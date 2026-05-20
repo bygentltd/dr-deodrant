@@ -30,7 +30,7 @@
   --color-on-tertiary-fixed-variant: #004d65;
   --color-inverse-surface: #2f3131;
   --color-background: #f9f9f9;
-  --color-primary: #565f68;
+  --color-primary: #ebf9fa;
   --color-surface-container-low: #f3f3f4;
   --color-on-tertiary-container: #297694;
   --color-surface-variant: #e2e2e2;
@@ -46,7 +46,7 @@
   --color-on-secondary-fixed-variant: #2e4382;
   --color-surface-bright: #f9f9f9;
   --color-primary-fixed: #dae3ee;
-  --color-surface-tint: #565f68;
+  --color-surface-tint: #ebf9fa;
   --color-inverse-on-surface: #f0f1f1;
   --color-on-primary-container: #667079;
   --color-tertiary: #0d6683;
@@ -138,4 +138,31 @@
   .clinical-gradient {
       background: linear-gradient(180deg, #F7FAFF 0%, #FFFFFF 100%);
   }
+  /* Hero-specific utilities */
+  .hero-pattern { color: rgba(255, 255, 255, 0.95); transform: scale(1.02); }
+  @keyframes hero-pattern-float {
+    0% { transform: translateY(0) scale(1.02); }
+    50% { transform: translateY(-8px) scale(1.03); }
+    100% { transform: translateY(0) scale(1.02); }
+  }
+  .hero-pattern { animation: hero-pattern-float 12s ease-in-out infinite; }
+
+  .hero-indicators { position: relative; z-index: 30; }
+
+  .hero-arrow {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    border: none;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    font-size: 22px;
+    backdrop-filter: blur(6px);
+    transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+    box-shadow: 0 6px 18px rgba(7, 11, 16, 0.35);
+  }
+  .hero-arrow:hover { transform: translateY(-3px); background: rgba(255,255,255,0.14); }
 }
