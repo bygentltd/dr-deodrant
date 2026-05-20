@@ -27,7 +27,7 @@ export default function Home() {
       author: "Sophia M, New York"
     },
     {
-      image: "/img3.png",
+      image: "/Img3.png",
       quote: `"I've struggled with dark underarms for years. After switching to Dr. Deodrant, the Acerola and Vitamin E extracts have visibly brightened the skin. Plus, 24-hour protection is real."`,
       author: "Marcus T, Seattle"
     }
