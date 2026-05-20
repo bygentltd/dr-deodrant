@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@theme {
+  --color-secondary-fixed-dim: #79d1ff;
+  --color-surface: #f9f9f9;
+  --color-error: #ba1a1a;
+  --color-outline: #74777b;
+  --color-on-secondary: #ffffff;
+  --color-secondary-fixed: #c3e8ff;
+  --color-tertiary-fixed-dim: #8ad0f1;
+  --color-primary-container: #ebf4ff;
+  --color-inverse-primary: #bec7d2;
+  --color-secondary-container: #a2b6fd;
+  --color-on-background: #1b1b1f;
+  --color-error-container: #ffdad6;
+  --color-secondary: #475b9c;
+  --color-accent-highlight: #8CC4E8;
+  --color-brand-bg: #EBF9FA;
+  --color-outline-variant: #c4c6cb;
+  --color-on-surface-variant: #44474b;
+  --color-on-primary: #ffffff;
+  --color-on-surface: #1a1c1c;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container: #eeeeee;
+  --color-on-primary-fixed: #141c24;
+  --color-surface-container-highest: #e2e2e2;
+  --color-tertiary-container: #e5f5ff;
+  --color-on-tertiary-fixed: #001f2a;
+  --color-on-error-container: #93000a;
+  --color-on-tertiary-fixed-variant: #004d65;
+  --color-inverse-surface: #2f3131;
+  --color-background: #f9f9f9;
+  --color-primary: #565f68;
+  --color-surface-container-low: #f3f3f4;
+  --color-on-tertiary-container: #297694;
+  --color-surface-variant: #e2e2e2;
+  --color-on-tertiary: #ffffff;
+  --color-surface-container-high: #e8e8e8;
+  --color-on-secondary-container: #314685;
+  --color-primary-fixed-dim: #bec7d2;
+  --color-surface-dim: #dadada;
+  --color-tertiary-fixed: #bee9ff;
+  --color-on-secondary-fixed: #00164d;
+  --color-on-error: #ffffff;
+  --color-on-primary-fixed-variant: #3f4850;
+  --color-on-secondary-fixed-variant: #2e4382;
+  --color-surface-bright: #f9f9f9;
+  --color-primary-fixed: #dae3ee;
+  --color-surface-tint: #565f68;
+  --color-inverse-on-surface: #f0f1f1;
+  --color-on-primary-container: #667079;
+  --color-tertiary: #0d6683;
+  --color-clinical-blue: #3E5C76;
+  --color-ice-glimmer: #F7FAFF;
+  --color-deep-navy: #051139;
+
+  --spacing-base: 8px;
+  --spacing-section-padding: 80px;
+  --spacing-gutter: 24px;
+  --spacing-container-max: 1280px;
+  --spacing-margin-mobile: 20px;
+  --spacing-margin-desktop: 64px;
+  --spacing-unit: 8px;
+
+  --font-body: "Hanken Grotesk", sans-serif;
+  --font-heading: "Hanken Grotesk", sans-serif;
+  --font-headline-md: "Hanken Grotesk", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-headline-lg-mobile: "Hanken Grotesk", sans-serif;
+  --font-display-lg: "Hanken Grotesk", sans-serif;
+  --font-label-sm: "Geist", sans-serif;
+  --font-headline-lg: "Hanken Grotesk", sans-serif;
+}
+
+@layer base {
+  body {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+  .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  
+  .hero-gradient { background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%); }
+  
+  .reveal-text {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: translateY(100%);
+    transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .reveal-text.active { transform: translateY(0); }
+
+  @keyframes rotate-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .animate-rotate-slow { animation: rotate-slow 15s linear infinite; }
+
+  .testimonial-slide { transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+
+  .accordion-content { max-height: 0; overflow: hidden; transition: max-height 300px ease-out; }
+  .accordion-item.active .accordion-content { max-height: 400px; }
+  .accordion-item.active .accordion-icon { transform: rotate(45deg); }
+
+  @keyframes ken-burns {
+    from { transform: scale(1); }
+    to { transform: scale(1.15); }
+  }
+  .ken-burns {
+    animation: ken-burns 10s linear infinite alternate;
+  }
+  .carousel-slide {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+  }
+  .carousel-slide.active {
+    opacity: 1;
+  }
+  
+  .glass-nav {
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+  }
+  .bento-hover {
+      transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .bento-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -20px rgba(62, 92, 118, 0.15);
+  }
+  .clinical-gradient {
+      background: linear-gradient(180deg, #F7FAFF 0%, #FFFFFF 100%);
+  }
+}
