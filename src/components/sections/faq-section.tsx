@@ -34,7 +34,7 @@ export function FaqSection() {
             <p className="text-lg text-[#0a2544] mt-4">Professional answers for your mineral skincare journey.</p>
           </div>
           <div className="reveal-on-scroll">
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion multiple={false} className="w-full">
               {faqs.map((faq, idx) => (
                 <AccordionItem key={idx} value={`item-${idx}`} className="border-b border-outline-variant/30 py-2">
                   <AccordionTrigger className="text-xl font-bold text-[#0a2544] hover:no-underline hover:text-[#0a2544]/80 transition-colors text-left">
@@ -49,7 +49,7 @@ export function FaqSection() {
           </div>
         </div>
         <div className="relative group h-full reveal-on-scroll">
-          <div className="sticky top-32 bg-[#f8f9fa] rounded-[2rem] overflow-hidden shadow-2xl p-12 flex flex-col items-center text-center justify-center min-h-[500px]">
+          <div className="sticky top-32 bg-[#f8f9fa] rounded-[2rem] overflow-hidden shadow-2xl p-12 flex flex-col items-center text-center justify-center min-h-125">
             <div className="absolute inset-0 opacity-20">
               <img className="w-full h-full object-cover grayscale" src="/img3.png" alt="Contact" />
             </div>
