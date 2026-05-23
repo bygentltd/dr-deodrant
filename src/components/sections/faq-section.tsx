@@ -41,7 +41,7 @@ export function FaqSection() {
                   <AccordionTrigger className="text-xl font-bold text-[#0a2544] hover:no-underline hover:text-[#0a2544]/80 transition-colors text-left">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-[#0a2544] text-base leading-relaxed">
+                  <AccordionContent className="text-[#0a2544] text-serif leading-relaxed">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>
@@ -50,9 +50,9 @@ export function FaqSection() {
           </div>
         </div>
         <div className="relative group h-full reveal-on-scroll">
-          <div className="sticky top-32 bg-[#f8f9fa] rounded-[2rem] overflow-hidden shadow-2xl p-12 flex flex-col items-center text-center justify-center min-h-125">
-            <div className="absolute inset-0 opacity-20">
-              <img className="w-full h-full object-cover grayscale" src="/img3.png" alt="Contact" />
+          <div className="sticky top-32 rounded-[2rem] overflow-hidden shadow-2xl p-12 flex flex-col items-center text-center justify-center min-h-125">
+            <div className="absolute inset-0 opacity-50">
+              <img className="w-full h-full object-cover" src="/img3.png" alt="Contact" />
             </div>
             <div className="relative z-10 space-y-8">
               <p className="text-xs font-bold text-[#0a2544] uppercase tracking-[0.2em]">Scientific Consultation • Mon—Sat, 9am—6pm</p>

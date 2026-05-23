@@ -22,9 +22,9 @@ export function BentoGridSection() {
           
           {/* Centered Text Container */}
           <div className="absolute bottom-0 left-0 w-full p-8 md:p-10 flex flex-col items-center text-center">
-            <h3 className="text-2xl md:text-3xl font-medium text-[#EAF5FF] mb-3 tracking-wide">Long-lasting Value</h3>
+            <h3 className="text-2xl md:text-3xl font-medium text-[#EAF5FF] mb-3 tracking-wide">Everyday With You</h3>
             <p className="text-sm md:text-base text-[#EAF5FF]/80 leading-relaxed max-w-[90%]">
-              Designed with clinical efficiency. One product lasts 6-8 months with daily use.
+              Built for daily life—workouts, commutes, and everything in between.
             </p>
           </div>
         </div>

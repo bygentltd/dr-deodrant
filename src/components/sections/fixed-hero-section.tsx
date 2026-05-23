@@ -33,8 +33,8 @@ export function FixedHeroSection() {
         </p>
         
         {/* Call to Action Button */}
-        <button className="group flex items-center gap-2 bg-[#EAF5FF] text-[#0a2544] px-8 py-3.5 rounded-full text-sm font-medium transition-all hover:bg-gray-100 hover:scale-105 active:scale-95 shadow-lg cursor-pointer">
-          <span>Begin Your Ritual</span>
+        <button className="group flex items-center gap-2 bg-[#113D86] text-[#EAF5FF] px-8 py-3.5 rounded-full text-sm font-medium transition-all hover:bg-gray-100 hover:scale-105 active:scale-95 shadow-lg cursor-pointer">
+          <span>Get Smell Free</span>
           <span className="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">
             arrow_forward_ios
           </span>

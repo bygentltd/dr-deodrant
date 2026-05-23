@@ -51,7 +51,8 @@ export default function BlogGrid() {
   ];
 
   return (
-    <section className={`${blogGridTopOffset} pb-24 px-6 md:px-12 lg:px-16 max-w-350 mx-auto bg-[#FCFAF9]`}>
+    <div className="w-full bg-[#EAF5FF]">
+    <section className={`${blogGridTopOffset} pb-24 px-6 md:px-12 lg:px-16 max-w-350 mx-auto bg-[#EAF5FF]`}>
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-16 reveal-on-scroll">
         <div className="max-w-2xl">
           <div className="inline-block px-3 py-1 bg-gray-200/50 rounded-full text-[10px] font-bold uppercase tracking-widest text-gray-700 mb-6">
@@ -61,10 +62,7 @@ export default function BlogGrid() {
             Beyond your skin.
           </h1>
         </div>
-        <p className="max-w-md text-sm md:text-base text-gray-600 leading-relaxed">
-          Insights, research, and stories exploring the science of skincare and its impact on health, wellness, and daily life. <br /><br />
-          Dive deeper into how proper skincare can transform your beauty.
-        </p>
+        
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
@@ -106,5 +104,6 @@ export default function BlogGrid() {
         ))}
       </div>
     </section>
+    </div>
   );
 }

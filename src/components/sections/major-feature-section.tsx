@@ -17,7 +17,7 @@ export function MajorFeaturesSection() {
           {/* Replace src with your actual image */}
           <img 
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-            src="/photo.avif" 
+            src="/image_3.webp" 
             alt="Everyday With You" 
           />
           {/* Dark Gradient Overlay */}
@@ -26,10 +26,10 @@ export function MajorFeaturesSection() {
           {/* Text Content */}
           <div className="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col items-center text-center">
             <h3 className="text-3xl md:text-4xl font-medium text-[#EAF5FF] mb-3 tracking-wide">
-              Everyday With You
+              Long-lasting Value
             </h3>
             <p className="text-sm md:text-base text-[#EAF5FF]/80 leading-relaxed max-w-[85%] md:max-w-[70%]">
-              Built for daily life—workouts, commutes, and everything in between.
+              Designed with clinical efficiency. One product lasts 6-8 months with daily use.
             </p>
           </div>
         </div>
@@ -39,7 +39,7 @@ export function MajorFeaturesSection() {
           {/* Replace src with your actual image */}
           <img 
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-            src="/premium_photo.avif" 
+            src="/Image_2.webp" 
             alt="Instant Pairing" 
           />
           <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/30 to-transparent pointer-events-none"></div>

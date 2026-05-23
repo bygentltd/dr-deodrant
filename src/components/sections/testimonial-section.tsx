@@ -82,28 +82,28 @@ export function TestimonialSection() {
               </div>
 
               {/* Right Side: Content Box (Now 8 columns instead of 7) */}
-              <div className="md:col-span-8 bg-[#ffffff] p-10 md:p-14 lg:p-16 rounded-[2rem] flex flex-col justify-between h-full">
+              <div className="md:col-span-8 bg-[#113d86]/40  p-10 md:p-14 lg:p-16 rounded-[2rem] flex flex-col justify-between h-full">
                 
                 <div className="space-y-6">
                   {/* Custom Quote Icon */}
-                  <span className="font-serif text-6xl text-gray-800 leading-none block h-10">
+                  <span className="font-cabinet text-6xl text-[#113D86]-800 leading-none block h-10">
                     “
                   </span>
                   
                   {/* Quote Text */}
-                  <p className="text-xl md:text-[1.65rem] font-serif text-gray-800 leading-relaxed">
+                  <p className="text-xl md:text-[1.65rem] font-cabinet text-[#113D86]-800 leading-relaxed">
                     {t.quote}
                   </p>
 
                   {/* Stars */}
-                  <div className="flex gap-1 text-[#1c2e4a] pt-2">
+                  <div className="flex gap-1 text-[#113D86] pt-2">
                     {[1, 2, 3, 4, 5].map((star) => (
                       <span key={star} className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
                     ))}
                   </div>
 
                   {/* Author */}
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-[#113D86]-600">
                     — {t.author}
                   </p>
                 </div>

@@ -82,7 +82,7 @@ export default function Header() {
         </div>
 
         {/* Left Navigation Links (Desktop) */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           {links.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -90,7 +90,7 @@ export default function Header() {
                 key={link.name}
                 href={link.href}
                 className={cn(
-                  "text-sm font-medium tracking-wide transition-all duration-300 pb-0.5 nav-underline",
+                  "text-md font-cabinet tracking-wide transition-all duration-300 pb-0.5 nav-underline",
                   linkClasses,
                   isActive && "active"
                 )}
@@ -104,7 +104,7 @@ export default function Header() {
         {/* Center Brand Name & SVG Logo */}
         <div className="flex items-center justify-center">
           <Link href="/">
-            <img src="/drdeologo.png" alt="Dr. Deodrant Logo" className="h-13 w-auto hover:opacity-90 transition-opacity" />
+            <img src="/drdeologo.png" alt="Dr. Deodrant Logo" className="h-15 w-auto hover:opacity-90 transition-opacity" />
           </Link>
         </div>
 
