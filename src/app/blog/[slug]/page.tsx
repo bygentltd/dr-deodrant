@@ -17,13 +17,13 @@ export default function BlogPost() {
 
         <div className="relative z-10 flex flex-col items-center text-center px-6 mt-16 reveal-on-scroll">
           <div className="flex items-center gap-3 mb-6">
-            <span className="text-white/80 text-sm font-medium tracking-wider">Mar 14, 2026</span>
-            <span className="bg-white/20 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-medium">Trends</span>
+            <span className="text-[#EAF5FF]/80 text-sm font-medium tracking-wider">Mar 14, 2026</span>
+            <span className="bg-[#EAF5FF]/20 backdrop-blur-md text-[#EAF5FF] px-3 py-1 rounded-full text-xs font-medium">Trends</span>
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white max-w-5xl leading-tight mb-6">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-[#EAF5FF] max-w-5xl leading-tight mb-6">
             Why fewer ingredients work better.
           </h1>
-          <p className="text-white/90 font-medium">
+          <p className="text-[#EAF5FF]/90 font-medium">
             By Dr. Elena Kovac
           </p>
         </div>

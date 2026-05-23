@@ -10,7 +10,7 @@ export function FeaturedProductSection() {
       <div className="max-w-container-max mx-auto px-8 md:px-16">
         <div className="flex flex-col md:flex-row gap-16 items-center">
 
-          <div className="flex-1 w-full bg-white p-10 rounded-2xl shadow-xl border border-outline-variant/10 group reveal-on-scroll">
+          <div className="flex-1 w-full bg-[#EAF5FF] p-10 rounded-2xl shadow-xl border border-outline-variant/10 group reveal-on-scroll">
             <shopify-context type="product" handle="dr-deodorant-natural-mineral-deodorant-stick-vitamin-c-e-enriched" wait-for-update="false">
               <template dangerouslySetInnerHTML={{
                 __html: `
@@ -56,11 +56,11 @@ export function FeaturedProductSection() {
             <h2 className="text-4xl md:text-5xl font-bold text-[#0a2544]">How to Use for Optimal Results.</h2>
             <p className="text-lg text-[#0a2544]">Apply after showering on slightly damp underarms. Wet the crystal if needed and glide gently 4-5 times over the underarm area. Product lasts 6-8 months with daily use.</p>
             <div className="grid grid-cols-2 gap-6 pt-4">
-              <div className="p-6 border-2 border-[#0a2544]/5 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="p-6 border-2 border-[#0a2544]/5 bg-[#EAF5FF] rounded-xl shadow-sm hover:shadow-md transition-shadow">
                 <span className="material-symbols-outlined text-[#0a2544] text-3xl mb-3" style={{ fontVariationSettings: "'FILL' 1" }}>water_drop</span>
                 <p className="text-xs font-bold uppercase tracking-widest text-[#0a2544]">Damp Application</p>
               </div>
-              <div className="p-6 border-2 border-[#0a2544]/5 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="p-6 border-2 border-[#0a2544]/5 bg-[#EAF5FF] rounded-xl shadow-sm hover:shadow-md transition-shadow">
                 <span className="material-symbols-outlined text-[#0a2544] text-3xl mb-3" style={{ fontVariationSettings: "'FILL' 1" }}>calendar_month</span>
                 <p className="text-xs font-bold uppercase tracking-widest text-[#0a2544]">8 Month Lifecycle</p>
               </div>

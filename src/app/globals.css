@@ -9,7 +9,7 @@
   --color-surface: #f9f9f9;
   --color-error: #ba1a1a;
   --color-outline: #74777b;
-  --color-on-secondary: #ffffff;
+  --color-on-secondary: #eaf5ff;
   --color-secondary-fixed: #c3e8ff;
   --color-tertiary-fixed-dim: #8ad0f1;
   --color-primary-container: #ebf4ff;
@@ -19,12 +19,12 @@
   --color-error-container: #ffdad6;
   --color-secondary: #475b9c;
   --color-accent-highlight: #8CC4E8;
-  --color-brand-bg: #EBF9FA;
+  --color-brand-bg: #EAF5FF;
   --color-outline-variant: #c4c6cb;
   --color-on-surface-variant: #44474b;
-  --color-on-primary: #ffffff;
+  --color-on-primary: #eaf5ff;
   --color-on-surface: #1a1c1c;
-  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-lowest: #eaf5ff;
   --color-surface-container: #eeeeee;
   --color-on-primary-fixed: #141c24;
   --color-surface-container-highest: #e2e2e2;
@@ -34,23 +34,23 @@
   --color-on-tertiary-fixed-variant: #004d65;
   --color-inverse-surface: #2f3131;
   --color-background: #f9f9f9;
-  --color-primary: #ebf9fa;
+  --color-primary: #EAF5FF;
   --color-surface-container-low: #f3f3f4;
   --color-on-tertiary-container: #297694;
   --color-surface-variant: #e2e2e2;
-  --color-on-tertiary: #ffffff;
+  --color-on-tertiary: #eaf5ff;
   --color-surface-container-high: #e8e8e8;
   --color-on-secondary-container: #314685;
   --color-primary-fixed-dim: #bec7d2;
   --color-surface-dim: #dadada;
   --color-tertiary-fixed: #bee9ff;
   --color-on-secondary-fixed: #00164d;
-  --color-on-error: #ffffff;
+  --color-on-error: #eaf5ff;
   --color-on-primary-fixed-variant: #3f4850;
   --color-on-secondary-fixed-variant: #2e4382;
   --color-surface-bright: #f9f9f9;
   --color-primary-fixed: #dae3ee;
-  --color-surface-tint: #ebf9fa;
+  --color-surface-tint: #EAF5FF;
   --color-inverse-on-surface: #f0f1f1;
   --color-on-primary-container: #667079;
   --color-tertiary: #0d6683;
@@ -66,15 +66,15 @@
   --spacing-margin-desktop: 64px;
   --spacing-unit: 8px;
 
-  --font-body: "Hanken Grotesk", sans-serif;
-  --font-heading: "Hanken Grotesk", sans-serif;
-  --font-headline-md: "Hanken Grotesk", sans-serif;
-  --font-body-md: "Inter", sans-serif;
-  --font-body-lg: "Inter", sans-serif;
-  --font-headline-lg-mobile: "Hanken Grotesk", sans-serif;
-  --font-display-lg: "Hanken Grotesk", sans-serif;
-  --font-label-sm: "Geist", sans-serif;
-  --font-headline-lg: "Hanken Grotesk", sans-serif;
+  --font-body: var(--font-cabinet), sans-serif;
+  --font-heading: var(--font-cabinet), sans-serif;
+  --font-headline-md: var(--font-cabinet), sans-serif;
+  --font-body-md: var(--font-cabinet), sans-serif;
+  --font-body-lg: var(--font-cabinet), sans-serif;
+  --font-headline-lg-mobile: var(--font-cabinet), sans-serif;
+  --font-display-lg: var(--font-cabinet), sans-serif;
+  --font-label-sm: var(--font-cabinet), sans-serif;
+  --font-headline-lg: var(--font-cabinet), sans-serif;
 }
 
 @layer base {
@@ -86,7 +86,12 @@
     @apply border-border outline-ring/50;
   }
   html {
-    @apply font-serif;
+    font-family: var(--font-body);
+  }
+
+  .font-sans,
+  .font-serif {
+    font-family: var(--font-body);
   }
 }
 
@@ -145,7 +150,7 @@
       box-shadow: 0 20px 40px -20px rgba(62, 92, 118, 0.15);
   }
   .clinical-gradient {
-      background: linear-gradient(180deg, #F7FAFF 0%, #FFFFFF 100%);
+      background: linear-gradient(180deg, #F7FAFF 0%, #eaf5ff 100%);
   }
   /* Hero-specific utilities */
   .hero-pattern { color: rgba(255, 255, 255, 0.95); transform: scale(1.02); }
@@ -199,8 +204,8 @@
   }
 
 @theme inline {
-  --font-heading: var(--font-sans);
-  --font-sans: var(--font-sans);
+  --font-heading: var(--font-cabinet);
+  --font-sans: var(--font-cabinet);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -242,7 +247,7 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
+  --background: #EAF5FF;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -308,4 +313,18 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+}
+
+@font-face{
+  font-family: 'CabinetGrotesk';
+  src: url('/fonts/CabinetGrotesk-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'CabinetGrotesk';
+  src: url('/fonts/CabinetGrotesk-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
 }

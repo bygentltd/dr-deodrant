@@ -26,7 +26,7 @@ export function FaqSection() {
   ];
 
   return (
-    <section className="py-24 px-8 md:px-16 max-w-container-max mx-auto bg-white">
+    <section className="py-24 px-8 md:px-16 max-w-container-max mx-auto bg-[#EAF5FF]">
       <div className="grid md:grid-cols-2 gap-20 items-start">
         <div className="space-y-12">
           <div className="reveal-on-scroll">
@@ -57,7 +57,7 @@ export function FaqSection() {
               <p className="text-xs font-bold text-[#0a2544] uppercase tracking-[0.2em]">Scientific Consultation • Mon—Sat, 9am—6pm</p>
               <h3 className="text-4xl font-bold text-[#0a2544] leading-tight">Speak with a Specialist</h3>
               <p className="text-[#0a2544]/80 max-w-sm mx-auto">Get personalized advice on transitioning to mineral-based hygiene based on your skin type.</p>
-              <Button variant="outline" className="bg-white text-[#0a2544] px-10 py-6 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-brand-bg transition-colors flex items-center gap-2 mx-auto">
+              <Button variant="outline" className="bg-[#EAF5FF] text-[#0a2544] px-10 py-6 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-brand-bg transition-colors flex items-center gap-2 mx-auto">
                 Connect with Our Team <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
               </Button>
             </div>

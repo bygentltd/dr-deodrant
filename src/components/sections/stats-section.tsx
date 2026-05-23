@@ -66,7 +66,7 @@ export function StatsSection() {
   }, [hasCounted]);
 
   return (
-    <section className="py-24 bg-[#ffffff]" id="stats-section">
+    <section className="py-24 bg-[#eaf5ff]" id="stats-section">
       <div className="max-w-7xl mx-auto px-8 md:px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
         
         <div className="space-y-4 reveal-on-scroll">

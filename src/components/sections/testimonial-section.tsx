@@ -21,7 +21,7 @@ export function TestimonialSection() {
   ];
 
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="py-24 bg-[#EAF5FF] overflow-hidden">
       
       {/* Header Section */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 text-center mb-16 reveal-on-scroll">
@@ -86,13 +86,13 @@ export function TestimonialSection() {
                 {/* Bottom Navigation Row */}
                 <div className="flex justify-between items-center mt-12 pt-6 border-t border-gray-200">
                   <button 
-                    className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors shadow-sm cursor-pointer" 
+                    className="w-12 h-12 bg-[#EAF5FF] rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors shadow-sm cursor-pointer" 
                     onClick={() => setCurrentTestimonial(prev => (prev - 1 + testimonials.length) % testimonials.length)}
                   >
                     <span className="material-symbols-outlined text-gray-600">arrow_back</span>
                   </button>
                   <button 
-                    className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors shadow-sm cursor-pointer" 
+                    className="w-12 h-12 bg-[#EAF5FF] rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors shadow-sm cursor-pointer" 
                     onClick={() => setCurrentTestimonial(prev => (prev + 1) % testimonials.length)}
                   >
                     <span className="material-symbols-outlined text-gray-600">arrow_forward</span>

@@ -8,15 +8,17 @@ import { FaqSection } from "@/components/sections/faq-section";
 import InfiniteCarousel from "@/components/sections/infinite-carousel";
 import { MajorFeaturesSection } from "@/components/sections/major-feature-section";
 import { FixedHeroSection } from "@/components/sections/fixed-hero-section";
+import { ServicesSection } from "@/components/sections/services-section";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <div className="relative z-10 -mt-16 md:-mt-28 bg-white rounded-t-[3rem] md:rounded-t-[7rem] overflow-hidden">
+      <div className="relative z-10 -mt-16 md:-mt-28 bg-[#EAF5FF] rounded-t-[3rem] md:rounded-t-[7rem] overflow-hidden">
         <InfiniteCarousel />
         <PhilosophySection />
         <StatsSection />
+        <ServicesSection/>
         <MajorFeaturesSection/>
         <BentoGridSection />
       </div>

@@ -39,7 +39,7 @@ export function HeroSection() {
   }, [currentHeroSlide]);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden" id="hero-section">
+    <section className="relative min-h-screen h-[calc(100svh+4rem)] md:h-[calc(100svh+7rem)] w-full overflow-hidden" id="hero-section">
       {/* Slides */}
       <div className="absolute inset-0 z-0">
         {heroImages.map((src, idx) => (
@@ -56,14 +56,14 @@ export function HeroSection() {
           <h1 className="font-bold font-serif text-5xl md:text-6xl text-[#0a2544] max-w-4xl reveal-text leading-[1.1] drop-shadow-xl">{heroTitles[currentHeroSlide]}</h1>
         </div>
         <div className="flex flex-col sm:flex-row gap-4 transition-opacity duration-1000 justify-start" id="hero-btns">
-          <Button variant="default" className="bg-white text-[#0a2544] px-10 py-6 rounded-full font-bold text-xs uppercase tracking-widest hover:scale-105 hover:bg-white/90 transition-transform shadow-lg">Shop The Collection</Button>
-          <Button variant="outline" className="border-2 border-[#0a2544] text-[#0a2544] bg-transparent px-10 py-6 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white hover:text-[#0a2544] transition-all shadow-lg">Learn The Science</Button>
+          <Button variant="default" className="bg-[#EAF5FF] text-[#0a2544] px-10 py-6 rounded-full font-bold text-xs uppercase tracking-widest hover:scale-105 hover:bg-[#EAF5FF]/90 transition-transform shadow-lg">Shop The Collection</Button>
+          <Button variant="outline" className="border-2 border-[#0a2544] text-[#0a2544] bg-transparent px-10 py-6 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-[#EAF5FF] hover:text-[#0a2544] transition-all shadow-lg">Learn The Science</Button>
         </div>
 
         {/* Indicators */}
         <div className="mt-10 flex items-center gap-3 hero-indicators justify-start">
           {heroImages.map((_, i) => (
-            <button key={i} onClick={() => setCurrentHeroSlide(i)} className={`w-3 h-3 rounded-full cursor-pointer ${i === currentHeroSlide ? 'bg-white' : 'bg-white/40'} transition-all`} aria-label={`Go to slide ${i + 1}`} />
+            <button key={i} onClick={() => setCurrentHeroSlide(i)} className={`w-3 h-3 rounded-full cursor-pointer ${i === currentHeroSlide ? 'bg-[#EAF5FF]' : 'bg-[#EAF5FF]/40'} transition-all`} aria-label={`Go to slide ${i + 1}`} />
           ))}
         </div>
 

@@ -86,19 +86,19 @@ export default function BlogGrid() {
             <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-500 group-hover:opacity-90"></div>
 
             <div className="absolute top-6 left-6 flex items-center justify-between w-[calc(100%-3rem)]">
-              <span className="bg-white/90 backdrop-blur-sm text-gray-900 px-4 py-1.5 rounded-full text-xs font-medium">
+              <span className="bg-[#EAF5FF]/90 backdrop-blur-sm text-gray-900 px-4 py-1.5 rounded-full text-xs font-medium">
                 {post.category}
               </span>
-              <span className="material-symbols-outlined text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-2 group-hover:translate-x-0">
+              <span className="material-symbols-outlined text-[#EAF5FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-2 group-hover:translate-x-0">
                 arrow_outward
               </span>
             </div>
 
             <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 pr-6">
-              <p className="text-white/80 text-xs font-medium tracking-wider mb-2">
+              <p className="text-[#EAF5FF]/80 text-xs font-medium tracking-wider mb-2">
                 {post.date}
               </p>
-              <h3 className={`font-serif text-white leading-tight ${post.featured ? "text-3xl md:text-5xl max-w-3xl" : "text-2xl md:text-3xl max-w-md"}`}>
+              <h3 className={`font-serif text-[#EAF5FF] leading-tight ${post.featured ? "text-3xl md:text-5xl max-w-3xl" : "text-2xl md:text-3xl max-w-md"}`}>
                 {post.title}
               </h3>
             </div>

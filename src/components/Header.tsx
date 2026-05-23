@@ -57,19 +57,14 @@ export default function Header() {
     };
   }, [pathname]);
 
-  const surfaceClasses = isHeroSurface
-    ? "bg-white/12 text-[#203856] border-white/20 shadow-2xl glass-nav backdrop-blur-2xl"
-    : "bg-white text-[#0a2544] border-[#0a2544]/10 shadow-lg";
+  // Keep a single glass style everywhere (same blur & opacity)
+  const surfaceClasses = "bg-[#EAF5FF]/12 text-[#203856] border-[#EAF5FF]/20 shadow-2xl glass-nav backdrop-blur-2xl";
 
-  const linkClasses = isHeroSurface
-    ? "text-[#203856]/90 hover:text-[#203856]"
-    : "text-[#0a2544] hover:text-[#0a2544]";
+  const linkClasses = "text-[#203856]/90 hover:text-[#203856]";
 
   // underline handled by .nav-underline pseudo-element animation
 
-  const iconClasses = isHeroSurface
-    ? "text-[#203856]/80 hover:text-[#203856]"
-    : "text-[#0a2544]/70 hover:text-[#0a2544]";
+  const iconClasses = "text-[#203856]/80 hover:text-[#203856]";
 
   return (
     <header ref={headerRef} className="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 flex justify-center pointer-events-none">
@@ -116,17 +111,17 @@ export default function Header() {
         {/* Right Section Actions (Desktop & Mobile) */}
         <div className="flex items-center gap-4 md:gap-6">
           {/* Search & Profile Icons (Desktop only) */}
-          <div className={cn("hidden md:flex items-center gap-4", isHeroSurface ? "text-[#203856]/70" : "text-[#0a2544]/70") }>
+          <div className={cn("hidden md:flex items-center gap-4", "text-[#203856]/70") }>
             <button className={cn("material-symbols-outlined text-xl transition-colors cursor-pointer", iconClasses)}>search</button>
             <button className={cn("material-symbols-outlined text-xl transition-colors cursor-pointer", iconClasses)}>person</button>
           </div>
 
           {/* Support Phone Info (Desktop only) */}
 
-          {/* White Pill Action Button */}
+          {/* [#EAF5FF] Pill Action Button */}
           <Button
             onClick={openCart}
-            className="bg-[#0a2544] hover:bg-[#0a2544]/90 active:scale-95 text-white px-6 py-6 rounded-full font-bold text-xs uppercase tracking-wider transition-all duration-300 hover:scale-105 cursor-pointer shadow-md flex items-center gap-1.5"
+            className="bg-[#0a2544] hover:bg-[#0a2544]/90 active:scale-95 text-[#EAF5FF] px-6 py-6 rounded-full font-bold text-xs uppercase tracking-wider transition-all duration-300 hover:scale-105 cursor-pointer shadow-md flex items-center gap-1.5"
           >
             <span>Shop Collection</span>
             <span className="material-symbols-outlined text-xs font-bold">arrow_forward</span>
@@ -138,10 +133,8 @@ export default function Header() {
       {/* Mobile Dropdown Menu Drawer */}
       {isOpen && (
         <div className={cn(
-          "absolute top-20 left-4 right-4 backdrop-blur-2xl border rounded-3xl p-6 shadow-2xl flex flex-col gap-6 md:hidden animate-fade-in z-50 pointer-events-auto",
-          isHeroSurface
-            ? "bg-deep-navy/90 border-white/15"
-            : "bg-white/95 border-[#0a2544]/10"
+          "absolute top-20 left-4 right-4 backdrop-blur-2xl border rounded-3xl p-6 shadow-2xl flex flex-col gap-6 md:hidden animate-fade-in z-50 pointer-events-auto glass-nav",
+          "bg-[#EAF5FF]/12 border-[#EAF5FF]/15"
         )}>
           <div className="flex flex-col gap-4">
             {links.map((link) => {
@@ -152,7 +145,7 @@ export default function Header() {
                   onClick={() => setIsOpen(false)}
                   className={cn(
                     "text-lg font-medium py-2 nav-underline",
-                    isHeroSurface ? "text-[#203856]/80 hover:text-[#203856]" : "text-[#0a2544]/80 hover:text-[#0a2544]",
+                    "text-[#203856]/80 hover:text-[#203856]",
                     isActive && "active"
                   )}
                   href={link.href}
@@ -162,14 +155,14 @@ export default function Header() {
               );
             })}
           </div>
-          <div className={cn("flex flex-col gap-4 pt-4 border-t", isHeroSurface ? "border-white/10" : "border-[#0a2544]/10")}>
-            <a href="tel:+3910352568" className={cn("flex items-center gap-2 text-sm font-medium", isHeroSurface ? "text-[#203856]/70 hover:text-[#203856]" : "text-[#0a2544]/70 hover:text-[#0a2544]")}>
+          <div className={cn("flex flex-col gap-4 pt-4 border-t border-[#EAF5FF]/10")}>
+            <a href="tel:+3910352568" className={cn("flex items-center gap-2 text-sm font-medium text-[#203856]/70 hover:text-[#203856]") }>
               <span className="material-symbols-outlined text-base">phone_iphone</span>
               <span>+391 (0)35 2568</span>
             </a>
-            <div className={cn("flex gap-6 pt-2", isHeroSurface ? "text-[#203856]/70" : "text-[#0a2544]/70")}>
-              <button className={cn("material-symbols-outlined text-xl transition-colors cursor-pointer", isHeroSurface ? "hover:text-[#203856]" : "hover:text-[#0a2544]")}>search</button>
-              <button className={cn("material-symbols-outlined text-xl transition-colors cursor-pointer", isHeroSurface ? "hover:text-[#203856]" : "hover:text-[#0a2544]")}>person</button>
+            <div className={cn("flex gap-6 pt-2 text-[#203856]/70")}>
+              <button className={cn("material-symbols-outlined text-xl transition-colors cursor-pointer hover:text-[#203856]")}>search</button>
+              <button className={cn("material-symbols-outlined text-xl transition-colors cursor-pointer hover:text-[#203856]")}>person</button>
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@ export function PhilosophySection() {
   useRevealOnScroll();
 
   return (
-    <section className="py-24 px-8 md:px-16 max-w-7xl mx-auto bg-[#FFFFFF] overflow-hidden">
+    <section className="py-24 px-8 md:px-16 max-w-7xl mx-auto bg-[#eaf5ff] overflow-hidden">
       <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
         
         {/* Left Column: Text Content */}
@@ -37,7 +37,7 @@ export function PhilosophySection() {
 
           {/* Added the button from the reference design */}
           <div className="pt-6">
-            <button className="bg-[#203856] hover:bg-[#203856]/80 text-white px-8 py-3 rounded-full text-sm font-medium transition-colors duration-300">
+            <button className="bg-[#203856] hover:bg-[#203856]/80 text-[#eaf5ff] px-8 py-3 rounded-full text-sm font-medium transition-colors duration-300">
               Our Story &rsaquo;
             </button>
           </div>
@@ -58,7 +58,7 @@ export function PhilosophySection() {
                   <path d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" id="circlePath"></path>
                 </defs>
                 <text className="text-[8.5px] font-bold uppercase tracking-[0.18em] fill-gray-800">
-                  <textPath href="#circlePath">• Natural Alum • Vitamin E • Fresh</textPath>
+                  <textPath href="#circlePath">• Natural Alum • Vitamin E • Fresh Vibe</textPath>
                 </text>
               </svg>
             </div>
