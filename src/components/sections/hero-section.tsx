@@ -6,17 +6,12 @@ import { Button } from "@/components/ui/button";
 export function HeroSection() {
   const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
   const heroContentOffset = "md:pl-[5vw] lg:pl-[8vw]";
+  const heroTitle = "Confidence Starts With What You Wear Closest.";
 
   const heroImages = [
     "/HERO_image.webp",
     "/2nd_hero_image.webp",
     "/HERO_image.webp"
-  ];
-
-  const heroTitles = [
-    'Confidence Starts With What You Wear Closest.',
-    'Science-Backed Protection. Naturally Gentle.',
-    'Stay Fresh Longer — Without Harsh Chemicals.'
   ];
 
   useEffect(() => {
@@ -25,18 +20,6 @@ export function HeroSection() {
     }, 5000);
     return () => clearInterval(timer);
   }, [heroImages.length]);
-
-  // Reveal hero text on mount and when slide changes
-  useEffect(() => {
-    const elems = Array.from(document.querySelectorAll('.reveal-text')) as HTMLElement[];
-    elems.forEach(el => el.classList.remove('active'));
-    const timers: number[] = [];
-    elems.forEach((el, i) => {
-      const t = window.setTimeout(() => el.classList.add('active'), 200 + i * 120);
-      timers.push(t);
-    });
-    return () => timers.forEach(t => clearTimeout(t));
-  }, [currentHeroSlide]);
 
   return (
     <section className="relative min-h-screen h-[calc(100svh+4rem)] md:h-[calc(100svh+7rem)] w-full overflow-hidden" id="hero-section">
@@ -49,11 +32,11 @@ export function HeroSection() {
         ))}
       </div>
       <div className={`relative z-10 h-full flex flex-col items-start justify-center text-left px-6 ${heroContentOffset}`}>
-        <div className="overflow-hidden mb-4">
-          <span className="font-bold text-xs uppercase tracking-[0.3em] text-[#0a2544] drop-shadow-md reveal-text block">CERTIFIED · EXPERIENCED · DEVOTED</span>
+        <div className="mb-4">
+          <span className="block font-bold text-xs uppercase tracking-[0.3em] text-[#0a2544] drop-shadow-md">CERTIFIED · EXPERIENCED · DEVOTED</span>
         </div>
-        <div className="overflow-hidden mb-8">
-          <h1 className="font-bold font-serif text-5xl md:text-6xl text-[#0a2544] max-w-4xl reveal-text leading-[1.1] drop-shadow-xl">{heroTitles[currentHeroSlide]}</h1>
+        <div className="mb-8">
+          <h1 className="max-w-4xl font-serif text-5xl font-bold leading-[1.1] text-[#0a2544] drop-shadow-xl md:text-6xl">{heroTitle}</h1>
         </div>
         <div className="flex flex-col sm:flex-row gap-4 transition-opacity duration-1000 justify-start" id="hero-btns">
           <Button variant="default" className="bg-[#EAF5FF] text-[#0a2544] px-10 py-6 rounded-full font-bold text-xs uppercase tracking-widest hover:scale-105 hover:bg-[#EAF5FF]/90 transition-transform shadow-lg">Shop The Collection</Button>

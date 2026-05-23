@@ -26,7 +26,8 @@ export function FaqSection() {
   ];
 
   return (
-    <section className="py-24 px-8 md:px-16 max-w-container-max mx-auto bg-[#EAF5FF]">
+    <section className="w-full bg-[#EAF5FF]">
+      <div className="py-24 px-8 md:px-16 max-w-container-max mx-auto">
       <div className="grid md:grid-cols-2 gap-20 items-start">
         <div className="space-y-12">
           <div className="reveal-on-scroll">
@@ -64,6 +65,7 @@ export function FaqSection() {
           </div>
         </div>
       </div>
+    </div>
     </section>
   );
 }

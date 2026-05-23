@@ -8,17 +8,42 @@ export function TestimonialSection() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   const testimonials = [
-    {
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCl39wosQluUgrJbRmGcWApiqE1HF7iBhfHdG55FCacoM5RiQtbvJC2X9s7NI2Q3KfNUtz8s3UCZol4IYs1g1nux0TDFxMehHeEmTL55RHsOiuz_pXRjj6mG_VmmnJu0WSxfvp-PFRNDa_fdGwqQv-mQbM8jaPkT56XxzBUh2QBrbPUYXWLyh_434ve8oG38-IjUYrmkUgM0BqrwLOBQf2t-JjG7jfojNoLy2ZBtOKX_sVoUbMJApLyrKZ7Quvc4qh_i16PvbaG-Etx",
-      quote: "The Pure Alum Crystal left my skin feeling fresh for days. What I loved most was how the mineral protection felt genuinely personalized, not like a harsh chemical product.",
-      author: "Sophia M, New York"
-    },
-    {
-      image: "/Img3.png",
-      quote: "I've struggled with dark underarms for years. After switching to Dr. Deodrant, the Acerola and Vitamin E extracts have visibly brightened the skin. Plus, 24-hour protection is real.",
-      author: "Marcus T, Seattle"
-    }
-  ];
+  {
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
+    quote:
+      "Finally, a deodorant that eliminates odour instead of just masking it with perfume! Dr. Deodrant removed my underarm smell completely. I feel so much more confident knowing I actually smell fresh, not just covered up. A total game-changer.",
+    author: "Sophia M, New York",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
+    quote:
+      "I love that this is enriched with Vitamin C and E. It didn't just stop the smell; it actually smoothened my underarms and cleared up my pigmentation. It feels like high-end skincare for your armpits. I’m finally wearing sleeveless tops again!",
+    author: "Marcus T, Seattle",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=1200&auto=format&fit=crop",
+    quote:
+      "The best part? No white cast! It goes on clear and stays that way, so my black clothes are safe. It’s incredibly effective at neutralizing odour while keeping my skin soft and bright. Everything I’ve been looking for in one bottle.",
+    author: "Priya K, Mumbai",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop",
+    quote:
+      "I’ve struggled with rough skin and dark patches for years. Since switching to Dr. Deodrant, my underarms are noticeably smoother. The alum works wonders on odour, and the vitamins have totally transformed the texture of my skin.",
+    author: "Daniel R, Chicago",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200&auto=format&fit=crop",
+    quote:
+      "This is hands down the most effective odour eliminator I’ve tried. It removes the smell entirely without any messy residue or white marks. My underarms look brighter and feel healthier than ever. I'll never go back to regular sprays!",
+    author: "Ayesha L, Dubai",
+  },
+];
 
   return (
     <section className="py-24 bg-[#EAF5FF] overflow-hidden">
@@ -57,7 +82,7 @@ export function TestimonialSection() {
               </div>
 
               {/* Right Side: Content Box (Now 8 columns instead of 7) */}
-              <div className="md:col-span-8 bg-[#F8F6F4] p-10 md:p-14 lg:p-16 rounded-[2rem] flex flex-col justify-between h-full">
+              <div className="md:col-span-8 bg-[#ffffff] p-10 md:p-14 lg:p-16 rounded-[2rem] flex flex-col justify-between h-full">
                 
                 <div className="space-y-6">
                   {/* Custom Quote Icon */}

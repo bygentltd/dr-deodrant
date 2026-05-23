@@ -13,7 +13,7 @@ export default function Header() {
   const headerRef = useRef<HTMLElement | null>(null);
 
   const links = [
-    { name: "Shop", href: "/shop" },
+    { name: "Shop", href: "/shop/popular" },
     { name: "Our Story", href: "/story" },
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" }

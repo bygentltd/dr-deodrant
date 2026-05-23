@@ -19,7 +19,9 @@ import {
 
 export function Footer() {
   return (
-    <footer className="bg-[#2E3079] text-white pt-20 pb-10 px-8 md:px-16 rounded-t-[3rem] md:rounded-t-[5rem] mt-20">
+    <footer className="w-full">
+
+   <div className="bg-[#113d86] text-white pt-20 pb-10 px-8 md:px-16 rounded-t-[3rem] md:rounded-t-[5rem]">
       <div className="max-w-7xl mx-auto">
         
         {/* --- Top Row: Contact Info --- */}
@@ -166,6 +168,7 @@ export function Footer() {
         </div>
 
       </div>
+    </div>
     </footer>
   );
 }
