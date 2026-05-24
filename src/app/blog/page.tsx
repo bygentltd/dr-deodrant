@@ -1,54 +1,13 @@
 "use client";
 
 import Link from "next/link";
+
 import { useRevealOnScroll } from "@/hooks/use-reveal";
+import { blogPosts } from "@/lib/blog-posts";
 
 export default function BlogGrid() {
   useRevealOnScroll();
   const blogGridTopOffset = "pt-28 md:pt-32";
-
-  const posts = [
-    {
-      id: "1",
-      title: "Why fewer ingredients work better.",
-      category: "Trends",
-      date: "Mar 14, 2026",
-      image: "https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=1600&q=80",
-      featured: true,
-    },
-    {
-      id: "2",
-      title: "Skincare science vs. trend cycles.",
-      category: "Trends",
-      date: "Feb 8, 2026",
-      image: "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=1400&q=80",
-      featured: false,
-    },
-    {
-      id: "3",
-      title: "The foundation of healthy skin.",
-      category: "Insights",
-      date: "Jan 3, 2026",
-      image: "https://images.unsplash.com/photo-1526758097130-bab247274f58?auto=format&fit=crop&w=1400&q=80",
-      featured: false,
-    },
-    {
-      id: "4",
-      title: "The truth about ingredient percentages.",
-      category: "Insights",
-      date: "Mar 14, 2026",
-      image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1400&q=80",
-      featured: false,
-    },
-    {
-      id: "5",
-      title: "My skin transformed when I used less.",
-      category: "Story",
-      date: "Mar 14, 2026",
-      image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1400&q=80",
-      featured: false,
-    },
-  ];
 
   return (
     <div className="w-full bg-[#EAF5FF]">
@@ -66,17 +25,17 @@ export default function BlogGrid() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-        {posts.map((post, index) => (
+        {blogPosts.map((post, index) => (
           <Link
-            href={`/blog/${post.id}`}
-            key={post.id}
+            href={`/blog/${post.slug}`}
+            key={post.slug}
             className={`relative group overflow-hidden rounded-3xl block reveal-on-scroll ${
               post.featured ? "md:col-span-2 h-100 md:h-150" : "col-span-1 h-87.5 md:h-112.5"
             }`}
             style={{ transitionDelay: `${index * 50}ms` }}
           >
             <img
-              src={post.image}
+              src={post.heroImage}
               alt={post.title}
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
             />

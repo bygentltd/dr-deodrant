@@ -9,6 +9,7 @@ import InfiniteCarousel from "@/components/sections/infinite-carousel";
 import { MajorFeaturesSection } from "@/components/sections/major-feature-section";
 import { FixedHeroSection } from "@/components/sections/fixed-hero-section";
 import { ServicesSection } from "@/components/sections/services-section";
+import HowToUse from "@/components/sections/how-to-use";
 
 export default function Home() {
   return (
@@ -18,11 +19,12 @@ export default function Home() {
         <InfiniteCarousel />
         <PhilosophySection />
         <StatsSection />
+        <FeaturedProductSection />
+        <HowToUse/>
         <ServicesSection/>
         <MajorFeaturesSection/>
         <BentoGridSection />
       </div>
-      <FeaturedProductSection />
       <FixedHeroSection/>
       <TestimonialSection />
       <FaqSection />

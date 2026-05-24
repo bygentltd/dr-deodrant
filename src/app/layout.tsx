@@ -27,7 +27,7 @@ export default function RootLayout({
       </head>
       <body className="bg-surface text-on-background selection:bg-clinical-blue selection:text-[#EAF5FF]">
         <LenisProvider>
-          <shopify-store store-domain="dr-deodrant.myshopify.com" public-access-token="c17cf5d66e6a70d03807572afe40ee3a" country="US" language="en">
+          <shopify-store store-domain="7pxnx6-mf.myshopify.com" public-access-token="e5272fb300e4dfe9ada40cd200dfc6c6" country="US" language="en">
             
             <Header />
 

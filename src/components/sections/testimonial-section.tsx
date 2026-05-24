@@ -51,10 +51,10 @@ export function TestimonialSection() {
       {/* Header Section */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 text-center mb-16 reveal-on-scroll">
         <h2 className="text-4xl md:text-5xl font-serif text-gray-900 leading-tight mb-4">
-          Real Results, Clinically Proven.
+          What Our Customers Are Saying.
         </h2>
         <p className="text-sm md:text-base text-gray-600">
-          Join thousands of users who have transitioned to the future of mineral skincare.
+          Join thousands of users who have transitioned from synthetic chemicals to natural protection.
         </p>
       </div>
 
@@ -82,7 +82,7 @@ export function TestimonialSection() {
               </div>
 
               {/* Right Side: Content Box (Now 8 columns instead of 7) */}
-              <div className="md:col-span-8 bg-[#113d86]/40  p-10 md:p-14 lg:p-16 rounded-[2rem] flex flex-col justify-between h-full">
+              <div className="md:col-span-8 bg-[#113d86]/30  p-10 md:p-14 lg:p-16 rounded-[2rem] flex flex-col justify-between h-full">
                 
                 <div className="space-y-6">
                   {/* Custom Quote Icon */}

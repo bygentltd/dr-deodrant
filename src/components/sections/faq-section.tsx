@@ -31,7 +31,7 @@ export function FaqSection() {
       <div className="grid md:grid-cols-2 gap-20 items-start">
         <div className="space-y-12">
           <div className="reveal-on-scroll">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#0a2544] leading-tight">Expert Guidance.</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0a2544] leading-tight">All Your Queries Answered.</h2>
             <p className="text-lg text-[#0a2544] mt-4">Professional answers for your mineral skincare journey.</p>
           </div>
           <div className="reveal-on-scroll">
@@ -51,17 +51,10 @@ export function FaqSection() {
         </div>
         <div className="relative group h-full reveal-on-scroll">
           <div className="sticky top-32 rounded-[2rem] overflow-hidden shadow-2xl p-12 flex flex-col items-center text-center justify-center min-h-125">
-            <div className="absolute inset-0 opacity-50">
-              <img className="w-full h-full object-cover" src="/img3.png" alt="Contact" />
+            <div className="absolute inset-0 opacity-90">
+              <img className="w-full h-full object-cover" src="/DRDEO11.webp" alt="Contact" />
             </div>
-            <div className="relative z-10 space-y-8">
-              <p className="text-xs font-bold text-[#0a2544] uppercase tracking-[0.2em]">Scientific Consultation • Mon—Sat, 9am—6pm</p>
-              <h3 className="text-4xl font-bold text-[#0a2544] leading-tight">Speak with a Specialist</h3>
-              <p className="text-[#0a2544]/80 max-w-sm mx-auto">Get personalized advice on transitioning to mineral-based hygiene based on your skin type.</p>
-              <Button variant="outline" className="bg-[#EAF5FF] text-[#0a2544] px-10 py-6 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-brand-bg transition-colors flex items-center gap-2 mx-auto">
-                Connect with Our Team <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-              </Button>
-            </div>
+            
           </div>
         </div>
       </div>

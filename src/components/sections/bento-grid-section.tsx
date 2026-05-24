@@ -6,7 +6,7 @@ export function BentoGridSection() {
   useRevealOnScroll();
 
   return (
-    <section className="px-6 md:px-12 lg:px-16 max-w-350 mx-auto">
+    <section className="bg-[#EAF5FF] px-6 py-12 md:px-12 lg:px-16 max-w-350 mx-auto">
       {/* 3-Column Grid matching the reference image layout */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 auto-rows-[250px] md:auto-rows-[320px]">
         
@@ -14,7 +14,7 @@ export function BentoGridSection() {
         <div className="md:col-span-1 md:row-span-2 relative group overflow-hidden rounded-[2rem] reveal-on-scroll">
           <img 
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-            src="hf_20260520_220203_3e37c1fa-fe7d-449a-9a03-e8c0fc80834d.webp" 
+            src="/image_3.webp" 
             alt="Long-lasting Value" 
           />
           {/* Bottom Gradient Overlay */}
@@ -22,12 +22,14 @@ export function BentoGridSection() {
           
           {/* Centered Text Container */}
           <div className="absolute bottom-0 left-0 w-full p-8 md:p-10 flex flex-col items-center text-center">
-            <h3 className="text-2xl md:text-3xl font-medium text-[#EAF5FF] mb-3 tracking-wide">Everyday With You</h3>
+            <h3 className="text-2xl md:text-3xl font-medium text-[#EAF5FF] mb-3 tracking-wide">Long-lasting Value</h3>
             <p className="text-sm md:text-base text-[#EAF5FF]/80 leading-relaxed max-w-[90%]">
-              Built for daily life—workouts, commutes, and everything in between.
+              Designed with clinical efficiency. One product lasts 6-8 months with daily use.
             </p>
           </div>
         </div>
+
+        
 
         {/* Card 2: Tall (Middle) */}
         <div className="md:col-span-1 md:row-span-2 relative group overflow-hidden rounded-[2rem] reveal-on-scroll" style={{ transitionDelay: '100ms' }}>

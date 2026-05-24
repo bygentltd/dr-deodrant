@@ -132,14 +132,14 @@ export function Footer() {
             </div>
 
             {/* Wellness Column */}
-            <div className="flex flex-col gap-4 col-span-2 md:col-span-1">
+            {/* <div className="flex flex-col gap-4 col-span-2 md:col-span-1">
               <h4 className="font-serif text-xl mb-2">Wellness</h4>
               {['Massages', 'Facials', 'Body Treatments', 'Rituals'].map((link) => (
                 <Link key={link} href="#" className="text-sm text-white/70 hover:text-white transition-colors w-fit">
                   {link}
                 </Link>
               ))}
-            </div>
+            </div> */}
           </div>
 
         </div>

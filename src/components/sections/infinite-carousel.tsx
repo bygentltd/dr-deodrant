@@ -1,13 +1,22 @@
 import React from "react";
-import { Flower2, Ribbon, Recycle, Leaf } from "lucide-react";
+import {
+  ShieldCheck,
+  HeartHandshake,
+  Ban,
+  SunMedium,
+  Leaf,
+  Shirt,
+} from "lucide-react";
 
 export default function InfiniteCarousel() {
   // The original list of features from your design
   const features = [
-    { text: "Private Treatment Rooms", icon: Flower2 },
-    { text: "24+ Certified Techniques", icon: Ribbon },
-    { text: "Zero-Waste Studio", icon: Recycle },
-    { text: "100% Organic Oils", icon: Leaf },
+    { text: "24-Hour Odor Elimination", icon: ShieldCheck },
+    { text: "Gentle on Skin", icon: HeartHandshake },
+    { text: "No Parabens & Alcohol", icon: Ban },
+    { text: "Helps Lighten Dark Underarms", icon: SunMedium },
+    { text: "Vegan & Cruelty-Free", icon: Leaf },
+    { text: "No White Marks or Stains", icon: Shirt },
   ];
 
   // We duplicate the list 3 times to ensure a perfectly seamless infinite scroll loop

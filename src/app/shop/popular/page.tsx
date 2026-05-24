@@ -11,7 +11,7 @@ export default function Page() {
         <div className="reveal-on-scroll">
           <shopify-context
             type="product"
-            handle="dr-deodorant-natural-mineral-deodorant-stick-vitamin-c-e-enriched"
+            handle="dr-deodrantnatural-crystal-deodorant"
             wait-for-update="false"
           >
             <template
@@ -20,13 +20,10 @@ export default function Page() {
                 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-32">
                   
-                  <!-- LEFT -->
                   <div class="flex flex-col gap-10">
 
-                    <!-- PRODUCT GALLERY -->
                     <div class="product-gallery">
 
-                      <!-- MAIN IMAGE -->
                       <div class="main-product-image aspect-[4/5] bg-[#F8F6F4] rounded-2xl overflow-hidden flex items-center justify-center mb-4 relative">
 
                         <shopify-media
@@ -36,7 +33,6 @@ export default function Page() {
 
                       </div>
 
-                      <!-- THUMBNAILS -->
                       <div class="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
 
                         <shopify-repeater query="product.images" class="contents">
@@ -93,7 +89,6 @@ export default function Page() {
 
                     </div>
 
-                    <!-- ACCORDIONS -->
                     <div class="border-t border-gray-200 mt-4">
 
                       <details class="group border-b border-gray-200 py-5" open>
@@ -108,9 +103,7 @@ export default function Page() {
                         </summary>
 
                         <div class="text-gray-600 text-sm md:text-base leading-relaxed mt-4 pb-2">
-                          This advanced serum, formulated with 10% Argireline,
-                          provides a powerful yet non-invasive solution for
-                          reducing the appearance of dynamic wrinkles.
+                          This pure mineral crystal deodorant offers a clean, toxin-free alternative to conventional antiperspirants. It forms an invisible protective layer on your skin that completely neutralizes odor-causing bacteria without clogging your pores. Unlike chemical deodorants, it lets your body breathe naturally while keeping you fresh, dry, and odor-free all day long. It leaves zero sticky residue, zero white marks on your clothes, and zero irritation.
                         </div>
                       </details>
 
@@ -126,8 +119,7 @@ export default function Page() {
                         </summary>
 
                         <div class="text-gray-600 text-sm md:text-base leading-relaxed mt-4 pb-2">
-                          Crafted with high-quality, skin-loving ingredients,
-                          free from harsh chemicals and toxins.
+                          Alum, Water, Acerola Extract, Kiwi Fruit Extract, Vitamin C, and Vitamin E
                         </div>
                       </details>
 
@@ -143,8 +135,57 @@ export default function Page() {
                         </summary>
 
                         <div class="text-gray-600 text-sm md:text-base leading-relaxed mt-4 pb-2">
-                          Apply a small amount to clean skin and gently massage
-                          until fully absorbed.
+                          Apply after showering to slightly damp underarms. Wet the crystal if needed and glide gently 4-5 times over the underarm area. 
+                        </div>
+                      </details>
+                      <details class="group border-b border-gray-200 py-5">
+                        <summary class="flex justify-between items-center font-medium text-lg text-gray-900 cursor-pointer list-none outline-none">
+                          Benefits
+
+                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-gray-900">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                              <path d="m6 9 6 6 6-6"/>
+                            </svg>
+                          </span>
+                        </summary>
+
+                        <div class="mt-4 pb-2">
+                          <ul class="space-y-4 text-gray-600 text-sm md:text-base leading-relaxed list-disc pl-5">
+                            <li>
+                              <span class="font-medium text-gray-900">24-Hour Odor Protection:</span>
+                              Eliminates the bacteria that cause body odor, keeping you fresh from morning to night.
+                            </li>
+
+                            <li>
+                              <span class="font-medium text-gray-900">Zero Clothing Stains:</span>
+                              Completely transparent formula leaves no white chalky residue on dark clothes or yellow stains on white shirts.
+                            </li>
+
+                            <li>
+                              <span class="font-medium text-gray-900">Hypoallergenic & Gentle:</span>
+                              Soothes the skin and prevents underarm darkening; perfectly safe for sensitive skin and post-shaving use.
+                            </li>
+
+                            <li>
+                              <span class="font-medium text-gray-900">Incredibly Long-Lasting:</span>
+                              A single pure crystal stick is highly concentrated and can easily last for up to 6–8 months of daily use.
+                            </li>
+                          </ul>
+                        </div>
+                      </details>
+                      <details class="group border-b border-gray-200 py-5">
+                        <summary class="flex justify-between items-center font-medium text-lg text-gray-900 cursor-pointer list-none outline-none">
+                          Sustainability & Ethics
+
+                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-gray-900">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                              <path d="m6 9 6 6 6-6"/>
+                            </svg>
+                          </span>
+                        </summary>
+
+                        <div class="text-gray-600 text-sm md:text-base leading-relaxed mt-4 pb-2">
+                          We believe in clean beauty that cares for both your body and the planet. Our crystal deodorants are 100% vegan, cruelty-free, and sustainably sourced. Because a single stick lasts many times longer than a standard aerosol or plastic roll-on gel, switching to Dr. Deodorant drastically reduces your personal packaging waste and environmental footprint. Safe for your skin, kind to the earth.
                         </div>
                       </details>
 
@@ -152,7 +193,6 @@ export default function Page() {
 
                   </div>
 
-                  <!-- RIGHT -->
                   <div class="lg:sticky lg:top-32 h-fit flex flex-col">
 
                     <nav class="text-sm text-gray-400 mb-6 font-medium">
@@ -206,14 +246,40 @@ export default function Page() {
 
                     </ul>
 
-                    <div class="mb-8">
-                      <shopify-variant-selector></shopify-variant-selector>
+                    <div class="mb-8 space-y-6">
+                      
+                      <div>
+                        <h3 class="text-xs font-bold text-gray-900 uppercase tracking-widest mb-3">Flavour</h3>
+                        <div class="flex flex-wrap gap-3">
+                          <label class="cursor-pointer relative">
+                            <input type="radio" name="flavour" value="original" class="peer sr-only" checked>
+                            <span class="block px-5 py-2.5 border border-gray-300 rounded-full text-sm font-medium text-gray-700 peer-checked:border-[#203956] peer-checked:bg-[#203956] peer-checked:text-white hover:bg-gray-50 peer-checked:hover:bg-[#203956] transition-all duration-200">
+                              Original
+                            </span>
+                          </label>
+
+                        </div>
+                      </div>
+
+                      <div>
+                        <h3 class="text-xs font-bold text-gray-900 uppercase tracking-widest mb-3">Size</h3>
+                        <div class="flex flex-wrap gap-3">
+                          <label class="cursor-pointer relative">
+                            <input type="radio" name="size" value="70g" class="peer sr-only" checked>
+                            <span class="block px-5 py-2.5 border border-gray-300 rounded-full text-sm font-medium text-gray-700 peer-checked:border-[#203956] peer-checked:bg-[#203956] peer-checked:text-white hover:bg-gray-50 peer-checked:hover:bg-[#203956] transition-all duration-200">
+                              70g
+                            </span>
+                          </label>
+
+                        </div>
+                      </div>
+
                     </div>
 
                     <div class="flex items-center gap-4">
 
                       <button
-                        class="flex-1 bg-[#b0b1b6] hover:bg-[#d7d7d7] text-white py-4 rounded-full font-bold text-xs md:text-sm uppercase tracking-widest transition-colors cursor-pointer"
+                        class="flex-1 bg-[#203956] hover:bg-[#203956]/80 text-white py-4 rounded-full font-bold text-xs md:text-sm uppercase tracking-widest transition-colors cursor-pointer"
                         onclick="
                           const cart = document.getElementById('main-cart');
 
@@ -227,7 +293,7 @@ export default function Page() {
                       </button>
 
                       <button
-                        class="flex-1 bg-[#849bb5] hover:bg-[#8aa3e5] text-white py-4 rounded-full font-bold text-xs md:text-sm uppercase tracking-widest transition-colors cursor-pointer"
+                        class="flex-1 bg-[#203956]/60 hover:bg-[#203956]/40 text-white py-4 rounded-full font-bold text-xs md:text-sm uppercase tracking-widest transition-colors cursor-pointer"
                         onclick="
                           const cart = document.getElementById('main-cart');
 
@@ -269,6 +335,10 @@ export default function Page() {
                   <div className="h-4 bg-gray-100 w-1/4 mb-6 rounded"></div>
                   <div className="h-10 bg-gray-100 w-3/4 mb-4 rounded"></div>
                   <div className="h-6 bg-gray-100 w-1/4 mb-8 rounded"></div>
+                  
+                  {/* Mock Loading for Variants */}
+                  <div className="h-12 bg-gray-100 w-full mb-4 rounded-full"></div>
+                  <div className="h-12 bg-gray-100 w-full mb-8 rounded-full"></div>
 
                   <div className="h-12 bg-gray-100 w-full rounded-full"></div>
                 </div>
