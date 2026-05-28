@@ -17,7 +17,7 @@ export default function BlogGrid() {
           <div className="inline-block px-3 py-1 bg-gray-200/50 rounded-full text-[10px] font-bold uppercase tracking-widest text-gray-700 mb-6">
             Our Journal
           </div>
-          <h1 className="text-5xl md:text-7xl font-serif text-gray-900 leading-tight">
+          <h1 className="text-5xl md:text-7xl  text-gray-900 leading-tight">
             Beyond your skin.
           </h1>
         </div>
@@ -55,7 +55,7 @@ export default function BlogGrid() {
               <p className="text-[#EAF5FF]/80 text-xs font-medium tracking-wider mb-2">
                 {post.date}
               </p>
-              <h3 className={`font-serif text-[#EAF5FF] leading-tight ${post.featured ? "text-3xl md:text-5xl max-w-3xl" : "text-2xl md:text-3xl max-w-md"}`}>
+              <h3 className={`text-[#EAF5FF] leading-tight ${post.featured ? "text-3xl md:text-5xl max-w-3xl" : "text-2xl md:text-3xl max-w-md"}`}>
                 {post.title}
               </h3>
             </div>

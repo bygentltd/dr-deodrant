@@ -41,7 +41,7 @@ export function FaqSection() {
                   <AccordionTrigger className="text-xl font-bold text-[#0a2544] hover:no-underline hover:text-[#0a2544]/80 transition-colors text-left">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-[#0a2544] text-serif leading-relaxed">
+                  <AccordionContent className="text-[#0a2544] font-bold leading-relaxed">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>

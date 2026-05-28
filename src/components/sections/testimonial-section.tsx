@@ -50,7 +50,7 @@ export function TestimonialSection() {
       
       {/* Header Section */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 text-center mb-16 reveal-on-scroll">
-        <h2 className="text-4xl md:text-5xl font-serif text-gray-900 leading-tight mb-4">
+        <h2 className="text-4xl md:text-5xl text-gray-900 leading-tight mb-4">
           What Our Customers Are Saying.
         </h2>
         <p className="text-sm md:text-base text-gray-600">
@@ -90,13 +90,13 @@ export function TestimonialSection() {
                     “
                   </span>
                   
-                  {/* Quote Text */}
-                  <p className="text-xl md:text-[1.65rem] font-cabinet text-[#113D86]-800 leading-relaxed">
+                  {/* Quote Text TODO: Adjust font to regular */}
+                  <p className="text-xl md:text-[1.65rem] font-sans font-regular text-[#113D86]-800 leading-relaxed">
                     {t.quote}
                   </p>
 
                   {/* Stars */}
-                  <div className="flex gap-1 text-[#113D86] pt-2">
+                  <div className="flex gap-1 text-[#0f1216] pt-2">
                     {[1, 2, 3, 4, 5].map((star) => (
                       <span key={star} className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
                     ))}

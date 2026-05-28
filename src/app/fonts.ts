@@ -12,6 +12,11 @@ export const cabinet = localFont({
       weight: '900',
       style: 'normal',
     },
+    //   {
+    //   path: '../../public/fonts/CabinetGrotesk-Regular.ttf',
+    //   weight: '400',
+    //   style: 'normal',
+    // },
   ],
   variable: '--font-cabinet',
 })

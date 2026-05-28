@@ -77,7 +77,7 @@ export function FeaturedProductSection() {
                       </span>
                     </nav>
 
-                    <h1 class="text-3xl md:text-4xl font-serif text-gray-900 mb-2">
+                    <h1 class="text-3xl md:text-4xl text-gray-900 mb-2">
                       <shopify-data query="product.title"></shopify-data>
                     </h1>
 
@@ -102,7 +102,7 @@ export function FeaturedProductSection() {
                       <li class="flex items-center gap-2">✓ Suitable for All Skin Types</li>
                     </ul>
 
-                    <div class="mb-8 space-y-6">
+                    <div class="mb-8 flex flex-wrap flex-row gap-8">
                       <div>
                         <h3 class="text-xs font-bold text-gray-900 uppercase tracking-widest mb-3">Flavour</h3>
                         <div class="flex flex-wrap gap-3">
