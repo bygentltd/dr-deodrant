@@ -49,7 +49,7 @@ export function TestimonialSection() {
     <section className="py-24 bg-[#EAF5FF] overflow-hidden">
       
       {/* Header Section */}
-      <div className="max-w-7xl mx-auto px-6 md:px-12 text-center mb-16 reveal-on-scroll">
+      <div className="max-w-6xl mx-auto px-6 md:px-12 text-center mb-16 reveal-on-scroll">
         <h2 className="text-4xl font-cabinet font-bold md:text-5xl text-gray-900 leading-tight mb-4">
           What Our Customers Are Saying.
         </h2>
@@ -72,8 +72,8 @@ export function TestimonialSection() {
             >
               
               {/* Left Side: Image (Now 4 columns instead of 5) */}
-              {/* Removed fixed height. Added h-full and min-h-[400px] */}
-              <div className="md:col-span-4 rounded-[2rem] overflow-hidden shadow-lg h-full min-h-[400px]">
+              {/* Removed fixed height. Added h-full and min-h-[320px] lg:min-h-[360px] */}
+              <div className="md:col-span-4 rounded-[2rem] overflow-hidden shadow-lg h-full min-h-[320px] lg:min-h-[360px]">
                 <img 
                   alt="Client testimonial" 
                   className="w-full h-full object-cover" 
@@ -82,7 +82,7 @@ export function TestimonialSection() {
               </div>
 
               {/* Right Side: Content Box (Now 8 columns instead of 7) */}
-              <div className="md:col-span-8 bg-[#113d86]/30  p-10 md:p-14 lg:p-16 rounded-[2rem] flex flex-col justify-between h-full">
+              <div className="md:col-span-8 bg-[#113d86]/30  p-8 md:p-10 lg:p-12 rounded-[2rem] flex flex-col justify-between h-full">
                 
                 <div className="space-y-6">
                   {/* Custom Quote Icon */}
@@ -91,7 +91,7 @@ export function TestimonialSection() {
                   </span>
                   
                   {/* Quote Text TODO: Adjust font to regular */}
-                  <p className="text-xl md:text-[1.65rem]  text-[#113D86]-800 leading-relaxed">
+                  <p className="text-lg md:text-xl lg:text-[1.45rem]  text-[#113D86]-800 leading-relaxed">
                     {t.quote}
                   </p>
 
@@ -110,19 +110,24 @@ export function TestimonialSection() {
 
                 {/* Bottom Navigation Row */}
                 <div className="flex justify-between items-center mt-12 pt-6 border-t border-gray-200">
-                  <button 
-                    className="w-12 h-12 bg-[#EAF5FF] rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors shadow-sm cursor-pointer" 
-                    onClick={() => setCurrentTestimonial(prev => (prev - 1 + testimonials.length) % testimonials.length)}
-                  >
-                    <span className="material-symbols-outlined text-gray-600">arrow_back</span>
-                  </button>
-                  <button 
-                    className="w-12 h-12 bg-[#EAF5FF] rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors shadow-sm cursor-pointer" 
-                    onClick={() => setCurrentTestimonial(prev => (prev + 1) % testimonials.length)}
-                  >
-                    <span className="material-symbols-outlined text-gray-600">arrow_forward</span>
-                  </button>
-                </div>
+                <button 
+                  className="w-12 h-12 bg-[#0F1216] rounded-full flex items-center justify-center hover:bg-[#0F1216]/60 hover:scale-110 active:scale-95 transition-all duration-300 shadow-sm cursor-pointer group" 
+                  onClick={() => setCurrentTestimonial(prev => (prev - 1 + testimonials.length) % testimonials.length)}
+                >
+                  <span className="material-symbols-outlined text-white transition-transform duration-300 group-hover:-translate-x-1">
+                    arrow_back
+                  </span>
+                </button>
+
+                <button 
+                  className="w-12 h-12 bg-[#0F1216] rounded-full flex items-center justify-center hover:bg-[#0F1216]/60 hover:scale-110 active:scale-95 transition-all duration-300 shadow-sm cursor-pointer group" 
+                  onClick={() => setCurrentTestimonial(prev => (prev + 1) % testimonials.length)}
+                >
+                  <span className="material-symbols-outlined text-white transition-transform duration-300 group-hover:translate-x-1">
+                    arrow_forward
+                  </span>
+                </button>
+              </div>
 
               </div>
             </div>

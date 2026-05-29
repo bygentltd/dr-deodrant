@@ -21,9 +21,9 @@ export default function Home() {
         <StatsSection />
         <FeaturedProductSection />
         <HowToUse/>
-        <ServicesSection/>
         <MajorFeaturesSection/>
         <BentoGridSection />
+        <ServicesSection/>
       </div>
       <FixedHeroSection/>
       <TestimonialSection />

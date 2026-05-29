@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { FlowButton } from "./ui/flow-button";
@@ -11,6 +12,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isHeroSurface, setIsHeroSurface] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
   const headerRef = useRef<HTMLElement | null>(null);
 
   const links = [
@@ -86,6 +88,28 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-6">
           {links.map((link) => {
             const isActive = pathname === link.href;
+
+            if (link.href === "/story") {
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    // force full reload so browser lands at top
+                    if (typeof window !== "undefined") window.location.href = link.href;
+                  }}
+                  className={cn(
+                    "text-md font-cabinet tracking-wide transition-all duration-300 pb-0.5 nav-underline",
+                    linkClasses,
+                    isActive && "active"
+                  )}
+                >
+                  {link.name}
+                </a>
+              );
+            }
+
             return (
               <Link
                 key={link.name}
@@ -140,6 +164,29 @@ export default function Header() {
           <div className="flex flex-col gap-4">
             {links.map((link) => {
               const isActive = pathname === link.href;
+
+              if (link.href === "/story") {
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIsOpen(false);
+                      // force full reload so browser lands at top
+                      if (typeof window !== "undefined") window.location.href = link.href;
+                    }}
+                    className={cn(
+                      "text-lg font-medium py-2 nav-underline",
+                      "text-[#203856]/80 hover:text-[#203856]",
+                      isActive && "active"
+                    )}
+                  >
+                    {link.name}
+                  </a>
+                );
+              }
+
               return (
                 <Link
                   key={link.name}

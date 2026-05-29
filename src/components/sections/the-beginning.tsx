@@ -1,6 +1,6 @@
 export default function TheBeginning() {
   return (
-    <section className="bg-[#d1e5ff] px-6 py-20 md:py-28 md:px-16 lg:px-32 font-sans w-full">
+    <section className="bg-[#eaf5ff] px-6 py-20 md:py-28 md:px-16 lg:px-32 font-sans w-full">
       <div className="max-w-7xl mx-auto w-full">
         {/* Main Heading */}
         <h1 className="text-6xl md:text-[3rem] lg:text-[4rem] font-medium text-[#203956] mb-16 tracking-tight">

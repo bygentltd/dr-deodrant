@@ -10,7 +10,7 @@ export default function OurPhilosophy() {
       number: "02",
       title: "Radical Transparency",
       description:
-        "Our formula has exactly 6 ingredients. Every single one is listed, named, and explained — no trade names, no hidden chemicals, no fine print. If it's on your skin, you'll know what it is and why it's there.",
+        "Our formula has exactly 5 ingredients. Every single one is listed, named, and explained — no trade names, no hidden chemicals, no fine print. If it's on your skin, you'll know what it is and why it's there.",
     },
     {
       number: "03",
@@ -18,6 +18,12 @@ export default function OurPhilosophy() {
       description:
         "Made for all. Loved by all. Dr. Deodrant was designed without gender, age, or skin-type limitations. If you have underarms, this product was made for you.",
     },
+  ];
+
+  const images = [
+    "/St1.webp",
+    "/St2.webp",
+    "/St3.webp",
   ];
 
   return (
@@ -49,8 +55,15 @@ export default function OurPhilosophy() {
 
         {/* Bottom Grid: Core Principles */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 lg:gap-16">
-          {principles.map((principle) => (
+          {principles.map((principle, idx) => (
             <div key={principle.number} className="flex flex-col">
+              <div className="mb-6">
+                <img
+                  src={images[idx]}
+                  alt={principle.title}
+                  className="w-full aspect-square rounded-xl object-cover"
+                />
+              </div>
               {/* Header Row with Title and Number */}
               <div className="flex justify-between items-end pb-3 mb-4 border-b border-[#313131]/20">
                 <h3 className="text-lg md:text-2xl font-bold text-[#313131]">

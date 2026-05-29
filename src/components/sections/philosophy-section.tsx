@@ -27,19 +27,21 @@ export function PhilosophySection() {
           <ul className="space-y-3 pt-2">
             <li className="flex items-center gap-3">
               <span className="material-symbols-outlined text-[16px] text-gray-400">check</span>
-              <span className="text-sm  text-gray-700">Brightening Power</span>
+              <span className="text-sm  text-gray-700">Visibly Lightens Dark Underarms</span>
             </li>
             <li className="flex items-center gap-3">
               <span className="material-symbols-outlined text-[16px] text-gray-400">check</span>
-              <span className="text-sm text-gray-700">Plant-Derived</span>
+              <span className="text-sm text-gray-700">100% Free From Harsh Chemicals</span>
             </li>
           </ul>
 
           {/* Added the button from the reference design */}
           <div className="pt-6">
-            <button className="bg-[#203856] hover:bg-[#203856]/80 text-[#eaf5ff] px-8 py-3 rounded-full text-sm font-medium transition-colors duration-300">
-              Our Story &rsaquo;
-            </button>
+            <a href="/story">
+              <button className="bg-[#203856] hover:bg-[#203856]/80 text-[#eaf5ff] px-8 py-3 rounded-full text-sm font-medium transition-colors duration-300">
+                Our Story &rsaquo;
+              </button>
+            </a>
           </div>
         </div>
 
@@ -58,7 +60,7 @@ export function PhilosophySection() {
                   <path d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" id="circlePath"></path>
                 </defs>
                 <text className="text-[8.5px] font-bold uppercase tracking-[0.18em] fill-gray-800">
-                  <textPath href="#circlePath">• Natural Alum • Vitamin E • Fresh Vibe</textPath>
+                  <textPath href="#circlePath">• Pure Mineral • Vitamin E • Fresh Vibe </textPath>
                 </text>
               </svg>
             </div>

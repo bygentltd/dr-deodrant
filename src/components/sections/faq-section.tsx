@@ -31,7 +31,7 @@ export function FaqSection() {
       <div className="grid md:grid-cols-2 gap-20 items-start">
         <div className="space-y-12">
           <div className="reveal-on-scroll">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#0a2544] leading-tight">All Your Queries Answered.</h2>
+            <h2 className="text-4xl md:text-5xl font-cabinet font-bold text-[#0a2544] leading-tight">All Your Queries Answered.</h2>
             <p className="text-lg text-[#0a2544] mt-4">Professional answers for your mineral skincare journey.</p>
           </div>
           <div className="reveal-on-scroll">

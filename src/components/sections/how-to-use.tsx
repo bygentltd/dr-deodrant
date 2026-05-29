@@ -6,22 +6,22 @@ export default function HowToUse() {
   const steps = [
     {
       step: 1,
-      title: "Shower & prep your underarms",
+      title: "Shower and prepare your underarms",
       description: "Apply after showering on slightly damp underarms for best results.",
-      imageUrl: "/Step1.webp",
+      imageUrl: "/Step_1.webp",
       imageAlt: "A woman with her eyes closed relaxing under a rain shower head"
     },
     {
       step: 2,
       title: "Glide gently for all-day freshness",
-      description: "Wet the crystal if needed and glide gently 4-5 times over the underarm area.",
-      imageUrl: "/Step2.webp",
+      description: "Wet the crystal if needed and glide gently 4-5 times over the underarm.",
+      imageUrl: "/Step_2.webp",
       imageAlt: "A smiling woman wrapped in a towel holding and applying a roll-on deodorant"
     }
   ];
 
   return (
-    <section className="bg-[#eaf5ff] py-20 px-6">
+    <section className="bg-[#c6d9f1] py-20 px-6">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16 md:mb-24 reveal-on-scroll">
           <h2 className="text-4xl md:text-5xl font-cabinet font-bold text-gray-900 leading-tight">

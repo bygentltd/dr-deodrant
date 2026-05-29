@@ -50,7 +50,7 @@ export function ServicesSection() {
   ];
 
   return (
-    <section className="py-20 md:py-32 bg-[#F0F7FF] overflow-hidden">
+    <section className="py-20 md:py-32 bg-[#c6d9f1] overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         
         <div className="text-center mb-16 md:mb-24 reveal-on-scroll">
@@ -85,7 +85,7 @@ export function ServicesSection() {
                   
                   {/* Icon */}
                   <div className="relative shrink-0 order-1 sm:order-2">
-                    <div className="flex items-center justify-center w-[88px] h-[88px] bg-white rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.06)] text-[#1E40AF] z-10 relative">
+                    <div className="flex items-center justify-center w-[88px] h-[88px] bg-[#1E40AF] rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.06)] text-white z-10 relative">
                       {idx === 0 ? (
                         <div className="relative flex items-center justify-center">
                           <Icon strokeWidth={1.5} className="w-9 h-9" />
@@ -131,7 +131,7 @@ export function ServicesSection() {
                 >
                   {/* Icon */}
                   <div className="relative shrink-0">
-                    <div className="flex items-center justify-center w-[88px] h-[88px] bg-white rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.06)] text-[#1E40AF] z-10 relative">
+                    <div className="flex items-center justify-center w-[88px] h-[88px] bg-[#1E40AF] rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.06)] text-white z-10 relative">
                       <Icon strokeWidth={1.5} className="w-9 h-9" />
                     </div>
                     {/* Connecting Line */}

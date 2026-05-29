@@ -6,7 +6,7 @@ export default function OurCommitments() {
       description:
         "We never test on animals, and every ingredient was chosen with your long-term skin health in mind. Dr. Deodrant doesn't create dependency, doesn't strip your skin's natural balance, and doesn't leave behind residue your body has to deal with. Just clean, daily care you can feel good about.",
       image:
-        "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=1200&auto=format&fit=crop",
+        "St4.webp",
       alt: "Close up of glowing skin",
     },
     {
@@ -15,22 +15,22 @@ export default function OurCommitments() {
       description:
         "Our packaging is recyclable and we're continuously working to reduce our environmental footprint. A crystal that lasts 6–8 months already means dramatically less packaging waste compared to disposable spray or roll-on alternatives, and we're committed to doing even more.",
       image:
-        "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=2000&auto=format&fit=crop",
+        "St5.webp",
       alt: "Glass orb reflecting a natural landscape",
     },
     {
       id: "03",
       title: "Transparency",
       description:
-        "Six ingredients. Full stop. We'll never add an ingredient for marketing appeal or hide something behind a trade name. What you see on the label is everything that's in the product. Because you deserve to know exactly what you're putting on your skin.",
+        "We'll never add an ingredient for marketing appeal or hide something behind a trade name. What you see on the label is everything that's in the product. Because you deserve to know exactly what you're putting on your skin.",
       image:
-        "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?q=80&w=1200&auto=format&fit=crop",
+        "St6.webp",
       alt: "Lab glassware from above",
     },
   ];
 
   return (
-    <section className="bg-[#d1e5ff] px-6 py-24 md:py-32 md:px-16 lg:px-24 font-sans w-full">
+    <section className="bg-[#C6D9F1] px-6 py-24 md:py-32 md:px-16 lg:px-24 font-sans w-full">
       <div className="max-w-[1400px] mx-auto w-full">
         {/* Main Heading */}
         <h2 className="text-5xl md:text-6xl font-medium text-[#313131] mb-12 md:mb-16 tracking-tight">
@@ -53,7 +53,7 @@ export default function OurCommitments() {
 
               {/* Title and Number Row */}
               <div className="flex justify-between items-end pb-3 mb-4 border-b border-[#313131]/20">
-                <h3 className="text-lg md:text-xl font-medium text-[#313131]">
+                <h3 className="text-lg md:text-2xl font-medium text-[#313131]">
                   {item.title}
                 </h3>
                 <span className="text-lg md:text-xl font-medium text-[#313131]">

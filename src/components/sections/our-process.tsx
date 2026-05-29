@@ -8,9 +8,9 @@ export default function OurProcess() {
         <div className="w-full md:w-1/2 p-6 md:p-12 lg:p-16">
           <div className="w-full aspect-[4/5] md:aspect-square lg:aspect-[4/5] relative overflow-hidden rounded-2xl md:rounded-[2rem]">
             <img
-              src="/ChatGPT Image Jan 30, 2026, 08_08_08 PM.png"
+              src="/OUR_PROCESS.webp"
               alt="Skincare formulation process"
-              className="absolute inset-0 w-full h-full object-cover object-center"
+              className="absolute inset-0 w-full h-full object-contain object-center"
             />
           </div>
         </div>

@@ -96,37 +96,48 @@ export function FeaturedProductSection() {
                     </p>
 
                     <ul class="space-y-3 text-sm text-gray-600 mb-8 pb-8 border-b border-gray-200">
-                      <li class="flex items-center gap-2">✓ Lightweight & Non-Greasy</li>
-                      <li class="flex items-center gap-2">✓ Deep Hydration & Nourishment</li>
-                      <li class="flex items-center gap-2">✓ Fast-Absorbing Formula</li>
-                      <li class="flex items-center gap-2">✓ Suitable for All Skin Types</li>
+                      <li class="flex items-center gap-2">✓ 24-Hour Odour Protection</li>
+                      <li class="flex items-center gap-2">✓ Visibly Lightens Dark Underarms</li>
+                      <li class="flex items-center gap-2">✓ No White Marks. No Parabens. No Compromise. </li>
+                      <li class="flex items-center gap-2">✓ One Crystal = 6–8 Months of Freshness
+</li>
                     </ul>
 
                     <div class="mb-8 flex flex-wrap flex-row gap-8">
-                      <div>
-                        <h3 class="text-xs font-bold text-gray-900 uppercase tracking-widest mb-3">Flavour</h3>
-                        <div class="flex flex-wrap gap-3">
-                          <label class="cursor-pointer relative">
-                            <input type="radio" name="flavour" value="original" class="peer sr-only" checked>
-                            <span class="block px-5 py-2.5 border border-gray-300 rounded-full text-sm font-medium text-gray-700 peer-checked:border-[#203956] peer-checked:bg-[#203956] peer-checked:text-white hover:bg-gray-50 peer-checked:hover:bg-[#203956] transition-all duration-200">
-                              Original
-                            </span>
-                          </label>
-                        </div>
-                      </div>
 
-                      <div>
-                        <h3 class="text-xs font-bold text-gray-900 uppercase tracking-widest mb-3">Size</h3>
-                        <div class="flex flex-wrap gap-3">
-                          <label class="cursor-pointer relative">
-                            <input type="radio" name="size" value="70g" class="peer sr-only" checked>
-                            <span class="block px-5 py-2.5 border border-gray-300 rounded-full text-sm font-medium text-gray-700 peer-checked:border-[#203956] peer-checked:bg-[#203956] peer-checked:text-white hover:bg-gray-50 peer-checked:hover:bg-[#203956] transition-all duration-200">
-                              70g
-                            </span>
-                          </label>
-                        </div>
+                    <div>
+                      <h3 class="text-xs font-bold text-gray-900 uppercase tracking-widest mb-3">
+                        Flavour
+                      </h3>
+
+                      <div class="flex flex-wrap gap-3">
+                        <label class="cursor-pointer relative">
+                          <input type="radio" name="flavour" value="original" class="peer sr-only" checked>
+
+                          <span class="block px-5 py-2.5 border border-gray-300 rounded-full text-sm font-medium text-gray-700 hover:text-white hover:border-[#203956] hover:bg-[#203956]/85 peer-checked:border-[#203956] peer-checked:bg-[#3E566F]/85 peer-checked:text-white transition-all duration-200">
+                            Original
+                          </span>
+                        </label>
                       </div>
                     </div>
+
+                    <div>
+                      <h3 class="text-xs font-bold text-gray-900 uppercase tracking-widest mb-3">
+                        Size
+                      </h3>
+
+                      <div class="flex flex-wrap gap-3">
+                        <label class="cursor-pointer relative">
+                          <input type="radio" name="size" value="70g" class="peer sr-only" checked>
+
+                          <span class="block px-5 py-2.5 border border-gray-300 rounded-full text-sm font-medium text-gray-700 hover:text-white hover:border-[#203956] hover:bg-[#203956]/85 peer-checked:border-[#203956] peer-checked:bg-[#3E566F]/85 peer-checked:text-white transition-all duration-200">
+                            70g
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+
+                  </div>
 
                     <div class="flex items-center gap-4">
 
