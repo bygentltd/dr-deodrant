@@ -24,7 +24,7 @@ export default function Page() {
 
                     <div class="product-gallery">
 
-                      <div class="main-product-image aspect-[4/5] bg-[#F8F6F4] rounded-2xl overflow-hidden flex items-center justify-center mb-4 relative">
+                      <div class="main-product-image aspect-4/5 bg-[#F8F6F4] rounded-2xl overflow-hidden flex items-center justify-center mb-4 relative">
 
                         <shopify-media
                           query="product.selectedOrFirstAvailableVariant.image"
@@ -202,7 +202,7 @@ export default function Page() {
                       </span>
                     </nav>
 
-                    <h1 class="text-3xl md:text-4xl font-serif text-gray-900 mb-2">
+                    <h1 class="text-3xl md:text-4xl font-cabinet font text-gray-900 mb-2">
                       <shopify-data query="product.title"></shopify-data>
                     </h1>
 
@@ -279,7 +279,7 @@ export default function Page() {
                     <div class="flex items-center gap-4">
 
                       <button
-                        class="flex-1 bg-[#203956] hover:bg-[#203956]/80 text-white py-4 rounded-full font-bold text-xs md:text-sm uppercase tracking-widest transition-colors cursor-pointer"
+                        class="group relative inline-flex h-10 w-32 items-center justify-center overflow-hidden rounded-md border-2 border-[#394481] dark:border-[#656fe2] font-medium cursor-pointer"
                         onclick="
                           const cart = document.getElementById('main-cart');
 
@@ -289,11 +289,17 @@ export default function Page() {
                           }
                         "
                       >
-                        Buy Now
+                        <div class="inline-flex h-10 w-full translate-y-0 items-center justify-center bg-linear-to-r from-[#070e41] to-[#263381] px-4 text-white transition duration-500 group-hover:translate-y-[-150%] dark:from-[#070e41] dark:to-[#263381] dark:text-white">
+                          Buy Now
+                        </div>
+                        <div class="absolute inline-flex h-10 w-full translate-y-full items-center justify-center text-neutral-50 transition duration-500 group-hover:translate-y-0">
+                          <span class="absolute h-full w-[200%] -left-[50%] translate-y-full skew-y-12 scale-y-0 bg-[#394481] rounded-md transition duration-500 origin-center group-hover:translate-y-0 group-hover:scale-150 dark:bg-[#656fe2]"></span>
+                          <span class="z-10">Buy Now</span>
+                        </div>
                       </button>
 
                       <button
-                        class="flex-1 bg-[#203956]/60 hover:bg-[#203956]/40 text-white py-4 rounded-full font-bold text-xs md:text-sm uppercase tracking-widest transition-colors cursor-pointer"
+                        class="group relative inline-flex h-10 w-32 items-center justify-center overflow-hidden rounded-md border-2 border-[#394481] dark:border-[#656fe2] font-medium cursor-pointer"
                         onclick="
                           const cart = document.getElementById('main-cart');
 
@@ -303,7 +309,13 @@ export default function Page() {
                           }
                         "
                       >
-                        Add to Basket
+                        <div class="inline-flex h-10 w-full translate-y-0 items-center justify-center bg-linear-to-r from-[#070e41] to-[#263381] px-4 text-white transition duration-500 group-hover:translate-y-[-150%] dark:from-[#070e41] dark:to-[#263381] dark:text-white">
+                          Add to Cart
+                        </div>
+                        <div class="absolute inline-flex h-10 w-full translate-y-full items-center justify-center text-neutral-50 transition duration-500 group-hover:translate-y-0">
+                          <span class="absolute h-full w-[200%] -left-[50%] translate-y-full skew-y-12 scale-y-0 bg-[#394481] rounded-md transition duration-500 origin-center group-hover:translate-y-0 group-hover:scale-150 dark:bg-[#656fe2]"></span>
+                          <span class="z-10">Add to Cart</span>
+                        </div>
                       </button>
 
                     </div>
@@ -322,7 +334,7 @@ export default function Page() {
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
                 <div>
-                  <div className="aspect-[4/5] bg-gray-100 rounded-2xl mb-4"></div>
+                  <div className="aspect-4/5 bg-gray-100 rounded-2xl mb-4"></div>
 
                   <div className="flex gap-4">
                     <div className="w-20 h-20 bg-gray-100 rounded-xl"></div>

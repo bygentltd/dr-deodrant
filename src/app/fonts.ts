@@ -1,4 +1,5 @@
 import localFont from 'next/font/local'
+import { Inter } from 'next/font/google'
 
 export const cabinet = localFont({
   src: [
@@ -19,4 +20,11 @@ export const cabinet = localFont({
     // },
   ],
   variable: '--font-cabinet',
+})
+
+export const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-inter',
+  display: 'swap',
 })

@@ -40,7 +40,7 @@ export default function OurPhilosophy() {
           {/* Right Column: Intro Text */}
           <div className="md:col-span-8 lg:col-span-8 flex flex-col gap-8">
 
-            <p className="text-lg md:text-xl leading-relaxed text-[#4a4a4a] max-w-2xl">
+            <p className="text-lg font-inter md:text-xl leading-relaxed text-justify  text-[#4a4a4a] max-w-2xl">
               Dr. Deodrant is built on the belief that skincare, even for your underarms should be pure, effective, and kind. We reject the industry's habit of loading products with chemicals designed to mask problems rather than address them. Everything we do follows three principles:
             </p>
             
@@ -61,7 +61,7 @@ export default function OurPhilosophy() {
                 </span>
               </div>
               {/* Description */}
-              <p className="text-sm md:text-base leading-relaxed text-[#4a4a4a]">
+              <p className="text-sm md:text-base font-inter text-justify leading-relaxed text-[#4a4a4a]">
                 {principle.description}
               </p>
             </div>

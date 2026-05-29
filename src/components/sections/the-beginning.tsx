@@ -20,10 +20,10 @@ export default function TheBeginning() {
           {/* Right Column: Text Content */}
           <div className="md:col-span-8 lg:col-span-8 flex flex-col gap-8 md:gap-10">
             {/* Primary Paragraph */}
-            <p className="font-semibold leading-snug md:leading-normal text-[#4a4a4a] max-w-3xl">
+            <p className="font-inter leading-snug md:leading-normal  text-justify text-[#4a4a4a] max-w-3xl">
              Walk down any pharmacy aisle and you're confronted with dozens of deodorants making the same promises. Bold-labelled claims. Chemical lists no one can pronounce. And shelves full of products that leave your skin darker, drier, and more irritated than before you started. <b>We believed there had to be a better way — one rooted in nature, not a laboratory.</b>
             </p>
-            <p className="font-semibold leading-snug md:leading-normal text-[#4a4a4a] max-w-3xl">
+            <p className="font-inter text-justify leading-snug md:leading-normal text-[#4a4a4a] max-w-3xl">
              Dr. Deodrant was born from that frustration. We went back to the mineral that's protected skin for generations — alum crystal — and paired it with the best of what nature offers: real Vitamin C from acerola and kiwi fruit, and nourishing Vitamin E. Clean ingredients. Honest results.
             </p>
           </div>

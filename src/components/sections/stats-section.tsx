@@ -67,7 +67,7 @@ export function StatsSection() {
   }, [hasCounted]);
 
   return (
-    <section className="py-24 bg-[#eaf5ff] w-full flex items-center justify-center" id="stats-section">
+    <section className="py-24 font-cabinet font-bold bg-[#eaf5ff] w-full flex items-center justify-center" id="stats-section">
       <div className="max-w-7xl w-full mx-auto px-8 md:px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         
         <div className="flex flex-col items-center justify-center space-y-4 reveal-on-scroll">

@@ -54,7 +54,7 @@ export function ServicesSection() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         
         <div className="text-center mb-16 md:mb-24 reveal-on-scroll">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-cabinet font-bold text-gray-900 leading-tight">
             Transform with <br className="hidden md:block" />
             Our Glowing Services
           </h2>
@@ -75,7 +75,7 @@ export function ServicesSection() {
                 >
                   {/* Text Container: Flex column aligning items to the right on tablet/desktop */}
                   <div className="flex-1 order-2 sm:order-1 flex flex-col items-center sm:items-end">
-                    <h3 className="text-[#0B2559] font-bold text-lg md:text-xl mb-1.5">
+                    <h3 className="text-[#0B2559] font-cabinet font-bold text-lg md:text-xl mb-1.5">
                       {service.title}
                     </h3>
                     <p className="text-gray-500 text-sm leading-relaxed max-w-[240px]">
@@ -142,10 +142,10 @@ export function ServicesSection() {
                   
                   {/* Text Container: Flex column aligning items to the left on tablet/desktop */}
                   <div className="flex-1 flex flex-col items-center sm:items-start">
-                    <h3 className="text-[#0B2559] font-bold text-lg md:text-xl mb-1.5">
+                    <h3 className="text-[#0B2559] font-cabinet font-bold text-lg md:text-xl mb-1.5">
                       {service.title}
                     </h3>
-                    <p className="text-gray-500 text-sm leading-relaxed max-w-[240px]">
+                    <p className="text-gray-500 font-inter text-sm leading-relaxed max-w-[240px]">
                       {service.description}
                     </p>
                   </div>

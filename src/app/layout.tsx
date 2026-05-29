@@ -6,7 +6,7 @@ import Script from "next/script";
 import Header from "@/components/Header";
 import LenisProvider from "@/components/LenisProvider";
 import { cn } from "@/lib/utils";
-import { cabinet } from "./fonts";
+import { cabinet, inter } from "./fonts";
 import { Footer } from "@/components/sections/footer";
 
 export const metadata: Metadata = {
@@ -20,9 +20,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("light", cabinet.variable)}>
+    <html lang="en" className={cn("light", cabinet.variable, inter.variable)}>
       <head>
-        <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500&family=Geist:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=Geist:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
         <Script type="module" src="https://cdn.shopify.com/storefront/web-components.js" strategy="beforeInteractive" />
       </head>
       <body className="bg-surface text-on-background selection:bg-clinical-blue selection:text-[#EAF5FF]">

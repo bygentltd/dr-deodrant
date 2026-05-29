@@ -62,7 +62,7 @@ export default function OurCommitments() {
               </div>
 
               {/* Description Text */}
-              <p className="text-sm md:text-base leading-relaxed text-[#4a4a4a]">
+              <p className="text-sm md:text-base font-inter text-justify leading-relaxed text-[#4a4a4a]">
                 {item.description}
               </p>
               

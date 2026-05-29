@@ -24,7 +24,7 @@ export default function OurProcess() {
               Our Process
             </h2>
 
-            <div className="flex flex-col gap-8 text-base md:text-lg leading-relaxed text-[#4a4a4a]">
+            <div className="flex flex-col font-inter gap-8 text-base md:text-lg leading-relaxed text-[#4a4a4a]">
               <p>
                 Every Dr. Deodrant crystal begins with pharmaceutical-grade alum sourced from trusted mineral suppliers. This is combined with water, real acerola and kiwi fruit extracts, and Vitamins C and E through a careful cold-process formulation that preserves the integrity of every active ingredient.
               </p>

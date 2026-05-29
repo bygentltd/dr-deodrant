@@ -23,12 +23,12 @@ export function FixedHeroSection() {
         </span>
         
         {/* Main Heading */}
-        <h2 className="text-4xl md:text-6xl  text-[#EAF5FF] mb-6 leading-tight">
+        <h2 className="text-4xl md:text-6xl font-cabinet font-bold text-[#EAF5FF] mb-6 leading-tight">
           Stay Odor-Free. <br/> Stay Unstoppable. 
         </h2>
         
         {/* Subtitle */}
-        <p className="text-light md:text-md text-[#EAF5FF]/90 mb-10 max-w-2xl">
+        <p className="text-light md:text-md font-inter text-[#EAF5FF]/90 mb-10 max-w-2xl">
           A dermatologist-tested, hypoallergenic formula that lets your skin breathe while completely neutralizing odor-causing bacteria.
         </p>
         

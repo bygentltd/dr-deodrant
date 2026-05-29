@@ -24,7 +24,7 @@ export default function HowToUse() {
     <section className="bg-[#eaf5ff] py-20 px-6">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16 md:mb-24 reveal-on-scroll">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-cabinet font-bold text-gray-900 leading-tight">
             How to Use?
           </h2>
         </div>
@@ -107,7 +107,7 @@ export default function HowToUse() {
               <h3 className="text-[#3b5982] text-lg md:text-xl font-bold mb-3 transition-colors duration-300 group-hover:text-blue-900">
                 {steps[1].title}
               </h3>
-              <p className="text-gray-600 leading-relaxed text-sm md:text-base font-medium">
+              <p className="text-gray-600 font-inter leading-relaxed text-sm md:text-base font-medium">
                 {steps[1].description}
               </p>
             </div>

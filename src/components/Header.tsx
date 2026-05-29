@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { FlowButton } from "./ui/flow-button";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -119,13 +120,13 @@ export default function Header() {
           {/* Support Phone Info (Desktop only) */}
 
           {/* [#EAF5FF] Pill Action Button */}
-          <Button
+          <FlowButton
+            text="SHOP COLLECTION"
             onClick={openCart}
-            className="bg-[#0a2544] hover:bg-[#0a2544]/90 active:scale-95 text-[#EAF5FF] px-6 py-6 rounded-full font-bold text-xs uppercase tracking-wider transition-all duration-300 hover:scale-105 cursor-pointer shadow-md flex items-center gap-1.5"
+            
           >
-            <span>Shop Collection</span>
-            <span className="material-symbols-outlined text-xs font-bold">arrow_forward</span>
-          </Button>
+                       
+          </FlowButton>
         </div>
 
       </nav>

@@ -22,8 +22,8 @@ export function BentoGridSection() {
           
           {/* Centered Text Container */}
           <div className="absolute bottom-0 left-0 w-full p-8 md:p-10 flex flex-col items-center text-center">
-            <h3 className="text-2xl md:text-3xl font-medium text-[#EAF5FF] mb-3 tracking-wide">Long-lasting Value</h3>
-            <p className="text-sm md:text-base text-[#EAF5FF]/80 leading-relaxed max-w-[90%]">
+            <h3 className="text-2xl md:text-3xl font-cabinet font-bold text-[#EAF5FF] mb-3 tracking-wide">Long-lasting Value</h3>
+            <p className="text-sm md:text-base font-inter text-[#EAF5FF]/80 leading-relaxed max-w-[90%]">
               Designed with clinical efficiency. One product lasts 6-8 months with daily use.
             </p>
           </div>
@@ -41,8 +41,8 @@ export function BentoGridSection() {
           <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/30 to-transparent pointer-events-none"></div>
           
           <div className="absolute bottom-0 left-0 w-full p-8 md:p-10 flex flex-col items-center text-center">
-            <h3 className="text-2xl md:text-3xl font-medium text-[#EAF5FF] mb-3 tracking-wide">Active Ingredients</h3>
-            <p className="text-sm md:text-base text-[#EAF5FF]/80 leading-relaxed max-w-[90%]">
+            <h3 className="text-2xl md:text-3xl font-cabinet font-bold text-[#EAF5FF] mb-3 tracking-wide">Active Ingredients</h3>
+            <p className="text-sm md:text-base font-inter text-[#EAF5FF]/80 leading-relaxed max-w-[90%]">
               Potent Vitamin E & Acerola for ultimate cellular health and skin nourishment.
             </p>
           </div>
@@ -58,8 +58,8 @@ export function BentoGridSection() {
           <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent pointer-events-none"></div>
           
           <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 flex flex-col items-center text-center">
-            <h3 className="text-xl md:text-2xl font-medium text-[#EAF5FF] mb-2 tracking-wide">Daily Defense</h3>
-            <p className="text-sm text-[#EAF5FF]/80 max-w-[95%]">
+            <h3 className="text-xl md:text-2xl font-cabinet font-bold text-[#EAF5FF] mb-2 tracking-wide">Daily Defense</h3>
+            <p className="text-sm font-inter text-[#EAF5FF]/80 max-w-[95%]">
               Providing consistent protection without harsh chemicals.
             </p>
           </div>
@@ -75,8 +75,8 @@ export function BentoGridSection() {
           <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent pointer-events-none"></div>
           
           <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 flex flex-col items-center text-center">
-            <h3 className="text-xl md:text-2xl font-medium text-[#EAF5FF] mb-2 tracking-wide">Discover More</h3>
-            <p className="text-sm text-[#EAF5FF]/80 max-w-[95%]">
+            <h3 className="text-xl md:text-2xl font-cabinet font-bold text-[#EAF5FF] mb-2 tracking-wide">Discover More</h3>
+            <p className="text-sm font-inter text-[#EAF5FF]/80 max-w-[95%]">
               Explore our synergistic natural formulations.
             </p>
           </div>

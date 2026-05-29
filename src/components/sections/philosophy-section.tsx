@@ -11,11 +11,11 @@ export function PhilosophySection() {
         
         {/* Left Column: Text Content */}
         <div className="space-y-6 reveal-on-scroll order-2 md:order-1">
-          <span className="font-semibold text-[10px] text-gray-500 uppercase tracking-[0.2em]">
+          <span className="font-cabinet font-bold text-[10px] text-gray-500 uppercase tracking-[0.2em]">
             Our Formulation
           </span>
           
-          <h2 className="text-4xl md:text-5xl text-gray-900 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-cabinet font-bold text-gray-900 leading-tight">
             Synergy of Alum & Superfood Extracts.
           </h2>
           
@@ -27,7 +27,7 @@ export function PhilosophySection() {
           <ul className="space-y-3 pt-2">
             <li className="flex items-center gap-3">
               <span className="material-symbols-outlined text-[16px] text-gray-400">check</span>
-              <span className="text-sm text-gray-700">Brightening Power</span>
+              <span className="text-sm  text-gray-700">Brightening Power</span>
             </li>
             <li className="flex items-center gap-3">
               <span className="material-symbols-outlined text-[16px] text-gray-400">check</span>

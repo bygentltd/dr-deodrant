@@ -66,11 +66,11 @@
   --spacing-margin-desktop: 64px;
   --spacing-unit: 8px;
 
-  --font-body: var(--font-cabinet), sans-serif;
+  --font-body: var(--font-inter);
   --font-heading: var(--font-cabinet), sans-serif;
   --font-headline-md: var(--font-cabinet), sans-serif;
-  --font-body-md: var(--font-cabinet), sans-serif;
-  --font-body-lg: var(--font-cabinet), sans-serif;
+  --font-body-md: var(--font-inter);
+  --font-body-lg: var(--font-inter);
   --font-headline-lg-mobile: var(--font-cabinet), sans-serif;
   --font-display-lg: var(--font-cabinet), sans-serif;
   --font-label-sm: var(--font-cabinet), sans-serif;
@@ -93,6 +93,8 @@
   .font-serif {
     font-family: var(--font-body);
   }
+  .font-cabinet { font-family: var(--font-cabinet); }
+  .font-inter { font-family: var(--font-inter); }
 }
 
 @layer utilities {
@@ -247,6 +249,7 @@
 }
 
 :root {
+  --font-inter: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
   --font-cabinet: 'CabinetGrotesk';
   --background: #EAF5FF;
   --foreground: oklch(0.145 0 0);

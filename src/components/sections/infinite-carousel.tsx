@@ -43,7 +43,7 @@ export default function InfiniteCarousel() {
               <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#aec6df]">
                 <Icon className="h-6 w-6 text-gray-800" strokeWidth={1.5} />
               </div>
-              <span className="[#EAF5FF]space-nowrap text-gray-800 tracking-wide">
+              <span className="[#EAF5FF]space-nowrap font-cabinet font-bold text-xl text-gray-800 tracking-wide">
                 {item.text}
               </span>
             </div>
