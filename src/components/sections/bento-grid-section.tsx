@@ -69,7 +69,7 @@ export function BentoGridSection() {
         <div className="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-[2rem] reveal-on-scroll" style={{ transitionDelay: '300ms' }}>
           <img 
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-            src="/image_6.webp" 
+            src="/Image_6.webp" 
             alt="Discover More" 
           />
           <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>

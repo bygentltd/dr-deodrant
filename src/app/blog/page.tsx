@@ -17,7 +17,7 @@ export default function BlogGrid() {
           <div className="inline-block px-3 py-1 bg-gray-200/50 rounded-full text-[10px] font-bold uppercase tracking-widest text-gray-700 mb-6">
             Our Journal
           </div>
-          <h1 className="text-5xl md:text-7xl  text-gray-900 leading-tight">
+          <h1 className="text-5xl md:text-7xl  text-[#0B2559] leading-tight">
             Beyond your skin.
           </h1>
         </div>
@@ -43,7 +43,7 @@ export default function BlogGrid() {
             <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-500 group-hover:opacity-90"></div>
 
             <div className="absolute top-6 left-6 flex items-center justify-between w-[calc(100%-3rem)]">
-              <span className="bg-[#EAF5FF]/90 backdrop-blur-sm text-gray-900 px-4 py-1.5 rounded-full text-xs font-medium">
+              <span className="bg-[#EAF5FF]/90 backdrop-blur-sm text-[#0B2559] px-4 py-1.5 rounded-full text-xs font-medium">
                 {post.category}
               </span>
               <span className="material-symbols-outlined text-[#EAF5FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-2 group-hover:translate-x-0">

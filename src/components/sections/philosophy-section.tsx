@@ -15,7 +15,7 @@ export function PhilosophySection() {
             Our Formulation
           </span>
           
-          <h2 className="text-4xl md:text-5xl font-cabinet font-bold text-gray-900 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-cabinet font-bold text-[#0B2559] leading-tight">
             Synergy of Alum & Superfood Extracts.
           </h2>
           
@@ -49,8 +49,16 @@ export function PhilosophySection() {
         <div className="relative reveal-on-scroll order-1 md:order-2">
           {/* Main Image with large rounded corners */}
           <div className="aspect-square md:aspect-4/5 rounded-[2rem] overflow-hidden shadow-xl">
-            <img className="w-full h-full object-cover" src="/DRDEO.webp" alt="Philosophy" />
-          </div>
+          <video
+            src="/video/sample_vid.mov"
+            className="w-full h-full object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+
+        </div>
 
           {/* Circular Rotating Badge - Moved to top-left with matching colors */}
           <div className="absolute -top-8 -left-8 md:-top-12 md:-left-12 w-32 h-32 md:w-40 md:h-40 bg-[#f6fbfd] rounded-full p-2 shadow-lg flex items-center justify-center z-10">

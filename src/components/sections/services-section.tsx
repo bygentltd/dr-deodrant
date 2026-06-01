@@ -54,9 +54,9 @@ export function ServicesSection() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         
         <div className="text-center mb-16 md:mb-24 reveal-on-scroll">
-          <h2 className="text-4xl md:text-5xl font-cabinet font-bold text-gray-900 leading-tight">
-            Transform with <br className="hidden md:block" />
-            Our Glowing Services
+          <h2 className="text-4xl md:text-5xl font-cabinet font-bold text-[#0B2559] leading-tight">
+            Made for  <br className="hidden md:block" />
+            Everyday Confidence
           </h2>
         </div>
         
@@ -85,7 +85,7 @@ export function ServicesSection() {
                   
                   {/* Icon */}
                   <div className="relative shrink-0 order-1 sm:order-2">
-                    <div className="flex items-center justify-center w-[88px] h-[88px] bg-[#1E40AF] rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.06)] text-white z-10 relative">
+                    <div className="flex items-center justify-center w-[88px] h-[88px] bg-[#0B2559] rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.06)] text-white z-10 relative">
                       {idx === 0 ? (
                         <div className="relative flex items-center justify-center">
                           <Icon strokeWidth={1.5} className="w-9 h-9" />
@@ -131,7 +131,7 @@ export function ServicesSection() {
                 >
                   {/* Icon */}
                   <div className="relative shrink-0">
-                    <div className="flex items-center justify-center w-[88px] h-[88px] bg-[#1E40AF] rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.06)] text-white z-10 relative">
+                    <div className="flex items-center justify-center w-[88px] h-[88px] bg-[#0B2559] rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.06)] text-white z-10 relative">
                       <Icon strokeWidth={1.5} className="w-9 h-9" />
                     </div>
                     {/* Connecting Line */}

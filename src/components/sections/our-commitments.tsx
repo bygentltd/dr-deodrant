@@ -30,10 +30,10 @@ export default function OurCommitments() {
   ];
 
   return (
-    <section className="bg-[#C6D9F1] px-6 py-24 md:py-32 md:px-16 lg:px-24 font-sans w-full">
+    <section className="bg-[#EAF5FF] px-6 py-24 md:py-32 md:px-16 lg:px-24 font-sans w-full">
       <div className="max-w-[1400px] mx-auto w-full">
         {/* Main Heading */}
-        <h2 className="text-5xl md:text-6xl font-medium text-[#313131] mb-12 md:mb-16 tracking-tight">
+        <h2 className="text-6xl md:text-[3rem] lg:text-[4rem] font-medium text-[#313131] mb-12 md:mb-16 tracking-tight">
           Our Commitments
         </h2>
 

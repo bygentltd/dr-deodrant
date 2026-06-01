@@ -11,7 +11,7 @@ export function HeroSection() {
   const heroImages = [
     "/HERO_image.webp",
     "/2nd_hero_image.webp",
-    "/HERO_image.webp"
+    "/3rd_hero_Image.webp"
   ];
 
   useEffect(() => {

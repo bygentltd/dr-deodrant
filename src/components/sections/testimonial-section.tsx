@@ -50,7 +50,7 @@ export function TestimonialSection() {
       
       {/* Header Section */}
       <div className="max-w-6xl mx-auto px-6 md:px-12 text-center mb-16 reveal-on-scroll">
-        <h2 className="text-4xl font-cabinet font-bold md:text-5xl text-gray-900 leading-tight mb-4">
+        <h2 className="text-4xl font-cabinet font-bold md:text-5xl text-[#0B2559] leading-tight mb-4">
           What Our Customers Are Saying.
         </h2>
         <p className="text-md md:text-base text-gray-600">

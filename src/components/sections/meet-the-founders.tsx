@@ -17,10 +17,10 @@ export default function MeetTheFounders() {
   const yParallax = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
 
   return (
-    <section className="bg-[#f7f6f2] px-4 py-12 md:px-8 lg:px-16 w-full font-sans">
+    <section className="bg-[#eaf5ff] px-4 py-12 md:px-8 lg:px-16 w-full font-sans">
       <div 
         ref={sectionRef}
-        className="bg-[#e4e7dd] rounded-[2rem] md:rounded-[3rem] p-6 pt-16 md:p-16 lg:p-24 w-full max-w-[1400px] mx-auto"
+        className="bg-[#C6D9F1] rounded-[2rem] md:rounded-[3rem] p-6 pt-16 md:p-16 lg:p-24 w-full max-w-[1400px] mx-auto"
       >
         {/* Top Header */}
         <div className="mb-12 md:mb-16">

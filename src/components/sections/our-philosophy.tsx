@@ -30,7 +30,7 @@ export default function OurPhilosophy() {
     <section className="bg-[#EAF5FF] px-6 py-24 md:py-32 md:px-16 lg:px-32 font-sans w-full">
       <div className="max-w-7xl mx-auto w-full">
         {/* Main Heading */}
-        <h1 className="text-6xl md:text-[5rem] lg:text-[6rem] font-medium text-[#203956] mb-16 md:mb-24 tracking-tight">
+        <h1 className="text-6xl md:text-[3rem] lg:text-[4rem] font-medium text-[#203956] mb-16 md:mb-24 tracking-tight">
           Our Philosophy
         </h1>
 

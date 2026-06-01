@@ -70,7 +70,7 @@ export default function Header() {
   const iconClasses = "text-[#203856]/80 hover:text-[#203856]";
 
   return (
-    <header ref={headerRef} className="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 flex justify-center pointer-events-none">
+    <header ref={headerRef} className="absolute top-0 left-0 right-0 z-50 px-4 md:px-8 flex justify-center pointer-events-none">
       <nav className={cn("pointer-events-auto mt-6 flex items-center justify-between w-full max-w-310 h-15 px-6 md:px-8 rounded-full transition-all duration-300", surfaceClasses)}>
 
         {/* Mobile Menu Toggle (Left on mobile, hidden on desktop) */}

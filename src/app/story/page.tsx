@@ -16,7 +16,7 @@ export default function StoryPage() {
       <TheBeginning />
       <OurStoryFixed/>
       <OurPhilosophy/>
-      {/* <MeetTheFounders/> */}
+      <MeetTheFounders/>
       <OurProcess/>
       <OurCommitments/>
     </div>

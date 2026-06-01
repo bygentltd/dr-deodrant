@@ -34,11 +34,11 @@ export default function OurStoryFixed() {
         
         <div />
 
-        <div className="flex justify-center items-center">
+        {/* <div className="flex justify-center items-center">
           <h1 className="text-6xl md:text-8xl lg:text-[100px] text-white/95 font-medium tracking-tight drop-shadow-md">
             Dr.Deodrant
           </h1>
-        </div>
+        </div> */}
 
         <div className="flex justify-between items-end w-full">
           <div className="text-white/95 drop-shadow-sm">

@@ -19,7 +19,7 @@ import {
 
 export function Footer() {
   return (
-    <footer className="w-full">
+    <footer className="w-full bg-[#EAF5FF]">
 
    <div className="bg-[#113d86] text-white pt-20 pb-10 px-8 md:px-16 rounded-t-[3rem] md:rounded-t-[5rem]">
       <div className="max-w-7xl mx-auto">
