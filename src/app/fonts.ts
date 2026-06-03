@@ -19,7 +19,7 @@ export const cabinet = localFont({
     //   style: 'normal',
     // },
   ],
-  variable: '--font-cabinet',
+  variable: '--font-inter',
 })
 
 export const inter = Inter({

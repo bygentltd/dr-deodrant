@@ -9,7 +9,7 @@ export function MajorFeaturesSection() {
     // Minimal bottom padding (pb-6) so it connects nicely with the Bento Grid below it
     <section className="pt-24 pb-6 px-6 md:px-12 lg:px-16 max-w-350 mx-auto">
       <div className="text-center mb-16 md:mb-24 reveal-on-scroll">
-          <h2 className="text-4xl md:text-5xl font-cabinet font-bold text-[#0B2559] leading-tight">
+          <h2 className="text-4xl md:text-5xl font-inter font-bold text-[#0B2559] leading-tight">
             Why Choose Dr. Deodrant?
           </h2>
         </div>
@@ -30,10 +30,10 @@ export function MajorFeaturesSection() {
           
           {/* Text Content */}
           <div className="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col items-center text-center">
-            <h3 className="text-2xl font-cabinet font-bold md:text-3xl text-[#EAF5FF] mb-3 tracking-wide">
+            <h3 className="text-2xl font-inter font-bold md:text-3xl text-[#F5FBFF] mb-3 tracking-wide">
               21 Days. Real Results
             </h3>
-            <p className="text-sm md:text-base font-inter text-[#EAF5FF]/80 leading-relaxed max-w-[85%] md:max-w-[70%]">
+            <p className="text-sm md:text-base font-inter text-[#F5FBFF]/80 leading-relaxed max-w-[85%] md:max-w-[70%]">
               Switch to pure crystal alum and watch your skin thank you.
             </p>
           </div>
@@ -50,10 +50,10 @@ export function MajorFeaturesSection() {
           <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
           
           <div className="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col items-center text-center">
-            <h3 className="text-2xl md:text-3xl font-cabinet font-bold text-[#EAF5FF] mb-3 tracking-wide">
+            <h3 className="text-2xl md:text-3xl font-inter font-bold text-[#F5FBFF] mb-3 tracking-wide">
                 Pure Ingredients. Real Effect
             </h3>
-            <p className="text-sm md:text-base font-inter text-[#EAF5FF]/80 leading-relaxed max-w-[85%] md:max-w-[70%]">
+            <p className="text-sm md:text-base font-inter text-[#F5FBFF]/80 leading-relaxed max-w-[85%] md:max-w-[70%]">
                 Infused with Kiwi, Acerola, and Vitamins C & E to brighten, protect, and nourish skin.
             </p>
           </div>

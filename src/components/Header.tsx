@@ -61,7 +61,7 @@ export default function Header() {
   }, [pathname]);
 
   // Keep a single glass style everywhere (same blur & opacity)
-  const surfaceClasses = "bg-[#EAF5FF]/12 text-[#203856] border-[#EAF5FF]/20 shadow-2xl glass-nav backdrop-blur-2xl";
+  const surfaceClasses = "bg-[#F5FBFF]/12 text-[#203856] border-[#F5FBFF]/20 shadow-2xl glass-nav backdrop-blur-2xl";
 
   const linkClasses = "text-[#203856]/90 hover:text-[#203856]";
 
@@ -100,7 +100,7 @@ export default function Header() {
                     if (typeof window !== "undefined") window.location.href = link.href;
                   }}
                   className={cn(
-                    "text-md font-cabinet tracking-wide transition-all duration-300 pb-0.5 nav-underline",
+                    "text-md font-inter tracking-wide transition-all duration-300 pb-0.5 nav-underline",
                     linkClasses,
                     isActive && "active"
                   )}
@@ -115,7 +115,7 @@ export default function Header() {
                 key={link.name}
                 href={link.href}
                 className={cn(
-                  "text-md font-cabinet tracking-wide transition-all duration-300 pb-0.5 nav-underline",
+                  "text-md font-inter tracking-wide transition-all duration-300 pb-0.5 nav-underline",
                   linkClasses,
                   isActive && "active"
                 )}
@@ -143,7 +143,7 @@ export default function Header() {
 
           {/* Support Phone Info (Desktop only) */}
 
-          {/* [#EAF5FF] Pill Action Button */}
+          {/* [#F5FBFF] Pill Action Button */}
           <FlowButton
             text="SHOP COLLECTION"
             onClick={openCart}
@@ -159,7 +159,7 @@ export default function Header() {
       {isOpen && (
         <div className={cn(
           "absolute top-20 left-4 right-4 backdrop-blur-2xl border rounded-3xl p-6 shadow-2xl flex flex-col gap-6 md:hidden animate-fade-in z-50 pointer-events-auto glass-nav",
-          "bg-[#EAF5FF]/12 border-[#EAF5FF]/15"
+          "bg-[#F5FBFF]/12 border-[#F5FBFF]/15"
         )}>
           <div className="flex flex-col gap-4">
             {links.map((link) => {
@@ -203,7 +203,7 @@ export default function Header() {
               );
             })}
           </div>
-          <div className={cn("flex flex-col gap-4 pt-4 border-t border-[#EAF5FF]/10")}>
+          <div className={cn("flex flex-col gap-4 pt-4 border-t border-[#F5FBFF]/10")}>
             <a href="tel:+3910352568" className={cn("flex items-center gap-2 text-sm font-medium text-[#203856]/70 hover:text-[#203856]") }>
               <span className="material-symbols-outlined text-base">phone_iphone</span>
               <span>+391 (0)35 2568</span>

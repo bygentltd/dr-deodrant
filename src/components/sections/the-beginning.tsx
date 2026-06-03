@@ -1,9 +1,9 @@
 export default function TheBeginning() {
   return (
-    <section className="bg-[#eaf5ff] px-6 py-20 md:py-28 md:px-16 lg:px-32 font-sans w-full">
+    <section className="bg-[#F5FBFF] px-6 py-20 md:py-28 md:px-16 lg:px-32 font-sans w-full">
       <div className="max-w-7xl mx-auto w-full">
         {/* Main Heading */}
-        <h1 className="text-6xl md:text-[3rem] lg:text-[4rem] font-medium text-[#203956] mb-16 tracking-tight">
+        <h1 className="text-6xl md:text-[3rem] lg:text-[4rem] font-medium text-[#0A2544] mb-16 tracking-tight">
           The Beginning
         </h1>
 
@@ -12,7 +12,7 @@ export default function TheBeginning() {
           
           {/* Left Column: Badge */}
           <div className="md:col-span-4 lg:col-span-4 flex items-start">
-            <span className="inline-flex items-center rounded-full bg-[#203956] px-4 py-1.5 text-sm font-medium text-[#ffffff] tracking-wide">
+            <span className="inline-flex items-center rounded-full bg-[#0A2544] px-4 py-1.5 text-sm font-medium text-[#ffffff] tracking-wide">
               Our Approach
             </span>
           </div>

@@ -25,9 +25,9 @@ export default function InfiniteCarousel() {
   const duplicatedFeatures = [...features, ...features, ...features];
 
   return (
-    <div className="relative w-full overflow-hidden bg-[#EAF5FF] py-8">
+    <div className="relative w-full overflow-hidden bg-[#F5FBFF] py-8">
       {/* Left Fade Overlay */}
-      <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-32 bg-linear-to-r from-[#EAF5FF] to-transparent" />
+      <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-32 bg-linear-to-r from-[#F5FBFF] to-transparent" />
 
       {/* Marquee Track */}
       <div
@@ -43,7 +43,7 @@ export default function InfiniteCarousel() {
               <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#aec6df]">
                 <Icon className="h-6 w-6 text-gray-800" strokeWidth={1.5} />
               </div>
-              <span className="[#EAF5FF]space-nowrap font-cabinet font-bold text-xl text-gray-800 tracking-wide">
+              <span className="[#F5FBFF]space-nowrap font-inter font-bold text-xl text-gray-800 tracking-wide">
                 {item.text}
               </span>
             </div>
@@ -52,7 +52,7 @@ export default function InfiniteCarousel() {
       </div>
 
       {/* Right Fade Overlay */}
-      <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-32 bg-linear-to-l from-[#EAF5FF] to-transparent" />
+      <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-32 bg-linear-to-l from-[#F5FBFF] to-transparent" />
 
       {/* Injecting pure CSS keyframes so it works anywhere without touching tailwind.config.js */}
       <style dangerouslySetInnerHTML={{

@@ -6,16 +6,16 @@ export function PhilosophySection() {
   useRevealOnScroll();
 
   return (
-    <section className="py-24 px-8 md:px-16 max-w-7xl mx-auto bg-[#eaf5ff] overflow-hidden">
+    <section className="py-24 px-8 md:px-16 max-w-7xl mx-auto bg-[#F5FBFF] overflow-hidden">
       <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
         
         {/* Left Column: Text Content */}
         <div className="space-y-6 reveal-on-scroll order-2 md:order-1">
-          <span className="font-cabinet font-bold text-[10px] text-gray-500 uppercase tracking-[0.2em]">
+          <span className="font-inter font-bold text-[10px] text-gray-500 uppercase tracking-[0.2em]">
             Our Formulation
           </span>
           
-          <h2 className="text-4xl md:text-5xl font-cabinet font-bold text-[#0B2559] leading-tight">
+          <h2 className="text-4xl md:text-5xl font-inter font-bold text-[#0B2559] leading-tight">
             Synergy of Alum & Superfood Extracts.
           </h2>
           
@@ -38,7 +38,7 @@ export function PhilosophySection() {
           {/* Added the button from the reference design */}
           <div className="pt-6">
             <a href="/story">
-              <button className="bg-[#203856] hover:bg-[#203856]/80 text-[#eaf5ff] px-8 py-3 rounded-full text-sm font-medium transition-colors duration-300">
+              <button className="bg-[#203856] hover:bg-[#203856]/80 text-[#F5FBFF] px-8 py-3 rounded-full text-sm font-medium transition-colors duration-300">
                 Our Story &rsaquo;
               </button>
             </a>
@@ -61,7 +61,7 @@ export function PhilosophySection() {
         </div>
 
           {/* Circular Rotating Badge - Moved to top-left with matching colors */}
-          <div className="absolute -top-8 -left-8 md:-top-12 md:-left-12 w-32 h-32 md:w-40 md:h-40 bg-[#f6fbfd] rounded-full p-2 shadow-lg flex items-center justify-center z-10">
+          {/* <div className="absolute -top-8 -left-8 md:-top-12 md:-left-12 w-32 h-32 md:w-40 md:h-40 bg-[#f6fbfd] rounded-full p-2 shadow-lg flex items-center justify-center z-10">
             <div className="absolute inset-0 animate-rotate-slow">
               <svg className="w-full h-full" viewBox="0 0 100 100">
                 <defs>
@@ -73,10 +73,9 @@ export function PhilosophySection() {
               </svg>
             </div>
             {/* Kept original center icon */}
-            <span className="material-symbols-outlined text-5xl md:text-6xl text-gray-800" style={{ fontVariationSettings: "'FILL' 1" }}>
+            {/* <span className="material-symbols-outlined text-5xl md:text-6xl text-gray-800" style={{ fontVariationSettings: "'FILL' 1" }}>
             spa {/* or whichever icon you chose */}
-            </span>
-          </div>
+             
         </div>
 
       </div>

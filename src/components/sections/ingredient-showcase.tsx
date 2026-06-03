@@ -50,12 +50,12 @@ export function IngredientShowcase() {
   ];
 
   return (
-    <section className="py-32 bg-[#C6D9F1] overflow-hidden relative">
+    <section className="py-32 bg-[#EAF5FF] overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 reveal-on-scroll">
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-20 lg:mb-28">
-          <h2 className="text-3xl md:text-5xl font-cabinet font-bold text-[#0F172A] mb-4">
+          <h2 className="text-3xl md:text-5xl font-inter font-bold text-[#0F172A] mb-4">
             Powered by Nature
           </h2>
           <p className="text-[#64748B] text-base md:text-lg">

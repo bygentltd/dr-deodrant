@@ -46,11 +46,11 @@ export function TestimonialSection() {
 ];
 
   return (
-    <section className="py-24 bg-[#EAF5FF] overflow-hidden">
+    <section className="py-24 bg-[#F5FBFF] overflow-hidden">
       
       {/* Header Section */}
       <div className="max-w-6xl mx-auto px-6 md:px-12 text-center mb-16 reveal-on-scroll">
-        <h2 className="text-4xl font-cabinet font-bold md:text-5xl text-[#0B2559] leading-tight mb-4">
+        <h2 className="text-4xl font-inter font-bold md:text-5xl text-[#0B2559] leading-tight mb-4">
           What Our Customers Are Saying.
         </h2>
         <p className="text-md md:text-base text-gray-600">
@@ -86,7 +86,7 @@ export function TestimonialSection() {
                 
                 <div className="space-y-6">
                   {/* Custom Quote Icon */}
-                  <span className="font-cabinet text-6xl text-[#113D86]-800 leading-none block h-10">
+                  <span className="font-inter text-6xl text-[#113D86]-800 leading-none block h-10">
                     “
                   </span>
                   

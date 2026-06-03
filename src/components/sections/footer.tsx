@@ -19,7 +19,7 @@ import {
 
 export function Footer() {
   return (
-    <footer className="w-full bg-[#EAF5FF]">
+    <footer className="w-full bg-[#F5FBFF]">
 
    <div className="bg-[#113d86] text-white pt-20 pb-10 px-8 md:px-16 rounded-t-[3rem] md:rounded-t-[5rem]">
       <div className="max-w-7xl mx-auto">
@@ -33,7 +33,7 @@ export function Footer() {
               <MapPin size={20} strokeWidth={1.5} />
             </div>
             <div>
-              <h4 className="font-serif text-lg mb-1">Address</h4>
+              <h4 className="font-inter text-lg mb-1">Address</h4>
               <p className="text-sm text-white/70 leading-relaxed">
                 4b/39 James St, Fortitude Valley<br />QLD 4006
               </p>
@@ -46,7 +46,7 @@ export function Footer() {
               <Clock size={20} strokeWidth={1.5} />
             </div>
             <div>
-              <h4 className="font-serif text-lg mb-1">Hours</h4>
+              <h4 className="font-inter text-lg mb-1">Hours</h4>
               <p className="text-sm text-white/70 leading-relaxed">
                 Mon–Sat, 9am–6pm
               </p>
@@ -59,7 +59,7 @@ export function Footer() {
               <Phone size={20} strokeWidth={1.5} />
             </div>
             <div>
-              <h4 className="font-serif text-lg mb-1">Call Us</h4>
+              <h4 className="font-inter text-lg mb-1">Call Us</h4>
               <p className="text-sm text-white/70 leading-relaxed group-hover:text-white transition-colors">
                 +391 (0)35 2568
               </p>
@@ -72,7 +72,7 @@ export function Footer() {
               <Mail size={20} strokeWidth={1.5} />
             </div>
             <div>
-              <h4 className="font-serif text-lg mb-1">Email</h4>
+              <h4 className="font-inter text-lg mb-1">Email</h4>
               <p className="text-sm text-white/70 leading-relaxed group-hover:text-white transition-colors">
                 support@drdeodrant.com
               </p>
@@ -86,7 +86,7 @@ export function Footer() {
           
           {/* Left: Newsletter */}
           <div className="lg:col-span-5 pr-0 lg:pr-12">
-            <h3 className="font-serif text-3xl mb-4">Dr. Deodrant</h3>
+            <h3 className="font-inter text-3xl mb-4">Dr. Deodrant</h3>
             <p className="text-sm text-white/80 mb-8 max-w-sm">
               Monthly wellness insights and exclusive offers. Join 2,400+ guests.
             </p>
@@ -113,7 +113,7 @@ export function Footer() {
           <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-10">
             {/* Explore Column */}
             <div className="flex flex-col gap-4">
-              <h4 className="font-serif text-xl mb-2">Explore</h4>
+              <h4 className="font-inter text-xl mb-2">Explore</h4>
               {['Home', 'About', 'Services', 'Blog', 'Contact'].map((link) => (
                 <Link key={link} href="#" className="text-sm text-white/70 hover:text-white transition-colors w-fit">
                   {link}
@@ -123,7 +123,7 @@ export function Footer() {
 
             {/* Company Column */}
             <div className="flex flex-col gap-4">
-              <h4 className="font-serif text-xl mb-2">Company</h4>
+              <h4 className="font-inter text-xl mb-2">Company</h4>
               {['Our Story', 'Pricing', 'FAQs', 'Privacy Policy', 'Terms & Conditions'].map((link) => (
                 <Link key={link} href="#" className="text-sm text-white/70 hover:text-white transition-colors w-fit">
                   {link}
@@ -133,7 +133,7 @@ export function Footer() {
 
             {/* Wellness Column */}
             {/* <div className="flex flex-col gap-4 col-span-2 md:col-span-1">
-              <h4 className="font-serif text-xl mb-2">Wellness</h4>
+              <h4 className="font-inter text-xl mb-2">Wellness</h4>
               {['Massages', 'Facials', 'Body Treatments', 'Rituals'].map((link) => (
                 <Link key={link} href="#" className="text-sm text-white/70 hover:text-white transition-colors w-fit">
                   {link}

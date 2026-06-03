@@ -43,7 +43,7 @@ export default function IngredientsContent() {
   ];
 
   return (
-    <section className="bg-[#EAF5FF] px-6 py-24 md:py-32 md:px-16 lg:px-24 font-sans w-full">
+    <section className="bg-[#F5FBFF] px-6 py-24 md:py-32 md:px-16 lg:px-24 font-sans w-full">
       <div className="max-w-350 mx-auto w-full">
         <h2 className="text-5xl md:text-[3rem] lg:text-[4rem] font-medium text-[#313131] mb-12 md:mb-16 tracking-tight">
           Ingredients

@@ -4,16 +4,25 @@ import Link from "next/link";
 
 import { useRevealOnScroll } from "@/hooks/use-reveal";
 import type { BlogPost } from "@/lib/blog-posts";
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
 type BlogPostViewProps = {
   post: BlogPost;
 };
 
 export default function BlogPostView({ post }: BlogPostViewProps) {
-  useRevealOnScroll();
+  const pathname = usePathname();
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+  }, [pathname]);
   return (
-    <article className="bg-[#eaf5ff] min-h-screen pb-24">
+    <article className="bg-[#F5FBFF] min-h-screen pb-24">
       <div className="relative w-full h-[60vh] md:h-[75vh] flex items-center justify-center overflow-hidden">
         <img
           src={post.heroImage}
@@ -22,24 +31,24 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
         />
         <div className="absolute inset-0 bg-black/45" />
 
-        <div className="relative z-10 flex flex-col items-center text-center px-6 mt-16 reveal-on-scroll">
+        <div className="relative z-10 flex flex-col items-center text-center px-6 mt-16 ">
           <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
-            <span className="text-[#EAF5FF]/80 text-sm font-medium tracking-wider">{post.date}</span>
-            <span className="bg-[#EAF5FF]/20 backdrop-blur-md text-[#EAF5FF] px-3 py-1 rounded-full text-xs font-medium">
+            <span className="text-[#F5FBFF]/80 text-sm font-medium tracking-wider">{post.date}</span>
+            <span className="bg-[#F5FBFF]/20 backdrop-blur-md text-[#F5FBFF] px-3 py-1 rounded-full text-xs font-medium">
               {post.category}
             </span>
-            <span className="text-[#EAF5FF]/70 text-sm font-medium">{post.author}</span>
+            <span className="text-[#F5FBFF]/70 text-sm font-medium">{post.author}</span>
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-[#EAF5FF] max-w-5xl leading-tight mb-6">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-inter text-[#F5FBFF] max-w-5xl leading-tight mb-6">
             {post.title}
           </h1>
-          <p className="text-[#EAF5FF]/90 font-medium max-w-2xl">
+          <p className="text-[#F5FBFF]/90 font-medium max-w-2xl">
             {post.excerpt}
           </p>
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-6 md:px-8 pt-20 reveal-on-scroll">
+      <div className="max-w-4xl mx-auto px-6 md:px-8 pt-20 ">
         <div className="flex items-center justify-between gap-4 mb-10 text-sm text-gray-500">
           <Link href="/blog" className="font-medium text-gray-700 hover:text-[#0B2559] transition-colors">
             Back to Journal
@@ -56,7 +65,7 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
                     {section.eyebrow}
                   </p>
                 ) : null}
-                <h2 className="text-3xl md:text-4xl font-serif text-[#0B2559] leading-tight">
+                <h2 className="text-3xl md:text-4xl font-inter text-[#0B2559] leading-tight">
                   {section.heading}
                 </h2>
               </div>
@@ -74,14 +83,21 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
               <div className="space-y-5 text-base md:text-lg text-gray-700 leading-relaxed font-light">
                 {section.blocks.map((block, blockIndex) => {
                   if (block.type === "paragraph") {
-                    return <p key={`${section.heading}-${blockIndex}`}>{block.text}</p>;
+                    return (
+                      <p 
+                        key={`${section.heading}-${blockIndex}`} 
+                        className="text-justify"
+                      >
+                        {block.text}
+                      </p>
+                    );
                   }
 
                   if (block.type === "quote") {
                     return (
                       <blockquote
                         key={`${section.heading}-${blockIndex}`}
-                        className="border-l-4 border-[#1D4F5D]/20 pl-6 py-1 text-[#0B2559] font-medium italic"
+                        className="border-l-4 border-[#1D4F5D]/20 pl-6 py-1 text-[#0B2559] font-medium italic text-left"
                       >
                         {block.text}
                       </blockquote>
@@ -91,7 +107,7 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
                   return (
                     <ul
                       key={`${section.heading}-${blockIndex}`}
-                      className="space-y-3 list-disc pl-6"
+                      className="space-y-3 list-disc pl-6 text-justify"
                     >
                       {block.items.map((item) => (
                         <li key={item}>{item}</li>

@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 
 type LenisProviderProps = {
@@ -8,6 +9,9 @@ type LenisProviderProps = {
 };
 
 export function LenisProvider({ children }: LenisProviderProps) {
+  const pathname = usePathname();
+  const lenisRef = useRef<Lenis | null>(null);
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -15,20 +19,28 @@ export function LenisProvider({ children }: LenisProviderProps) {
       lerp: 0.08,
     });
 
+    lenisRef.current = lenis;
+
     let frameId = 0;
 
     const raf = (time: number) => {
       lenis.raf(time);
-      frameId = window.requestAnimationFrame(raf);
+      frameId = requestAnimationFrame(raf);
     };
 
-    frameId = window.requestAnimationFrame(raf);
+    frameId = requestAnimationFrame(raf);
 
     return () => {
-      window.cancelAnimationFrame(frameId);
+      cancelAnimationFrame(frameId);
       lenis.destroy();
     };
   }, []);
+
+  useEffect(() => {
+    lenisRef.current?.scrollTo(0, {
+      immediate: true,
+    });
+  }, [pathname]);
 
   return children;
 }
