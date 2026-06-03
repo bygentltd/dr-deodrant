@@ -21,9 +21,9 @@ export default function Home() {
         <PhilosophySection />
         <StatsSection />
         <FeaturedProductSection />
-        <ImageSectionComp src="/Home_21.webp" />
+        <ImageSectionComp src="/HOME_21.webp" />
         <ImageSectionComp src="/Home-Ing.webp" />
-        <ImageSectionComp src="/Home_HOW.webp" />
+        <ImageSectionComp src="/HOME_HOW.webp" />
         {/* <MajorFeaturesSection/>
         <BentoGridSection /> */}
         <ServicesSection/>
