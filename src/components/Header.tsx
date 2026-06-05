@@ -16,6 +16,7 @@ export default function Header() {
   const headerRef = useRef<HTMLElement | null>(null);
 
   const links = [
+    { name: "Home", href: "/" },
     { name: "Shop", href: "/shop/popular" },
     { name: "Our Story", href: "/story" },
     { name: "Blog", href: "/blog" },
@@ -85,7 +86,7 @@ export default function Header() {
         </div>
 
         {/* Left Navigation Links (Desktop) */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-6 font-bold">
           {links.map((link) => {
             const isActive = pathname === link.href;
 

@@ -44,7 +44,7 @@ export const blogPosts: BlogPost[] = [
     author: "Dr. Deodrant Editorial Team",
     excerpt:
       "A physiology-first explanation of perspiration, bacterial odor formation, and why modern underarm care should support the skin instead of suppressing it.",
-    heroImage: "/blogs/Blogs1.webp",
+    heroImage: "/blogs/Blogs2.webp",
     heroAlt: "Scientifically styled skincare and body care scene",
     featured: false,
     sections: [
@@ -333,7 +333,7 @@ export const blogPosts: BlogPost[] = [
     author: "Dr. Deodrant Editorial Team",
     excerpt:
       "A clear breakdown of the natural ingredients that help keep underarms fresh, comfortable, and odor-free without relying on heavy-handed suppression.",
-    heroImage: "/blogs/Blogs2.webp",
+    heroImage: "/blogs/Blogs3.webp",
     heroAlt: "Natural skincare ingredients arranged on a clean surface",
     featured: false,
     sections: [
@@ -491,7 +491,7 @@ export const blogPosts: BlogPost[] = [
     author: "Dr. Deodrant Editorial Team",
     excerpt:
       "Five science-backed habits that support energy, focus, and all-day freshness by working with your body instead of against it.",
-    heroImage: "/blogs/Blogs3.webp",
+    heroImage: "/blogs/Blogs1.webp",
     heroAlt: "Morning light in a calm, wellness-focused room",
     featured: true,
     sections: [

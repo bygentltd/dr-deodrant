@@ -41,9 +41,9 @@ export default function InfiniteCarousel() {
           return (
             <div key={index} className="flex items-center gap-4 px-10">
               <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#aec6df]">
-                <Icon className="h-6 w-6 text-gray-800" strokeWidth={1.5} />
+                <Icon className="h-6 w-6 text-[#00399a]" strokeWidth={1.5} />
               </div>
-              <span className="[#F5FBFF]space-nowrap font-inter font-bold text-xl text-gray-800 tracking-wide">
+              <span className="[#F5FBFF]space-nowrap font-inter font-bold text-xl text-[#00399a] tracking-wide">
                 {item.text}
               </span>
             </div>

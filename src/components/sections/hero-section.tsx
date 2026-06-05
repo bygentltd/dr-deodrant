@@ -64,14 +64,14 @@ export function HeroSection() {
         className={`relative z-10 h-full flex flex-col items-start justify-center text-left px-6 ${heroContentOffset}`}
       >
         <div className="mb-4">
-          <span className="block font-inter text-sm uppercase tracking-[0.3em] text-[#0a2544] drop-shadow-md">
+          <span className="block font-inter text-sm uppercase tracking-[0.3em] text-[#00399a] drop-shadow-md">
             CERTIFIED · TESTED · SKIN-FRIENDLY
           </span>
         </div>
         
         <div className="mb-8 h-[140px] md:h-[160px] flex items-center">
           {/* Render the title based on the active slide */}
-          <h1 className="max-w-4xl text-3xl font-inter font-bold leading-[1.1] text-[#0a2544] drop-shadow-xl md:text-6xl">
+          <h1 className="max-w-4xl text-3xl font-inter font-bold leading-[1.1] text-[#00399a] drop-shadow-xl md:text-6xl">
             {heroSlides[currentHeroSlide].title}
           </h1>
         </div>
@@ -83,12 +83,14 @@ export function HeroSection() {
           <Button
             variant="default"
             className="bg-[#113d86] text-white px-10 py-6 rounded-full font-bold text-md uppercase tracking-widest hover:scale-105 hover:bg-[#113d86]/90 transition-transform shadow-lg"
+            onClick={() => window.location.href = "/shop/popular"}
           >
             Shop Now
           </Button>
           <Button
             variant="outline"
-            className="border-2 border-[#0a2544] text-[#0a2544] bg-transparent px-10 py-6 rounded-full font-bold text-md uppercase tracking-widest hover:bg-[#F5FBFF]/95 hover:text-[#0a2544] transition-all shadow-lg"
+            className="border-2 border-[#00399a] text-[#00399a] bg-transparent px-10 py-6 rounded-full font-bold text-md uppercase tracking-widest hover:bg-[#F5FBFF]/95 hover:text-[#00399a] transition-all shadow-lg"
+            onClick={() => window.location.href = "/story"}
           >
             Learn The Science
           </Button>

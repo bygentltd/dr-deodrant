@@ -11,6 +11,7 @@ import { FixedHeroSection } from "@/components/sections/fixed-hero-section";
 import { ServicesSection } from "@/components/sections/services-section";
 import HowToUse from "@/components/sections/how-to-use";
 import ImageSectionComp from "@/components/sections/image-section-comp";
+import IngredientsSection from "@/components/sections/product-ingredient-layout";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <FeaturedProductSection />
         <ImageSectionComp src="/HOME_21.webp" />
         <ImageSectionComp src="/Home-Ing.webp" />
+        <IngredientsSection/>
         <ImageSectionComp src="/HOME_HOW.webp" />
         {/* <MajorFeaturesSection/>
         <BentoGridSection /> */}

@@ -69,7 +69,7 @@ export function FeaturedProductSection() {
                           onclick="
                             const root = this.closest('.product-gallery');
                             const thumbs = Array.from(root.querySelectorAll('.gallery-thumb'));
-                            const activeIndex = thumbs.findIndex(t => t.classList.contains('border-[#0B2559]'));
+                            const activeIndex = thumbs.findIndex(t => t.classList.contains('border-[#00399a]'));
                             const currentIndex = activeIndex > -1 ? activeIndex : 0;
                             if(thumbs.length > 0) {
                               const prevIndex = currentIndex <= 0 ? thumbs.length - 1 : currentIndex - 1;
@@ -85,7 +85,7 @@ export function FeaturedProductSection() {
                           onclick="
                             const root = this.closest('.product-gallery');
                             const thumbs = Array.from(root.querySelectorAll('.gallery-thumb'));
-                            const activeIndex = thumbs.findIndex(t => t.classList.contains('border-[#0B2559]'));
+                            const activeIndex = thumbs.findIndex(t => t.classList.contains('border-[#00399a]'));
                             const currentIndex = activeIndex > -1 ? activeIndex : 0;
                             if(thumbs.length > 0) {
                               const nextIndex = currentIndex >= thumbs.length - 1 ? 0 : currentIndex + 1;
@@ -102,18 +102,18 @@ export function FeaturedProductSection() {
                         <shopify-list-context type="image" query="product.selectedOrFirstAvailableVariant.product.images" first="10" class="flex gap-4">
                           <template>
                             <button
-                              class="gallery-thumb w-20 h-20 bg-[#F8F6F4] rounded-xl shrink-0 cursor-pointer border border-gray-200 hover:border-[#0B2559] overflow-hidden transition-all duration-300"
+                              class="gallery-thumb w-20 h-20 bg-[#F8F6F4] rounded-xl shrink-0 cursor-pointer border border-gray-200 hover:border-[#00399a] overflow-hidden transition-all duration-300"
                               onmouseenter="this.click()"
                               onclick="
                                 const root = this.closest('.product-gallery');
                                 
                                 // Update active thumbnail borders
                                 root.querySelectorAll('.gallery-thumb').forEach(t => {
-                                  t.classList.remove('border-[#0B2559]');
+                                  t.classList.remove('border-[#00399a]');
                                   t.classList.add('border-gray-200');
                                 });
                                 this.classList.remove('border-gray-200');
-                                this.classList.add('border-[#0B2559]');
+                                this.classList.add('border-[#00399a]');
 
                                 // Extract the image URL safely
                                 const media = this.querySelector('shopify-media');
@@ -155,84 +155,6 @@ export function FeaturedProductSection() {
 
                     </div>
 
-                    <div class="border-t border-gray-200 mt-4">
-
-                      <details class="group border-b border-gray-200 py-5" open>
-                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#0B2559] cursor-pointer list-none outline-none">
-                          Description
-                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#0B2559]">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                              <path d="m6 9 6 6 6-6"/>
-                            </svg>
-                          </span>
-                        </summary>
-                        <div class="text-gray-600 text-sm md:text-base leading-relaxed mt-4 pb-2">
-                          This pure mineral crystal deodorant offers a clean, toxin-free alternative to conventional antiperspirants. It forms an invisible protective layer on your skin that completely neutralizes odor-causing bacteria without clogging your pores. Unlike chemical deodorants, it lets your body breathe naturally while keeping you fresh, dry, and odor-free all day long. It leaves zero sticky residue, zero white marks on your clothes, and zero irritation.
-                        </div>
-                      </details>
-
-                      <details class="group border-b border-gray-200 py-5">
-                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#0B2559] cursor-pointer list-none outline-none">
-                          Ingredients
-                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#0B2559]">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                              <path d="m6 9 6 6 6-6"/>
-                            </svg>
-                          </span>
-                        </summary>
-                        <div class="text-gray-600 text-sm md:text-base leading-relaxed mt-4 pb-2">
-                          Alum, Water, Acerola Extract, Kiwi Fruit Extract, Vitamin C, and Vitamin E
-                        </div>
-                      </details>
-
-                      <details class="group border-b border-gray-200 py-5">
-                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#0B2559] cursor-pointer list-none outline-none">
-                          How to Use
-                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#0B2559]">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                              <path d="m6 9 6 6 6-6"/>
-                            </svg>
-                          </span>
-                        </summary>
-                        <div class="text-gray-600 text-sm md:text-base leading-relaxed mt-4 pb-2">
-                          Apply after showering to slightly damp underarms. Wet the crystal if needed and glide gently 4-5 times over the underarm area. 
-                        </div>
-                      </details>
-
-                      <details class="group border-b border-gray-200 py-5">
-                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#0B2559] cursor-pointer list-none outline-none">
-                          Benefits
-                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#0B2559]">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                              <path d="m6 9 6 6 6-6"/>
-                            </svg>
-                          </span>
-                        </summary>
-                        <div class="mt-4 pb-2">
-                          <ul class="space-y-4 text-gray-600 text-sm md:text-base leading-relaxed list-disc pl-5">
-                            <li><span class="font-medium text-[#0B2559]">24-Hour Odor Protection:</span> Eliminates the bacteria that cause body odor, keeping you fresh from morning to night.</li>
-                            <li><span class="font-medium text-[#0B2559]">Zero Clothing Stains:</span> Completely transparent formula leaves no white chalky residue on dark clothes or yellow stains on white shirts.</li>
-                            <li><span class="font-medium text-[#0B2559]">Hypoallergenic & Gentle:</span> Soothes the skin and prevents underarm darkening; perfectly safe for sensitive skin and post-shaving use.</li>
-                            <li><span class="font-medium text-[#0B2559]">Incredibly Long-Lasting:</span> A single pure crystal stick is highly concentrated and can easily last for up to 6–8 months of daily use.</li>
-                          </ul>
-                        </div>
-                      </details>
-
-                      <details class="group border-b border-gray-200 py-5">
-                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#0B2559] cursor-pointer list-none outline-none">
-                          Sustainability & Ethics
-                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#0B2559]">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                              <path d="m6 9 6 6 6-6"/>
-                            </svg>
-                          </span>
-                        </summary>
-                        <div class="text-gray-600 text-sm md:text-base leading-relaxed mt-4 pb-2">
-                          We believe in clean beauty that cares for both your body and the planet. Our crystal deodorants are 100% vegan, cruelty-free, and sustainably sourced. Because a single stick lasts many times longer than a standard aerosol or plastic roll-on gel, switching to Dr. Deodrant drastically reduces your personal packaging waste and environmental footprint. Safe for your skin, kind to the earth.
-                        </div>
-                      </details>
-
-                    </div>
 
                   </div>
 
@@ -245,7 +167,7 @@ export function FeaturedProductSection() {
                       </span>
                     </nav>
 
-                    <h1 class="text-3xl md:text-4xl font-inter font-bold font text-[#0B2559] mb-2">
+                    <h1 class="text-3xl md:text-4xl font-inter font-bold font text-[#00399a] mb-2">
                       <shopify-data query="product.title"></shopify-data>
                     </h1>
 
@@ -255,7 +177,7 @@ export function FeaturedProductSection() {
 
                     <div class="flex items-center flex-wrap gap-2 mb-6">
   <span class="text-yellow-500 text-base">★</span>
-  <span class="font-medium text-[#0B2559]">4.9</span>
+  <span class="font-medium text-[#00399a]">4.9</span>
   <span class="text-gray-400 text-sm">(127 Reviews)</span>
 
   <span class="text-gray-300 mx-2">|</span>
@@ -282,7 +204,7 @@ export function FeaturedProductSection() {
   </div>
 </div>
 
-                    <p class="text-2xl font-bold text-[#0B2559] mb-6">
+                    <p class="text-2xl font-bold text-[#00399a] mb-6">
                       <shopify-money query="product.selectedOrFirstAvailableVariant.price"></shopify-money>
                     </p>
 
@@ -425,7 +347,7 @@ export function FeaturedProductSection() {
     <span class="material-symbols-outlined text-[#394481] text-2xl mb-2">
       local_shipping
     </span>
-    <div class="text-[#0B2559] font-medium">
+    <div class="text-[#00399a] font-medium">
       Free Delivery
     </div>
     <div class="text-xs text-gray-500">
@@ -437,7 +359,7 @@ export function FeaturedProductSection() {
     <span class="material-symbols-outlined text-[#394481] text-2xl mb-2">
       verified_user
     </span>
-    <div class="text-[#0B2559] font-medium">
+    <div class="text-[#00399a] font-medium">
       Secure Payment
     </div>
     <div class="text-xs text-gray-500">
@@ -449,7 +371,7 @@ export function FeaturedProductSection() {
     <span class="material-symbols-outlined text-[#394481] text-2xl mb-2">
       replay
     </span>
-    <div class="text-[#0B2559] font-medium">
+    <div class="text-[#00399a] font-medium">
       Easy Replacement
     </div>
     <div class="text-xs text-gray-500">

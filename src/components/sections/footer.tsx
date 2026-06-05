@@ -6,7 +6,8 @@ import {
   Clock, 
   Phone, 
   Mail, 
-  Send
+  Send,
+  ShoppingBag
 } from "lucide-react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
@@ -21,7 +22,7 @@ export function Footer() {
   return (
     <footer className="w-full bg-[#F5FBFF]">
 
-   <div className="bg-[#113d86] text-white pt-20 pb-10 px-8 md:px-16 rounded-t-[3rem] md:rounded-t-[5rem]">
+   <div className="bg-[#1b3e79] text-white pt-20 pb-10 px-8 md:px-16 rounded-t-[3rem] md:rounded-t-[5rem]">
       <div className="max-w-7xl mx-auto">
         
         {/* --- Top Row: Contact Info --- */}
@@ -30,12 +31,12 @@ export function Footer() {
           {/* Address */}
           <div className="flex items-start gap-4 group cursor-default">
             <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-colors duration-300 group-hover:bg-white group-hover:text-[#53606b]">
-              <MapPin size={20} strokeWidth={1.5} />
+              <ShoppingBag size={20} strokeWidth={1.5} />
             </div>
             <div>
-              <h4 className="font-inter text-lg mb-1">Address</h4>
+              <h4 className="font-inter text-lg mb-1">Free Shipping</h4>
               <p className="text-sm text-white/70 leading-relaxed">
-                4b/39 James St, Fortitude Valley<br />QLD 4006
+                All over India
               </p>
             </div>
           </div>
@@ -114,9 +115,14 @@ export function Footer() {
             {/* Explore Column */}
             <div className="flex flex-col gap-4">
               <h4 className="font-inter text-xl mb-2">Explore</h4>
-              {['Home', 'About', 'Services', 'Blog', 'Contact'].map((link) => (
-                <Link key={link} href="#" className="text-sm text-white/70 hover:text-white transition-colors w-fit">
-                  {link}
+              {[
+                { name: 'Home', href: '/' }, 
+                { name: 'Our Story', href: '/story' }, 
+                { name: 'Blog', href: '/blog' }, 
+                { name: 'Contact', href: '/contact' }
+              ].map((link) => (
+                <Link key={link.name} href={link.href} className="text-sm text-white/70 hover:text-white transition-colors w-fit">
+                  {link.name}
                 </Link>
               ))}
             </div>
@@ -124,22 +130,31 @@ export function Footer() {
             {/* Company Column */}
             <div className="flex flex-col gap-4">
               <h4 className="font-inter text-xl mb-2">Company</h4>
-              {['Our Story', 'Pricing', 'FAQs', 'Privacy Policy', 'Terms & Conditions'].map((link) => (
-                <Link key={link} href="#" className="text-sm text-white/70 hover:text-white transition-colors w-fit">
-                  {link}
+              {[
+                { name: 'Our Story', href: '/story' }, 
+                { name: 'Pricing', href: '/shop' }, 
+                { name: 'FAQs', href: '#faqs' }
+              ].map((link) => (
+                <Link key={link.name} href={link.href} className="text-sm text-white/70 hover:text-white transition-colors w-fit">
+                  {link.name}
                 </Link>
               ))}
             </div>
 
-            {/* Wellness Column */}
-            {/* <div className="flex flex-col gap-4 col-span-2 md:col-span-1">
-              <h4 className="font-inter text-xl mb-2">Wellness</h4>
-              {['Massages', 'Facials', 'Body Treatments', 'Rituals'].map((link) => (
-                <Link key={link} href="#" className="text-sm text-white/70 hover:text-white transition-colors w-fit">
-                  {link}
+            {/* T&C Column */}
+            <div className="flex flex-col gap-4">
+              <h4 className="font-inter text-xl mb-2">T&C</h4>
+              {[
+                { name: 'Privacy Policy', href: '/privacy' }, 
+                { name: 'Shipping Policy', href: '/shipping' },
+                { name: 'Terms & Conditions', href: '/tnc' }, 
+              ].map((link) => (
+                <Link key={link.name} href={link.href} className="text-sm text-white/70 hover:text-white transition-colors w-fit">
+                  {link.name}
                 </Link>
               ))}
-            </div> */}
+            </div>
+
           </div>
 
         </div>

@@ -34,10 +34,12 @@ export function FixedHeroSection() {
         
         {/* Call to Action Button */}
         <button className="group flex items-center gap-2 bg-[#113D86] text-[#F5FBFF] px-8 py-3.5 rounded-full text-md font-medium transition-all hover:bg-[#113D86]/95 hover:scale-105 active:scale-95 shadow-lg cursor-pointer">
-          <span>SWITCH TO NATURAL</span>
-          <span className="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">
-            arrow_forward_ios
-          </span>
+          <a href="/shop/popular">
+            <span>SWITCH TO NATURAL</span>
+            <span className="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">
+              arrow_forward_ios
+            </span>
+          </a>
         </button>
 
       </div>

@@ -31,10 +31,10 @@ export default function OurProcess() {
       <div className="max-w-7xl mx-auto w-full">
         {/* Main Heading */}
         <div className="max-w-3xl mb-10 md:mb-14 process-reveal">
-          <div className="inline-flex items-center rounded-full bg-[#0A2544] px-4 py-1.5 text-sm font-medium text-[#ffffff] tracking-wide mb-5">
+          <div className="inline-flex items-center rounded-full bg-[#00399a] px-4 py-1.5 text-sm font-medium text-[#ffffff] tracking-wide mb-5">
             Our Process
           </div>
-          <h1 className="text-6xl md:text-[3rem] lg:text-[4rem] font-medium text-[#0A2544] tracking-tight">
+          <h1 className="text-6xl md:text-[3rem] lg:text-[4rem] font-medium text-[#00399a] tracking-tight">
           Our Process
           </h1>
         </div>
@@ -56,7 +56,7 @@ export default function OurProcess() {
           <div className="md:col-span-4 lg:col-span-4 flex md:justify-end items-start">
             <div className="process-orbit relative w-full max-w-xs rounded-[2rem] border border-white/50 bg-white/40 backdrop-blur-sm p-5 shadow-[0_20px_50px_rgba(32,57,86,0.08)]">
               <div className="absolute inset-0 rounded-[2rem] process-orbit-ring"></div>
-              <p className="relative text-sm md:text-base leading-relaxed text-[#0A2544] font-medium">
+              <p className="relative text-sm md:text-base leading-relaxed text-[#00399a] font-medium">
                 A calm, deliberate flow from raw mineral to finished crystal, built step by step.
               </p>
             </div>
@@ -68,7 +68,7 @@ export default function OurProcess() {
           {principles.map((principle, idx) => (
             <div key={principle.number} className="process-card flex flex-col">
               <div className="mb-6 relative">
-                <div className="process-number-badge absolute -top-4 left-4 z-10 inline-flex items-center justify-center rounded-full bg-[#0A2544] px-4 py-1.5 text-sm font-medium text-white shadow-lg">
+                <div className="process-number-badge absolute -top-4 left-4 z-10 inline-flex items-center justify-center rounded-full bg-[#00399a] px-4 py-1.5 text-sm font-medium text-white shadow-lg">
                   Step {principle.number}
                 </div>
                 <img

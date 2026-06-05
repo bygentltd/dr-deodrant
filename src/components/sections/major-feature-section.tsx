@@ -9,7 +9,7 @@ export function MajorFeaturesSection() {
     // Minimal bottom padding (pb-6) so it connects nicely with the Bento Grid below it
     <section className="pt-24 pb-6 px-6 md:px-12 lg:px-16 max-w-350 mx-auto">
       <div className="text-center mb-16 md:mb-24 reveal-on-scroll">
-          <h2 className="text-4xl md:text-5xl font-inter font-bold text-[#0B2559] leading-tight">
+          <h2 className="text-4xl md:text-5xl font-inter font-bold text-[#00399a] leading-tight">
             Why Choose Dr. Deodrant?
           </h2>
         </div>

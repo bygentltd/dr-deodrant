@@ -10,17 +10,17 @@ export function TestimonialSection() {
   const testimonials = [
   {
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
+      "/reviews/Rev-Img1.jpg",
     quote:
       "Finally, a deodorant that eliminates odour instead of just masking it with perfume! Dr. Deodrant removed my underarm smell completely. I feel so much more confident knowing I actually smell fresh, not just covered up. A total game-changer.",
-    author: "Sophia M, New York",
+    author: "Isheeta, Mumbai ",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
+      "/reviews/Rev-Img2.webp",
     quote:
       "I love that this is enriched with Vitamin C and E. It didn't just stop the smell; it actually smoothened my underarms and cleared up my pigmentation. It feels like high-end skincare for your armpits. I’m finally wearing sleeveless tops again!",
-    author: "Marcus T, Seattle",
+    author: "Ekta, Mumbai",
   },
   {
     image:
@@ -50,7 +50,7 @@ export function TestimonialSection() {
       
       {/* Header Section */}
       <div className="max-w-6xl mx-auto px-6 md:px-12 text-center mb-16 reveal-on-scroll">
-        <h2 className="text-4xl font-inter font-bold md:text-5xl text-[#0B2559] leading-tight mb-4">
+        <h2 className="text-4xl font-inter font-bold md:text-5xl text-[#00399a] leading-tight mb-4">
           What Our Customers Are Saying.
         </h2>
         <p className="text-md md:text-base text-gray-600">
@@ -59,7 +59,7 @@ export function TestimonialSection() {
       </div>
 
       {/* Slider Carousel - CONTAINER INCREASED to max-w-7xl */}
-      <div className="max-w-7xl mx-auto px-4 md:px-8 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 relative overflow-hidden ">
         <div 
           className="flex transition-transform duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]" 
           style={{ transform: `translateX(-${currentTestimonial * 100}%)` }}
@@ -82,7 +82,7 @@ export function TestimonialSection() {
               </div>
 
               {/* Right Side: Content Box (Now 8 columns instead of 7) */}
-              <div className="md:col-span-8 bg-[#113d86]/30  p-8 md:p-10 lg:p-12 rounded-[2rem] flex flex-col justify-between h-full">
+              <div className="md:col-span-8 bg-[#eaf5ff] p-8 md:p-10 lg:p-12 rounded-[2rem] flex flex-col justify-between h-full">
                 
                 <div className="space-y-6">
                   {/* Custom Quote Icon */}

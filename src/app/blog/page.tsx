@@ -18,10 +18,10 @@ export default function BlogGrid() {
     <section className={`${blogGridTopOffset} pb-24 px-6 md:px-12 lg:px-16 max-w-350 mx-auto bg-[#F5FBFF]`}>
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-16 reveal-on-scroll">
         <div className="max-w-2xl">
-          <div className="inline-block px-3 py-1 bg-[#0A2544] rounded-full text-[10px] font-bold uppercase tracking-widest text-white mb-6">
+          <div className="inline-block px-3 py-1 bg-[#00399a] rounded-full text-[10px] font-bold uppercase tracking-widest text-white mb-6">
             Our Journal
           </div>
-          <h1 className="text-5xl md:text-7xl  text-[#0B2559] leading-tight">
+          <h1 className="text-5xl md:text-7xl  text-[#00399a] leading-tight">
             Beyond your skin.
           </h1>
         </div>
@@ -47,7 +47,7 @@ export default function BlogGrid() {
             <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-500 group-hover:opacity-90"></div>
 
             <div className="absolute top-6 left-6 flex items-center justify-between w-[calc(100%-3rem)]">
-              <span className="bg-[#F5FBFF]/90 backdrop-blur-sm text-[#0B2559] px-4 py-1.5 rounded-full text-xs font-medium">
+              <span className="bg-[#F5FBFF]/90 backdrop-blur-sm text-[#00399a] px-4 py-1.5 rounded-full text-xs font-medium">
                 {post.category}
               </span>
               <span className="material-symbols-outlined text-[#F5FBFF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-2 group-hover:translate-x-0">

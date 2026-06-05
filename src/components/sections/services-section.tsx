@@ -54,7 +54,7 @@ export function ServicesSection() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         
         <div className="text-center mb-16 md:mb-24 reveal-on-scroll">
-          <h2 className="text-4xl md:text-5xl font-inter font-bold text-[#0B2559] leading-tight">
+          <h2 className="text-4xl md:text-5xl font-inter font-bold text-[#00399a] leading-tight">
             Made for  <br className="hidden md:block" />
             Everyday Confidence
           </h2>
@@ -75,7 +75,7 @@ export function ServicesSection() {
                 >
                   {/* Text Container: Flex column aligning items to the right on tablet/desktop */}
                   <div className="flex-1 order-2 sm:order-1 flex flex-col items-center sm:items-end">
-                    <h3 className="text-[#0B2559] font-inter font-bold text-lg md:text-xl mb-1.5">
+                    <h3 className="text-[#00399a] font-inter font-bold text-lg md:text-xl mb-1.5">
                       {service.title}
                     </h3>
                     <p className="text-gray-500 text-sm leading-relaxed max-w-[240px]">
@@ -85,7 +85,7 @@ export function ServicesSection() {
                   
                   {/* Icon */}
                   <div className="relative shrink-0 order-1 sm:order-2">
-                    <div className="flex items-center justify-center w-[88px] h-[88px] bg-[#0B2559] rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.06)] text-white z-10 relative">
+                    <div className="flex items-center justify-center w-[88px] h-[88px] bg-[#00399a] rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.06)] text-white z-10 relative">
                       {idx === 0 ? (
                         <div className="relative flex items-center justify-center">
                           <Icon strokeWidth={1.5} className="w-9 h-9" />
@@ -131,7 +131,7 @@ export function ServicesSection() {
                 >
                   {/* Icon */}
                   <div className="relative shrink-0">
-                    <div className="flex items-center justify-center w-[88px] h-[88px] bg-[#0B2559] rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.06)] text-white z-10 relative">
+                    <div className="flex items-center justify-center w-[88px] h-[88px] bg-[#00399a] rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.06)] text-white z-10 relative">
                       <Icon strokeWidth={1.5} className="w-9 h-9" />
                     </div>
                     {/* Connecting Line */}
@@ -142,7 +142,7 @@ export function ServicesSection() {
                   
                   {/* Text Container: Flex column aligning items to the left on tablet/desktop */}
                   <div className="flex-1 flex flex-col items-center sm:items-start">
-                    <h3 className="text-[#0B2559] font-inter font-bold text-lg md:text-xl mb-1.5">
+                    <h3 className="text-[#00399a] font-inter font-bold text-lg md:text-xl mb-1.5">
                       {service.title}
                     </h3>
                     <p className="text-gray-500 font-inter text-sm leading-relaxed max-w-[240px]">

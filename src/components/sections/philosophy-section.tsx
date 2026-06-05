@@ -15,7 +15,7 @@ export function PhilosophySection() {
             Our Formulation
           </span>
           
-          <h2 className="text-4xl md:text-5xl font-inter font-bold text-[#0B2559] leading-tight">
+          <h2 className="text-4xl md:text-5xl font-inter font-bold text-[#00399a] leading-tight">
             Synergy of Alum & Superfood Extracts.
           </h2>
           
