@@ -132,7 +132,7 @@ export function Footer() {
               <h4 className="font-inter text-xl mb-2">Company</h4>
               {[
                 { name: 'Our Story', href: '/story' }, 
-                { name: 'Pricing', href: '/shop' }, 
+                { name: 'Pricing', href: '/shop/popular' }, 
                 { name: 'FAQs', href: '#faqs' }
               ].map((link) => (
                 <Link key={link.name} href={link.href} className="text-sm text-white/70 hover:text-white transition-colors w-fit">

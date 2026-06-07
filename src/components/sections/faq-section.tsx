@@ -26,7 +26,7 @@ export function FaqSection() {
   ];
 
   return (
-    <section className="w-full bg-[#F5FBFF]">
+    <section id="#faqs" className="w-full bg-[#F5FBFF]">
       <div className="py-24 px-8 md:px-16 max-w-container-max mx-auto">
       <div className="grid md:grid-cols-2 gap-20 items-start">
         <div className="space-y-12">
