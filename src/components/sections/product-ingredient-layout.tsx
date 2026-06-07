@@ -1,116 +1,74 @@
-"use client";
-
-import Link from "next/link";
-
-// 👇 MODIFIED: Trimmed down the descriptions for a cleaner, less congested look
-const ingredients = [
-  {
-    id: "01",
-    title: "Alum",
-    image: "/Ingredient_1.webp",
-    alt: "Close up of glowing skin",
-    description: "A natural mineral crystal that creates an invisible layer to stop odor-causing bacteria without blocking your pores.",
-  },
-  {
-    id: "02",
-    title: "Acerola Extract",
-    image: "/Ingredient_2.webp",
-    alt: "Natural ingredient composition",
-    description: "Rich in Vitamin C, it helps brighten delicate underarm skin and provides powerful antioxidant protection against dullness.",
-  },
-  {
-    id: "03",
-    title: "Kiwi Extract",
-    image: "/Ingredient_3.webp",
-    alt: "Kiwi fruit extract concept",
-    description: "Packed with antioxidants that work to soothe, refresh, and deeply nourish the underarm area with every use.",
-  },
-  {
-    id: "04", // Fixed numbering sequence
-    title: "Vitamin E",
-    image: "/Ingredient_5.webp",
-    alt: "Vitamin E skin care visual",
-    description: "Deeply moisturizing and protective, acting as a gentle barrier to keep underarm skin soft, supple, and healthy-looking.",
-  },
-];
-
 export default function ProductIngredientLayout() {
+  const ingredients = [
+    {
+      id: "01",
+      title: "Alum",
+      image: "/Ingredient_1.webp",
+      alt: "Close up of glowing skin",
+      description:
+        "A naturally occurring mineral crystal that forms the core of Dr. Deodorant's formula. Alum works by creating an invisible layer on the skin that stops odor-causing bacteria from thriving, keeping you feeling fresh and clean all day — without blocking your pores.",
+    },
+    {
+      id: "02",
+      title: "Acerola Extract",
+      image: "/Ingredient_2.webp",
+      alt: "Natural ingredient composition",
+      description:
+        "Derived from one of nature's richest sources of Vitamin C, Acerola Extract helps brighten and even out the delicate underarm skin. Its antioxidant properties refresh and nourish the skin, making it a powerful ally against dullness and dark underarms.",
+    },
+    {
+      id: "03",
+      title: "Kiwi Fruit Extract",
+      image: "/Ingredient_3.webp",
+      alt: "Kiwi fruit extract concept",
+      description:
+        "Packed with antioxidants, Kiwi Fruit Extract works to soothe, refresh, and deeply nourish the underarm area. It helps combat oxidative stress on the skin, leaving your underarms feeling soft, calm, and revitalized with every use.",
+    },
+    {
+      id: "05",
+      title: "Vitamin E",
+      image: "/Ingredient_5.webp",
+      alt: "Vitamin E skin care visual",
+      description:
+        "Known for its deeply moisturizing and protective properties, Vitamin E helps keep the underarm skin soft, supple, and healthy-looking. It acts as a skin barrier, locking in moisture and shielding the skin from daily wear — making it an essential part of our gentle, nourishing formula.",
+    },
+  ];
+
   return (
-    <section className="bg-gradient-to-b from-[#eaf4ff] via-[#f4f9ff] to-white py-16 lg:py-24 overflow-hidden font-sans">
-      <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* TOP HEADER - Centered */}
-        <div className="text-center max-w-2xl mx-auto mb-16 relative z-10">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-inter font-bold text-[#00399A] mb-2">
-            Pure Ingredients
-          </h2>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-inter font-bold text-[#00399A] mb-6">
-            Real Results
-          </h2>
-          <p className="text-[#4a5568] text-base max-w-md mx-auto leading-relaxed">
-            A thoughtful blend of natural extracts and mineral actives that work with your skin, not against it.
-          </p>
-        </div>
+    // 1. Reduced lg:px-24 to xl:px-16 to free up screen edge space
+    <section className="bg-[#F5FBFF] px-6 py-24 md:py-32 md:px-16 xl:px-16 font-sans w-full">
+      {/* 2. Changed max-w-350 to an explicit wide max-width like max-w-[1600px] */}
+      <div className="max-w-[1600px] mx-auto w-full">
+        <h2 className="text-5xl md:text-[3rem] lg:text-[4rem] font-medium text-[#313131] mb-12 md:mb-16 tracking-tight">
+          Ingredients
+        </h2>
 
-        {/* MAIN LAYOUT: Product Left, 2x2 Grid Right */}
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 lg:gap-12 relative z-10">
-          
-          {/* PRODUCT IMAGE (Left) */}
-          {/* 👇 MODIFIED: Added `group` and `cursor-pointer` to trigger hover state */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:sticky lg:top-24 relative items-center group cursor-pointer">
-            <div className="relative w-[340px] h-[480px] md:w-[450px] md:h-[600px] translate-y-12">
-              <img
-                src="/Home_New.webp"
-                alt="Dr. Deodorant Original + C&E"
-                // 👇 MODIFIED: Added rounded corners and hover zoom transition
-                className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)] z-10 rounded-3xl transition-transform duration-700 ease-in-out group-hover:scale-105"
-              />
-            </div>
-          </div>
-
-          {/* RIGHT CONTENT (Smaller 2x2 Grid) */}
-          <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
-            {ingredients.map((item) => (
-              <div
-                key={item.id}
-                className="flex flex-col rounded-[1.5rem] bg-white/80 backdrop-blur-sm border border-white/60 p-5 shadow-[0_4px_20px_rgb(0,0,0,0.03)] group transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)]"
-              >
-                {/* Card Image Wrapper */}
-                <div className="w-full aspect-video overflow-hidden rounded-xl mb-4 bg-[#e4e7dd] isolate transform-gpu">
-                  <img
-                    src={item.image}
-                    alt={item.alt}
-                    className="w-full h-full object-cover object-center transition-transform duration-700 ease-in-out group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-
-                {/* Card Title & Number */}
-                <div className="flex justify-between items-end pb-2 mb-3 border-b border-slate-100">
-                  <h3 className="text-base md:text-lg font-bold text-[#1e3a5f]">{item.title}</h3>
-                  <span className="text-sm md:text-base font-semibold text-[#0052cc]">{item.id}</span>
-                </div>
-
-                {/* Card Description */}
-                <p className="text-xs md:text-sm font-inter leading-relaxed text-[#64748b]">
-                  {item.description}
-                </p>
+        {/* 3. Reduced gap on extra large screens slightly to allow wider cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 lg:gap-10 xl:gap-8">
+          {ingredients.map((item) => (
+            <div
+              key={item.id}
+              className="flex flex-col rounded-2xl md:rounded-[2rem] bg-[#F7FBFF]/75 backdrop-blur-sm border border-[#313131]/10 p-6 md:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.06)] group"
+            >
+              <div className="w-full aspect-4/5 md:aspect-square lg:aspect-4/5 overflow-hidden rounded-2xl md:rounded-[2rem] mb-6 md:mb-8 bg-[#e4e7dd]">
+                <img
+                  src={item.image}
+                  alt={item.alt}
+                  className="w-full h-full object-cover object-center transition-transform duration-700 ease-in-out group-hover:scale-105"
+                />
               </div>
-            ))}
-          </div>
-        </div>
 
-        {/* CTA BUTTON */}
-        <div className="mt-16 flex justify-center relative z-10">
-          <Link 
-            href="/story"
-            className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold text-white transition-all duration-300 bg-[#00399A] rounded-full hover:bg-[#002a75] hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00399A]"
-          >
-            Know More
-            <svg className="w-4 h-4 ml-2 -mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-          </Link>
-        </div>
+              <div className="flex justify-between items-end pb-3 mb-4 border-b border-[#313131]/20">
+                <h3 className="text-lg md:text-2xl font-medium text-[#313131]">{item.title}</h3>
+                <span className="text-lg md:text-xl font-medium text-[#313131]">{item.id}</span>
+              </div>
 
+              <p className="text-sm md:text-base font-inter text-justify leading-relaxed text-[#4a4a4a]">
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
