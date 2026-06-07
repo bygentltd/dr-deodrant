@@ -23,7 +23,6 @@ export default function Home() {
         <PhilosophySection />
         <StatsSection />
         <FeaturedProductSection />
-        <ProductIngredientLayout/>
         <ImageSectionComp src="/HOME_21.webp" />
         <ImageSectionComp src="/HOME_HOW.webp" />
         {/* <MajorFeaturesSection/>
