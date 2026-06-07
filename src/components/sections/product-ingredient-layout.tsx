@@ -58,7 +58,7 @@ export default function IngredientsSection() {
           {/* PRODUCT IMAGE (Left) */}
           {/* 👇 MODIFIED: Added `group` and `cursor-pointer` to trigger hover state */}
           <div className="w-full lg:w-1/2 flex justify-center lg:sticky lg:top-24 relative items-center group cursor-pointer">
-            <div className="relative w-75 h-100 md:w-112.5 md:h-150 translate-y-10">
+            <div className="relative w-[340px] h-[480px] md:w-[450px] md:h-[600px] translate-y-12">
               <img
                 src="/Home_New.webp"
                 alt="Dr. Deodorant Original + C&E"
@@ -76,7 +76,7 @@ export default function IngredientsSection() {
                 className="flex flex-col rounded-[1.5rem] bg-white/80 backdrop-blur-sm border border-white/60 p-5 shadow-[0_4px_20px_rgb(0,0,0,0.03)] group transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)]"
               >
                 {/* Card Image Wrapper */}
-                <div className="w-full aspect-video overflow-hidden rounded-xl mb-4 bg-[#e4e7dd]">
+                <div className="w-full aspect-video overflow-hidden rounded-xl mb-4 bg-[#e4e7dd] isolate transform-gpu">
                   <img
                     src={item.image}
                     alt={item.alt}
