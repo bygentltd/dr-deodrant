@@ -34,7 +34,7 @@ const ingredients = [
   },
 ];
 
-export default function IngredientsSection() {
+export default function ProductIngredientLayout() {
   return (
     <section className="bg-gradient-to-b from-[#eaf4ff] via-[#f4f9ff] to-white py-16 lg:py-24 overflow-hidden font-sans">
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
