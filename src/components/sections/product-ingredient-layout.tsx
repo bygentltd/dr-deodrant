@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+// 👇 Removed the Next.js Image import
 import Link from "next/link";
 
 interface IngredientCardProps {
@@ -24,13 +24,14 @@ function IngredientCard({
 }: IngredientCardProps) {
   return (
     <div className="bg-white/80 backdrop-blur-sm rounded-[2rem] p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white flex flex-col items-center text-center transition-all duration-300 hover:shadow-[0_10px_40px_rgb(0,0,0,0.08)]">
+      
+      {/* 👇 MODIFIED: Switched to standard img tag */}
       <div className="flex justify-center mb-6 h-32 items-center w-full">
-        <Image
+        <img
           src={image}
           alt={title}
-          width={128}
-          height={150}
-          className="object-contain drop-shadow-sm"
+          className="w-32 h-auto max-h-full object-contain drop-shadow-sm"
+          loading="lazy" 
         />
       </div>
 
@@ -122,12 +123,11 @@ export default function IngredientsSection() {
           {/* PRODUCT IMAGE (Left) */}
           <div className="w-full lg:w-2/5 flex justify-center relative items-center">
             <div className="relative w-[340px] h-[480px] md:w-[450px] md:h-[600px] lg:w-[500px] lg:h-[650px]">
-              <Image
+              {/* 👇 MODIFIED: Switched to standard img tag and updated classes to fill the container naturally */}
+              <img
                 src="/Home_New.webp"
                 alt="Dr. Deodorant Original + C&E"
-                fill
-                className="object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)] z-10"
-                priority
+                className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)] z-10"
               />
             </div>
           </div>
