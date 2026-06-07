@@ -73,7 +73,7 @@ export function ServicesSection() {
                   className="flex flex-col sm:flex-row items-center sm:justify-end gap-6 text-center sm:text-right reveal-on-scroll"
                   style={{ transitionDelay: `${idx * 100}ms` }}
                 >
-                  {/* Text Container: Flex column aligning items to the right on tablet/desktop */}
+                  {/* Text Container */}
                   <div className="flex-1 order-2 sm:order-1 flex flex-col items-center sm:items-end">
                     <h3 className="text-[#00399a] font-inter font-bold text-lg md:text-xl mb-1.5">
                       {service.title}
@@ -85,14 +85,14 @@ export function ServicesSection() {
                   
                   {/* Icon */}
                   <div className="relative shrink-0 order-1 sm:order-2">
-                    <div className="flex items-center justify-center w-[88px] h-[88px] bg-[#00399a] rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.06)] text-white z-10 relative">
+                    <div className="flex items-center justify-center w-[88px] h-[88px] bg-[#EAF5FF] rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.06)] border-2 border-[#00399a] border-2 text-white z-10 relative">
                       {idx === 0 ? (
                         <div className="relative flex items-center justify-center">
-                          <Icon strokeWidth={1.5} className="w-9 h-9" />
-                          <span className="absolute text-[10px] font-bold mt-0.5">24</span>
+                          <Icon strokeWidth={1.5} className="w-9 h-9 text-[#00399a]" />
+                          <span className="absolute text-[10px] font-bold mt-0.5 text-[#00399a]">24</span>
                         </div>
                       ) : (
-                        <Icon strokeWidth={1.5} className="w-9 h-9" />
+                        <Icon strokeWidth={1.5} className="w-9 h-9 text-[#00399a]" />
                       )}
                     </div>
                     {/* Connecting Line */}
@@ -107,14 +107,15 @@ export function ServicesSection() {
 
           {/* Center Column (Pill Image) */}
           <div className="flex justify-center order-1 lg:order-2 reveal-on-scroll z-20">
-            <div className="relative w-[300px] h-[480px] md:w-[360px] md:h-[580px] rounded-[200px] overflow-hidden shadow-[0_0_50px_rgba(255,255,255,0.8)] border-[8px] border-white/60">
+            {/* 👇 MODIFIED: Added `group` and `cursor-pointer` to the pill container */}
+            <div className="relative w-[300px] h-[480px] md:w-[360px] md:h-[580px] rounded-[200px] overflow-hidden shadow-[0_0_50px_rgba(255,255,255,0.8)] border-[8px] border-white/60 group cursor-pointer">
               <div className="absolute top-8 left-8 text-white w-4 h-4 z-10 opacity-80">✨</div>
               <div className="absolute bottom-12 right-10 text-white w-4 h-4 z-10 opacity-80">✨</div>
               
               <img 
                 src="/Central_image.webp" 
                 alt="24 Hour Odor Protection" 
-                className="absolute inset-0 w-full h-full object-cover object-center"
+                className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-in-out group-hover:scale-105"
               />
             </div>
           </div>
@@ -131,8 +132,8 @@ export function ServicesSection() {
                 >
                   {/* Icon */}
                   <div className="relative shrink-0">
-                    <div className="flex items-center justify-center w-[88px] h-[88px] bg-[#00399a] rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.06)] text-white z-10 relative">
-                      <Icon strokeWidth={1.5} className="w-9 h-9" />
+                    <div className="flex items-center justify-center w-[88px] h-[88px] bg-[#EAF5FF] rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-[#00399a] border-2 text-white z-10 relative">
+                      <Icon strokeWidth={1.5} className="w-9 h-9 text-[#00399a]" />
                     </div>
                     {/* Connecting Line */}
                     <div className="hidden lg:block absolute top-1/2 -left-8 xl:-left-16 w-8 xl:w-16 h-px bg-[#8BA6D3] z-[-1]">
@@ -140,7 +141,7 @@ export function ServicesSection() {
                     </div>
                   </div>
                   
-                  {/* Text Container: Flex column aligning items to the left on tablet/desktop */}
+                  {/* Text Container */}
                   <div className="flex-1 flex flex-col items-center sm:items-start">
                     <h3 className="text-[#00399a] font-inter font-bold text-lg md:text-xl mb-1.5">
                       {service.title}

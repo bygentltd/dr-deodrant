@@ -49,12 +49,15 @@ export function FaqSection() {
             </Accordion>
           </div>
         </div>
-        <div className="relative group h-full reveal-on-scroll">
+        <div className="relative group h-full reveal-on-scroll cursor-pointer">
           <div className="sticky top-32 rounded-[2rem] overflow-hidden shadow-2xl p-12 flex flex-col items-center text-center justify-center min-h-125">
             <div className="absolute inset-0 opacity-90">
-              <img className="w-full h-full object-cover" src="/DRDEO11.webp" alt="Contact" />
+              <img 
+                className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105" 
+                src="/DRDEO11.webp" 
+                alt="Contact" 
+              />
             </div>
-            
           </div>
         </div>
       </div>
