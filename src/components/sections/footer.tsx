@@ -133,7 +133,7 @@ export function Footer() {
               {[
                 { name: 'Our Story', href: '/story' }, 
                 { name: 'Pricing', href: '/shop/popular' }, 
-                { name: 'FAQs', href: '#faqs' }
+                { name: 'FAQs', href: '/#faqs' }
               ].map((link) => (
                 <Link key={link.name} href={link.href} className="text-sm text-white/70 hover:text-white transition-colors w-fit">
                   {link.name}
