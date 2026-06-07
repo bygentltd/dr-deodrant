@@ -50,7 +50,7 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
 
       <div className="max-w-4xl mx-auto px-6 md:px-8 pt-20 ">
         <div className="flex items-center justify-between gap-4 mb-10 text-sm text-gray-500">
-          <Link href="/blog" className="font-medium text-gray-700 hover:text-[#00399a] transition-colors">
+          <Link href="/blog" className="font-medium text-gray-700 hover:text-[#003286] transition-colors">
             Back to Journal
           </Link>
           <span>{post.category}</span>
@@ -65,7 +65,7 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
                     {section.eyebrow}
                   </p>
                 ) : null}
-                <h2 className="text-3xl md:text-4xl font-inter text-[#00399a] leading-tight">
+                <h2 className="text-3xl md:text-4xl font-inter text-[#003286] leading-tight">
                   {section.heading}
                 </h2>
               </div>
@@ -97,7 +97,7 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
                     return (
                       <blockquote
                         key={`${section.heading}-${blockIndex}`}
-                        className="border-l-4 border-[#1D4F5D]/20 pl-6 py-1 text-[#00399a] font-medium italic text-left"
+                        className="border-l-4 border-[#1D4F5D]/20 pl-6 py-1 text-[#003286] font-medium italic text-left"
                       >
                         {block.text}
                       </blockquote>

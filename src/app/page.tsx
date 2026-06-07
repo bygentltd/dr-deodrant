@@ -13,6 +13,7 @@ import HowToUse from "@/components/sections/how-to-use";
 import ImageSectionComp from "@/components/sections/image-section-comp";
 import IngredientsSection from "@/components/sections/product-ingredient-layout";
 import ProductIngredientLayout from "@/components/sections/product-ingredient-layout";
+import MeetTheFounder from "@/components/sections/meet-the-founders";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         <BentoGridSection /> */}
         <ServicesSection/>
       </div>
+      <MeetTheFounder/>
       <FixedHeroSection/>
       <TestimonialSection />
       <FaqSection />

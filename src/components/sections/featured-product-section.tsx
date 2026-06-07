@@ -69,7 +69,7 @@ export function FeaturedProductSection() {
                           onclick="
                             const root = this.closest('.product-gallery');
                             const thumbs = Array.from(root.querySelectorAll('.gallery-thumb'));
-                            const activeIndex = thumbs.findIndex(t => t.classList.contains('border-[#00399a]'));
+                            const activeIndex = thumbs.findIndex(t => t.classList.contains('border-[#003286]'));
                             const currentIndex = activeIndex > -1 ? activeIndex : 0;
                             if(thumbs.length > 0) {
                               const prevIndex = currentIndex <= 0 ? thumbs.length - 1 : currentIndex - 1;
@@ -85,7 +85,7 @@ export function FeaturedProductSection() {
                           onclick="
                             const root = this.closest('.product-gallery');
                             const thumbs = Array.from(root.querySelectorAll('.gallery-thumb'));
-                            const activeIndex = thumbs.findIndex(t => t.classList.contains('border-[#00399a]'));
+                            const activeIndex = thumbs.findIndex(t => t.classList.contains('border-[#003286]'));
                             const currentIndex = activeIndex > -1 ? activeIndex : 0;
                             if(thumbs.length > 0) {
                               const nextIndex = currentIndex >= thumbs.length - 1 ? 0 : currentIndex + 1;
@@ -102,18 +102,18 @@ export function FeaturedProductSection() {
                         <shopify-list-context type="image" query="product.selectedOrFirstAvailableVariant.product.images" first="10" class="flex gap-4">
                           <template>
                             <button
-                              class="gallery-thumb w-20 h-20 bg-[#F8F6F4] rounded-xl shrink-0 cursor-pointer border border-gray-200 hover:border-[#00399a] overflow-hidden transition-all duration-300"
+                              class="gallery-thumb w-20 h-20 bg-[#F8F6F4] rounded-xl shrink-0 cursor-pointer border border-gray-200 hover:border-[#003286] overflow-hidden transition-all duration-300"
                               onmouseenter="this.click()"
                               onclick="
                                 const root = this.closest('.product-gallery');
                                 
                                 // Update active thumbnail borders
                                 root.querySelectorAll('.gallery-thumb').forEach(t => {
-                                  t.classList.remove('border-[#00399a]');
+                                  t.classList.remove('border-[#003286]');
                                   t.classList.add('border-gray-200');
                                 });
                                 this.classList.remove('border-gray-200');
-                                this.classList.add('border-[#00399a]');
+                                this.classList.add('border-[#003286]');
 
                                 // Extract the image URL safely
                                 const media = this.querySelector('shopify-media');
@@ -167,7 +167,7 @@ export function FeaturedProductSection() {
                       </span>
                     </nav>
 
-                    <h1 class="text-3xl md:text-4xl font-inter font-bold font text-[#00399a] mb-2">
+                    <h1 class="text-3xl md:text-4xl font-inter font-bold font text-[#003286] mb-2">
                       <shopify-data query="product.title"></shopify-data>
                     </h1>
 
@@ -177,7 +177,7 @@ export function FeaturedProductSection() {
 
                     <div class="flex items-center flex-wrap gap-2 mb-6">
   <span class="text-yellow-500 text-base">★</span>
-  <span class="font-medium text-[#00399a]">4.9</span>
+  <span class="font-medium text-[#003286]">4.9</span>
   <span class="text-gray-400 text-sm">(127 Reviews)</span>
 
   <span class="text-gray-300 mx-2">|</span>
@@ -204,7 +204,7 @@ export function FeaturedProductSection() {
   </div>
 </div>
 
-                    <p class="text-2xl font-bold text-[#00399a] mb-6">
+                    <p class="text-2xl font-bold text-[#003286] mb-6">
                       <shopify-money query="product.selectedOrFirstAvailableVariant.price"></shopify-money>
                     </p>
 
@@ -235,7 +235,7 @@ export function FeaturedProductSection() {
     <span class="flex items-center justify-center w-4 h-4 rounded-full bg-[#394481] text-white text-[10px] shrink-0">
       ✓
     </span>
-    <span>One Crystal = 6–8 Months of Freshness</span>
+    <span>One Crystal gives 6 to 8 Months of Freshness</span>
   </li>
 
 </ul>
@@ -243,7 +243,7 @@ export function FeaturedProductSection() {
                     <div class="mb-8 flex items-start gap-10">
 
                     <div class="flex flex-col">
-  <h3 class="text-xs font-bold text-[#394481] uppercase tracking-widest mb-3">
+  <h3 class="text-xs font-bold text-[#394481] uppercase tracking-widest mb-3 flex justify-center items-center">
     Scent
   </h3>
 
@@ -259,7 +259,7 @@ export function FeaturedProductSection() {
 </div>
 
 <div class="flex flex-col">
-  <h3 class="text-xs font-bold text-[#394481] uppercase tracking-widest mb-3">
+  <h3 class="text-xs font-bold text-[#394481] uppercase tracking-widest mb-3 flex justify-center items-center">
     Size
   </h3>
 
@@ -347,7 +347,7 @@ export function FeaturedProductSection() {
     <span class="material-symbols-outlined text-[#394481] text-2xl mb-2">
       local_shipping
     </span>
-    <div class="text-[#00399a] font-medium">
+    <div class="text-[#003286] font-medium">
       Free Delivery
     </div>
     <div class="text-xs text-gray-500">
@@ -359,7 +359,7 @@ export function FeaturedProductSection() {
     <span class="material-symbols-outlined text-[#394481] text-2xl mb-2">
       verified_user
     </span>
-    <div class="text-[#00399a] font-medium">
+    <div class="text-[#003286] font-medium">
       Secure Payment
     </div>
     <div class="text-xs text-gray-500">
@@ -371,7 +371,7 @@ export function FeaturedProductSection() {
     <span class="material-symbols-outlined text-[#394481] text-2xl mb-2">
       replay
     </span>
-    <div class="text-[#00399a] font-medium">
+    <div class="text-[#003286] font-medium">
       Easy Replacement
     </div>
     <div class="text-xs text-gray-500">

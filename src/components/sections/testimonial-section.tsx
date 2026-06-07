@@ -50,7 +50,7 @@ export function TestimonialSection() {
       
       {/* Header Section */}
       <div className="max-w-6xl mx-auto px-6 md:px-12 text-center mb-16 reveal-on-scroll">
-        <h2 className="text-4xl font-inter font-bold md:text-5xl text-[#00399a] leading-tight mb-4">
+        <h2 className="text-4xl font-inter font-bold md:text-5xl text-[#003286] leading-tight mb-4">
           What Our Customers Are Saying.
         </h2>
         <p className="text-md md:text-base text-gray-600">
@@ -111,7 +111,7 @@ export function TestimonialSection() {
                 {/* Bottom Navigation Row */}
                 <div className="flex justify-between items-center mt-12 pt-6 border-t border-gray-200">
                 <button 
-                  className="w-12 h-12 bg-[#00399a] rounded-full flex items-center justify-center hover:bg-[#00399a]/60 hover:scale-110 active:scale-95 transition-all duration-300 shadow-sm cursor-pointer group" 
+                  className="w-12 h-12 bg-[#003286] rounded-full flex items-center justify-center hover:bg-[#003286]/60 hover:scale-110 active:scale-95 transition-all duration-300 shadow-sm cursor-pointer group" 
                   onClick={() => setCurrentTestimonial(prev => (prev - 1 + testimonials.length) % testimonials.length)}
                 >
                   <span className="material-symbols-outlined text-white transition-transform duration-300 group-hover:-translate-x-1">
@@ -120,7 +120,7 @@ export function TestimonialSection() {
                 </button>
 
                 <button 
-                  className="w-12 h-12 bg-[#00399a] rounded-full flex items-center justify-center hover:bg-[#00399a]/60 hover:scale-110 active:scale-95 transition-all duration-300 shadow-sm cursor-pointer group" 
+                  className="w-12 h-12 bg-[#003286] rounded-full flex items-center justify-center hover:bg-[#003286]/60 hover:scale-110 active:scale-95 transition-all duration-300 shadow-sm cursor-pointer group" 
                   onClick={() => setCurrentTestimonial(prev => (prev + 1) % testimonials.length)}
                 >
                   <span className="material-symbols-outlined text-white transition-transform duration-300 group-hover:translate-x-1">

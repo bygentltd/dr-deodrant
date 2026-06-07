@@ -21,7 +21,7 @@ export function FaqSection() {
     { q: "What flavors are available?", a: "Currently, Dr. Deodrant is available in its Original (Unscented) variant. We're excited to share that new naturally inspired variants are coming soon, including Aloe Vera, Turmeric, Mango, Coconut, and Mangosteen." },
     { q: "What is the shelf life of Dr. Deodrant?", a: "Dr. Deodrant has a shelf life of 3 years from the date of manufacturing when stored properly. With daily use, a single crystal typically lasts 3 to 6+ months, depending on usage conditions—making it 3–6× longer lasting than natural deodorants." },
     { q: "Is it cruelty-free?", a: "Yes! Dr. Deodrant is 100% cruelty-free and vegan. We never test on animals and our products contain no animal-derived ingredients." },
-    { q: "Can I use it after shaving?", a: "Absolutely! Dr. Deodorant is safe to use after shaving. The natural formula is gentle on freshly shaved skin, ensuring maximum comfort." },
+    { q: "Can I use it after shaving?", a: "Absolutely! Dr. Deodrant is safe to use after shaving. The natural formula is gentle on freshly shaved skin, ensuring maximum comfort." },
     { q: "Where can I buy Dr. Deodrant?", a: "You can purchase directly from our official website or from our selected online and offline partners. We recommend buying from authorized sources to ensure authenticity." }
   ];
 
@@ -31,14 +31,14 @@ export function FaqSection() {
       <div className="grid md:grid-cols-2 gap-20 items-start">
         <div className="space-y-12">
           <div className="reveal-on-scroll">
-            <h2 className="text-4xl md:text-5xl font-inter font-bold text-[#00399a] leading-tight">All Your Queries Answered.</h2>
+            <h2 className="text-4xl md:text-5xl font-inter font-bold text-[#003286] leading-tight">All Your Queries Answered.</h2>
             <p className="text-lg text-gray-600 mt-4">Professional answers for your mineral skincare journey.</p>
           </div>
           <div className="reveal-on-scroll">
             <Accordion multiple={false} className="w-full">
               {faqs.map((faq, idx) => (
                 <AccordionItem key={idx} value={`item-${idx}`} className="border-b border-outline-variant/30 py-2">
-                  <AccordionTrigger className="text-xl font-bold text-gray-600 hover:no-underline hover:text-[#00399a]/80 transition-colors text-left">
+                  <AccordionTrigger className="text-xl font-bold text-gray-600 hover:no-underline hover:text-[#003286]/80 transition-colors text-left">
                     {faq.q}
                   </AccordionTrigger>
                   <AccordionContent className="text-[#0f1216] leading-relaxed">

@@ -30,7 +30,7 @@ export default function OurPhilosophy() {
     <section className="bg-[#F5FBFF] px-6 py-24 md:py-32 md:px-16 lg:px-32 font-sans w-full">
       <div className="max-w-7xl mx-auto w-full">
         {/* Main Heading */}
-        <h1 className="text-6xl md:text-[3rem] lg:text-[4rem] font-medium text-[#00399a] mb-16 md:mb-24 tracking-tight">
+        <h1 className="text-6xl md:text-[3rem] lg:text-[4rem] font-medium text-[#003286] mb-16 md:mb-24 tracking-tight">
           Our Philosophy
         </h1>
 
@@ -38,7 +38,7 @@ export default function OurPhilosophy() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 mb-24 md:mb-32">
           {/* Left Column: Badge */}
           <div className="md:col-span-4 lg:col-span-4 flex items-start">
-            <span className="inline-flex items-center rounded-full bg-[#00399a] px-4 py-1.5 text-sm font-medium text-[#ffffff] tracking-wide">
+            <span className="inline-flex items-center rounded-full bg-[#003286] px-4 py-1.5 text-sm font-medium text-[#ffffff] tracking-wide">
               Our Core Principles
             </span>
           </div>

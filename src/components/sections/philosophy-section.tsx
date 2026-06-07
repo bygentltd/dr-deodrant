@@ -15,7 +15,7 @@ export function PhilosophySection() {
             Our Formulation
           </span>
           
-          <h2 className="text-4xl md:text-5xl font-inter font-bold text-[#00399a] leading-tight">
+          <h2 className="text-4xl md:text-5xl font-inter font-bold text-[#003286] leading-tight">
             Synergy of Alum & Superfood Extracts.
           </h2>
           
@@ -38,7 +38,7 @@ export function PhilosophySection() {
           {/* Added the button from the reference design */}
           <div className="pt-6">
             <a href="/story">
-              <button className="bg-[#203856] hover:bg-[#203856]/80 text-[#F5FBFF] px-8 py-3 rounded-full text-sm font-medium transition-colors duration-300">
+              <button className="bg-[#003286] hover:bg-[#003286]/80 text-[#F5FBFF] px-8 py-3 rounded-full text-sm font-medium transition-colors duration-300">
                 Our Story &rsaquo;
               </button>
             </a>

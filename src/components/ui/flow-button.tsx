@@ -11,6 +11,8 @@ interface FlowButtonProps {
 
   circleColor?: string;
   hoverTextColor?: string;
+  defaultBgColor?: string;
+  defaultTextColor?: string; 
 }
 
 export function FlowButton({
@@ -21,11 +23,14 @@ export function FlowButton({
 
   circleColor = "bg-[#203652]",
   hoverTextColor = "group-hover:text-white",
+  defaultBgColor = "bg-transparent",
+  defaultTextColor = "text-current", 
 }: FlowButtonProps) {
   return (
     <button
       onClick={onClick}
-      className={`group relative isolate flex items-center justify-center gap-1 overflow-hidden rounded-full border border-current px-8 py-3 text-sm font-semibold transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:rounded-xl hover:border-transparent active:scale-95 ${className}`}
+      // Added subtle shadow effects: hover:shadow-lg hover:shadow-current/20
+      className={`group relative isolate flex items-center justify-center gap-1 overflow-hidden rounded-full px-8 py-3 text-sm font-semibold transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:rounded-xl hover:shadow-lg hover:shadow-current/20 active:scale-95 ${defaultBgColor} ${defaultTextColor} ${className}`}
     >
       {/* Expanding Circle */}
       <span className="absolute inset-0 z-0 flex items-center justify-center">

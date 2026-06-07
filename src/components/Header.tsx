@@ -138,7 +138,6 @@ export default function Header() {
         <div className="flex items-center gap-4 md:gap-6">
           {/* Search & Profile Icons (Desktop only) */}
           <div className={cn("hidden md:flex items-center gap-4", "text-[#203856]/70") }>
-            <button className={cn("material-symbols-outlined text-xl transition-colors cursor-pointer", iconClasses)}>search</button>
             <button className={cn("material-symbols-outlined text-xl transition-colors cursor-pointer", iconClasses)}>person</button>
           </div>
 
@@ -146,12 +145,12 @@ export default function Header() {
 
           {/* [#F5FBFF] Pill Action Button */}
           <FlowButton
-            text="SHOP COLLECTION"
-            onClick={openCart}
-            
-          >
-                       
-          </FlowButton>
+  text="SHOP COLLECTION"
+  onClick={openCart}
+  defaultBgColor="bg-[#203652]"
+  defaultTextColor="text-[#FFFFFF]"
+  circleColor="bg-[#2C476B]" // <-- The slightly brighter hover color
+/>
         </div>
 
       </nav>
@@ -210,7 +209,6 @@ export default function Header() {
               <span>+391 (0)35 2568</span>
             </a>
             <div className={cn("flex gap-6 pt-2 text-[#203856]/70")}>
-              <button className={cn("material-symbols-outlined text-xl transition-colors cursor-pointer hover:text-[#203856]")}>search</button>
               <button className={cn("material-symbols-outlined text-xl transition-colors cursor-pointer hover:text-[#203856]")}>person</button>
             </div>
           </div>

@@ -6,7 +6,7 @@ export default function IngredientsContent() {
       image: "/Ingredient_1.webp",
       alt: "Close up of glowing skin",
       description:
-        "A naturally occurring mineral crystal that forms the core of Dr. Deodorant's formula. Alum works by creating an invisible layer on the skin that stops odor-causing bacteria from thriving, keeping you feeling fresh and clean all day — without blocking your pores.",
+        "A naturally occurring mineral crystal that forms the core of Dr. Deodrant's formula. Alum works by creating an invisible layer on the skin that stops odor-causing bacteria from thriving, keeping you feeling fresh and clean all day — without blocking your pores.",
     },
     {
       id: "02",
