@@ -1,74 +1,116 @@
-export default function OurCommitments() {
-  const commitments = [
-    {
-      id: "01",
-      title: "Your Skin",
-      description:
-        "We never test on animals, and every ingredient was chosen with your long-term skin health in mind. Dr. Deodrant doesn't create dependency, doesn't strip your skin's natural balance, and doesn't leave behind residue your body has to deal with. Just clean, daily care you can feel good about.",
-      image:
-        "St4.webp",
-      alt: "Close up of glowing skin",
-    },
-    {
-      id: "02",
-      title: "Our Planet",
-      description:
-        "Our packaging is recyclable and we're continuously working to reduce our environmental footprint. A crystal that lasts 6–8 months already means dramatically less packaging waste compared to disposable spray or roll-on alternatives, and we're committed to doing even more.",
-      image:
-        "St5.webp",
-      alt: "Glass orb reflecting a natural landscape",
-    },
-    {
-      id: "03",
-      title: "Transparency",
-      description:
-        "We'll never add an ingredient for marketing appeal or hide something behind a trade name. What you see on the label is everything that's in the product. Because you deserve to know exactly what you're putting on your skin.",
-      image:
-        "St6.webp",
-      alt: "Lab glassware from above",
-    },
-  ];
+"use client";
 
+import Link from "next/link";
+
+const ingredients = [
+  {
+    id: "01",
+    title: "Alum",
+    image: "/Ingredient_1.webp",
+    alt: "Close up of glowing skin",
+    description: "A natural mineral crystal that creates an invisible layer to stop odor-causing bacteria without blocking your pores.",
+  },
+  {
+    id: "02",
+    title: "Acerola Extract",
+    image: "/Ingredient_2.webp",
+    alt: "Natural ingredient composition",
+    description: "Rich in Vitamin C, it helps brighten delicate underarm skin and provides powerful antioxidant protection against dullness.",
+  },
+  {
+    id: "03",
+    title: "Kiwi Extract",
+    image: "/Ingredient_3.webp",
+    alt: "Kiwi fruit extract concept",
+    description: "Packed with antioxidants that work to soothe, refresh, and deeply nourish the underarm area with every use.",
+  },
+  {
+    id: "04", 
+    title: "Vitamin E",
+    image: "/Ingredient_5.webp",
+    alt: "Vitamin E skin care visual",
+    description: "Deeply moisturizing and protective, acting as a gentle barrier to keep underarm skin soft, supple, and healthy-looking.",
+  },
+];
+
+export default function ProductIngredientLayout() {
   return (
-    <section className="bg-[#F5FBFF] px-6 py-24 md:py-32 md:px-16 lg:px-24 font-sans w-full">
-      <div className="max-w-[1400px] mx-auto w-full">
-        {/* Main Heading */}
-        <h2 className="text-6xl md:text-[3rem] lg:text-[4rem] font-medium text-[#313131] mb-12 md:mb-16 tracking-tight">
-          Our Commitments
-        </h2>
-
-        {/* Commitments Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-          {commitments.map((item) => (
-            <div key={item.id} className="flex flex-col group cursor-pointer">
-              
-              {/* Image Container with Hover Zoom Effect */}
-              <div className="w-full aspect-[4/5] md:aspect-square lg:aspect-[4/5] overflow-hidden rounded-2xl md:rounded-[2rem] mb-6 md:mb-8 bg-[#e4e7dd]">
-                <img
-                  src={item.image}
-                  alt={item.alt}
-                  className="w-full h-full object-cover object-center transition-transform duration-700 ease-in-out group-hover:scale-105"
-                />
-              </div>
-
-              {/* Title and Number Row */}
-              <div className="flex justify-between items-end pb-3 mb-4 border-b border-[#313131]/20">
-                <h3 className="text-lg md:text-2xl font-medium text-[#313131]">
-                  {item.title}
-                </h3>
-                <span className="text-lg md:text-xl font-medium text-[#313131]">
-                  {item.id}
-                </span>
-              </div>
-
-              {/* Description Text */}
-              <p className="text-sm md:text-base font-inter text-justify leading-relaxed text-[#4a4a4a]">
-                {item.description}
-              </p>
-              
-            </div>
-          ))}
+    <section className="bg-gradient-to-b from-[#eaf4ff] via-[#f4f9ff] to-white py-16 lg:py-24 overflow-hidden font-sans">
+      <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* TOP HEADER - Centered */}
+        <div className="text-center max-w-2xl mx-auto mb-16 relative z-10">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-inter font-bold text-[#00399A] mb-2">
+            Pure Ingredients
+          </h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-inter font-bold text-[#00399A] mb-6">
+            Real Results
+          </h2>
+          <p className="text-[#4a5568] text-base max-w-md mx-auto leading-relaxed">
+            A thoughtful blend of natural extracts and mineral actives that work with your skin, not against it.
+          </p>
         </div>
+
+        {/* MAIN LAYOUT: Product Left, 2x2 Grid Right */}
+        {/* 👇 MODIFIED: Changed to `items-center` so both columns are perfectly vertically aligned */}
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-12 relative z-10">
+          
+          {/* PRODUCT IMAGE (Left) */}
+          {/* 👇 MODIFIED: Removed sticky top, added `group` to trigger the hover effect */}
+          <div className="w-full lg:w-1/2 flex justify-center items-center relative group cursor-pointer">
+            <div className="relative w-[340px] h-[480px] md:w-[450px] md:h-[600px]">
+              <img
+                src="/Home_New.webp"
+                alt="Dr. Deodorant Original + C&E"
+                // 👇 MODIFIED: Added your requested zoom effect classes here
+                className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)] z-10 transition-transform duration-700 ease-in-out group-hover:scale-105"
+              />
+            </div>
+          </div>
+
+          {/* RIGHT CONTENT (Smaller 2x2 Grid) */}
+          <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
+            {ingredients.map((item) => (
+              <div
+                key={item.id}
+                className="flex flex-col rounded-[1.5rem] bg-white/80 backdrop-blur-sm border border-white/60 p-5 shadow-[0_4px_20px_rgb(0,0,0,0.03)] group transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)]"
+              >
+                {/* Card Image Wrapper */}
+                <div className="w-full aspect-video overflow-hidden rounded-xl mb-4 bg-[#e4e7dd]">
+                  <img
+                    src={item.image}
+                    alt={item.alt}
+                    className="w-full h-full object-cover object-center transition-transform duration-700 ease-in-out group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+
+                {/* Card Title & Number */}
+                <div className="flex justify-between items-end pb-2 mb-3 border-b border-slate-100">
+                  <h3 className="text-base md:text-lg font-bold text-[#1e3a5f]">{item.title}</h3>
+                  <span className="text-sm md:text-base font-semibold text-[#0052cc]">{item.id}</span>
+                </div>
+
+                {/* Card Description */}
+                <p className="text-xs md:text-sm font-inter leading-relaxed text-[#64748b]">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA BUTTON */}
+        <div className="mt-16 flex justify-center relative z-10">
+          <Link 
+            href="/story"
+            className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold text-white transition-all duration-300 bg-[#00399A] rounded-full hover:bg-[#002a75] hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00399A]"
+          >
+            Know More
+            <svg className="w-4 h-4 ml-2 -mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </Link>
+        </div>
+
       </div>
     </section>
   );

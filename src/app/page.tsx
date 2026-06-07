@@ -12,6 +12,7 @@ import { ServicesSection } from "@/components/sections/services-section";
 import HowToUse from "@/components/sections/how-to-use";
 import ImageSectionComp from "@/components/sections/image-section-comp";
 import IngredientsSection from "@/components/sections/product-ingredient-layout";
+import ProductIngredientLayout from "@/components/sections/product-ingredient-layout";
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
         <StatsSection />
         <FeaturedProductSection />
         <ImageSectionComp src="/HOME_21.webp" />
-        <IngredientsSection/>
+        <ProductIngredientLayout/>
         <ImageSectionComp src="/HOME_HOW.webp" />
         {/* <MajorFeaturesSection/>
         <BentoGridSection /> */}
