@@ -10,7 +10,7 @@ export function HeroSection() {
 
   // Combine images and titles into a single array of objects
   const heroSlides = [
-        {
+    {
       src: "/Hero1_crop.webp",
       title: (
         <>
@@ -23,15 +23,15 @@ export function HeroSection() {
       src: "/3rd_hero_Image.webp",
       title: (
         <>
-          Thailand's Trusted <br/> Mineral Deodorant 
+          Thailand's Trusted <br /> Mineral Deodorant
         </>
       ),
     },
-        {
-      src: "/4th_hero_Image.webp",
+    {
+      src: "/4th_hero_image.webp",
       title: (
         <>
-          Sweat is Natural, <br/> Smell is Optional
+          Sweat is Natural, <br /> Smell is Optional
         </>
       ),
     },
@@ -55,9 +55,8 @@ export function HeroSection() {
         {heroSlides.map((slide, idx) => (
           <div
             key={idx}
-            className={`carousel-slide absolute inset-0 ${
-              idx === currentHeroSlide ? "active" : "opacity-0"
-            } transition-opacity duration-1000`}
+            className={`carousel-slide absolute inset-0 ${idx === currentHeroSlide ? "active" : "opacity-0"
+              } transition-opacity duration-1000`}
           >
             <img
               alt={`Hero slide ${idx + 1}`}
@@ -68,7 +67,7 @@ export function HeroSection() {
           </div>
         ))}
       </div>
-      
+
       <div
         className={`relative z-10 h-full flex flex-col items-start justify-center text-left px-6 ${heroContentOffset}`}
       >
@@ -77,7 +76,7 @@ export function HeroSection() {
             MADE IN THAILAND • TESTED • SKIN-FRIENDLY
           </span>
         </div>
-        
+
         <div className="mb-8 h-[140px] md:h-[160px] flex items-center">
           {/* Render the title based on the active slide */}
           <h1 className="max-w-4xl text-3xl font-inter font-bold leading-[1.1] text-[#003286] drop-shadow-xl md:text-6xl">
@@ -97,7 +96,7 @@ export function HeroSection() {
             defaultTextColor="text-[#FFFFFF]"
             circleColor="bg-[#2C476B]"
           />
-          
+
           {/* Decreased padding (px-8) and set a more compact width */}
           <Button
             variant="outline"
@@ -115,9 +114,8 @@ export function HeroSection() {
             <button
               key={i}
               onClick={() => setCurrentHeroSlide(i)}
-              className={`w-3 h-3 rounded-full cursor-pointer ${
-                i === currentHeroSlide ? "bg-[#F5FBFF]" : "bg-[#F5FBFF]/40"
-              } transition-all`}
+              className={`w-3 h-3 rounded-full cursor-pointer ${i === currentHeroSlide ? "bg-[#F5FBFF]" : "bg-[#F5FBFF]/40"
+                } transition-all`}
               aria-label={`Go to slide ${i + 1}`}
             />
           ))}
