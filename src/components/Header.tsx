@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { FlowButton } from "./ui/flow-button";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,32 +61,28 @@ export default function Header() {
     };
   }, [pathname]);
 
-  // Keep a single glass style everywhere (same blur & opacity)
   const surfaceClasses = "bg-[#F5FBFF]/12 text-[#203856] border-[#F5FBFF]/20 shadow-2xl glass-nav backdrop-blur-2xl";
-
   const linkClasses = "text-[#203856]/90 hover:text-[#203856]";
-
-  // underline handled by .nav-underline pseudo-element animation
-
   const iconClasses = "text-[#203856]/80 hover:text-[#203856]";
 
   return (
     <header ref={headerRef} className="absolute top-0 left-0 right-0 z-50 px-4 md:px-8 flex justify-center pointer-events-none">
-      <nav className={cn("pointer-events-auto mt-6 flex items-center justify-between w-full max-w-310 h-15 px-6 md:px-8 rounded-full transition-all duration-300", surfaceClasses)}>
+      {/* 👇 ADDED 'relative' TO NAV SO THE ABSOLUTE LOGO STAYS INSIDE IT */}
+      <nav className={cn("relative pointer-events-auto mt-6 flex items-center justify-between w-full max-w-[1400px] h-[60px] px-6 md:px-8 rounded-full transition-all duration-300", surfaceClasses)}>
 
         {/* Mobile Menu Toggle (Left on mobile, hidden on desktop) */}
-        <div className="flex md:hidden items-center">
+        <div className="flex md:hidden items-center z-10">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={cn("material-symbols-outlined transition-colors text-2xl cursor-pointer", iconClasses)}
+            className={cn("transition-colors cursor-pointer", iconClasses)}
             aria-label="Toggle Menu"
           >
-            {isOpen ? "close" : "menu"}
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
         {/* Left Navigation Links (Desktop) */}
-        <div className="hidden md:flex items-center gap-6 font-bold">
+        <div className="hidden md:flex items-center gap-6 font-bold z-10">
           {links.map((link) => {
             const isActive = pathname === link.href;
 
@@ -97,7 +93,6 @@ export default function Header() {
                   href={link.href}
                   onClick={(e) => {
                     e.preventDefault();
-                    // force full reload so browser lands at top
                     if (typeof window !== "undefined") window.location.href = link.href;
                   }}
                   className={cn(
@@ -127,30 +122,32 @@ export default function Header() {
           })}
         </div>
 
-        {/* Center Brand Name & SVG Logo */}
-        <div className="flex items-center justify-center">
+        {/* 👇 CENTER LOGO - NOW ABSOLUTELY POSITIONED FOR PERFECT CENTERING */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-[60%] md:-translate-x-1/2 -translate-y-1/2 flex items-center justify-center z-10">
           <Link href="/">
-            <img src="/drdeologo.png" alt="Dr. Deodrant Logo" className="h-15 w-auto hover:opacity-90 transition-opacity" />
+            {/* 👇 CHANGED h-15 to h-10 (mobile) and md:h-12 (desktop) so Tailwind recognizes it */}
+            <img src="/drdeologo.png" alt="Dr. Deodrant Logo" className="h-10 md:h-15 w-auto hover:opacity-90 transition-opacity" />
           </Link>
         </div>
 
         {/* Right Section Actions (Desktop & Mobile) */}
-        <div className="flex items-center gap-4 md:gap-6">
+        <div className="flex items-center gap-4 md:gap-6 z-10">
           {/* Search & Profile Icons (Desktop only) */}
-          <div className={cn("hidden md:flex items-center gap-4", "text-[#203856]/70") }>
+          <div className={cn("hidden md:flex items-center gap-4", "text-[#203856]/70")}>
             <button className={cn("material-symbols-outlined text-xl transition-colors cursor-pointer", iconClasses)}>person</button>
           </div>
 
-          {/* Support Phone Info (Desktop only) */}
-
           {/* [#F5FBFF] Pill Action Button */}
           <FlowButton
-  text="SHOP COLLECTION"
-  onClick={openCart}
-  defaultBgColor="bg-[#203652]"
-  defaultTextColor="text-[#FFFFFF]"
-  circleColor="bg-[#2C476B]" // <-- The slightly brighter hover color
-/>
+            onClick={() => router.push("/shop/popular")}
+            defaultBgColor="bg-[#203652]"
+            defaultTextColor="text-[#FFFFFF]"
+            circleColor="bg-[#2C476B]"
+            className="!px-6 !py-2.5 md:!px-8 md:!py-3"
+          >
+            <span className="hidden md:inline">SHOP COLLECTION</span>
+            <span className="md:hidden tracking-wider">SHOP</span>
+          </FlowButton>
         </div>
 
       </nav>
@@ -158,7 +155,7 @@ export default function Header() {
       {/* Mobile Dropdown Menu Drawer */}
       {isOpen && (
         <div className={cn(
-          "absolute top-20 left-4 right-4 backdrop-blur-2xl border rounded-3xl p-6 shadow-2xl flex flex-col gap-6 md:hidden animate-fade-in z-50 pointer-events-auto glass-nav",
+          "absolute top-24 left-4 right-4 backdrop-blur-2xl border rounded-3xl p-6 shadow-2xl flex flex-col gap-6 md:hidden animate-fade-in z-50 pointer-events-auto glass-nav",
           "bg-[#F5FBFF]/12 border-[#F5FBFF]/15"
         )}>
           <div className="flex flex-col gap-4">
@@ -173,11 +170,10 @@ export default function Header() {
                     onClick={(e) => {
                       e.preventDefault();
                       setIsOpen(false);
-                      // force full reload so browser lands at top
                       if (typeof window !== "undefined") window.location.href = link.href;
                     }}
                     className={cn(
-                      "text-lg font-medium py-2 nav-underline",
+                      "text-base font-medium py-1.5 nav-underline",
                       "text-[#203856]/80 hover:text-[#203856]",
                       isActive && "active"
                     )}
@@ -192,7 +188,7 @@ export default function Header() {
                   key={link.name}
                   onClick={() => setIsOpen(false)}
                   className={cn(
-                    "text-lg font-medium py-2 nav-underline",
+                    "text-base font-medium py-1.5 nav-underline",
                     "text-[#203856]/80 hover:text-[#203856]",
                     isActive && "active"
                   )}
@@ -204,7 +200,7 @@ export default function Header() {
             })}
           </div>
           <div className={cn("flex flex-col gap-4 pt-4 border-t border-[#F5FBFF]/10")}>
-            <a href="tel:+3910352568" className={cn("flex items-center gap-2 text-sm font-medium text-[#203856]/70 hover:text-[#203856]") }>
+            <a href="tel:+3910352568" className={cn("flex items-center gap-2 text-sm font-medium text-[#203856]/70 hover:text-[#203856]")}>
               <span className="material-symbols-outlined text-base">phone_iphone</span>
               <span>+391 (0)35 2568</span>
             </a>

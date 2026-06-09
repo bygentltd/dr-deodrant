@@ -21,7 +21,7 @@ export function CertificateSection() {
 
                     {/* Right: Content */}
                     <div className="w-full md:w-1/2 space-y-6 order-2">
-                        <h2 className="text-4xl md:text-5xl font-bold text-[#0a2544] tracking-tight">
+                        <h2 className="text-4xl md:text-5xl font-bold text-[#003286] tracking-tight">
                             We didn't just claim it.<br />We got it certified.
                         </h2>
                         <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
@@ -34,7 +34,7 @@ export function CertificateSection() {
                             <p>
                                 Because what goes on your body should be held to the highest bar.
                             </p>
-                            <p className="font-semibold text-[#0a2544] pt-4">
+                            <p className="font-semibold text-[#003286] pt-4">
                                 Trust DR.DEODRANT. Trust What's Inside.
                             </p>
                         </div>

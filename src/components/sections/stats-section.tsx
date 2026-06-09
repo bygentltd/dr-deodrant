@@ -71,39 +71,39 @@ export function StatsSection() {
       <div className="max-w-7xl w-full mx-auto px-8 md:px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         
         <div className="flex flex-col items-center justify-center space-y-4 reveal-on-scroll">
-          <h4 className="text-5xl md:text-6xl text-[#003286] flex justify-center items-center">
+          <h4 className="text-3xl md:text-6xl text-[#003286] flex justify-center items-center">
             <ArrowBalancer />
             <span className="stat-number" data-start="0" data-target="10000" data-suffix="+">0</span>
             <UpArrow />
           </h4>
-          <p className="text-base font-medium text-[#003286]/70 text-center">Happy Customers</p>
+          <p className="text-sm md:text-base font-medium text-[#003286]/70 text-center">Happy Customers</p>
         </div>
 
         <div className="flex flex-col items-center justify-center space-y-4 reveal-on-scroll" style={{ transitionDelay: '100ms' }}>
-          <h4 className="text-5xl md:text-6xl text-[#003286] flex justify-center items-center">
+          <h4 className="text-3xl md:text-6xl text-[#003286] flex justify-center items-center">
             <ArrowBalancer />
             <span className="stat-number" data-start="0" data-target="14" data-suffix="+">0</span>
             <UpArrow />
           </h4>
-          <p className="text-base font-medium text-[#003286]/70 text-center">Years of Clinical Experience</p>
+          <p className="text-sm md:text-base font-medium text-[#003286]/70 text-center">Years of Clinical Experience</p>
         </div>
 
         <div className="flex flex-col items-center justify-center space-y-4 reveal-on-scroll" style={{ transitionDelay: '200ms' }}>
-          <h4 className="text-5xl md:text-6xl text-[#003286] flex justify-center items-center">
+          <h4 className="text-3xl md:text-6xl text-[#003286] flex justify-center items-center">
             <ArrowBalancer />
             <span className="stat-number" data-start="0" data-target="24" data-suffix="h">0</span>
             <UpArrow />
           </h4>
-          <p className="text-base font-medium text-[#003286]/70 text-center">Odor Protection</p>
+          <p className="text-sm md:text-base font-medium text-[#003286]/70 text-center">Odor Protection</p>
         </div>
 
         <div className="flex flex-col items-center justify-center space-y-4 reveal-on-scroll" style={{ transitionDelay: '300ms' }}>
-          <h4 className="text-5xl md:text-6xl text-[#003286] flex justify-center items-center">
+          <h4 className="text-3xl md:text-6xl text-[#003286] flex justify-center items-center">
             <ArrowBalancer />
             <span className="stat-number" data-start="10" data-target="0" data-suffix="%">10%</span>
             <DownArrow />
           </h4>
-          <p className="text-base font-medium text-[#003286]/70 text-center">Synthetic Chemicals</p>
+          <p className="text-sm md:text-base font-medium text-[#003286]/70 text-center">Synthetic Chemicals</p>
         </div>
 
       </div>

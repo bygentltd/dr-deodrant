@@ -39,11 +39,11 @@ export default function InfiniteCarousel() {
         {duplicatedFeatures.map((item, index) => {
           const Icon = item.icon;
           return (
-            <div key={index} className="flex items-center gap-4 px-10">
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#aec6df]">
-                <Icon className="h-6 w-6 text-[#003286]" strokeWidth={1.5} />
+            <div key={index} className="flex items-center gap-3 md:gap-4 px-6 md:px-10">
+              <div className="flex h-12 w-12 md:h-16 md:w-16 shrink-0 items-center justify-center rounded-full bg-[#aec6df]">
+                <Icon className="h-5 w-5 md:h-6 md:w-6 text-[#003286]" strokeWidth={1.5} />
               </div>
-              <span className="[#F5FBFF]space-nowrap font-inter font-bold text-xl text-[#003286] tracking-wide">
+              <span className="whitespace-nowrap font-inter font-bold text-base md:text-xl text-[#003286] tracking-wide">
                 {item.text}
               </span>
             </div>

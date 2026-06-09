@@ -66,7 +66,7 @@ export function ServicesSection() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
 
         <div className="text-center mb-16 md:mb-24 reveal-on-scroll">
-          <h2 className="text-4xl md:text-5xl font-inter font-bold text-[#002B45] leading-tight">
+          <h2 className="text-4xl md:text-5xl font-inter font-bold text-[#003286] leading-tight">
             Made for  <br className="hidden md:block" />
             Everyday Confidence
           </h2>
@@ -86,7 +86,7 @@ export function ServicesSection() {
                   style={{ transitionDelay: `${idx * 100}ms` }}
                 >
                   <div className="flex-1 order-2 sm:order-1 flex flex-col items-center sm:items-end">
-                    <h3 className="text-[#002B45] font-inter font-bold text-lg md:text-xl mb-1.5">
+                    <h3 className="text-[#003286] font-inter font-bold text-lg md:text-xl mb-1.5">
                       {service.title}
                     </h3>
                     <p className="text-gray-500 text-sm leading-relaxed max-w-[240px]">
@@ -158,7 +158,7 @@ export function ServicesSection() {
                   </div>
 
                   <div className="flex-1 flex flex-col items-center sm:items-start">
-                    <h3 className="text-[#002B45] font-inter font-bold text-lg md:text-xl mb-1.5">
+                    <h3 className="text-[#003286] font-inter font-bold text-lg md:text-xl mb-1.5">
                       {service.title}
                     </h3>
                     <p className="text-gray-500 font-inter text-sm leading-relaxed max-w-[240px]">
