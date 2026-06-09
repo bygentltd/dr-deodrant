@@ -14,6 +14,7 @@ import ImageSectionComp from "@/components/sections/image-section-comp";
 import IngredientsSection from "@/components/sections/product-ingredient-layout";
 import ProductIngredientLayout from "@/components/sections/product-ingredient-layout";
 import MeetTheFounder from "@/components/sections/meet-the-founders";
+import { CertificateSection } from "@/components/sections/certificate-section";
 
 export default function Home() {
   return (
@@ -29,10 +30,11 @@ export default function Home() {
         <ImageSectionComp src="/HOME_HOW.webp" />
         {/* <MajorFeaturesSection/>
         <BentoGridSection /> */}
-        <ServicesSection/>
+        <ServicesSection />
       </div>
-      <MeetTheFounder/>
-      <FixedHeroSection/>
+      <CertificateSection />
+      <MeetTheFounder />
+      <FixedHeroSection />
       <TestimonialSection />
       <FaqSection />
     </>

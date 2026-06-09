@@ -220,41 +220,7 @@ export default function PrivacyPolicyPage() {
               </p>
             </section>
 
-            <section className="bg-[#F5FBFF] rounded-3xl p-8 border border-[#00399A]/10">
-              <h2 className="text-2xl font-semibold text-[#00399A] mb-5">
-                Contact Information
-              </h2>
-
-              <div className="space-y-4 text-[#4A4A4A]">
-                <p>
-                  For questions, concerns, or privacy requests, please contact:
-                </p>
-
-                <p>
-                  <span className="font-semibold">Dr. Deodrant</span>
-                </p>
-
-                <p>
-                  <span className="font-semibold">Email:</span>{" "}
-                  <a
-                    href="mailto:support@drdeodrant.com"
-                    className="text-[#00399A] underline underline-offset-2"
-                  >
-                    support@drdeodrant.com
-                  </a>
-                </p>
-
-                <div>
-                  <span className="font-semibold">Address:</span>
-                  <p className="mt-2 leading-7">
-                    NIDA DOOWA, Bldg No. 4/1604 Shivkrupa CHS,
-                    CTS No. 195 PT, Off JP Road, MHADA Layout,
-                    D N Nagar, Mumbai Suburban,
-                    Maharashtra – 400053, India.
-                  </p>
-                </div>
-              </div>
-            </section>
+            
 
           </div>
         </div>

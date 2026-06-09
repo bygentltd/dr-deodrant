@@ -161,37 +161,7 @@ export default function TermsConditionsPage() {
               </p>
             </section>
 
-            {/* Contact Card */}
-            <section className="bg-[#F5FBFF] rounded-3xl p-8 border border-[#00399A]/10">
-              <h2 className="text-2xl font-semibold text-[#00399A] mb-5">
-                Contact Information
-              </h2>
-
-              <div className="space-y-3 text-[#4A4A4A]">
-                <p>
-                  For any questions regarding these Terms & Conditions,
-                  please contact us:
-                </p>
-
-                <p>
-                  <span className="font-semibold">Email:</span>{" "}
-                  <a
-                    href="mailto:support@drdeodorant.com"
-                    className="text-[#00399A] underline underline-offset-2"
-                  >
-                    support@drdeodorant.com
-                  </a>
-                </p>
-
-                <p className="leading-7">
-                  <span className="font-semibold">Address:</span><br />
-                  NIDA DOOWA, Bldg No. 4/1604 Shivkrupa CHS,
-                  CTS No. 195 PT, Off JP Road, MHADA Layout,
-                  D N Nagar, Mumbai Suburban,
-                  Maharashtra – 400053, India.
-                </p>
-              </div>
-            </section>
+            
 
           </div>
         </div>

@@ -43,20 +43,20 @@ export default function Page() {
 
   return (
     <>
-    <section className="py-40 bg-[#F5FBFF]">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-        <div className="reveal-on-scroll">
-          
-          <shopify-store store-domain="mock.shop" country="US" language="en"></shopify-store>
+      <section className="py-40 bg-[#F5FBFF]">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+          <div className="reveal-on-scroll">
 
-          <shopify-context
-            type="product"
-            handle="dr-deodrantnatural-crystal-deodorant"
-            wait-for-update="false"
-          >
-            <template
-              dangerouslySetInnerHTML={{
-                __html: `
+            <shopify-store store-domain="mock.shop" country="US" language="en"></shopify-store>
+
+            <shopify-context
+              type="product"
+              handle="dr-deodrantnatural-crystal-deodorant"
+              wait-for-update="false"
+            >
+              <template
+                dangerouslySetInnerHTML={{
+                  __html: `
                 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32">
                   
@@ -344,21 +344,7 @@ export default function Page() {
   </div>
 </div>
 
-<div class="flex flex-col">
-  <h3 class="text-xs font-bold text-[#394481] uppercase tracking-widest mb-3 items-center justify-center flex">
-    Size
-  </h3>
 
-  <div class="flex gap-3">
-    <label class="cursor-pointer relative">
-      <input type="radio" name="size" value="70g" class="peer sr-only" checked>
-
-      <span class="block px-5 py-2.5 border border-gray-300 rounded-full bg-[#F5FBFF] text-sm font-medium text-[#394481] transition-all duration-200 hover:border-[#394481] peer-checked:border-[#394481] peer-checked:text-[#394481]">
-        70g
-      </span>
-    </label>
-  </div>
-</div>
 
                     </div>
 
@@ -473,47 +459,47 @@ export default function Page() {
 
                 </div>
               `,
-              }}
-            />
+                }}
+              />
 
-            {/* LOADING */}
-            <div
-              shopify-loading-placeholder="true"
-              className="animate-pulse"
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-                <div>
-                  <div className="aspect-4/5 bg-gray-100 rounded-2xl mb-4"></div>
+              {/* LOADING */}
+              <div
+                shopify-loading-placeholder="true"
+                className="animate-pulse"
+              >
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+                  <div>
+                    <div className="aspect-4/5 bg-gray-100 rounded-2xl mb-4"></div>
 
-                  <div className="flex gap-4">
-                    <div className="w-20 h-20 bg-gray-100 rounded-xl"></div>
-                    <div className="w-20 h-20 bg-gray-100 rounded-xl"></div>
-                    <div className="w-20 h-20 bg-gray-100 rounded-xl"></div>
+                    <div className="flex gap-4">
+                      <div className="w-20 h-20 bg-gray-100 rounded-xl"></div>
+                      <div className="w-20 h-20 bg-gray-100 rounded-xl"></div>
+                      <div className="w-20 h-20 bg-gray-100 rounded-xl"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className="h-4 bg-gray-100 w-1/4 mb-6 rounded"></div>
+                    <div className="h-10 bg-gray-100 w-3/4 mb-4 rounded"></div>
+                    <div className="h-6 bg-gray-100 w-1/4 mb-8 rounded"></div>
+
+                    <div className="h-12 bg-gray-100 w-full mb-4 rounded-full"></div>
+                    <div className="h-12 bg-gray-100 w-full mb-8 rounded-full"></div>
+
+                    <div className="h-12 bg-gray-100 w-full rounded-full"></div>
                   </div>
                 </div>
-
-                <div>
-                  <div className="h-4 bg-gray-100 w-1/4 mb-6 rounded"></div>
-                  <div className="h-10 bg-gray-100 w-3/4 mb-4 rounded"></div>
-                  <div className="h-6 bg-gray-100 w-1/4 mb-8 rounded"></div>
-                  
-                  <div className="h-12 bg-gray-100 w-full mb-4 rounded-full"></div>
-                  <div className="h-12 bg-gray-100 w-full mb-8 rounded-full"></div>
-
-                  <div className="h-12 bg-gray-100 w-full rounded-full"></div>
-                </div>
               </div>
-            </div>
 
-          </shopify-context>
-          <shopify-cart id="main-cart"></shopify-cart>
+            </shopify-context>
+            <shopify-cart id="main-cart"></shopify-cart>
+          </div>
         </div>
-      </div>
-    </section>
-    {/* <IngredientShowcase/> */}
-    <IngredientsContent/>
-    <TestimonialSection />
-    <FaqSection />
+      </section>
+      {/* <IngredientShowcase/> */}
+      <IngredientsContent />
+      <TestimonialSection />
+      <FaqSection />
     </>
   );
 }
