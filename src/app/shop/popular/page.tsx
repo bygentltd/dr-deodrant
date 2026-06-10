@@ -43,22 +43,22 @@ export default function Page() {
 
   return (
     <>
-      <section className="py-40 bg-[#F5FBFF]">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-          <div className="reveal-on-scroll">
+    <section className="py-40 bg-[#F5FBFF]">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+        <div className="reveal-on-scroll">
+          
+          <shopify-store store-domain="drdeodrant.myshopify.com" country="IN" language="en"></shopify-store>
 
-            <shopify-store store-domain="mock.shop" country="US" language="en"></shopify-store>
-
-            <shopify-context
-              type="product"
-              handle="dr-deodrantnatural-crystal-deodorant"
-              wait-for-update="false"
-            >
-              <template
-                dangerouslySetInnerHTML={{
-                  __html: `
+          <shopify-context
+            type="product"
+            handle="dr-deo"
+            wait-for-update="true"
+          >
+            <template
+              dangerouslySetInnerHTML={{
+                __html: `
                 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-32">
                   
                   <div class="flex flex-col gap-10">
 
@@ -77,7 +77,7 @@ export default function Page() {
                           onclick="
                             const root = this.closest('.product-gallery');
                             const thumbs = Array.from(root.querySelectorAll('.gallery-thumb'));
-                            const activeIndex = thumbs.findIndex(t => t.classList.contains('border-[#003286]'));
+                            const activeIndex = thumbs.findIndex(t => t.classList.contains('border-[#00399a]'));
                             const currentIndex = activeIndex > -1 ? activeIndex : 0;
                             if(thumbs.length > 0) {
                               const prevIndex = currentIndex <= 0 ? thumbs.length - 1 : currentIndex - 1;
@@ -93,7 +93,7 @@ export default function Page() {
                           onclick="
                             const root = this.closest('.product-gallery');
                             const thumbs = Array.from(root.querySelectorAll('.gallery-thumb'));
-                            const activeIndex = thumbs.findIndex(t => t.classList.contains('border-[#003286]'));
+                            const activeIndex = thumbs.findIndex(t => t.classList.contains('border-[#00399a]'));
                             const currentIndex = activeIndex > -1 ? activeIndex : 0;
                             if(thumbs.length > 0) {
                               const nextIndex = currentIndex >= thumbs.length - 1 ? 0 : currentIndex + 1;
@@ -110,18 +110,18 @@ export default function Page() {
                         <shopify-list-context type="image" query="product.selectedOrFirstAvailableVariant.product.images" first="10" class="flex gap-4">
                           <template>
                             <button
-                              class="gallery-thumb w-20 h-20 bg-[#F8F6F4] rounded-xl shrink-0 cursor-pointer border border-gray-200 hover:border-[#003286] overflow-hidden transition-all duration-300"
+                              class="gallery-thumb w-20 h-20 bg-[#F8F6F4] rounded-xl shrink-0 cursor-pointer border border-gray-200 hover:border-[#00399a] overflow-hidden transition-all duration-300"
                               onmouseenter="this.click()"
                               onclick="
                                 const root = this.closest('.product-gallery');
                                 
                                 // Update active thumbnail borders
                                 root.querySelectorAll('.gallery-thumb').forEach(t => {
-                                  t.classList.remove('border-[#003286]');
+                                  t.classList.remove('border-[#00399a]');
                                   t.classList.add('border-gray-200');
                                 });
                                 this.classList.remove('border-gray-200');
-                                this.classList.add('border-[#003286]');
+                                this.classList.add('border-[#00399a]');
 
                                 // Extract the image URL safely
                                 const media = this.querySelector('shopify-media');
@@ -166,9 +166,9 @@ export default function Page() {
                     <div class="border-t border-gray-200 mt-4">
 
                       <details class="group border-b border-gray-200 py-5" open>
-                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#003286] cursor-pointer list-none outline-none">
+                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#00399a] cursor-pointer list-none outline-none">
                           Description
-                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#003286]">
+                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#00399a]">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                               <path d="m6 9 6 6 6-6"/>
                             </svg>
@@ -180,9 +180,9 @@ export default function Page() {
                       </details>
 
                       <details class="group border-b border-gray-200 py-5">
-                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#003286] cursor-pointer list-none outline-none">
+                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#00399a] cursor-pointer list-none outline-none">
                           Ingredients
-                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#003286]">
+                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#00399a]">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                               <path d="m6 9 6 6 6-6"/>
                             </svg>
@@ -194,9 +194,9 @@ export default function Page() {
                       </details>
 
                       <details class="group border-b border-gray-200 py-5">
-                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#003286] cursor-pointer list-none outline-none">
+                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#00399a] cursor-pointer list-none outline-none">
                           How to Use
-                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#003286]">
+                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#00399a]">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                               <path d="m6 9 6 6 6-6"/>
                             </svg>
@@ -208,9 +208,9 @@ export default function Page() {
                       </details>
 
                       <details class="group border-b border-gray-200 py-5">
-                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#003286] cursor-pointer list-none outline-none">
+                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#00399a] cursor-pointer list-none outline-none">
                           Benefits
-                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#003286]">
+                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#00399a]">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                               <path d="m6 9 6 6 6-6"/>
                             </svg>
@@ -218,18 +218,18 @@ export default function Page() {
                         </summary>
                         <div class="mt-4 pb-2">
                           <ul class="space-y-4 text-gray-600 text-sm md:text-base leading-relaxed list-disc pl-5">
-                            <li><span class="font-medium text-[#003286]">24-Hour Odor Protection:</span> Eliminates the bacteria that cause body odor, keeping you fresh from morning to night.</li>
-                            <li><span class="font-medium text-[#003286]">Zero Clothing Stains:</span> Completely transparent formula leaves no white chalky residue on dark clothes or yellow stains on white shirts.</li>
-                            <li><span class="font-medium text-[#003286]">Hypoallergenic & Gentle:</span> Soothes the skin and prevents underarm darkening; perfectly safe for sensitive skin and post-shaving use.</li>
-                            <li><span class="font-medium text-[#003286]">Incredibly Long-Lasting:</span> A single pure crystal stick is highly concentrated and can easily last for up to 6–8 months of daily use.</li>
+                            <li><span class="font-medium text-[#00399a]">24-Hour Odor Protection:</span> Eliminates the bacteria that cause body odor, keeping you fresh from morning to night.</li>
+                            <li><span class="font-medium text-[#00399a]">Zero Clothing Stains:</span> Completely transparent formula leaves no white chalky residue on dark clothes or yellow stains on white shirts.</li>
+                            <li><span class="font-medium text-[#00399a]">Hypoallergenic & Gentle:</span> Soothes the skin and prevents underarm darkening; perfectly safe for sensitive skin and post-shaving use.</li>
+                            <li><span class="font-medium text-[#00399a]">Incredibly Long-Lasting:</span> A single pure crystal stick is highly concentrated and can easily last for up to 6–8 months of daily use.</li>
                           </ul>
                         </div>
                       </details>
 
                       <details class="group border-b border-gray-200 py-5">
-                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#003286] cursor-pointer list-none outline-none">
+                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#00399a] cursor-pointer list-none outline-none">
                           Sustainability & Ethics
-                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#003286]">
+                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#00399a]">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                               <path d="m6 9 6 6 6-6"/>
                             </svg>
@@ -253,7 +253,7 @@ export default function Page() {
                       </span>
                     </nav>
 
-                    <h1 class="text-3xl md:text-4xl font-inter font-bold font text-[#003286] mb-2">
+                    <h1 class="text-3xl md:text-4xl font-inter font-bold font text-[#00399a] mb-2">
                       <shopify-data query="product.title"></shopify-data>
                     </h1>
 
@@ -263,7 +263,7 @@ export default function Page() {
 
                     <div class="flex items-center flex-wrap gap-2 mb-6">
   <span class="text-yellow-500 text-base">★</span>
-  <span class="font-medium text-[#003286]">4.9</span>
+  <span class="font-medium text-[#00399a]">4.9</span>
   <span class="text-gray-400 text-sm">(127 Reviews)</span>
 
   <span class="text-gray-300 mx-2">|</span>
@@ -290,11 +290,11 @@ export default function Page() {
   </div>
 </div>
 
-                    <p class="text-2xl font-bold text-[#003286] mb-6">
+                    <p class="text-2xl font-bold text-[#00399a] mb-6">
                       <shopify-money query="product.selectedOrFirstAvailableVariant.price"></shopify-money>
                     </p>
 
-                    <ul class="space-y-3 text-xs md:text-sm text-gray-600 pb-8 border-gray-200">
+                    <ul class="space-y-3 text-xs md:text-sm text-gray-600 mb-8 pb-8 border-b border-gray-200">
 
   <li class="flex items-center gap-3">
     <span class="flex items-center justify-center w-4 h-4 rounded-full bg-[#394481] text-white text-[10px] shrink-0">
@@ -321,7 +321,7 @@ export default function Page() {
     <span class="flex items-center justify-center w-4 h-4 rounded-full bg-[#394481] text-white text-[10px] shrink-0">
       ✓
     </span>
-    <span>One Crystal gives 6 to 8 Months of Freshness</span>
+    <span>One Crystal = 6–8 Months of Freshness</span>
   </li>
 
 </ul>
@@ -329,7 +329,7 @@ export default function Page() {
                     <div class="mb-8 flex items-start gap-10">
 
                     <div class="flex flex-col">
-  <h3 class="text-xs font-bold text-[#394481] uppercase tracking-widest mb-3 items-center justify-center flex">
+  <h3 class="text-xs font-bold text-[#394481] uppercase tracking-widest mb-3">
     Scent
   </h3>
 
@@ -344,7 +344,21 @@ export default function Page() {
   </div>
 </div>
 
+<div class="flex flex-col">
+  <h3 class="text-xs font-bold text-[#394481] uppercase tracking-widest mb-3">
+    Size
+  </h3>
 
+  <div class="flex gap-3">
+    <label class="cursor-pointer relative">
+      <input type="radio" name="size" value="70g" class="peer sr-only" checked>
+
+      <span class="block px-5 py-2.5 border border-gray-300 rounded-full bg-[#F5FBFF] text-sm font-medium text-[#394481] transition-all duration-200 hover:border-[#394481] peer-checked:border-[#394481] peer-checked:text-[#394481]">
+        70g
+      </span>
+    </label>
+  </div>
+</div>
 
                     </div>
 
@@ -419,7 +433,7 @@ export default function Page() {
     <span class="material-symbols-outlined text-[#394481] text-2xl mb-2">
       local_shipping
     </span>
-    <div class="text-[#003286] font-medium">
+    <div class="text-[#00399a] font-medium">
       Free Delivery
     </div>
     <div class="text-xs text-gray-500">
@@ -431,7 +445,7 @@ export default function Page() {
     <span class="material-symbols-outlined text-[#394481] text-2xl mb-2">
       verified_user
     </span>
-    <div class="text-[#003286] font-medium">
+    <div class="text-[#00399a] font-medium">
       Secure Payment
     </div>
     <div class="text-xs text-gray-500">
@@ -443,7 +457,7 @@ export default function Page() {
     <span class="material-symbols-outlined text-[#394481] text-2xl mb-2">
       replay
     </span>
-    <div class="text-[#003286] font-medium">
+    <div class="text-[#00399a] font-medium">
       Easy Replacement
     </div>
     <div class="text-xs text-gray-500">
@@ -459,47 +473,47 @@ export default function Page() {
 
                 </div>
               `,
-                }}
-              />
+              }}
+            />
 
-              {/* LOADING */}
-              <div
-                shopify-loading-placeholder="true"
-                className="animate-pulse"
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-                  <div>
-                    <div className="aspect-4/5 bg-gray-100 rounded-2xl mb-4"></div>
+            {/* LOADING */}
+            <div
+              shopify-loading-placeholder="true"
+              className="animate-pulse"
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+                <div>
+                  <div className="aspect-4/5 bg-gray-100 rounded-2xl mb-4"></div>
 
-                    <div className="flex gap-4">
-                      <div className="w-20 h-20 bg-gray-100 rounded-xl"></div>
-                      <div className="w-20 h-20 bg-gray-100 rounded-xl"></div>
-                      <div className="w-20 h-20 bg-gray-100 rounded-xl"></div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div className="h-4 bg-gray-100 w-1/4 mb-6 rounded"></div>
-                    <div className="h-10 bg-gray-100 w-3/4 mb-4 rounded"></div>
-                    <div className="h-6 bg-gray-100 w-1/4 mb-8 rounded"></div>
-
-                    <div className="h-12 bg-gray-100 w-full mb-4 rounded-full"></div>
-                    <div className="h-12 bg-gray-100 w-full mb-8 rounded-full"></div>
-
-                    <div className="h-12 bg-gray-100 w-full rounded-full"></div>
+                  <div className="flex gap-4">
+                    <div className="w-20 h-20 bg-gray-100 rounded-xl"></div>
+                    <div className="w-20 h-20 bg-gray-100 rounded-xl"></div>
+                    <div className="w-20 h-20 bg-gray-100 rounded-xl"></div>
                   </div>
                 </div>
-              </div>
 
-            </shopify-context>
-            <shopify-cart id="main-cart"></shopify-cart>
-          </div>
+                <div>
+                  <div className="h-4 bg-gray-100 w-1/4 mb-6 rounded"></div>
+                  <div className="h-10 bg-gray-100 w-3/4 mb-4 rounded"></div>
+                  <div className="h-6 bg-gray-100 w-1/4 mb-8 rounded"></div>
+                  
+                  <div className="h-12 bg-gray-100 w-full mb-4 rounded-full"></div>
+                  <div className="h-12 bg-gray-100 w-full mb-8 rounded-full"></div>
+
+                  <div className="h-12 bg-gray-100 w-full rounded-full"></div>
+                </div>
+              </div>
+            </div>
+
+          </shopify-context>
+          <shopify-cart id="main-cart"></shopify-cart>
         </div>
-      </section>
-      {/* <IngredientShowcase/> */}
-      <IngredientsContent />
-      <TestimonialSection />
-      <FaqSection />
+      </div>
+    </section>
+    <IngredientShowcase/>
+    <IngredientsContent/>
+    <TestimonialSection />
+    <FaqSection />
     </>
   );
 }

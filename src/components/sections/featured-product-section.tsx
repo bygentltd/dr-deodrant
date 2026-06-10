@@ -44,7 +44,7 @@ export function FeaturedProductSection() {
           <shopify-context
             type="product"
             handle="dr-deodrantnatural-crystal-deodorant"
-            wait-for-update="false"
+            wait-for-update="true"
           >
             <template
               dangerouslySetInnerHTML={{
@@ -249,7 +249,7 @@ export function FeaturedProductSection() {
 
   <div class="flex gap-3">
     <label class="cursor-pointer relative">
-      <input type="radio" name="Scent" value="original" class="peer sr-only" checked>
+      <input type="radio" name="dummy-Scent" value="original" class="peer sr-only" checked>
 
       <span class="block px-5 py-2.5 border border-gray-300 rounded-full bg-[#F5FBFF] text-sm font-medium text-[#394481] transition-all duration-200 hover:border-[#394481] peer-checked:border-[#394481] peer-checked:text-[#394481]">
         Original
@@ -258,7 +258,21 @@ export function FeaturedProductSection() {
   </div>
 </div>
 
+<div class="flex flex-col">
+  <h3 class="text-xs font-bold text-[#394481] uppercase tracking-widest mb-3 flex justify-center items-center">
+    Size
+  </h3>
 
+  <div class="flex gap-3">
+    <label class="cursor-pointer relative">
+      <input type="radio" name="dummy-size" value="70g" class="peer sr-only" checked>
+
+      <span class="block px-5 py-2.5 border border-gray-300 rounded-full bg-[#F5FBFF] text-sm font-medium text-[#394481] transition-all duration-200 hover:border-[#394481] peer-checked:border-[#394481] peer-checked:text-[#394481]">
+        70g
+      </span>
+    </label>
+  </div>
+</div>
 
                     </div>
 
@@ -396,7 +410,7 @@ export function FeaturedProductSection() {
                   <div className="h-4 bg-gray-100 w-1/4 mb-6 rounded"></div>
                   <div className="h-10 bg-gray-100 w-3/4 mb-4 rounded"></div>
                   <div className="h-6 bg-gray-100 w-1/4 mb-8 rounded"></div>
-
+                  
                   <div className="h-12 bg-gray-100 w-full mb-4 rounded-full"></div>
                   <div className="h-12 bg-gray-100 w-full mb-8 rounded-full"></div>
 

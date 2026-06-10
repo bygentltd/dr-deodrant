@@ -27,13 +27,13 @@ export default function RootLayout({
       </head>
       <body className="bg-surface text-on-background selection:bg-clinical-blue selection:text-[#F5FBFF]">
         <LenisProvider>
-          <shopify-store store-domain="7pxnx6-mf.myshopify.com" public-access-token="e5272fb300e4dfe9ada40cd200dfc6c6" country="US" language="en">
-            
+          <shopify-store store-domain="drdeodrant.myshopify.com" public-access-token="a626fe9cce73c1f299dabe537ec4fb43" country="IN" language="en">
+
             <Header />
 
             <main>{children}</main>
 
-            <Footer/>
+            <Footer />
 
             <shopify-cart id="main-cart"></shopify-cart>
           </shopify-store>
