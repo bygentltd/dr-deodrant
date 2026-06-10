@@ -51,7 +51,7 @@ export default function Page() {
 
           <shopify-context
             type="product"
-            handle="dr-deo"
+            handle="dr-deodrantnatural-crystal-deodorant"
             wait-for-update="true"
           >
             <template
