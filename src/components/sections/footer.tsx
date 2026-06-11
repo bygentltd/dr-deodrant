@@ -62,7 +62,7 @@ export function Footer() {
               <div>
                 <h4 className="font-inter text-base md:text-lg mb-0.5 md:mb-1">Call Us</h4>
                 <p className="text-xs md:text-sm text-white/70 leading-relaxed group-hover:text-white transition-colors">
-                  +91 83830 27724
+                  +91 79001 60311
                 </p>
               </div>
             </div>

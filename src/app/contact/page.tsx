@@ -21,7 +21,7 @@ const Page = () => {
                             </div>
                             <div>
                                 <h3 className="text-[#003286] font-semibold text-sm md:text-base">Phone</h3>
-                                <a href="tel:5551234567" className="text-gray-500 text-sm md:text-base">+91 83830 27724</a>
+                                <a href="tel:5551234567" className="text-gray-500 text-sm md:text-base">+91 79001 60311</a>
                             </div>
                         </div>
                     </div>

@@ -200,9 +200,9 @@ export default function Header() {
           })}
         </div>
         <div className={cn("hidden md:flex flex-col gap-4 pt-4 border-t border-[#F5FBFF]/10")}>
-          <a href="tel:+918383027724" className={cn("flex items-center gap-2 text-sm font-medium text-[#203856]/70 hover:text-[#203856]")}>
+          <a href="tel:+917900160311" className={cn("flex items-center gap-2 text-sm font-medium text-[#203856]/70 hover:text-[#203856]")}>
             <span className="material-symbols-outlined text-base">phone_iphone</span>
-            <span>+91 83830 27724</span>
+            <span>+91 79001 60311</span>
           </a>
         </div>
       </div>
