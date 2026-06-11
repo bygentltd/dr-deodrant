@@ -16,7 +16,7 @@ export default function MeetTheFounder() {
   const yParallax = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
 
   return (
-    <section className="bg-[#F5FBFF] px-4 py-10 md:px-8 w-full font-sans">
+    <section className="font-inter bg-[#F5FBFF] px-4 py-10 md:px-8 w-full font-sans">
       <div
         ref={sectionRef}
         // Scaled down padding, max-width, and border-radius
@@ -24,7 +24,7 @@ export default function MeetTheFounder() {
       >
         {/* Top Header */}
         <div className="mb-8 md:mb-12 text-center lg:text-left">
-          <h2 className="text-3xl sm:text-4xl md:text-3xl lg:text-5xl font-medium tracking-tight text-[#313131] max-w-2xl lg:max-w-none mx-auto lg:mx-0">
+          <h2 className="text-3xl sm:text-4xl md:text-3xl lg:text-5xl font-semibold tracking-tight text-[#003286] max-w-2xl lg:max-w-none mx-auto lg:mx-0">
             Meet the Founder
           </h2>
         </div>

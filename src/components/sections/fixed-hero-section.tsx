@@ -7,7 +7,7 @@ export function FixedHeroSection() {
 
   return (
     <section
-      className="relative flex items-center justify-center w-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] bg-cover bg-center bg-no-repeat bg-fixed"
+      className="relative flex items-center justify-center w-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] bg-cover bg-center bg-no-repeat bg-scroll lg:bg-fixed"
       // Replace this URL with your actual image path
       style={{ backgroundImage: "url('/fixed_bg.webp')" }}
     >
@@ -37,7 +37,7 @@ export function FixedHeroSection() {
           href="/shop/popular"
           className="group inline-flex items-center justify-center gap-2 bg-[#113D86] text-[#F5FBFF] px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base font-medium transition-all hover:bg-[#113D86]/95 hover:scale-105 active:scale-95 shadow-lg cursor-pointer"
         >
-          <span>SWITCH TO NATURAL</span>
+          <span>Switch To Natural</span>
           <span className="material-symbols-outlined text-[14px] sm:text-base transition-transform group-hover:translate-x-1">
             arrow_forward_ios
           </span>

@@ -71,8 +71,8 @@ export function TestimonialSection() {
               className={`min-w-full grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 md:gap-10 items-stretch transition-opacity duration-700 ${idx === currentTestimonial ? 'opacity-100' : 'opacity-0'}`}
             >
 
-              {/* Left Side: Image (Now 4 columns instead of 5) */}
-              <div className="md:col-span-4 rounded-2xl sm:rounded-[2rem] overflow-hidden shadow-lg h-[240px] sm:h-[320px] md:h-full md:min-h-[320px] lg:min-h-[360px]">
+              {/* Left Side: Image */}
+              <div className="mx-auto w-[85%] sm:w-[80%] md:w-full md:mx-0 md:col-span-5 rounded-2xl sm:rounded-[2rem] overflow-hidden shadow-lg h-[380px] sm:h-[480px] md:h-full md:min-h-[320px] lg:min-h-[360px]">
                 <img
                   alt="Client testimonial"
                   className="w-full h-full object-cover"
@@ -80,8 +80,8 @@ export function TestimonialSection() {
                 />
               </div>
 
-              {/* Right Side: Content Box (Now 8 columns instead of 7) */}
-              <div className="md:col-span-8 bg-[#eaf5ff] p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl sm:rounded-[2rem] flex flex-col justify-between h-full">
+              {/* Right Side: Content Box */}
+              <div className="md:col-span-7 bg-[#eaf5ff] p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl sm:rounded-[2rem] flex flex-col justify-between h-full">
 
                 <div className="space-y-4 sm:space-y-6">
                   {/* Custom Quote Icon */}

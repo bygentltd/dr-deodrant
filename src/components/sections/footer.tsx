@@ -26,55 +26,55 @@ export function Footer() {
         <div className="max-w-7xl mx-auto">
 
           {/* --- Top Row: Contact Info --- */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6 pb-16 border-b border-white/10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 lg:gap-6 pb-10 md:pb-16 border-b border-white/10">
 
             {/* Address */}
-            <div className="flex items-start gap-4 group cursor-default">
-              <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-colors duration-300 group-hover:bg-white group-hover:text-[#53606b]">
-                <ShoppingBag size={20} strokeWidth={1.5} />
+            <div className="flex items-center md:items-start gap-3 md:gap-4 group cursor-default">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-colors duration-300 group-hover:bg-white group-hover:text-[#53606b]">
+                <ShoppingBag className="w-4 h-4 md:w-5 md:h-5" strokeWidth={1.5} />
               </div>
               <div>
-                <h4 className="font-inter text-lg mb-1">Free Shipping</h4>
-                <p className="text-sm text-white/70 leading-relaxed">
+                <h4 className="font-inter text-base md:text-lg mb-0.5 md:mb-1">Free Shipping</h4>
+                <p className="text-xs md:text-sm text-white/70 leading-relaxed">
                   All over India
                 </p>
               </div>
             </div>
 
             {/* Hours */}
-            <div className="flex items-start gap-4 group cursor-default">
-              <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-colors duration-300 group-hover:bg-white group-hover:text-[#53606b]">
-                <Clock size={20} strokeWidth={1.5} />
+            <div className="flex items-center md:items-start gap-3 md:gap-4 group cursor-default">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-colors duration-300 group-hover:bg-white group-hover:text-[#53606b]">
+                <Clock className="w-4 h-4 md:w-5 md:h-5" strokeWidth={1.5} />
               </div>
               <div>
-                <h4 className="font-inter text-lg mb-1">Hours</h4>
-                <p className="text-sm text-white/70 leading-relaxed">
+                <h4 className="font-inter text-base md:text-lg mb-0.5 md:mb-1">Hours</h4>
+                <p className="text-xs md:text-sm text-white/70 leading-relaxed">
                   Mon–Sat, 9am–6pm
                 </p>
               </div>
             </div>
 
             {/* Call Us */}
-            <div className="flex items-start gap-4 group cursor-pointer">
-              <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-colors duration-300 group-hover:bg-white group-hover:text-[#53606b]">
-                <Phone size={20} strokeWidth={1.5} />
+            <div className="flex items-center md:items-start gap-3 md:gap-4 group cursor-pointer">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-colors duration-300 group-hover:bg-white group-hover:text-[#53606b]">
+                <Phone className="w-4 h-4 md:w-5 md:h-5" strokeWidth={1.5} />
               </div>
               <div>
-                <h4 className="font-inter text-lg mb-1">Call Us</h4>
-                <p className="text-sm text-white/70 leading-relaxed group-hover:text-white transition-colors">
+                <h4 className="font-inter text-base md:text-lg mb-0.5 md:mb-1">Call Us</h4>
+                <p className="text-xs md:text-sm text-white/70 leading-relaxed group-hover:text-white transition-colors">
                   +91 83830 27724
                 </p>
               </div>
             </div>
 
             {/* Email */}
-            <div className="flex items-start gap-4 group cursor-pointer">
-              <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-colors duration-300 group-hover:bg-white group-hover:text-[#53606b]">
-                <Mail size={20} strokeWidth={1.5} />
+            <div className="flex items-center md:items-start gap-3 md:gap-4 group cursor-pointer">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-colors duration-300 group-hover:bg-white group-hover:text-[#53606b]">
+                <Mail className="w-4 h-4 md:w-5 md:h-5" strokeWidth={1.5} />
               </div>
               <div>
-                <h4 className="font-inter text-lg mb-1">Email</h4>
-                <p className="text-sm text-white/70 leading-relaxed group-hover:text-white transition-colors">
+                <h4 className="font-inter text-base md:text-lg mb-0.5 md:mb-1">Email</h4>
+                <p className="text-xs md:text-sm text-white/70 leading-relaxed group-hover:text-white transition-colors">
                   support@drdeodrant.com
                 </p>
               </div>
@@ -111,7 +111,7 @@ export function Footer() {
             </div>
 
             {/* Right: Links Grids */}
-            <div className="lg:col-span-7 grid grid-cols-3 gap-2 sm:gap-10">
+            <div className="lg:col-span-7 grid grid-cols-3 gap-2 sm:gap-5">
               {/* Explore Column */}
               <div className="flex flex-col gap-3 sm:gap-4">
                 <h4 className="font-inter text-[15px] sm:text-xl mb-1 sm:mb-2">Explore</h4>
@@ -160,7 +160,7 @@ export function Footer() {
           </div>
 
           {/* --- Bottom Row: Copyright & Socials --- */}
-          <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-6 pt-8 border-t border-white/10">
+          <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-2 pt-8 border-t border-white/10">
             <p className="text-xs text-white/60">
               © 2026 Dr. Deodrant. All Rights Reserved.
             </p>
