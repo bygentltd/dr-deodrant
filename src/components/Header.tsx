@@ -126,7 +126,7 @@ export default function Header() {
         <div className="absolute left-1/2 top-1/2 -translate-x-[60%] lg:-translate-x-1/2 -translate-y-1/2 flex items-center justify-center z-10">
           <Link href="/">
             {/* 👇 CHANGED h-15 to h-10 (mobile) and lg:h-12 (desktop) so Tailwind recognizes it */}
-            <img src="/drdeologo.png" alt="Dr. Deodrant Logo" className="h-10 lg:h-15 w-auto hover:opacity-90 transition-opacity" />
+            <img src="/DeDeo-logo.svg" alt="Dr. Deodrant Logo" className="h-10 lg:h-15 w-auto hover:opacity-90 transition-opacity" />
           </Link>
         </div>
 
@@ -146,67 +146,66 @@ export default function Header() {
             className="!px-6 !py-2.5 lg:!px-8 lg:!py-3"
           >
             <span className="hidden lg:inline">SHOP COLLECTION</span>
-            <span className="lg:hidden tracking-wider">SHOP</span>
+            <span className="lg:hidden tracking-wider ml-1">SHOP</span>
           </FlowButton>
         </div>
 
       </nav>
 
       {/* Mobile Dropdown Menu Drawer */}
-      {isOpen && (
-        <div className={cn(
-          "absolute top-24 left-4 right-4 backdrop-blur-2xl border rounded-3xl p-6 shadow-2xl flex flex-col gap-6 lg:hidden animate-fade-in z-50 pointer-events-auto glass-nav",
-          "bg-[#F5FBFF]/12 border-[#F5FBFF]/15"
-        )}>
-          <div className="flex flex-col gap-4">
-            {links.map((link) => {
-              const isActive = pathname === link.href;
+      <div className={cn(
+        "absolute top-24 left-4 right-4 backdrop-blur-2xl border rounded-3xl p-6 flex flex-col gap-6 lg:hidden z-50 glass-nav transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] origin-top",
+        "bg-[#F5FBFF]/12 border-[#F5FBFF]/15",
+        isOpen ? "opacity-100 translate-y-0 pointer-events-auto shadow-2xl scale-100" : "opacity-0 -translate-y-4 pointer-events-none shadow-none scale-95"
+      )}>
+        <div className="flex flex-col gap-4">
+          {links.map((link) => {
+            const isActive = pathname === link.href;
 
-              if (link.href === "/story") {
-                return (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setIsOpen(false);
-                      if (typeof window !== "undefined") window.location.href = link.href;
-                    }}
-                    className={cn(
-                      "text-base font-medium py-1.5 nav-underline",
-                      "text-[#203856]/80 hover:text-[#203856]",
-                      isActive && "active"
-                    )}
-                  >
-                    {link.name}
-                  </a>
-                );
-              }
-
+            if (link.href === "/story") {
               return (
-                <Link
+                <a
                   key={link.name}
-                  onClick={() => setIsOpen(false)}
+                  href={link.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsOpen(false);
+                    if (typeof window !== "undefined") window.location.href = link.href;
+                  }}
                   className={cn(
-                    "text-base font-medium py-1.5 nav-underline",
+                    "text-base font-bold py-1.5 nav-underline w-fit",
                     "text-[#203856]/80 hover:text-[#203856]",
                     isActive && "active"
                   )}
-                  href={link.href}
                 >
                   {link.name}
-                </Link>
+                </a>
               );
-            })}
-          </div>
-          <div className={cn("flex flex-col gap-4 pt-4 border-t border-[#F5FBFF]/10")}>
-            <a href="tel:+3910352568" className={cn("flex items-center gap-2 text-sm font-medium text-[#203856]/70 hover:text-[#203856]")}>
-              <span className="material-symbols-outlined text-base">phone_iphone</span>
-              <span>+91 83830 27724</span>
-            </a>
-          </div>
+            }
+
+            return (
+              <Link
+                key={link.name}
+                onClick={() => setIsOpen(false)}
+                className={cn(
+                  "text-base font-bold py-1.5 nav-underline w-fit",
+                  "text-[#203856]/80 hover:text-[#203856]",
+                  isActive && "active"
+                )}
+                href={link.href}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </div>
-      )}
+        <div className={cn("hidden md:flex flex-col gap-4 pt-4 border-t border-[#F5FBFF]/10")}>
+          <a href="tel:+918383027724" className={cn("flex items-center gap-2 text-sm font-medium text-[#203856]/70 hover:text-[#203856]")}>
+            <span className="material-symbols-outlined text-base">phone_iphone</span>
+            <span>+91 83830 27724</span>
+          </a>
+        </div>
+      </div>
     </header>
   );
 }

@@ -39,7 +39,13 @@ export default function Home() {
         {/* Mobile View */}
         <div className="block md:hidden">
           <ImageCarousel
-            images={["/HOME_21.webp", "/Home-Ing.webp", "/HOME_HOW.webp"]}
+            images={["/Result_1.webp", "/Result_2.webp", "/Result_3.webp"]}
+            title="Visible Results, Real Confidence"
+            subtitle="Brighter, smoother underarms in just 21 days"
+          />
+          <ImageCarousel
+            images={["/HTU_1.webp", "/HTU_2.webp", "/HTU_3.webp"]}
+            title="How To Use?"
           />
         </div>
         {/* <MajorFeaturesSection/>

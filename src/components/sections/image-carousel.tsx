@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-const ImageCarousel = ({ images }: { images: string[] }) => {
+const ImageCarousel = ({ images, title, subtitle }: { images: string[]; title?: string; subtitle?: string }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
@@ -14,18 +14,24 @@ const ImageCarousel = ({ images }: { images: string[] }) => {
   };
 
   return (
-    <div className="relative w-full overflow-hidden bg-[#F5FBFF]">
+    <div className="relative w-full overflow-hidden bg-[#F5FBFF] pb-32">
+      {(title || subtitle) && (
+        <div className="mb-6 text-center">
+          {title && <h1 className="text-2xl font-bold text-[#113D86] sm:text-4xl">{title}</h1>}
+          {subtitle && <p className="text-gray-600 mt-2">{subtitle}</p>}
+        </div>
+      )}
       {/* Image Display */}
       <div
-        className="flex transition-transform duration-500 ease-out"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        className="flex gap-4 px-4 py-4 transition-transform duration-500 ease-out"
+        style={{ transform: `translateX(calc(-${currentIndex * 85}vw - ${currentIndex} * 1rem))` }}
       >
         {images.map((img, index) => (
           <img
             key={index}
             src={img}
             alt={`Slide ${index}`}
-            className="w-full h-auto flex-shrink-0 object-cover"
+            className="w-[85vw] h-auto flex-shrink-0 object-cover rounded-3xl shadow-sm"
           />
         ))}
       </div>

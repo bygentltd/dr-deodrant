@@ -108,7 +108,7 @@ export function HeroSection() {
       >
         <div className="mb-4 w-full text-left">
           <span className="block font-inter text-[10px] md:text-xs lg:text-sm uppercase tracking-[0.2em] text-[#003286] drop-shadow-md">
-            MADE IN THAILAND • TESTED • SKIN-FRIENDLY
+            CERTIFIED • TESTED • SKIN-FRIENDLY
           </span>
         </div>
 
