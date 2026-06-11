@@ -43,20 +43,20 @@ export default function Page() {
 
   return (
     <>
-    <section className="py-40 bg-[#F5FBFF]">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-        <div className="reveal-on-scroll">
-          
-          <shopify-store store-domain="drdeodrant.myshopify.com" country="IN" language="en"></shopify-store>
+      <section className="py-40 bg-[#F5FBFF]">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+          <div className="reveal-on-scroll">
 
-          <shopify-context
-            type="product"
-            handle="dr-deodrantnatural-crystal-deodorant"
-            wait-for-update="true"
-          >
-            <template
-              dangerouslySetInnerHTML={{
-                __html: `
+            <shopify-store store-domain="drdeodrant.myshopify.com" country="IN" language="en"></shopify-store>
+
+            <shopify-context
+              type="product"
+              handle="dr-deodrantnatural-crystal-deodorant"
+              wait-for-update="true"
+            >
+              <template
+                dangerouslySetInnerHTML={{
+                  __html: `
                 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-32">
                   
@@ -64,7 +64,7 @@ export default function Page() {
 
                     <div class="product-gallery flex flex-col gap-4">
 
-                      <div id="main-image-container" class="w-full aspect-4/5 bg-[#F8F6F4] rounded-2xl overflow-hidden relative group">
+                      <div id="main-image-container" class="w-full aspect-[4/5] bg-[#F8F6F4] rounded-2xl overflow-hidden relative group">
                         
                         <shopify-media 
                           id="initial-main-media" 
@@ -163,84 +163,7 @@ export default function Page() {
 
                     </div>
 
-                    <div class="border-t border-gray-200 mt-4">
 
-                      <details class="group border-b border-gray-200 py-5" open>
-                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#00399a] cursor-pointer list-none outline-none">
-                          Description
-                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#00399a]">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                              <path d="m6 9 6 6 6-6"/>
-                            </svg>
-                          </span>
-                        </summary>
-                        <div class="text-gray-600 text-sm md:text-base leading-relaxed mt-4 pb-2">
-                          This pure mineral crystal deodorant offers a clean, toxin-free alternative to conventional antiperspirants. It forms an invisible protective layer on your skin that completely neutralizes odor-causing bacteria without clogging your pores. Unlike chemical deodorants, it lets your body breathe naturally while keeping you fresh, dry, and odor-free all day long. It leaves zero sticky residue, zero white marks on your clothes, and zero irritation.
-                        </div>
-                      </details>
-
-                      <details class="group border-b border-gray-200 py-5">
-                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#00399a] cursor-pointer list-none outline-none">
-                          Ingredients
-                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#00399a]">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                              <path d="m6 9 6 6 6-6"/>
-                            </svg>
-                          </span>
-                        </summary>
-                        <div class="text-gray-600 text-sm md:text-base leading-relaxed mt-4 pb-2">
-                          Alum, Water, Acerola Extract, Kiwi Fruit Extract, Vitamin C, and Vitamin E
-                        </div>
-                      </details>
-
-                      <details class="group border-b border-gray-200 py-5">
-                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#00399a] cursor-pointer list-none outline-none">
-                          How to Use
-                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#00399a]">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                              <path d="m6 9 6 6 6-6"/>
-                            </svg>
-                          </span>
-                        </summary>
-                        <div class="text-gray-600 text-sm md:text-base leading-relaxed mt-4 pb-2">
-                          Apply after showering to slightly damp underarms. Wet the crystal if needed and glide gently 4-5 times over the underarm area. 
-                        </div>
-                      </details>
-
-                      <details class="group border-b border-gray-200 py-5">
-                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#00399a] cursor-pointer list-none outline-none">
-                          Benefits
-                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#00399a]">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                              <path d="m6 9 6 6 6-6"/>
-                            </svg>
-                          </span>
-                        </summary>
-                        <div class="mt-4 pb-2">
-                          <ul class="space-y-4 text-gray-600 text-sm md:text-base leading-relaxed list-disc pl-5">
-                            <li><span class="font-medium text-[#00399a]">24-Hour Odor Protection:</span> Eliminates the bacteria that cause body odor, keeping you fresh from morning to night.</li>
-                            <li><span class="font-medium text-[#00399a]">Zero Clothing Stains:</span> Completely transparent formula leaves no white chalky residue on dark clothes or yellow stains on white shirts.</li>
-                            <li><span class="font-medium text-[#00399a]">Hypoallergenic & Gentle:</span> Soothes the skin and prevents underarm darkening; perfectly safe for sensitive skin and post-shaving use.</li>
-                            <li><span class="font-medium text-[#00399a]">Incredibly Long-Lasting:</span> A single pure crystal stick is highly concentrated and can easily last for up to 6–8 months of daily use.</li>
-                          </ul>
-                        </div>
-                      </details>
-
-                      <details class="group border-b border-gray-200 py-5">
-                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#00399a] cursor-pointer list-none outline-none">
-                          Sustainability & Ethics
-                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#00399a]">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                              <path d="m6 9 6 6 6-6"/>
-                            </svg>
-                          </span>
-                        </summary>
-                        <div class="text-gray-600 text-sm md:text-base leading-relaxed mt-4 pb-2">
-                          We believe in clean beauty that cares for both your body and the planet. Our crystal deodorants are 100% vegan, cruelty-free, and sustainably sourced. Because a single stick lasts many times longer than a standard aerosol or plastic roll-on gel, switching to Dr. Deodrant drastically reduces your personal packaging waste and environmental footprint. Safe for your skin, kind to the earth.
-                        </div>
-                      </details>
-
-                    </div>
 
                   </div>
 
@@ -326,14 +249,14 @@ export default function Page() {
 
 </ul>
 
-                    <div class="mb-8 flex items-start gap-10">
+                    <div class="mb-8 flex flex-col items-center lg:flex-row lg:items-start lg:justify-start gap-10">
 
-                    <div class="flex flex-col">
+                    <div class="flex flex-col items-center lg:items-start">
   <h3 class="text-xs font-bold text-[#394481] uppercase tracking-widest mb-3">
     Scent
   </h3>
 
-  <div class="flex gap-3">
+  <div class="flex justify-center lg:justify-start gap-3">
     <label class="cursor-pointer relative">
       <input type="radio" name="Scent" value="original" class="peer sr-only" checked>
 
@@ -344,25 +267,11 @@ export default function Page() {
   </div>
 </div>
 
-<div class="flex flex-col">
-  <h3 class="text-xs font-bold text-[#394481] uppercase tracking-widest mb-3">
-    Size
-  </h3>
 
-  <div class="flex gap-3">
-    <label class="cursor-pointer relative">
-      <input type="radio" name="size" value="70g" class="peer sr-only" checked>
-
-      <span class="block px-5 py-2.5 border border-gray-300 rounded-full bg-[#F5FBFF] text-sm font-medium text-[#394481] transition-all duration-200 hover:border-[#394481] peer-checked:border-[#394481] peer-checked:text-[#394481]">
-        70g
-      </span>
-    </label>
-  </div>
-</div>
 
                     </div>
 
-                    <div class="flex items-center gap-4">
+                    <div class="flex items-center justify-center lg:justify-start gap-4">
 
                       <button
   class="group relative inline-flex h-12 w-40 items-center justify-center overflow-hidden rounded-md border-2 border-[#394481] font-medium cursor-pointer"
@@ -469,51 +378,131 @@ export default function Page() {
 
 </div>
 
+                    <div class="border-t border-gray-200 mt-4">
+
+                      <details class="group border-b border-gray-200 py-5" open>
+                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#00399a] cursor-pointer list-none outline-none">
+                          Description
+                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#00399a]">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                              <path d="m6 9 6 6 6-6"/>
+                            </svg>
+                          </span>
+                        </summary>
+                        <div class="text-gray-600 text-sm md:text-base leading-relaxed mt-4 pb-2">
+                          This pure mineral crystal deodorant offers a clean, toxin-free alternative to conventional antiperspirants. It forms an invisible protective layer on your skin that completely neutralizes odor-causing bacteria without clogging your pores. Unlike chemical deodorants, it lets your body breathe naturally while keeping you fresh, dry, and odor-free all day long. It leaves zero sticky residue, zero white marks on your clothes, and zero irritation.
+                        </div>
+                      </details>
+
+                      <details class="group border-b border-gray-200 py-5">
+                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#00399a] cursor-pointer list-none outline-none">
+                          Ingredients
+                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#00399a]">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                              <path d="m6 9 6 6 6-6"/>
+                            </svg>
+                          </span>
+                        </summary>
+                        <div class="text-gray-600 text-sm md:text-base leading-relaxed mt-4 pb-2">
+                          Alum, Water, Acerola Extract, Kiwi Fruit Extract, Vitamin C, and Vitamin E
+                        </div>
+                      </details>
+
+                      <details class="group border-b border-gray-200 py-5">
+                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#00399a] cursor-pointer list-none outline-none">
+                          How to Use
+                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#00399a]">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                              <path d="m6 9 6 6 6-6"/>
+                            </svg>
+                          </span>
+                        </summary>
+                        <div class="text-gray-600 text-sm md:text-base leading-relaxed mt-4 pb-2">
+                          Apply after showering to slightly damp underarms. Wet the crystal if needed and glide gently 4-5 times over the underarm area. 
+                        </div>
+                      </details>
+
+                      <details class="group border-b border-gray-200 py-5">
+                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#00399a] cursor-pointer list-none outline-none">
+                          Benefits
+                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#00399a]">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                              <path d="m6 9 6 6 6-6"/>
+                            </svg>
+                          </span>
+                        </summary>
+                        <div class="mt-4 pb-2">
+                          <ul class="space-y-4 text-gray-600 text-sm md:text-base leading-relaxed list-disc pl-5">
+                            <li><span class="font-medium text-[#00399a]">24-Hour Odor Protection:</span> Eliminates the bacteria that cause body odor, keeping you fresh from morning to night.</li>
+                            <li><span class="font-medium text-[#00399a]">Zero Clothing Stains:</span> Completely transparent formula leaves no white chalky residue on dark clothes or yellow stains on white shirts.</li>
+                            <li><span class="font-medium text-[#00399a]">Hypoallergenic & Gentle:</span> Soothes the skin and prevents underarm darkening; perfectly safe for sensitive skin and post-shaving use.</li>
+                            <li><span class="font-medium text-[#00399a]">Incredibly Long-Lasting:</span> A single pure crystal stick is highly concentrated and can easily last for up to 6–8 months of daily use.</li>
+                          </ul>
+                        </div>
+                      </details>
+
+                      <details class="group border-b border-gray-200 py-5">
+                        <summary class="flex justify-between items-center font-inter font-bold text-lg text-[#00399a] cursor-pointer list-none outline-none">
+                          Sustainability & Ethics
+                          <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-[#00399a]">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                              <path d="m6 9 6 6 6-6"/>
+                            </svg>
+                          </span>
+                        </summary>
+                        <div class="text-gray-600 text-sm md:text-base leading-relaxed mt-4 pb-2">
+                          We believe in clean beauty that cares for both your body and the planet. Our crystal deodorants are 100% vegan, cruelty-free, and sustainably sourced. Because a single stick lasts many times longer than a standard aerosol or plastic roll-on gel, switching to Dr. Deodrant drastically reduces your personal packaging waste and environmental footprint. Safe for your skin, kind to the earth.
+                        </div>
+                      </details>
+
+                    </div>
+</div>
+
                   </div>
 
                 </div>
               `,
-              }}
-            />
+                }}
+              />
 
-            {/* LOADING */}
-            <div
-              shopify-loading-placeholder="true"
-              className="animate-pulse"
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-                <div>
-                  <div className="aspect-4/5 bg-gray-100 rounded-2xl mb-4"></div>
+              {/* LOADING */}
+              <div
+                shopify-loading-placeholder="true"
+                className="animate-pulse"
+              >
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+                  <div>
+                    <div className="aspect-4/5 bg-gray-100 rounded-2xl mb-4"></div>
 
-                  <div className="flex gap-4">
-                    <div className="w-20 h-20 bg-gray-100 rounded-xl"></div>
-                    <div className="w-20 h-20 bg-gray-100 rounded-xl"></div>
-                    <div className="w-20 h-20 bg-gray-100 rounded-xl"></div>
+                    <div className="flex gap-4">
+                      <div className="w-20 h-20 bg-gray-100 rounded-xl"></div>
+                      <div className="w-20 h-20 bg-gray-100 rounded-xl"></div>
+                      <div className="w-20 h-20 bg-gray-100 rounded-xl"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className="h-4 bg-gray-100 w-1/4 mb-6 rounded"></div>
+                    <div className="h-10 bg-gray-100 w-3/4 mb-4 rounded"></div>
+                    <div className="h-6 bg-gray-100 w-1/4 mb-8 rounded"></div>
+
+                    <div className="h-12 bg-gray-100 w-full mb-4 rounded-full"></div>
+                    <div className="h-12 bg-gray-100 w-full mb-8 rounded-full"></div>
+
+                    <div className="h-12 bg-gray-100 w-full rounded-full"></div>
                   </div>
                 </div>
-
-                <div>
-                  <div className="h-4 bg-gray-100 w-1/4 mb-6 rounded"></div>
-                  <div className="h-10 bg-gray-100 w-3/4 mb-4 rounded"></div>
-                  <div className="h-6 bg-gray-100 w-1/4 mb-8 rounded"></div>
-                  
-                  <div className="h-12 bg-gray-100 w-full mb-4 rounded-full"></div>
-                  <div className="h-12 bg-gray-100 w-full mb-8 rounded-full"></div>
-
-                  <div className="h-12 bg-gray-100 w-full rounded-full"></div>
-                </div>
               </div>
-            </div>
 
-          </shopify-context>
-          <shopify-cart id="main-cart"></shopify-cart>
+            </shopify-context>
+            <shopify-cart id="main-cart"></shopify-cart>
+          </div>
         </div>
-      </div>
-    </section>
-    <IngredientShowcase/>
-    <IngredientsContent/>
-    <TestimonialSection />
-    <FaqSection />
+      </section>
+      {/* <IngredientShowcase/> */}
+      <IngredientsContent />
+      <TestimonialSection />
+      <FaqSection />
     </>
   );
 }

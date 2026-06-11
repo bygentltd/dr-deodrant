@@ -8,7 +8,7 @@ export function HeroSection() {
   const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
   const heroContentOffset = "md:pl-[5vw] lg:pl-[8vw]";
 
-  // Combine images and titles into a single array of objects
+  // Desktop Slides
   const heroSlides = [
     {
       src: "/Hero1_crop.webp",
@@ -35,7 +35,35 @@ export function HeroSection() {
         </>
       ),
     },
+  ];
 
+  // Mobile & iPad Portrait Slides
+  const heroSlidesVertical = [
+    {
+      src: "/Hero1_crop.webp", // Replace with actual mobile portrait image
+      title: (
+        <>
+          Skincare For <br />
+          Your Underarms
+        </>
+      ),
+    },
+    {
+      src: "/3rd_hero_Image.webp", // Replace with actual mobile portrait image
+      title: (
+        <>
+          Thailand's Trusted <br /> Mineral Deodorant
+        </>
+      ),
+    },
+    {
+      src: "/4th_hero_image.webp", // Replace with actual mobile portrait image
+      title: (
+        <>
+          Sweat is Natural, <br /> Smell is Optional
+        </>
+      ),
+    },
   ];
 
   useEffect(() => {
@@ -58,10 +86,17 @@ export function HeroSection() {
             className={`carousel-slide absolute inset-0 ${idx === currentHeroSlide ? "active" : "opacity-0"
               } transition-opacity duration-1000`}
           >
+            {/* Desktop Image */}
             <img
               alt={`Hero slide ${idx + 1}`}
-              className="w-full h-full object-cover ken-burns"
+              className="hidden lg:block w-full h-full object-cover ken-burns"
               src={slide.src}
+            />
+            {/* Mobile & iPad Portrait Image */}
+            <img
+              alt={`Hero slide ${idx + 1} portrait`}
+              className="block lg:hidden w-full h-full object-cover ken-burns"
+              src={heroSlidesVertical[idx].src}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#000000]/10 via-[#000000]/10 to-[#000000]/10 z-10" />
           </div>
@@ -69,39 +104,38 @@ export function HeroSection() {
       </div>
 
       <div
-        className={`relative z-10 h-full flex flex-col items-start justify-center text-left px-6 ${heroContentOffset}`}
+        className={`relative z-10 h-full flex flex-col items-start justify-center text-left px-6 sm:px-10 ${heroContentOffset}`}
       >
-        <div className="mb-4">
-          <span className="block font-inter text-sm uppercase tracking-[0.2em] text-[#003286] drop-shadow-md">
+        <div className="mb-4 w-full text-left">
+          <span className="block font-inter text-[10px] md:text-xs lg:text-sm uppercase tracking-[0.2em] text-[#003286] drop-shadow-md">
             MADE IN THAILAND • TESTED • SKIN-FRIENDLY
           </span>
         </div>
 
-        <div className="mb-8 h-[140px] md:h-[160px] flex items-center">
+        <div className="mb-6 md:mb-8 h-[120px] md:h-[140px] lg:h-[160px] flex items-center w-full text-left">
           {/* Render the title based on the active slide */}
-          <h1 className="max-w-4xl text-3xl font-inter font-bold leading-[1.1] text-[#003286] drop-shadow-xl md:text-6xl">
+          <h1 className="max-w-4xl text-4xl sm:text-5xl lg:text-6xl font-inter font-bold leading-[1.1] text-[#003286] drop-shadow-xl">
             {heroSlides[currentHeroSlide].title}
           </h1>
         </div>
 
         <div
-          className="flex flex-col sm:flex-row gap-4 transition-opacity duration-1000 justify-start items-center sm:items-start"
+          className="w-full flex flex-col items-center lg:items-start lg:flex-row gap-4 transition-opacity duration-1000 mt-4"
           id="hero-btns"
         >
-          {/* Increased width to w-48 (192px) */}
+          {/* Primary Button */}
           <FlowButton
             text="SHOP NOW"
-            className="w-48"
+            className="w-44 lg:w-48"
             defaultBgColor="bg-[#203652]"
             defaultTextColor="text-[#FFFFFF]"
             circleColor="bg-[#2C476B]"
           />
 
-          {/* Decreased padding (px-8) and set a more compact width */}
+          {/* Secondary Button */}
           <Button
             variant="outline"
-            // Changed w-72 to w-48 and py-8 to py-6
-            className="w-56 h-11 border-2 border-[#003286] text-[#003286] bg-transparent px-3 py-2 rounded-full font-bold text-sm uppercase tracking-wide hover:bg-[#203652]/95 hover:text-[#F5FBFF] transition-all shadow-lg"
+            className="w-44 lg:w-48 h-10 lg:h-11 border-2 border-[#003286] text-[#003286] bg-transparent px-3 py-2 rounded-full font-bold text-xs lg:text-sm uppercase tracking-wide hover:bg-[#203652]/95 hover:text-[#F5FBFF] transition-all shadow-lg"
             onClick={() => window.location.href = "/story"}
           >
             Learn The Science
@@ -109,7 +143,7 @@ export function HeroSection() {
         </div>
 
         {/* Indicators */}
-        <div className="mt-10 flex items-center gap-3 hero-indicators justify-start">
+        <div className="mt-10 flex items-center gap-3 hero-indicators justify-center lg:justify-start w-full lg:w-auto">
           {heroSlides.map((_, i) => (
             <button
               key={i}

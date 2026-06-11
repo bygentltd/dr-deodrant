@@ -93,12 +93,12 @@ export default function ProductPage() {
                       <shopify-data query="product.descriptionHtml"></shopify-data>
                     </div>
                     
-                    <div class="mb-8 flex items-start gap-10">
-                      <div class="flex flex-col">
+                    <div class="mb-8 flex flex-col items-center lg:flex-row lg:items-start lg:justify-start gap-10">
+                      <div class="flex flex-col items-center lg:items-start">
                         <h3 class="text-xs font-bold text-[#003286] uppercase tracking-widest mb-3 flex justify-center items-center">
                           Scent
                         </h3>
-                        <div class="flex gap-3">
+                        <div class="flex justify-center lg:justify-start gap-3">
                           <label class="cursor-pointer relative">
                             <input type="radio" name="dummy-Scent" value="original" class="peer sr-only" checked>
                             <span class="block px-5 py-2.5 border border-gray-300 rounded-full bg-[#F5FBFF] text-sm font-medium text-[#003286] transition-all duration-200 hover:border-[#003286] peer-checked:border-[#003286] peer-checked:text-[#003286]">
@@ -107,22 +107,10 @@ export default function ProductPage() {
                           </label>
                         </div>
                       </div>
-                      <div class="flex flex-col">
-                        <h3 class="text-xs font-bold text-[#003286] uppercase tracking-widest mb-3 flex justify-center items-center">
-                          Size
-                        </h3>
-                        <div class="flex gap-3">
-                          <label class="cursor-pointer relative">
-                            <input type="radio" name="dummy-size" value="70g" class="peer sr-only" checked>
-                            <span class="block px-5 py-2.5 border border-gray-300 rounded-full bg-[#F5FBFF] text-sm font-medium text-[#003286] transition-all duration-200 hover:border-[#003286] peer-checked:border-[#003286] peer-checked:text-[#003286]">
-                              70g
-                            </span>
-                          </label>
-                        </div>
-                      </div>
+                      
                     </div>
 
-                    <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                    <div class="flex flex-col sm:flex-row gap-4 mb-10 w-full max-w-sm mx-auto lg:max-w-none lg:mx-0">
                       <button
                         class="flex-1 bg-[#0A2544] hover:bg-[#003286] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-[0_8px_20px_-8px_rgba(0,50,134,0.5)] hover:shadow-[0_12px_24px_-8px_rgba(0,50,134,0.6)] hover:-translate-y-1 flex items-center justify-center gap-2 group"
                         onclick="

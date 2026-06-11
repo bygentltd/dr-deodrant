@@ -20,7 +20,7 @@ export default function Header() {
     { name: "Shop", href: "/shop/popular" },
     { name: "Our Story", href: "/story" },
     { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/contact" }
+    { name: "Contact", href: "/contact" },
   ];
 
   const openCart = () => {
@@ -70,8 +70,8 @@ export default function Header() {
       {/* 👇 ADDED 'relative' TO NAV SO THE ABSOLUTE LOGO STAYS INSIDE IT */}
       <nav className={cn("relative pointer-events-auto mt-6 flex items-center justify-between w-full max-w-[1400px] h-[60px] px-6 md:px-8 rounded-full transition-all duration-300", surfaceClasses)}>
 
-        {/* Mobile Menu Toggle (Left on mobile, hidden on desktop) */}
-        <div className="flex md:hidden items-center z-10">
+        {/* Mobile Menu Toggle (Left on mobile & tablet, hidden on desktop) */}
+        <div className="flex lg:hidden items-center z-10">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={cn("transition-colors cursor-pointer", iconClasses)}
@@ -82,7 +82,7 @@ export default function Header() {
         </div>
 
         {/* Left Navigation Links (Desktop) */}
-        <div className="hidden md:flex items-center gap-6 font-bold z-10">
+        <div className="hidden lg:flex items-center gap-6 font-bold z-10">
           {links.map((link) => {
             const isActive = pathname === link.href;
 
@@ -123,19 +123,19 @@ export default function Header() {
         </div>
 
         {/* 👇 CENTER LOGO - NOW ABSOLUTELY POSITIONED FOR PERFECT CENTERING */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-[60%] md:-translate-x-1/2 -translate-y-1/2 flex items-center justify-center z-10">
+        <div className="absolute left-1/2 top-1/2 -translate-x-[60%] lg:-translate-x-1/2 -translate-y-1/2 flex items-center justify-center z-10">
           <Link href="/">
-            {/* 👇 CHANGED h-15 to h-10 (mobile) and md:h-12 (desktop) so Tailwind recognizes it */}
-            <img src="/drdeologo.png" alt="Dr. Deodrant Logo" className="h-10 md:h-15 w-auto hover:opacity-90 transition-opacity" />
+            {/* 👇 CHANGED h-15 to h-10 (mobile) and lg:h-12 (desktop) so Tailwind recognizes it */}
+            <img src="/drdeologo.png" alt="Dr. Deodrant Logo" className="h-10 lg:h-15 w-auto hover:opacity-90 transition-opacity" />
           </Link>
         </div>
 
         {/* Right Section Actions (Desktop & Mobile) */}
-        <div className="flex items-center gap-4 md:gap-6 z-10">
+        <div className="flex items-center gap-4 lg:gap-6 z-10">
           {/* Search & Profile Icons (Desktop only) */}
-          <div className={cn("hidden md:flex items-center gap-4", "text-[#203856]/70")}>
+          {/* <div className={cn("hidden lg:flex items-center gap-4", "text-[#203856]/70")}>
             <button className={cn("material-symbols-outlined text-xl transition-colors cursor-pointer", iconClasses)}>person</button>
-          </div>
+          </div> */}
 
           {/* [#F5FBFF] Pill Action Button */}
           <FlowButton
@@ -143,10 +143,10 @@ export default function Header() {
             defaultBgColor="bg-[#203652]"
             defaultTextColor="text-[#FFFFFF]"
             circleColor="bg-[#2C476B]"
-            className="!px-6 !py-2.5 md:!px-8 md:!py-3"
+            className="!px-6 !py-2.5 lg:!px-8 lg:!py-3"
           >
-            <span className="hidden md:inline">SHOP COLLECTION</span>
-            <span className="md:hidden tracking-wider">SHOP</span>
+            <span className="hidden lg:inline">SHOP COLLECTION</span>
+            <span className="lg:hidden tracking-wider">SHOP</span>
           </FlowButton>
         </div>
 
@@ -155,7 +155,7 @@ export default function Header() {
       {/* Mobile Dropdown Menu Drawer */}
       {isOpen && (
         <div className={cn(
-          "absolute top-24 left-4 right-4 backdrop-blur-2xl border rounded-3xl p-6 shadow-2xl flex flex-col gap-6 md:hidden animate-fade-in z-50 pointer-events-auto glass-nav",
+          "absolute top-24 left-4 right-4 backdrop-blur-2xl border rounded-3xl p-6 shadow-2xl flex flex-col gap-6 lg:hidden animate-fade-in z-50 pointer-events-auto glass-nav",
           "bg-[#F5FBFF]/12 border-[#F5FBFF]/15"
         )}>
           <div className="flex flex-col gap-4">
@@ -202,11 +202,8 @@ export default function Header() {
           <div className={cn("flex flex-col gap-4 pt-4 border-t border-[#F5FBFF]/10")}>
             <a href="tel:+3910352568" className={cn("flex items-center gap-2 text-sm font-medium text-[#203856]/70 hover:text-[#203856]")}>
               <span className="material-symbols-outlined text-base">phone_iphone</span>
-              <span>+391 (0)35 2568</span>
+              <span>+91 83830 27724</span>
             </a>
-            <div className={cn("flex gap-6 pt-2 text-[#203856]/70")}>
-              <button className={cn("material-symbols-outlined text-xl transition-colors cursor-pointer hover:text-[#203856]")}>person</button>
-            </div>
           </div>
         </div>
       )}

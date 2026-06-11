@@ -43,19 +43,19 @@ export default function IngredientsContent() {
   ];
 
   return (
-    <section className="bg-[#F5FBFF] px-6 py-24 md:py-32 md:px-16 lg:px-24 font-sans w-full">
-      <div className="max-w-350 mx-auto w-full">
-        <h2 className="text-5xl md:text-[3rem] lg:text-[4rem] font-medium text-[#313131] mb-12 md:mb-16 tracking-tight">
+    <section className="bg-[#F5FBFF] px-4 md:py-32 md:px-16 lg:px-24 font-sans w-full">
+      <div className="max-w-7xl mx-auto w-full">
+        <h2 className="text-3xl sm:text-4xl md:text-[3rem] lg:text-[4rem] font-medium text-[#003286] mb-8 md:mb-16 tracking-tight text-center md:text-left">
           Ingredients
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-6 gap-8 lg:gap-12 xl:*:col-span-2 xl:[&>*:nth-child(4)]:col-start-2 xl:[&>*:nth-child(5)]:col-start-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-6 gap-6 md:gap-8 lg:gap-12 xl:*:col-span-2 xl:[&>*:nth-child(4)]:col-start-2 xl:[&>*:nth-child(5)]:col-start-4">
           {ingredients.map((item) => (
             <div
               key={item.id}
-              className="flex flex-col rounded-2xl md:rounded-[2rem] bg-[#F7FBFF]/75 backdrop-blur-sm border border-[#313131]/10 p-6 md:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.06)] group"
+              className="flex flex-col rounded-2xl md:rounded-[2rem] bg-[#F7FBFF]/75 backdrop-blur-sm border border-[#313131]/10 p-5 md:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.06)] group"
             >
-              <div className="w-full aspect-4/5 md:aspect-square lg:aspect-4/5 overflow-hidden rounded-2xl md:rounded-[2rem] mb-6 md:mb-8 bg-[#e4e7dd]">
+              <div className="w-full aspect-video sm:aspect-[4/3] md:aspect-square lg:aspect-4/5 overflow-hidden rounded-xl md:rounded-[2rem] mb-4 md:mb-8 bg-[#e4e7dd]">
                 <img
                   src={item.image}
                   alt={item.alt}
@@ -63,12 +63,12 @@ export default function IngredientsContent() {
                 />
               </div>
 
-              <div className="flex justify-between items-end pb-3 mb-4 border-b border-[#313131]/20">
-                <h3 className="text-lg md:text-2xl font-medium text-[#313131]">{item.title}</h3>
-                <span className="text-lg md:text-xl font-medium text-[#313131]">{item.id}</span>
+              <div className="flex justify-between items-end pb-3 mb-3 md:mb-4 border-b border-[#313131]/20">
+                <h3 className="text-base sm:text-lg md:text-2xl font-medium text-[#313131]">{item.title}</h3>
+                <span className="text-base sm:text-lg md:text-xl font-medium text-[#313131]">{item.id}</span>
               </div>
 
-              <p className="text-sm md:text-base font-inter text-justify leading-relaxed text-[#4a4a4a]">
+              <p className="text-[14px] md:text-base font-inter text-left md:text-justify leading-relaxed text-[#4a4a4a]">
                 {item.description}
               </p>
             </div>

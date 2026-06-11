@@ -240,14 +240,14 @@ export function FeaturedProductSection() {
 
 </ul>
 
-                    <div class="mb-8 flex items-start gap-10">
+                    <div class="mb-8 flex flex-col items-center lg:flex-row lg:items-start lg:justify-start gap-10">
 
-                    <div class="flex flex-col">
+                    <div class="flex flex-col items-center lg:items-start">
   <h3 class="text-xs font-bold text-[#394481] uppercase tracking-widest mb-3 flex justify-center items-center">
     Scent
   </h3>
 
-  <div class="flex gap-3">
+  <div class="flex justify-center lg:justify-start gap-3">
     <label class="cursor-pointer relative">
       <input type="radio" name="dummy-Scent" value="original" class="peer sr-only" checked>
 
@@ -258,25 +258,10 @@ export function FeaturedProductSection() {
   </div>
 </div>
 
-<div class="flex flex-col">
-  <h3 class="text-xs font-bold text-[#394481] uppercase tracking-widest mb-3 flex justify-center items-center">
-    Size
-  </h3>
-
-  <div class="flex gap-3">
-    <label class="cursor-pointer relative">
-      <input type="radio" name="dummy-size" value="70g" class="peer sr-only" checked>
-
-      <span class="block px-5 py-2.5 border border-gray-300 rounded-full bg-[#F5FBFF] text-sm font-medium text-[#394481] transition-all duration-200 hover:border-[#394481] peer-checked:border-[#394481] peer-checked:text-[#394481]">
-        70g
-      </span>
-    </label>
-  </div>
-</div>
 
                     </div>
 
-                    <div class="flex items-center gap-4">
+                    <div class="flex items-center justify-center lg:justify-start gap-4">
 
                       <button
   class="group relative inline-flex h-12 w-40 items-center justify-center overflow-hidden rounded-md border-2 border-[#394481] font-medium cursor-pointer"
@@ -410,7 +395,7 @@ export function FeaturedProductSection() {
                   <div className="h-4 bg-gray-100 w-1/4 mb-6 rounded"></div>
                   <div className="h-10 bg-gray-100 w-3/4 mb-4 rounded"></div>
                   <div className="h-6 bg-gray-100 w-1/4 mb-8 rounded"></div>
-                  
+
                   <div className="h-12 bg-gray-100 w-full mb-4 rounded-full"></div>
                   <div className="h-12 bg-gray-100 w-full mb-8 rounded-full"></div>
 

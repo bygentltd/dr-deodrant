@@ -27,37 +27,35 @@ export default function OurPhilosophy() {
   ];
 
   return (
-    <section className="bg-[#F5FBFF] px-6 py-24 md:py-32 md:px-16 lg:px-32 font-sans w-full">
+    <section className="bg-[#F5FBFF] px-4 sm:px-6 py-16 md:py-32 md:px-16 lg:px-32 font-sans w-full">
       <div className="max-w-7xl mx-auto w-full">
         {/* Main Heading */}
-        <h1 className="text-6xl md:text-[3rem] lg:text-[4rem] font-medium text-[#003286] mb-16 md:mb-24 tracking-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-[3rem] lg:text-[4rem] font-medium text-[#003286] mb-10 md:mb-24 tracking-tight">
           Our Philosophy
         </h1>
 
         {/* Top Content Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 mb-24 md:mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-16 mb-16 md:mb-32">
           {/* Left Column: Badge */}
           <div className="md:col-span-4 lg:col-span-4 flex items-start">
-            <span className="inline-flex items-center rounded-full bg-[#003286] px-4 py-1.5 text-sm font-medium text-[#ffffff] tracking-wide">
+            <span className="inline-flex items-center rounded-full bg-[#003286] px-4 py-1.5 text-[13px] sm:text-sm font-medium text-[#ffffff] tracking-wide">
               Our Core Principles
             </span>
           </div>
 
           {/* Right Column: Intro Text */}
-          <div className="md:col-span-8 lg:col-span-8 flex flex-col gap-8">
-
-            <p className="text-lg font-inter md:text-xl leading-relaxed text-justify  text-[#4a4a4a] max-w-2xl">
+          <div className="md:col-span-8 lg:col-span-8 flex flex-col gap-6 md:gap-8">
+            <p className="text-[15px] sm:text-base font-inter md:text-xl leading-relaxed text-left sm:text-justify text-[#4a4a4a] max-w-2xl">
               Dr. Deodrant is built on the belief that skincare, even for your underarms should be pure, effective, and kind. We reject the industry's habit of loading products with chemicals designed to mask problems rather than address them. Everything we do follows three principles:
             </p>
-            
           </div>
         </div>
 
         {/* Bottom Grid: Core Principles */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 lg:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-16">
           {principles.map((principle, idx) => (
             <div key={principle.number} className="flex flex-col">
-              <div className="mb-6">
+              <div className="mb-5 md:mb-6">
                 <img
                   src={images[idx]}
                   alt={principle.title}
@@ -65,16 +63,16 @@ export default function OurPhilosophy() {
                 />
               </div>
               {/* Header Row with Title and Number */}
-              <div className="flex justify-between items-end pb-3 mb-4 border-b border-[#313131]/20">
-                <h3 className="text-lg md:text-2xl font-bold text-[#313131]">
+              <div className="flex justify-between items-end pb-3 mb-3 md:mb-4 border-b border-[#313131]/20">
+                <h3 className="text-[17px] sm:text-lg md:text-2xl font-bold text-[#313131]">
                   {principle.title}
                 </h3>
-                <span className="text-lg md:text-xl font-medium text-[#313131]">
+                <span className="text-base sm:text-lg md:text-xl font-medium text-[#313131]">
                   {principle.number}
                 </span>
               </div>
               {/* Description */}
-              <p className="text-sm md:text-base font-inter text-justify leading-relaxed text-[#4a4a4a]">
+              <p className="text-[14px] sm:text-[15px] md:text-base font-inter text-left sm:text-justify leading-relaxed text-[#4a4a4a]">
                 {principle.description}
               </p>
             </div>

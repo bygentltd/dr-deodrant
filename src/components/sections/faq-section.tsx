@@ -27,21 +27,21 @@ export function FaqSection() {
 
   return (
     <section id="faqs" className="w-full bg-[#F5FBFF]">
-      <div className="py-24 px-8 md:px-16 max-w-container-max mx-auto">
-      <div className="grid md:grid-cols-2 gap-20 items-start">
-        <div className="space-y-12">
-          <div className="reveal-on-scroll">
-            <h2 className="text-4xl md:text-5xl font-inter font-bold text-[#003286] leading-tight">All Your Queries Answered.</h2>
-            <p className="text-lg text-gray-600 mt-4">Professional answers for your mineral skincare journey.</p>
+      <div className="py-16 md:py-24 px-4 sm:px-8 md:px-12 lg:px-16 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div className="space-y-8 sm:space-y-12">
+          <div className="reveal-on-scroll text-center md:text-left">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-inter font-bold text-[#003286] leading-tight">All Your Queries Answered.</h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 mt-3 sm:mt-4">Professional answers for your mineral skincare journey.</p>
           </div>
           <div className="reveal-on-scroll">
-            <Accordion multiple={false} className="w-full">
+            <Accordion className="w-full">
               {faqs.map((faq, idx) => (
-                <AccordionItem key={idx} value={`item-${idx}`} className="border-b border-outline-variant/30 py-2">
-                  <AccordionTrigger className="text-xl font-bold text-gray-600 hover:no-underline hover:text-[#003286]/80 transition-colors text-left">
+                <AccordionItem key={idx} value={`item-${idx}`} className="border-b border-[#003286]/10 py-2">
+                  <AccordionTrigger className="text-[15px] sm:text-lg lg:text-xl font-bold text-gray-600 hover:no-underline hover:text-[#003286] transition-colors text-left pr-2">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-[#0f1216] leading-relaxed">
+                  <AccordionContent className="text-[14px] sm:text-base text-[#0f1216]/80 leading-relaxed pt-1 pb-4">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>
@@ -49,8 +49,8 @@ export function FaqSection() {
             </Accordion>
           </div>
         </div>
-        <div className="relative group h-full reveal-on-scroll cursor-pointer">
-          <div className="sticky top-32 rounded-[2rem] overflow-hidden shadow-2xl p-12 flex flex-col items-center text-center justify-center min-h-125">
+        <div className="relative group h-full reveal-on-scroll cursor-pointer w-full max-w-md mx-auto md:max-w-none">
+          <div className="sticky top-24 sm:top-32 rounded-2xl sm:rounded-[2rem] overflow-hidden shadow-2xl flex flex-col items-center text-center justify-center h-[280px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full">
             <div className="absolute inset-0 opacity-90">
               <img 
                 className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105" 

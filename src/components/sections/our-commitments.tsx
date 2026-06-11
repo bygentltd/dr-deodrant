@@ -30,20 +30,20 @@ export default function OurCommitments() {
   ];
 
   return (
-    <section className="bg-[#F5FBFF] px-6 py-24 md:py-32 md:px-16 lg:px-24 font-sans w-full">
+    <section className="bg-[#F5FBFF] px-4 sm:px-6 py-16 md:py-32 md:px-16 lg:px-24 font-sans w-full">
       <div className="max-w-[1400px] mx-auto w-full">
         {/* Main Heading */}
-        <h2 className="text-6xl md:text-[3rem] lg:text-[4rem] font-medium text-[#313131] mb-12 md:mb-16 tracking-tight">
+        <h2 className="text-4xl sm:text-5xl md:text-[3rem] lg:text-[4rem] font-medium text-[#313131] mb-10 md:mb-16 tracking-tight">
           Our Commitments
         </h2>
 
         {/* Commitments Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
           {commitments.map((item) => (
             <div key={item.id} className="flex flex-col group cursor-pointer">
               
               {/* Image Container with Hover Zoom Effect */}
-              <div className="w-full aspect-[4/5] md:aspect-square lg:aspect-[4/5] overflow-hidden rounded-2xl md:rounded-[2rem] mb-6 md:mb-8 bg-[#e4e7dd]">
+              <div className="w-full aspect-[4/5] md:aspect-square lg:aspect-[4/5] overflow-hidden rounded-2xl md:rounded-[2rem] mb-5 md:mb-8 bg-[#e4e7dd]">
                 <img
                   src={item.image}
                   alt={item.alt}
@@ -52,17 +52,17 @@ export default function OurCommitments() {
               </div>
 
               {/* Title and Number Row */}
-              <div className="flex justify-between items-end pb-3 mb-4 border-b border-[#313131]/20">
-                <h3 className="text-lg md:text-2xl font-medium text-[#313131]">
+              <div className="flex justify-between items-end pb-3 mb-3 md:mb-4 border-b border-[#313131]/20">
+                <h3 className="text-[17px] sm:text-lg md:text-2xl font-medium text-[#313131]">
                   {item.title}
                 </h3>
-                <span className="text-lg md:text-xl font-medium text-[#313131]">
+                <span className="text-base sm:text-lg md:text-xl font-medium text-[#313131]">
                   {item.id}
                 </span>
               </div>
 
               {/* Description Text */}
-              <p className="text-sm md:text-base font-inter text-justify leading-relaxed text-[#4a4a4a]">
+              <p className="text-[14px] sm:text-[15px] md:text-base font-inter text-left sm:text-justify leading-relaxed text-[#4a4a4a]">
                 {item.description}
               </p>
               

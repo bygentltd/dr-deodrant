@@ -27,36 +27,33 @@ export default function OurProcess() {
   ];
 
   return (
-    <section className="bg-[#EAF5FF] px-6 py-24 md:py-32 md:px-16 lg:px-32 font-sans w-full">
+    <section className="bg-[#EAF5FF] px-4 sm:px-6 py-16 md:py-32 md:px-16 lg:px-32 font-sans w-full">
       <div className="max-w-7xl mx-auto w-full">
         {/* Main Heading */}
-        <div className="max-w-3xl mb-10 md:mb-14 process-reveal">
-          <div className="inline-flex items-center rounded-full bg-[#003286] px-4 py-1.5 text-sm font-medium text-[#ffffff] tracking-wide mb-5">
+        <div className="max-w-3xl mb-8 md:mb-14 process-reveal">
+          <div className="inline-flex items-center rounded-full bg-[#003286] px-4 py-1.5 text-[13px] sm:text-sm font-medium text-[#ffffff] tracking-wide mb-4 md:mb-5">
             Our Process
           </div>
-          <h1 className="text-6xl md:text-[3rem] lg:text-[4rem] font-medium text-[#003286] tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-[3rem] lg:text-[4rem] font-medium text-[#003286] tracking-tight">
           Our Process
           </h1>
         </div>
 
         {/* Top Content Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 mb-24 md:mb-32 process-reveal process-reveal-delay-1">
-          <div className="md:col-span-8 lg:col-span-8 flex flex-col gap-8">
-            <p className="text-lg font-inter md:text-xl leading-relaxed text-justify text-[#4a4a4a] max-w-2xl">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-16 mb-16 md:mb-32 process-reveal process-reveal-delay-1">
+          <div className="md:col-span-8 lg:col-span-8 flex flex-col gap-6 md:gap-8">
+            <p className="text-[15px] sm:text-base font-inter md:text-xl leading-relaxed text-left sm:text-justify text-[#4a4a4a] max-w-2xl">
               Every Dr. Deodrant crystal begins with pharmaceutical-grade alum sourced from trusted mineral suppliers. This is combined with water, real acerola, kiwi fruit extracts, Vitamins C and E through a careful cold-process formulation that preserves the integrity of every active ingredient.
-
             </p>
-            <p className="text-lg font-inter md:text-xl leading-relaxed text-justify text-[#4a4a4a] max-w-2xl">
+            <p className="text-[15px] sm:text-base font-inter md:text-xl leading-relaxed text-left sm:text-justify text-[#4a4a4a] max-w-2xl">
               Each batch is quality-tested before being poured into its smooth-finish casing. The process takes longer than conventional deodorant manufacturing, but that's the point. We're not cutting corners on something you apply to your skin every single day.
-
             </p>
-            
           </div>
 
-          <div className="md:col-span-4 lg:col-span-4 flex md:justify-end items-start">
+          <div className="md:col-span-4 lg:col-span-4 flex md:justify-end items-start mt-4 md:mt-0">
             <div className="process-orbit relative w-full max-w-xs rounded-[2rem] border border-white/50 bg-white/40 backdrop-blur-sm p-5 shadow-[0_20px_50px_rgba(32,57,86,0.08)]">
               <div className="absolute inset-0 rounded-[2rem] process-orbit-ring"></div>
-              <p className="relative text-sm md:text-base leading-relaxed text-[#003286] font-medium">
+              <p className="relative text-[13px] sm:text-sm md:text-base leading-relaxed text-[#003286] font-medium text-center md:text-left">
                 A calm, deliberate flow from raw mineral to finished crystal, built step by step.
               </p>
             </div>
@@ -64,11 +61,11 @@ export default function OurProcess() {
         </div>
 
         {/* Bottom Grid: Core Principles */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 lg:gap-16 process-grid">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-16 process-grid">
           {principles.map((principle, idx) => (
             <div key={principle.number} className="process-card flex flex-col">
-              <div className="mb-6 relative">
-                <div className="process-number-badge absolute -top-4 left-4 z-10 inline-flex items-center justify-center rounded-full bg-[#003286] px-4 py-1.5 text-sm font-medium text-white shadow-lg">
+              <div className="mb-5 md:mb-6 relative">
+                <div className="process-number-badge absolute -top-3 -left-2 md:-top-4 md:left-4 z-10 inline-flex items-center justify-center rounded-full bg-[#003286] px-3 py-1 md:px-4 md:py-1.5 text-[12px] md:text-sm font-medium text-white shadow-lg">
                   Step {principle.number}
                 </div>
                 <img
@@ -78,15 +75,11 @@ export default function OurProcess() {
                 />
               </div>
               {/* Header Row with Title and Number */}
-              <div className="flex justify-between items-end pb-3 mb-4 border-b border-[#313131]/20 process-title-row">
-                <h3 className="text-lg md:text-2xl font-bold text-[#313131]">
+              <div className="flex justify-between items-end pb-3 mb-2 md:mb-4 border-b border-[#313131]/20 process-title-row">
+                <h3 className="text-[17px] sm:text-lg md:text-2xl font-bold text-[#313131]">
                   {principle.title}
                 </h3>
               </div>
-              {/* Description */}
-              {/* <p className="text-sm md:text-base font-inter text-justify leading-relaxed text-[#4a4a4a]">
-                {principle.description}
-              </p> */}
             </div>
           ))}
         </div>

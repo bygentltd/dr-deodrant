@@ -1,3 +1,4 @@
+"use client"
 import { HeroSection } from "@/components/sections/hero-section";
 import { PhilosophySection } from "@/components/sections/philosophy-section";
 import { StatsSection } from "@/components/sections/stats-section";
@@ -11,10 +12,13 @@ import { FixedHeroSection } from "@/components/sections/fixed-hero-section";
 import { ServicesSection } from "@/components/sections/services-section";
 import HowToUse from "@/components/sections/how-to-use";
 import ImageSectionComp from "@/components/sections/image-section-comp";
+import ImageCarousel from "@/components/sections/image-carousel";
 import IngredientsSection from "@/components/sections/product-ingredient-layout";
 import ProductIngredientLayout from "@/components/sections/product-ingredient-layout";
 import MeetTheFounder from "@/components/sections/meet-the-founders";
 import { CertificateSection } from "@/components/sections/certificate-section";
+
+
 
 export default function Home() {
   return (
@@ -25,9 +29,19 @@ export default function Home() {
         <PhilosophySection />
         <StatsSection />
         <FeaturedProductSection />
-        <ImageSectionComp src="/HOME_21.webp" />
-        <ImageSectionComp src="/Home-Ing.webp" />
-        <ImageSectionComp src="/HOME_HOW.webp" />
+        {/* Desktop View */}
+        <div className="hidden md:block">
+          <ImageSectionComp src="/HOME_21.webp" />
+          <ImageSectionComp src="/Home-Ing.webp" />
+          <ImageSectionComp src="/HOME_HOW.webp" />
+        </div>
+
+        {/* Mobile View */}
+        <div className="block md:hidden">
+          <ImageCarousel
+            images={["/HOME_21.webp", "/Home-Ing.webp", "/HOME_HOW.webp"]}
+          />
+        </div>
         {/* <MajorFeaturesSection/>
         <BentoGridSection /> */}
         <ServicesSection />
