@@ -123,7 +123,7 @@ export default function Header() {
         </div>
 
         {/* 👇 CENTER LOGO - NOW ABSOLUTELY POSITIONED FOR PERFECT CENTERING */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-[70%] -translate-y-1/2 flex items-center justify-center z-10">
+        <div className="absolute left-1/2 top-1/2 -translate-x-[70%] md:-translate-x-1/2 -translate-y-1/2 flex items-center justify-center z-10">
           <Link href="/">
             {/* 👇 CHANGED h-15 to h-10 (mobile) and lg:h-12 (desktop) so Tailwind recognizes it */}
             <img src="/DeDeo-logo.svg" alt="Dr. Deodrant Logo" className=" h-10 lg:h-15 w-auto hover:opacity-90 transition-opacity " />
