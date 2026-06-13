@@ -106,13 +106,13 @@ export function HeroSection() {
       <div
         className={`relative z-10 h-full flex flex-col items-start justify-center text-left px-6 sm:px-10 ${heroContentOffset}`}
       >
-        <div className="mb-4 w-full text-left translate-y-20">
+        <div className="mb-4 w-full text-left translate-y-20 lg:translate-y-0">
           <span className="block font-inter text-[10px] md:text-xs lg:text-sm uppercase tracking-[0.2em] text-[#003286] drop-shadow-md">
             CERTIFIED • TESTED • SKIN-FRIENDLY
           </span>
         </div>
 
-        <div className="mb-6 md:mb-8 h-[120px] md:h-[140px] lg:h-[160px] flex items-center w-full text-left translate-y-15">
+        <div className="mb-6 md:mb-8 h-[120px] md:h-[140px] lg:h-[160px] flex items-center w-full text-left translate-y-[60px] lg:translate-y-0">
           {/* Render the title based on the active slide */}
           <h1 className="max-w-4xl text-4xl sm:text-5xl lg:text-6xl font-inter font-bold leading-[1.1] text-[#003286] drop-shadow-xl">
             {heroSlides[currentHeroSlide].title}
@@ -120,7 +120,7 @@ export function HeroSection() {
         </div>
 
         <div
-          className="w-full flex flex-row justify-center lg:justify-start items-center lg:items-start lg:flex-row gap-3 sm:gap-4 transition-opacity duration-1000 mt-100 md:mt-150 lg:mt-4"
+          className="w-full flex flex-row justify-center lg:justify-start items-center lg:items-start lg:flex-row gap-3 sm:gap-4 transition-opacity duration-1000 mt-[100px] md:mt-[150px] lg:mt-4"
           id="hero-btns"
         >
           {/* Primary Button */}
