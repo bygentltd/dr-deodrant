@@ -4,19 +4,19 @@ export default function OurProcess() {
       number: "01",
       title: "Carefully Sourced",
       description:
-        "We trust what nature perfected. Alum crystal has been used across cultures for centuries precisely because it works. We haven't reinvented it - we've respected it, and added the best clean botanicals to make it even better for modern skin.",
+        "Pharmaceutical-grade alum crystal, real acerola, kiwi extract, and skin-nourishing vitamins. Every ingredient earns its place.",
     },
     {
       number: "02",
       title: "Thoughtfully Formulated",
       description:
-        "Our formula has exactly 5 ingredients. Every single one is listed, named, and explained — no trade names, no hidden chemicals, no fine print. If it's on your skin, you'll know what it is and why it's there.",
+        "Cold-process blending preserves the potency of every active ingredient, no shortcuts, no fillers, no compromise.",
     },
     {
       number: "03",
       title: "Quality Assured",
       description:
-        "Made for all. Loved by all. Dr. Deodrant was designed without gender, age, or skin-type limitations. If you have underarms, this product was made for you.",
+        "Each batch is tested before it leaves the facility. What reaches your skin has already passed our standards, not just the industry's.",
     },
   ];
 
@@ -30,22 +30,22 @@ export default function OurProcess() {
     <section className="bg-[#EAF5FF] px-4 sm:px-6 py-16 md:py-32 md:px-16 lg:px-32 font-sans w-full">
       <div className="max-w-7xl mx-auto w-full">
         {/* Main Heading */}
-        <div className="max-w-3xl mb-8 md:mb-14 process-reveal">
+        <div className="max-w-3xl mb-8 md:mb-14 process-reveal w-[85%] sm:w-[80%] md:w-full mx-auto md:mx-0">
           <div className="inline-flex items-center rounded-full bg-[#003286] px-4 py-1.5 text-[13px] sm:text-sm font-medium text-[#ffffff] tracking-wide mb-4 md:mb-5">
             Our Process
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-[3rem] lg:text-[4rem] font-medium text-[#003286] tracking-tight">
-          Our Process
+            Our Process
           </h1>
         </div>
 
         {/* Top Content Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-16 mb-16 md:mb-32 process-reveal process-reveal-delay-1">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-16 mb-16 md:mb-32 process-reveal process-reveal-delay-1 w-[85%] sm:w-[80%] md:w-full mx-auto md:mx-0">
           <div className="md:col-span-8 lg:col-span-8 flex flex-col gap-6 md:gap-8">
-            <p className="text-[15px] sm:text-base font-inter md:text-xl leading-relaxed text-left sm:text-justify text-[#4a4a4a] max-w-2xl">
+            <p className="text-[15px] sm:text-base font-inter md:text-xl leading-relaxed text-justify text-[#4a4a4a] max-w-2xl">
               Every Dr. Deodrant crystal begins with pharmaceutical-grade alum sourced from trusted mineral suppliers. This is combined with water, real acerola, kiwi fruit extracts, Vitamins C and E through a careful cold-process formulation that preserves the integrity of every active ingredient.
             </p>
-            <p className="text-[15px] sm:text-base font-inter md:text-xl leading-relaxed text-left sm:text-justify text-[#4a4a4a] max-w-2xl">
+            <p className="text-[15px] sm:text-base font-inter md:text-xl leading-relaxed text-justify text-[#4a4a4a] max-w-2xl">
               Each batch is quality-tested before being poured into its smooth-finish casing. The process takes longer than conventional deodorant manufacturing, but that's the point. We're not cutting corners on something you apply to your skin every single day.
             </p>
           </div>
@@ -71,14 +71,19 @@ export default function OurProcess() {
                 <img
                   src={images[idx]}
                   alt={principle.title}
-                  className="w-full aspect-square rounded-[1.4rem] object-cover process-image"
+                  className="w-[85%] sm:w-[80%] md:w-full mx-auto aspect-square rounded-[1.4rem] object-cover process-image"
                 />
               </div>
-              {/* Header Row with Title and Number */}
-              <div className="flex justify-between items-end pb-3 mb-2 md:mb-4 border-b border-[#313131]/20 process-title-row">
-                <h3 className="text-[17px] sm:text-lg md:text-2xl font-bold text-[#313131]">
-                  {principle.title}
-                </h3>
+              <div className="w-[85%] sm:w-[80%] md:w-full mx-auto">
+                {/* Header Row with Title and Number */}
+                <div className="flex justify-between items-end pb-3 mb-2 md:mb-4 border-b border-[#313131]/20 process-title-row">
+                  <h3 className="text-[17px] sm:text-lg md:text-2xl font-bold text-[#313131]">
+                    {principle.title}
+                  </h3>
+                </div>
+                <p className="text-[14px] sm:text-[15px] text-[#4a4a4a] leading-relaxed text-justify">
+                  {principle.description}
+                </p>
               </div>
             </div>
           ))}

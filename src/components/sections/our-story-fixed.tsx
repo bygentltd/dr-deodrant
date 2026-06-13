@@ -25,7 +25,7 @@ export default function OurStoryFixed() {
     >
       <motion.div
         style={{ scale }}
-        className="absolute inset-0 z-0 w-full h-full bg-[url('/OurStory_image.webp')] bg-fixed bg-cover bg-center bg-no-repeat origin-center"
+        className="absolute inset-0 z-0 w-full h-full bg-[url('/Story_page.webp')] md:bg-[url('/OurStory_image.webp')] bg-fixed bg-cover bg-center bg-no-repeat origin-center"
       />
 
       <div className="absolute inset-0 z-10 bg-black/15" />

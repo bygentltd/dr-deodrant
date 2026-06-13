@@ -46,7 +46,7 @@ export function TestimonialSection() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#F5FBFF] overflow-hidden">
+    <section className="py-12 md:py-16 bg-[#F5FBFF] overflow-hidden">
 
       {/* Header Section */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-12 text-center mb-10 sm:mb-16 reveal-on-scroll">
@@ -58,8 +58,8 @@ export function TestimonialSection() {
         </p>
       </div>
 
-      {/* Slider Carousel - CONTAINER INCREASED to max-w-7xl */}
-      <div className="max-w-7xl mx-auto px-4 md:px-8 relative overflow-hidden ">
+      {/* Slider Carousel */}
+      <div className="max-w-5xl mx-auto px-4 md:px-8 relative overflow-hidden ">
         <div
           className="flex transition-transform duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]"
           style={{ transform: `translateX(-${currentTestimonial * 100}%)` }}
@@ -67,12 +67,11 @@ export function TestimonialSection() {
           {testimonials.map((t, idx) => (
             <div
               key={idx}
-              // `items-stretch` forces the columns to match heights!
               className={`min-w-full grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 md:gap-10 items-stretch transition-opacity duration-700 ${idx === currentTestimonial ? 'opacity-100' : 'opacity-0'}`}
             >
 
               {/* Left Side: Image */}
-              <div className="mx-auto w-[85%] sm:w-[80%] md:w-full md:mx-0 md:col-span-5 rounded-2xl sm:rounded-[2rem] overflow-hidden shadow-lg h-[380px] sm:h-[480px] md:h-full md:min-h-[320px] lg:min-h-[360px]">
+              <div className="mx-auto w-[85%] sm:w-[80%] md:w-full md:mx-0 md:col-span-5 rounded-2xl sm:rounded-[2rem] overflow-hidden shadow-lg aspect-[4/5] md:aspect-auto md:h-full">
                 <img
                   alt="Client testimonial"
                   className="w-full h-full object-cover"
@@ -81,16 +80,16 @@ export function TestimonialSection() {
               </div>
 
               {/* Right Side: Content Box */}
-              <div className="md:col-span-7 bg-[#eaf5ff] p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl sm:rounded-[2rem] flex flex-col justify-between h-full">
+              <div className="md:col-span-7 bg-[#eaf5ff] p-6 sm:p-8 md:p-8 lg:p-10 rounded-2xl sm:rounded-[2rem] flex flex-col justify-between h-full">
 
-                <div className="space-y-4 sm:space-y-6">
+                <div className="space-y-3 sm:space-y-5">
                   {/* Custom Quote Icon */}
                   <span className="font-inter text-5xl sm:text-6xl text-[#113D86]/30 leading-none block h-8 sm:h-10">
                     “
                   </span>
 
                   {/* Quote Text */}
-                  <p className="text-[15px] sm:text-lg md:text-xl lg:text-[1.45rem] font-medium text-[#113D86] leading-relaxed">
+                  <p className="text-[15px] sm:text-lg md:text-xl font-medium text-[#113D86] leading-relaxed">
                     {t.quote}
                   </p>
 
@@ -108,7 +107,7 @@ export function TestimonialSection() {
                 </div>
 
                 {/* Bottom Navigation Row */}
-                <div className="flex justify-between items-center mt-6 sm:mt-8 md:mt-12 pt-4 sm:pt-6 border-t border-[#003286]/10">
+                <div className="flex justify-between items-center mt-5 sm:mt-6 md:mt-8 pt-4 sm:pt-5 border-t border-[#003286]/10">
                   <button
                     className="w-10 h-10 sm:w-12 sm:h-12 bg-[#003286] rounded-full flex items-center justify-center hover:bg-[#003286]/80 hover:scale-110 active:scale-95 transition-all duration-300 shadow-sm cursor-pointer group"
                     onClick={() => setCurrentTestimonial(prev => (prev - 1 + testimonials.length) % testimonials.length)}

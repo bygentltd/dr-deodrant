@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { FlowButton } from "./ui/flow-button";
-import { Menu, X } from "lucide-react";
+import { Menu, ShoppingBagIcon, X, User } from "lucide-react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -123,19 +123,23 @@ export default function Header() {
         </div>
 
         {/* 👇 CENTER LOGO - NOW ABSOLUTELY POSITIONED FOR PERFECT CENTERING */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-[60%] lg:-translate-x-1/2 -translate-y-1/2 flex items-center justify-center z-10">
+        <div className="absolute left-1/2 top-1/2 -translate-x-[70%] -translate-y-1/2 flex items-center justify-center z-10">
           <Link href="/">
             {/* 👇 CHANGED h-15 to h-10 (mobile) and lg:h-12 (desktop) so Tailwind recognizes it */}
-            <img src="/DeDeo-logo.svg" alt="Dr. Deodrant Logo" className="h-10 lg:h-15 w-auto hover:opacity-90 transition-opacity" />
+            <img src="/DeDeo-logo.svg" alt="Dr. Deodrant Logo" className=" h-10 lg:h-15 w-auto hover:opacity-90 transition-opacity " />
           </Link>
         </div>
 
         {/* Right Section Actions (Desktop & Mobile) */}
         <div className="flex items-center gap-4 lg:gap-6 z-10">
-          {/* Search & Profile Icons (Desktop only) */}
-          {/* <div className={cn("hidden lg:flex items-center gap-4", "text-[#203856]/70")}>
-            <button className={cn("material-symbols-outlined text-xl transition-colors cursor-pointer", iconClasses)}>person</button>
-          </div> */}
+          {/* Account Icon (All Devices) */}
+          <a
+            href="https://shopify.com/99417162092/account"
+            className={cn("transition-colors hover:opacity-70 flex items-center justify-center", iconClasses)}
+            aria-label="Account"
+          >
+            <User className="w-5 h-5 sm:w-6 sm:h-6" />
+          </a>
 
           {/* [#F5FBFF] Pill Action Button */}
           <FlowButton
@@ -146,7 +150,7 @@ export default function Header() {
             className="!px-6 !py-2.5 lg:!px-8 lg:!py-3"
           >
             <span className="hidden lg:inline">SHOP COLLECTION</span>
-            <span className="lg:hidden tracking-wider ml-1">SHOP</span>
+            <span className="lg:hidden tracking-wider ml-1"><ShoppingBagIcon /></span>
           </FlowButton>
         </div>
 
@@ -174,7 +178,7 @@ export default function Header() {
                   }}
                   className={cn(
                     "text-base font-bold py-1.5 nav-underline w-fit",
-                    "text-[#203856]/80 hover:text-[#203856]",
+                    "text-[#003286]/80 hover:text-[#003286]",
                     isActive && "active"
                   )}
                 >
@@ -189,7 +193,7 @@ export default function Header() {
                 onClick={() => setIsOpen(false)}
                 className={cn(
                   "text-base font-bold py-1.5 nav-underline w-fit",
-                  "text-[#203856]/80 hover:text-[#203856]",
+                  "text-[#003286]/80 hover:text-[#003286]",
                   isActive && "active"
                 )}
                 href={link.href}
@@ -200,7 +204,7 @@ export default function Header() {
           })}
         </div>
         <div className={cn("hidden md:flex flex-col gap-4 pt-4 border-t border-[#F5FBFF]/10")}>
-          <a href="tel:+917900160311" className={cn("flex items-center gap-2 text-sm font-medium text-[#203856]/70 hover:text-[#203856]")}>
+          <a href="tel:+917900160311" className={cn("flex items-center gap-2 text-sm font-medium text-[#003286]/70 hover:text-[#003286]")}>
             <span className="material-symbols-outlined text-base">phone_iphone</span>
             <span>+91 79001 60311</span>
           </a>

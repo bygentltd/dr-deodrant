@@ -30,12 +30,12 @@ export default function OurPhilosophy() {
     <section className="bg-[#F5FBFF] px-4 sm:px-6 py-16 md:py-32 md:px-16 lg:px-32 font-sans w-full">
       <div className="max-w-7xl mx-auto w-full">
         {/* Main Heading */}
-        <h1 className="text-4xl sm:text-5xl md:text-[3rem] lg:text-[4rem] font-medium text-[#003286] mb-10 md:mb-24 tracking-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-[3rem] lg:text-[4rem] font-medium text-[#003286] mb-10 md:mb-24 tracking-tight w-[85%] sm:w-[80%] md:w-full mx-auto md:mx-0">
           Our Philosophy
         </h1>
 
         {/* Top Content Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-16 mb-16 md:mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-16 mb-16 md:mb-32 w-[85%] sm:w-[80%] md:w-full mx-auto md:mx-0">
           {/* Left Column: Badge */}
           <div className="md:col-span-4 lg:col-span-4 flex items-start">
             <span className="inline-flex items-center rounded-full bg-[#003286] px-4 py-1.5 text-[13px] sm:text-sm font-medium text-[#ffffff] tracking-wide">
@@ -52,33 +52,86 @@ export default function OurPhilosophy() {
         </div>
 
         {/* Bottom Grid: Core Principles */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-16 philosophy-grid">
           {principles.map((principle, idx) => (
-            <div key={principle.number} className="flex flex-col">
+            <div key={principle.number} className="flex flex-col philosophy-card">
               <div className="mb-5 md:mb-6">
                 <img
                   src={images[idx]}
                   alt={principle.title}
-                  className="w-full aspect-square rounded-xl object-cover"
+                  className="w-[85%] sm:w-[80%] md:w-full mx-auto aspect-square rounded-xl object-cover philosophy-image"
                 />
               </div>
-              {/* Header Row with Title and Number */}
-              <div className="flex justify-between items-end pb-3 mb-3 md:mb-4 border-b border-[#313131]/20">
-                <h3 className="text-[17px] sm:text-lg md:text-2xl font-bold text-[#313131]">
-                  {principle.title}
-                </h3>
-                <span className="text-base sm:text-lg md:text-xl font-medium text-[#313131]">
-                  {principle.number}
-                </span>
+              <div className="w-[85%] sm:w-[80%] md:w-full mx-auto">
+                {/* Header Row with Title and Number */}
+                <div className="flex justify-between items-end pb-3 mb-3 md:mb-4 border-b border-[#313131]/20">
+                  <h3 className="text-[17px] sm:text-lg md:text-2xl font-bold text-[#313131]">
+                    {principle.title}
+                  </h3>
+                  <span className="text-base sm:text-lg md:text-xl font-medium text-[#313131]">
+                    {principle.number}
+                  </span>
+                </div>
+                {/* Description */}
+                <p className="text-[14px] sm:text-[15px] md:text-base font-inter text-justify leading-relaxed text-[#4a4a4a]">
+                  {principle.description}
+                </p>
               </div>
-              {/* Description */}
-              <p className="text-[14px] sm:text-[15px] md:text-base font-inter text-left sm:text-justify leading-relaxed text-[#4a4a4a]">
-                {principle.description}
-              </p>
             </div>
           ))}
         </div>
       </div>
+
+      <style jsx>{`
+        .philosophy-grid .philosophy-card {
+          position: relative;
+          animation: philosophyCardIn 900ms ease both, philosophyFloat 7.5s ease-in-out infinite;
+        }
+
+        .philosophy-grid .philosophy-card:nth-child(1) {
+          animation-delay: 220ms, 0ms;
+        }
+
+        .philosophy-grid .philosophy-card:nth-child(2) {
+          animation-delay: 420ms, 900ms;
+        }
+
+        .philosophy-grid .philosophy-card:nth-child(3) {
+          animation-delay: 620ms, 1800ms;
+        }
+
+        .philosophy-image {
+          transform: translateY(0);
+          transition: transform 500ms ease, box-shadow 500ms ease, filter 500ms ease;
+          box-shadow: 0 18px 40px rgba(32, 57, 86, 0.12);
+        }
+
+        .philosophy-card:hover .philosophy-image {
+          transform: translateY(-6px) scale(1.01);
+          filter: saturate(1.04) contrast(1.03);
+          box-shadow: 0 22px 52px rgba(32, 57, 86, 0.18);
+        }
+
+        @keyframes philosophyCardIn {
+          from {
+            opacity: 0;
+            transform: translateY(22px) scale(0.985);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+
+        @keyframes philosophyFloat {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-8px);
+          }
+        }
+      `}</style>
     </section>
   );
 }

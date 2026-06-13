@@ -11,7 +11,7 @@ export function HeroSection() {
   // Desktop Slides
   const heroSlides = [
     {
-      src: "/Hero1_crop.webp",
+      src: "/Hero1.webp",
       title: (
         <>
           Skincare For <br />
@@ -40,7 +40,7 @@ export function HeroSection() {
   // Mobile & iPad Portrait Slides
   const heroSlidesVertical = [
     {
-      src: "/Hero1_crop.webp", // Replace with actual mobile portrait image
+      src: "/HeroV1.webp", // Replace with actual mobile portrait image
       title: (
         <>
           Skincare For <br />
@@ -89,13 +89,13 @@ export function HeroSection() {
             {/* Desktop Image */}
             <img
               alt={`Hero slide ${idx + 1}`}
-              className="hidden lg:block w-full h-full object-cover ken-burns"
+              className="hidden xl:block w-full h-full object-cover ken-burns"
               src={slide.src}
             />
             {/* Mobile & iPad Portrait Image */}
             <img
               alt={`Hero slide ${idx + 1} portrait`}
-              className="block lg:hidden w-full h-full object-cover ken-burns"
+              className="block xl:hidden w-full h-full object-cover ken-burns"
               src={heroSlidesVertical[idx].src}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#000000]/10 via-[#000000]/10 to-[#000000]/10 z-10" />
@@ -106,13 +106,13 @@ export function HeroSection() {
       <div
         className={`relative z-10 h-full flex flex-col items-start justify-center text-left px-6 sm:px-10 ${heroContentOffset}`}
       >
-        <div className="mb-4 w-full text-left">
+        <div className="mb-4 w-full text-left translate-y-20">
           <span className="block font-inter text-[10px] md:text-xs lg:text-sm uppercase tracking-[0.2em] text-[#003286] drop-shadow-md">
             CERTIFIED • TESTED • SKIN-FRIENDLY
           </span>
         </div>
 
-        <div className="mb-6 md:mb-8 h-[120px] md:h-[140px] lg:h-[160px] flex items-center w-full text-left">
+        <div className="mb-6 md:mb-8 h-[120px] md:h-[140px] lg:h-[160px] flex items-center w-full text-left translate-y-15">
           {/* Render the title based on the active slide */}
           <h1 className="max-w-4xl text-4xl sm:text-5xl lg:text-6xl font-inter font-bold leading-[1.1] text-[#003286] drop-shadow-xl">
             {heroSlides[currentHeroSlide].title}
@@ -120,22 +120,23 @@ export function HeroSection() {
         </div>
 
         <div
-          className="w-full flex flex-col items-center lg:items-start lg:flex-row gap-4 transition-opacity duration-1000 mt-4"
+          className="w-full flex flex-row justify-center lg:justify-start items-center lg:items-start lg:flex-row gap-3 sm:gap-4 transition-opacity duration-1000 mt-100 md:mt-150 lg:mt-4"
           id="hero-btns"
         >
           {/* Primary Button */}
           <FlowButton
             text="SHOP NOW"
-            className="w-44 lg:w-48"
+            className="!w-36 sm:!w-40 lg:!w-48 !h-10 lg:!h-11 !px-0 text-[10px] sm:text-xs lg:text-sm"
             defaultBgColor="bg-[#203652]"
             defaultTextColor="text-[#FFFFFF]"
             circleColor="bg-[#2C476B]"
+            onClick={() => window.location.href = "/shop/popular"}
           />
 
           {/* Secondary Button */}
           <Button
             variant="outline"
-            className="w-44 lg:w-48 h-10 lg:h-11 border-2 border-[#003286] text-[#003286] bg-transparent px-3 py-2 rounded-full font-bold text-xs lg:text-sm uppercase tracking-wide hover:bg-[#203652]/95 hover:text-[#F5FBFF] transition-all shadow-lg"
+            className="w-36 sm:w-40 lg:w-48 h-10 lg:h-11 border-2 border-[#003286] text-[#003286] bg-transparent px-0 sm:px-3 py-2 rounded-full font-bold text-[10px] sm:text-xs lg:text-sm uppercase tracking-wide hover:bg-[#203652]/95 hover:text-[#F5FBFF] transition-all shadow-lg"
             onClick={() => window.location.href = "/story"}
           >
             Learn The Science

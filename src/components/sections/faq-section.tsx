@@ -27,9 +27,9 @@ export function FaqSection() {
 
   return (
     <section id="faqs" className="w-full bg-[#F5FBFF]">
-      <div className="py-16 md:py-24 px-4 sm:px-8 md:px-12 lg:px-16 max-w-7xl mx-auto">
+      <div className="py-24 md:py-32 px-4 sm:px-8 md:px-12 lg:px-16 max-w-7xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-start">
-        <div className="space-y-8 sm:space-y-12">
+        <div className="space-y-8 sm:space-y-12 order-2 md:order-1 px-4 sm:px-6 md:px-0">
           <div className="reveal-on-scroll text-center md:text-left">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-inter font-bold text-[#003286] leading-tight">All Your Queries Answered.</h2>
             <p className="text-sm sm:text-base md:text-lg text-gray-600 mt-3 sm:mt-4">Professional answers for your mineral skincare journey.</p>
@@ -49,7 +49,7 @@ export function FaqSection() {
             </Accordion>
           </div>
         </div>
-        <div className="relative group h-full reveal-on-scroll cursor-pointer w-full max-w-md mx-auto md:max-w-none">
+        <div className="relative group h-full reveal-on-scroll cursor-pointer w-full max-w-md mx-auto md:max-w-none order-1 md:order-2">
           <div className="sticky top-24 sm:top-32 rounded-2xl sm:rounded-[2rem] overflow-hidden shadow-2xl flex flex-col items-center text-center justify-center h-[280px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full">
             <div className="absolute inset-0 opacity-90">
               <img 

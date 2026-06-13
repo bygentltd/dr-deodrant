@@ -62,7 +62,7 @@ export function ServicesSection() {
   ];
 
   return (
-    <section className="py-8 md:py-20 bg-white overflow-hidden bg-[#f5fbff]">
+    <section className="py-8 md:py-20 overflow-hidden bg-[#f5fbff]">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
 
         <div className="text-center mb-12 sm:mb-16 md:mb-24 reveal-on-scroll">
