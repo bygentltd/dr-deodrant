@@ -1,4 +1,6 @@
 "use client"
+import Link from "next/link";
+import { FlowButton } from "@/components/ui/flow-button";
 import { HeroSection } from "@/components/sections/hero-section";
 import { PhilosophySection } from "@/components/sections/philosophy-section";
 import { StatsSection } from "@/components/sections/stats-section";
@@ -32,7 +34,19 @@ export default function Home() {
         {/* Desktop View */}
         <div className="hidden md:block">
           <ImageSectionComp src="/HOME_21.webp" />
-          <ImageSectionComp src="/Home-Ing.webp" />
+          <div className="relative">
+            <ImageSectionComp src="/Home-Ing.webp" />
+            <Link href="/shop/popular" className="absolute bottom-12 right-12 md:bottom-16 md:right-16 z-20">
+              <FlowButton
+                text="Buy Now"
+                className="scale-125 md:scale-150 origin-bottom-right"
+                defaultBgColor="bg-[#203652]"
+                defaultTextColor="text-white"
+                circleColor="bg-[#2C476B]"
+                hoverTextColor="group-hover:text-white"
+              />
+            </Link>
+          </div>
           <ImageSectionComp src="/HOME_HOW.webp" />
         </div>
 

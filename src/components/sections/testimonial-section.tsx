@@ -89,7 +89,7 @@ export function TestimonialSection() {
                   </span>
 
                   {/* Quote Text */}
-                  <p className="text-[15px] sm:text-lg md:text-xl font-medium text-[#113D86] leading-relaxed">
+                  <p className="text-[15px] sm:text-lg md:text-xl font-medium text-[#113D86] leading-relaxed text-justify">
                     {t.quote}
                   </p>
 

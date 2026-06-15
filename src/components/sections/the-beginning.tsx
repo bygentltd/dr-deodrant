@@ -1,14 +1,14 @@
 export default function TheBeginning() {
   return (
-    <section className="bg-[#F5FBFF] px-4 sm:px-6 py-32 sm:py-20 md:py-40 md:px-32 lg:px-32 font-sans w-full">
+    <section className="bg-[#F5FBFF] px-6 py-32 sm:py-20 md:py-40 md:px-12 font-sans w-full">
       <div className="max-w-7xl mx-auto w-full">
         {/* Main Heading */}
-        <h1 className="text-4xl sm:text-5xl md:text-[3rem] lg:text-[4rem] font-medium text-[#003286] mb-10 md:mb-16 tracking-tight w-[85%] sm:w-[80%] md:w-full mx-auto md:mx-0">
+        <h1 className="text-4xl sm:text-5xl md:text-[3rem] lg:text-[4rem] font-medium text-[#003286] mb-10 md:mb-16 tracking-tight w-full">
           The Beginning
         </h1>
 
         {/* Content Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 w-[85%] sm:w-[80%] md:w-full mx-auto md:mx-0">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 w-full">
 
           {/* Left Column: Badge */}
           <div className="md:col-span-4 lg:col-span-4 flex items-start">

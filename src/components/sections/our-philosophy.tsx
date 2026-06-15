@@ -27,15 +27,15 @@ export default function OurPhilosophy() {
   ];
 
   return (
-    <section className="bg-[#F5FBFF] px-4 sm:px-6 py-16 md:py-32 md:px-16 lg:px-32 font-sans w-full">
+    <section className="bg-[#F5FBFF] px-6 py-16 md:py-32 md:px-12 font-sans w-full">
       <div className="max-w-7xl mx-auto w-full">
         {/* Main Heading */}
-        <h1 className="text-4xl sm:text-5xl md:text-[3rem] lg:text-[4rem] font-medium text-[#003286] mb-10 md:mb-24 tracking-tight w-[85%] sm:w-[80%] md:w-full mx-auto md:mx-0">
+        <h1 className="text-4xl sm:text-5xl md:text-[3rem] lg:text-[4rem] font-medium text-[#003286] mb-10 md:mb-24 tracking-tight w-full">
           Our Philosophy
         </h1>
 
         {/* Top Content Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-16 mb-16 md:mb-32 w-[85%] sm:w-[80%] md:w-full mx-auto md:mx-0">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-16 mb-16 md:mb-32 w-full">
           {/* Left Column: Badge */}
           <div className="md:col-span-4 lg:col-span-4 flex items-start">
             <span className="inline-flex items-center rounded-full bg-[#003286] px-4 py-1.5 text-[13px] sm:text-sm font-medium text-[#ffffff] tracking-wide">
@@ -59,10 +59,10 @@ export default function OurPhilosophy() {
                 <img
                   src={images[idx]}
                   alt={principle.title}
-                  className="w-[85%] sm:w-[80%] md:w-full mx-auto aspect-square rounded-xl object-cover philosophy-image"
+                  className="w-full aspect-square rounded-xl object-cover philosophy-image"
                 />
               </div>
-              <div className="w-[85%] sm:w-[80%] md:w-full mx-auto">
+              <div className="w-full">
                 {/* Header Row with Title and Number */}
                 <div className="flex justify-between items-end pb-3 mb-3 md:mb-4 border-b border-[#313131]/20">
                   <h3 className="text-[17px] sm:text-lg md:text-2xl font-bold text-[#313131]">

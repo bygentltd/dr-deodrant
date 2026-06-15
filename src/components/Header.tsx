@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { FlowButton } from "./ui/flow-button";
-import { Menu, ShoppingBagIcon, X, User } from "lucide-react";
+import { Menu, ShoppingBagIcon, X, User, ArrowRight } from "lucide-react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -126,7 +126,7 @@ export default function Header() {
         <div className="absolute left-1/2 top-1/2 -translate-x-[70%] md:-translate-x-1/2 -translate-y-1/2 flex items-center justify-center z-10">
           <Link href="/">
             {/* 👇 CHANGED h-15 to h-10 (mobile) and lg:h-12 (desktop) so Tailwind recognizes it */}
-            <img src="/DeDeo-logo.svg" alt="Dr. Deodrant Logo" className=" h-10 lg:h-15 w-auto hover:opacity-90 transition-opacity " />
+            <img src="/DeDeo-logo.svg" alt="Dr. Deodrant Logo" className="h-8 md:h-10 lg:h-12 w-auto hover:opacity-90 transition-opacity" />
           </Link>
         </div>
 
@@ -147,10 +147,14 @@ export default function Header() {
             defaultBgColor="bg-[#203652]"
             defaultTextColor="text-[#FFFFFF]"
             circleColor="bg-[#2C476B]"
-            className="!px-6 !py-2.5 lg:!px-8 lg:!py-3"
+            className="!px-5 !py-2 md:!px-6 md:!py-2.5 lg:!px-8 lg:!py-3 scale-95 md:scale-100 origin-right"
+            arrowClassName="hidden lg:block"
           >
             <span className="hidden lg:inline">SHOP COLLECTION</span>
-            <span className="lg:hidden tracking-wider ml-1"><ShoppingBagIcon /></span>
+            <span className="lg:hidden tracking-wider flex items-center justify-center translate-x-[9px]">
+              <ShoppingBagIcon className="w-5 h-5" />
+              <ArrowRight className="w-4 h-4 ml-1 opacity-80" />
+            </span>
           </FlowButton>
         </div>
 

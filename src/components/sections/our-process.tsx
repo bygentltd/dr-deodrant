@@ -27,10 +27,10 @@ export default function OurProcess() {
   ];
 
   return (
-    <section className="bg-[#EAF5FF] px-4 sm:px-6 py-16 md:py-32 md:px-16 lg:px-32 font-sans w-full">
+    <section className="bg-[#EAF5FF] px-6 py-16 md:py-32 md:px-12 font-sans w-full">
       <div className="max-w-7xl mx-auto w-full">
         {/* Main Heading */}
-        <div className="max-w-3xl mb-8 md:mb-14 process-reveal w-[85%] sm:w-[80%] md:w-full mx-auto md:mx-0">
+        <div className="max-w-3xl mb-8 md:mb-14 process-reveal w-full">
           <div className="inline-flex items-center rounded-full bg-[#003286] px-4 py-1.5 text-[13px] sm:text-sm font-medium text-[#ffffff] tracking-wide mb-4 md:mb-5">
             Our Process
           </div>
@@ -40,7 +40,7 @@ export default function OurProcess() {
         </div>
 
         {/* Top Content Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-16 mb-16 md:mb-32 process-reveal process-reveal-delay-1 w-[85%] sm:w-[80%] md:w-full mx-auto md:mx-0">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-16 mb-16 md:mb-32 process-reveal process-reveal-delay-1 w-full">
           <div className="md:col-span-8 lg:col-span-8 flex flex-col gap-6 md:gap-8">
             <p className="text-[15px] sm:text-base font-inter md:text-xl leading-relaxed text-justify text-[#4a4a4a] max-w-2xl">
               Every Dr. Deodrant crystal begins with pharmaceutical-grade alum sourced from trusted mineral suppliers. This is combined with water, real acerola, kiwi fruit extracts, Vitamins C and E through a careful cold-process formulation that preserves the integrity of every active ingredient.
@@ -50,14 +50,7 @@ export default function OurProcess() {
             </p>
           </div>
 
-          <div className="md:col-span-4 lg:col-span-4 flex md:justify-end items-start mt-4 md:mt-0">
-            <div className="process-orbit relative w-full max-w-xs rounded-[2rem] border border-white/50 bg-white/40 backdrop-blur-sm p-5 shadow-[0_20px_50px_rgba(32,57,86,0.08)]">
-              <div className="absolute inset-0 rounded-[2rem] process-orbit-ring"></div>
-              <p className="relative text-[13px] sm:text-sm md:text-base leading-relaxed text-[#003286] font-medium text-center md:text-left">
-                A calm, deliberate flow from raw mineral to finished crystal, built step by step.
-              </p>
-            </div>
-          </div>
+
         </div>
 
         {/* Bottom Grid: Core Principles */}
@@ -71,10 +64,10 @@ export default function OurProcess() {
                 <img
                   src={images[idx]}
                   alt={principle.title}
-                  className="w-[85%] sm:w-[80%] md:w-full mx-auto aspect-square rounded-[1.4rem] object-cover process-image"
+                  className="w-full aspect-square rounded-[1.4rem] object-cover process-image"
                 />
               </div>
-              <div className="w-[85%] sm:w-[80%] md:w-full mx-auto">
+              <div className="w-full">
                 {/* Header Row with Title and Number */}
                 <div className="flex justify-between items-end pb-3 mb-2 md:mb-4 border-b border-[#313131]/20 process-title-row">
                   <h3 className="text-[17px] sm:text-lg md:text-2xl font-bold text-[#313131]">

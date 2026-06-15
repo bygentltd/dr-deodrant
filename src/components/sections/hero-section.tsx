@@ -49,7 +49,7 @@ export function HeroSection() {
       ),
     },
     {
-      src: "/3rd_hero_Image.webp", // Replace with actual mobile portrait image
+      src: "/HeroV2.webp", // Replace with actual mobile portrait image
       title: (
         <>
           Thailand's Trusted <br /> Mineral Deodorant
@@ -57,7 +57,7 @@ export function HeroSection() {
       ),
     },
     {
-      src: "/4th_hero_image.webp", // Replace with actual mobile portrait image
+      src: "/HeroV3.webp", // Replace with actual mobile portrait image
       title: (
         <>
           Sweat is Natural, <br /> Smell is Optional
@@ -120,7 +120,7 @@ export function HeroSection() {
         </div>
 
         <div
-          className="w-full flex flex-row justify-center lg:justify-start items-center lg:items-start lg:flex-row gap-3 sm:gap-4 transition-opacity duration-1000 mt-[100px] md:mt-[150px] lg:mt-4"
+          className="w-full flex flex-row justify-center lg:justify-start items-center lg:items-start lg:flex-row gap-3 sm:gap-4 transition-opacity duration-1000 mt-[35vh] md:mt-[40vh] lg:mt-4"
           id="hero-btns"
         >
           {/* Primary Button */}

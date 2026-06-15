@@ -11,7 +11,7 @@ export default function OurStoryFixed() {
   // "start start" = top of component hits top of viewport (fully covers screen)
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "start start"], 
+    offset: ["start end", "start start"],
   });
 
   // CHANGED: Map progress from 0 to 1 perfectly over the entry phase.
@@ -19,8 +19,8 @@ export default function OurStoryFixed() {
   const scale = useTransform(scrollYProgress, [0, 1], [1.15, 1]);
 
   return (
-    <section 
-      ref={containerRef} 
+    <section
+      ref={containerRef}
       className="relative w-full h-[100svh] overflow-hidden"
     >
       <motion.div
@@ -31,7 +31,7 @@ export default function OurStoryFixed() {
       <div className="absolute inset-0 z-10 bg-black/15" />
 
       <div className="relative z-20 w-full h-full flex flex-col justify-between px-6 py-12 md:px-16 md:py-16 font-sans">
-        
+
         <div />
 
         {/* <div className="flex justify-center items-center">

@@ -19,7 +19,7 @@ export function PhilosophySection() {
             Synergy of Alum & Superfood Extracts.
           </h2>
 
-          <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-[90%]">
+          <p className="text-sm md:text-base text-gray-600 leading-relaxed text-justify">
             Experience the medical-grade precision of pure Alum crystals enhanced with the antioxidant power of <b>Kiwi Fruit Extract</b>, <b>Acerola Extract</b>, and <b>Vitamin E</b>. Our formula doesn't just block odor; it nourishes the delicate underarm skin while helping to lighten dark areas naturally.
           </p>
 
@@ -48,7 +48,7 @@ export function PhilosophySection() {
         {/* Right Column: Image & Badge */}
         <div className="relative reveal-on-scroll order-1 md:order-2">
           {/* Main Image with large rounded corners */}
-          <div className="aspect-square md:aspect-4/5 rounded-[2rem] overflow-hidden shadow-xl">
+          <div className="aspect-[3/4] md:aspect-[4/5] rounded-[2rem] overflow-hidden shadow-xl">
             <video
               src="/video/Untitled.mp4"
               className="w-full h-full object-cover"

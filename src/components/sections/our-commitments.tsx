@@ -30,10 +30,10 @@ export default function OurCommitments() {
   ];
 
   return (
-    <section className="bg-[#F5FBFF] px-4 sm:px-6 py-16 md:py-32 md:px-16 lg:px-24 font-sans w-full">
+    <section className="bg-[#F5FBFF] px-6 py-16 md:py-32 md:px-12 font-sans w-full">
       <div className="max-w-[1400px] mx-auto w-full">
         {/* Main Heading */}
-        <h2 className="text-4xl sm:text-5xl md:text-[3rem] lg:text-[4rem] font-medium text-[#313131] mb-10 md:mb-16 tracking-tight w-[85%] sm:w-[80%] md:w-full mx-auto md:mx-0">
+        <h2 className="text-4xl sm:text-5xl md:text-[3rem] lg:text-[4rem] font-medium text-[#313131] mb-10 md:mb-16 tracking-tight w-full">
           Our Commitments
         </h2>
 
@@ -43,7 +43,7 @@ export default function OurCommitments() {
             <div key={item.id} className="flex flex-col group cursor-pointer">
               
               {/* Image Container with Hover Zoom Effect */}
-              <div className="w-[85%] sm:w-[80%] md:w-full mx-auto aspect-[4/5] md:aspect-square lg:aspect-[4/5] overflow-hidden rounded-2xl md:rounded-[2rem] mb-5 md:mb-8 bg-[#e4e7dd]">
+              <div className="w-full aspect-[4/5] md:aspect-square lg:aspect-[4/5] overflow-hidden rounded-2xl md:rounded-[2rem] mb-5 md:mb-8 bg-[#e4e7dd]">
                 <img
                   src={item.image}
                   alt={item.alt}
@@ -51,7 +51,7 @@ export default function OurCommitments() {
                 />
               </div>
 
-              <div className="w-[85%] sm:w-[80%] md:w-full mx-auto">
+              <div className="w-full">
                 {/* Title and Number Row */}
                 <div className="flex justify-between items-end pb-3 mb-3 md:mb-4 border-b border-[#313131]/20">
                   <h3 className="text-[17px] sm:text-lg md:text-2xl font-medium text-[#313131]">

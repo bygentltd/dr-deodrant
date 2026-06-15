@@ -13,6 +13,7 @@ interface FlowButtonProps {
   hoverTextColor?: string;
   defaultBgColor?: string;
   defaultTextColor?: string; 
+  arrowClassName?: string;
 }
 
 export function FlowButton({
@@ -25,6 +26,7 @@ export function FlowButton({
   hoverTextColor = "group-hover:text-white",
   defaultBgColor = "bg-transparent",
   defaultTextColor = "text-current", 
+  arrowClassName = "",
 }: FlowButtonProps) {
   return (
     <button
@@ -41,7 +43,7 @@ export function FlowButton({
 
       {/* Left Arrow */}
       <ArrowRight
-        className={`absolute left-[-25%] z-10 h-4 w-4 stroke-current transition-all duration-[800ms] ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:left-4 ${hoverTextColor}`}
+        className={`absolute left-[-25%] z-10 h-4 w-4 stroke-current transition-all duration-[800ms] ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:left-4 ${hoverTextColor} ${arrowClassName}`}
       />
 
       {/* Content */}
@@ -53,7 +55,7 @@ export function FlowButton({
 
       {/* Right Arrow */}
       <ArrowRight
-        className={`absolute right-4 z-10 h-4 w-4 stroke-current transition-all duration-[800ms] ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:right-[-25%] ${hoverTextColor}`}
+        className={`absolute right-4 z-10 h-4 w-4 stroke-current transition-all duration-[800ms] ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:right-[-25%] ${hoverTextColor} ${arrowClassName}`}
       />
     </button>
   );

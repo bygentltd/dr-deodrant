@@ -121,7 +121,7 @@ export function ServicesSection() {
 
           {/* Center Column */}
           <div className="flex justify-center order-1 lg:order-2 reveal-on-scroll z-20">
-            <div className="relative w-[280px] h-[400px] sm:w-[320px] sm:h-[460px] md:w-[360px] md:h-[580px] rounded-[200px] overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.05)] border-[6px] md:border-[8px] border-white group cursor-pointer">
+            <div className="relative w-[240px] h-[340px] sm:w-[320px] sm:h-[460px] md:w-[360px] md:h-[580px] rounded-[200px] overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.05)] border-[6px] md:border-[8px] border-white group cursor-pointer">
               <div className="absolute top-8 left-8 text-white w-4 h-4 z-10 opacity-80">✨</div>
               <div className="absolute bottom-12 right-10 text-white w-4 h-4 z-10 opacity-80">✨</div>
 

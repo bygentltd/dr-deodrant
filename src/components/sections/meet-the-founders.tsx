@@ -16,14 +16,14 @@ export default function MeetTheFounder() {
   const yParallax = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
 
   return (
-    <section className="font-inter bg-[#F5FBFF] px-4 py-10 md:px-8 w-full font-sans">
+    <section className="font-inter bg-[#F5FBFF] px-6 py-10 md:px-12 w-full font-sans">
       <div
         ref={sectionRef}
         // Scaled down padding, max-width, and border-radius
         className="bg-[#EAF5FF] rounded-3xl md:rounded-[2.5rem] p-6 pt-12 md:p-10 lg:p-16 w-full max-w-[1100px] mx-auto"
       >
         {/* Top Header */}
-        <div className="mb-8 md:mb-12 text-center lg:text-left w-[85%] sm:w-[80%] md:w-full mx-auto md:mx-0">
+        <div className="mb-8 md:mb-12 text-center lg:text-left w-full">
           <h2 className="text-3xl sm:text-4xl md:text-3xl lg:text-5xl font-semibold tracking-tight text-[#003286] max-w-2xl lg:max-w-none mx-auto lg:mx-0">
             Meet the Founder
           </h2>
@@ -34,7 +34,7 @@ export default function MeetTheFounder() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
 
           {/* Left: Founder Image */}
-          <div className="relative w-[85%] sm:w-[80%] md:w-full aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5] overflow-hidden rounded-xl group mx-auto max-w-md lg:max-w-none">
+          <div className="relative w-full aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5] overflow-hidden rounded-xl group mx-auto max-w-md lg:max-w-none">
             <motion.div
               style={{ y: yParallax, scale: 1.15 }}
               className="absolute inset-0 w-full h-full"
@@ -57,7 +57,7 @@ export default function MeetTheFounder() {
           </div>
 
           {/* Right: Founder Details */}
-          <div className="flex flex-col gap-6 lg:gap-10 text-center lg:text-left w-[85%] sm:w-[80%] md:w-full mx-auto md:mx-0">
+          <div className="flex flex-col gap-6 lg:gap-10 text-center lg:text-left w-full">
             <div>
               <span className="text-xs md:text-sm font-medium text-[#4a4a4a] tracking-wide mb-2 md:mb-3 block">
                 Singer. Songwriter. Visionary.
