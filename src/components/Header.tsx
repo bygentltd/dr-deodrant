@@ -20,7 +20,7 @@ export default function Header() {
     { name: "Shop", href: "/shop/popular" },
     { name: "Our Story", href: "/story" },
     { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/contact" },
+    { name: "Support", href: "/contact" },
   ];
 
   const openCart = () => {
@@ -123,22 +123,22 @@ export default function Header() {
         </div>
 
         {/* 👇 CENTER LOGO - NOW ABSOLUTELY POSITIONED FOR PERFECT CENTERING */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-[70%] md:-translate-x-1/2 -translate-y-1/2 flex items-center justify-center z-10">
+        <div className="absolute left-1/2 top-1/2 -translate-x-[55%] md:-translate-x-1/2 -translate-y-1/2 flex items-center justify-center z-10">
           <Link href="/">
             {/* 👇 CHANGED h-15 to h-10 (mobile) and lg:h-12 (desktop) so Tailwind recognizes it */}
-            <img src="/DeDeo-logo.svg" alt="Dr. Deodrant Logo" className="h-8 md:h-10 lg:h-12 w-auto hover:opacity-90 transition-opacity" />
+            <img src="/DeDeo-logo.svg" alt="Dr. Deodrant Logo" className="h-11 md:h-13 lg:h-14 w-auto hover:opacity-90 transition-opacity flex items-center justify0ce" />
           </Link>
         </div>
 
         {/* Right Section Actions (Desktop & Mobile) */}
         <div className="flex items-center gap-4 lg:gap-6 z-10">
-          {/* Account Icon (All Devices) */}
+          {/* Account Icon (Desktop Only) */}
           <a
             href="https://shopify.com/99417162092/account"
-            className={cn("transition-colors hover:opacity-70 flex items-center justify-center", iconClasses)}
+            className={cn("hidden lg:flex transition-colors hover:opacity-70 items-center justify-center", iconClasses)}
             aria-label="Account"
           >
-            <User className="w-5 h-5 sm:w-6 sm:h-6" />
+            <User className="w-12 h-12 sm:w-6 sm:h-6" />
           </a>
 
           {/* [#F5FBFF] Pill Action Button */}
@@ -206,6 +206,18 @@ export default function Header() {
               </Link>
             );
           })}
+
+          {/* Mobile Customer Login */}
+          <a
+            href="https://shopify.com/99417162092/account"
+            onClick={() => setIsOpen(false)}
+            className={cn(
+              "text-base font-bold py-1.5 nav-underline w-fit flex items-center gap-2",
+              "text-[#003286]/80 hover:text-[#003286]"
+            )}
+          >
+            Customer Login
+          </a>
         </div>
         <div className={cn("hidden md:flex flex-col gap-4 pt-4 border-t border-[#F5FBFF]/10")}>
           <a href="tel:+917900160311" className={cn("flex items-center gap-2 text-sm font-medium text-[#003286]/70 hover:text-[#003286]")}>

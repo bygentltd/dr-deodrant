@@ -56,6 +56,7 @@ export default function Home() {
             images={["/Result_1.webp", "/Result_2.webp", "/Result_3.webp"]}
             title="Visible Results, Real Confidence"
             subtitle="Brighter, smoother underarms in just 21 days"
+            bgColor="#eaf5ff"
           />
           <ImageCarousel
             images={["/HTU_1.webp", "/HTU_2.webp", "/HTU_3.webp"]}

@@ -136,7 +136,7 @@ export function HeroSection() {
           {/* Secondary Button */}
           <Button
             variant="outline"
-            className="w-36 sm:w-40 lg:w-48 h-10 lg:h-11 border-2 border-[#003286] text-[#003286] bg-transparent px-0 sm:px-3 py-2 rounded-full font-bold text-[10px] sm:text-xs lg:text-sm uppercase tracking-wide hover:bg-[#203652]/95 hover:text-[#F5FBFF] transition-all shadow-lg"
+            className="w-36 sm:w-40 lg:w-48 h-10 lg:h-11 border-2 border-[#003286] text-[#003286] bg-white/40 backdrop-blur-sm sm:bg-transparent sm:backdrop-blur-none px-0 sm:px-3 py-2 rounded-full font-bold text-[10px] sm:text-xs lg:text-sm uppercase tracking-wide hover:bg-[#203652]/95 hover:text-[#F5FBFF] transition-all shadow-lg"
             onClick={() => window.location.href = "/story"}
           >
             Learn The Science

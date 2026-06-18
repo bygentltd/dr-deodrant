@@ -25,7 +25,7 @@ export function Footer() {
       <div className="bg-[#1b3e79] text-white pt-20 pb-10 px-8 md:px-16 rounded-t-[3rem] md:rounded-t-[5rem]">
         <div className="max-w-7xl mx-auto">
 
-          {/* --- Top Row: Contact Info --- */}
+          {/* --- Top Row: Support Info --- */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 lg:gap-6 pb-10 md:pb-16 border-b border-white/10">
 
             {/* Address */}
@@ -55,7 +55,7 @@ export function Footer() {
             </div>
 
             {/* Call Us */}
-            <div className="flex items-center md:items-start gap-3 md:gap-4 group cursor-pointer">
+            <a href="tel:+917900160311" className="flex items-center md:items-start gap-3 md:gap-4 group cursor-pointer">
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-colors duration-300 group-hover:bg-white group-hover:text-[#53606b]">
                 <Phone className="w-4 h-4 md:w-5 md:h-5" strokeWidth={1.5} />
               </div>
@@ -65,10 +65,10 @@ export function Footer() {
                   +91 79001 60311
                 </p>
               </div>
-            </div>
+            </a>
 
             {/* Email */}
-            <div className="flex items-center md:items-start gap-3 md:gap-4 group cursor-pointer">
+            <a href="mailto:support@drdeodrant.com" className="flex items-center md:items-start gap-3 md:gap-4 group cursor-pointer">
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-colors duration-300 group-hover:bg-white group-hover:text-[#53606b]">
                 <Mail className="w-4 h-4 md:w-5 md:h-5" strokeWidth={1.5} />
               </div>
@@ -78,7 +78,7 @@ export function Footer() {
                   support@drdeodrant.com
                 </p>
               </div>
-            </div>
+            </a>
 
           </div>
 
@@ -119,7 +119,7 @@ export function Footer() {
                   { name: 'Home', href: '/' },
                   { name: 'Our Story', href: '/story' },
                   { name: 'Blog', href: '/blog' },
-                  { name: 'Contact', href: '/contact' }
+                  { name: 'Support', href: '/contact' }
                 ].map((link) => (
                   <Link key={link.name} href={link.href} className="text-xs sm:text-sm text-white/70 hover:text-white transition-colors w-fit">
                     {link.name}
@@ -166,19 +166,19 @@ export function Footer() {
             </p>
 
             <div className="flex items-center gap-5">
-              <Link href="#" className="text-white/60 hover:text-white transition-colors">
+              <Link href="#" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">
                 <FontAwesomeIcon icon={faFacebookF} size="lg" />
               </Link>
-              <Link href="#" className="text-white/60 hover:text-white transition-colors">
+              <Link href="https://www.instagram.com/drdeodrant/" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">
                 <FontAwesomeIcon icon={faInstagram} size="lg" />
               </Link>
-              <Link href="#" className="text-white/60 hover:text-white transition-colors">
+              {/* <Link href="#" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">
                 <FontAwesomeIcon icon={faYoutube} size="lg" />
-              </Link>
+              </Link> */}
               {/* Using a custom SVG for TikTok to match the aesthetic since Lucide doesn't have it natively */}
-              <Link href="#" className="text-white/60 hover:text-white transition-colors">
+              {/* <Link href="#" className="text-white/60 hover:text-white transition-colors">
                 <FontAwesomeIcon icon={faTiktok} size="lg" />
-              </Link>
+              </Link> */}
             </div>
           </div>
 

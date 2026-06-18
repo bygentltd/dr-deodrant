@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-const ImageCarousel = ({ images, title, subtitle }: { images: string[]; title?: string; subtitle?: string }) => {
+const ImageCarousel = ({ images, title, subtitle, bgColor }: { images: string[]; title?: string; subtitle?: string; bgColor?: string }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
@@ -41,8 +41,9 @@ const ImageCarousel = ({ images, title, subtitle }: { images: string[]; title?: 
   };
 
   return (
-    <div 
-      className="relative w-full overflow-hidden bg-[#F5FBFF] pb-32"
+    <div
+      className="relative w-full overflow-hidden pt-10 pb-20"
+      style={{ backgroundColor: bgColor || "#F5FBFF" }}
       onTouchStart={onTouchStart}
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEndHandler}
