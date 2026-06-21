@@ -24,25 +24,25 @@ export function TestimonialSection() {
     },
     {
       image:
-        "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=1200&auto=format&fit=crop",
+        "/reviews/Rev-Img3.webp",
       quote:
-        "The best part? No white cast! It goes on clear and stays that way, so my black clothes are safe. It’s incredibly effective at neutralizing odour while keeping my skin soft and bright. Everything I’ve been looking for in one bottle.",
-      author: "Priya K, Mumbai",
+        "Healthy habits are built on consistency. We brush our teeth daily, in the same way our underarms also deserve the same care. Dr. Deodrant keeps me feeling fresh through long days with patients, without residue or stains on my white coats. It’s simple, effective underarm skincare I trust every day",
+      author: "Dr. Priti Shah, Dentist",
     },
-    {
-      image:
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop",
-      quote:
-        "I’ve struggled with rough skin and dark patches for years. Since switching to Dr. Deodrant, my underarms are noticeably smoother. The alum works wonders on odour, and the vitamins have totally transformed the texture of my skin.",
-      author: "Daniel R, Chicago",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200&auto=format&fit=crop",
-      quote:
-        "This is hands down the most effective odour eliminator I’ve tried. It removes the smell entirely without any messy residue or white marks. My underarms look brighter and feel healthier than ever. I'll never go back to regular sprays!",
-      author: "Ayesha L, Dubai",
-    },
+    // {
+    //   image:
+    //     "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop",
+    //   quote:
+    //     "I’ve struggled with rough skin and dark patches for years. Since switching to Dr. Deodrant, my underarms are noticeably smoother. The alum works wonders on odour, and the vitamins have totally transformed the texture of my skin.",
+    //   author: "Daniel R, Chicago",
+    // },
+    // {
+    //   image:
+    //     "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200&auto=format&fit=crop",
+    //   quote:
+    //     "This is hands down the most effective odour eliminator I’ve tried. It removes the smell entirely without any messy residue or white marks. My underarms look brighter and feel healthier than ever. I'll never go back to regular sprays!",
+    //   author: "Ayesha L, Dubai",
+    // },
   ];
 
   return (

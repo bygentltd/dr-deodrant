@@ -45,10 +45,14 @@ export default function IngredientsContent() {
   return (
     <section className="bg-[#F5FBFF] px-4 md:py-32 md:px-16 lg:px-24 font-sans w-full">
       <div className="max-w-7xl mx-auto w-full">
-        <h2 className="text-3xl sm:text-4xl md:text-[3rem] lg:text-[4rem] font-medium text-[#003286] mb-8 md:mb-16 tracking-tight text-center md:text-left">
-          Ingredients
-        </h2>
-
+        <div className="mb-8 md:mb-16 text-center md:text-left">
+          <h2 className="text-3xl sm:text-4xl md:text-[3rem] lg:text-[4rem] font-medium text-[#003286] tracking-tight">
+            The Formula Decoded
+          </h2>
+          <p className="text-sm sm:translate-x-3 sm:text-base md:text-lg text-gray-600 mt-2 sm:mt-3 md:mt-4">
+            Natural ingredients, Zero Synthetic Chemicals
+          </p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-6 gap-6 md:gap-8 lg:gap-12 xl:*:col-span-2 xl:[&>*:nth-child(4)]:col-start-2 xl:[&>*:nth-child(5)]:col-start-4">
           {ingredients.map((item) => (
             <div

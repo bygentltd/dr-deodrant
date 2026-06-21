@@ -30,17 +30,20 @@ export default function OurProcess() {
     <section className="bg-[#EAF5FF] px-6 py-16 md:py-32 md:px-12 font-sans w-full">
       <div className="max-w-7xl mx-auto w-full">
         {/* Main Heading */}
-        <div className="max-w-3xl mb-8 md:mb-14 process-reveal w-full">
-          <div className="inline-flex items-center rounded-full bg-[#003286] px-4 py-1.5 text-[13px] sm:text-sm font-medium text-[#ffffff] tracking-wide mb-4 md:mb-5">
-            Our Process
-          </div>
-          <h1 className="text-4xl sm:text-5xl md:text-[3rem] lg:text-[4rem] font-medium text-[#003286] tracking-tight">
-            Our Process
-          </h1>
-        </div>
+        <h1 className="text-4xl sm:text-5xl md:text-[3rem] lg:text-[4rem] font-medium text-[#003286] mb-10 md:mb-24 tracking-tight w-full">
+          Our Process
+        </h1>
 
         {/* Top Content Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-16 mb-16 md:mb-32 process-reveal process-reveal-delay-1 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-16 mb-16 md:mb-32 w-full">
+          {/* Left Column: Badge */}
+          <div className="md:col-span-4 lg:col-span-4 flex items-start">
+            <span className="inline-flex items-center rounded-full bg-[#003286] px-4 py-1.5 text-[13px] sm:text-sm font-medium text-[#ffffff] tracking-wide">
+              Our Process
+            </span>
+          </div>
+
+          {/* Right Column: Intro Text */}
           <div className="md:col-span-8 lg:col-span-8 flex flex-col gap-6 md:gap-8">
             <p className="text-[15px] sm:text-base font-inter md:text-xl leading-relaxed text-justify text-[#4a4a4a] max-w-2xl">
               Every Dr. Deodrant crystal begins with pharmaceutical-grade alum sourced from trusted mineral suppliers. This is combined with water, real acerola, kiwi fruit extracts, Vitamins C and E through a careful cold-process formulation that preserves the integrity of every active ingredient.
@@ -49,8 +52,6 @@ export default function OurProcess() {
               Each batch is quality-tested before being poured into its smooth-finish casing. The process takes longer than conventional deodorant manufacturing, but that's the point. We're not cutting corners on something you apply to your skin every single day.
             </p>
           </div>
-
-
         </div>
 
         {/* Bottom Grid: Core Principles */}
