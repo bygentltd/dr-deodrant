@@ -39,10 +39,10 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
             </span>
             <span className="text-[#F5FBFF]/70 text-[11px] sm:text-sm font-medium">{post.author}</span>
           </div>
-          <h1 className="text-xl sm:text-2xl md:text-6xl lg:text-7xl font-inter text-[#F5FBFF] max-w-5xl leading-tight mb-4 md:mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-6xl lg:text-7xl font-inter text-[#F5FBFF] max-w-5xl leading-tight mb-4 md:mb-6">
             {post.title}
           </h1>
-          <p className="text-sm sm:text-base md:text-lg text-[#F5FBFF]/90 font-medium max-w-2xl">
+          <p className="translate-y-6 text-xs sm:text-base md:text-lg text-[#F5FBFF]/90 font-medium max-w-2xl">
             {post.excerpt}
           </p>
         </div>
@@ -65,7 +65,7 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
                     {section.eyebrow}
                   </p>
                 ) : null}
-                <h2 className="text-lg sm:text-xl md:text-4xl font-inter text-[#003286] leading-tight">
+                <h2 className="text-[15px] sm:text-xl md:text-4xl font-inter text-[#003286] leading-tight">
                   {section.heading}
                 </h2>
               </div>
@@ -80,12 +80,12 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
                 </div>
               ) : null}
 
-              <div className="space-y-4 md:space-y-5 text-[15px] sm:text-base md:text-lg text-gray-700 leading-relaxed font-light">
+              <div className="space-y-4 md:space-y-5 text-[13px] sm:text-base md:text-lg text-gray-700 leading-relaxed font-light">
                 {section.blocks.map((block, blockIndex) => {
                   if (block.type === "paragraph") {
                     return (
-                      <p 
-                        key={`${section.heading}-${blockIndex}`} 
+                      <p
+                        key={`${section.heading}-${blockIndex}`}
                         className="text-left sm:text-justify"
                       >
                         {block.text}
