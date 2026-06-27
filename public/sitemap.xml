@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:fo="http://www.w3.org/1999/XSL/Format"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://drdeodrant.com/</loc>
+  <lastmod>2026-06-27T15:48:33+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://drdeodrant.com/shop/popular</loc>
+  <lastmod>2026-06-27T15:48:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://drdeodrant.com/story</loc>
+  <lastmod>2026-06-27T15:48:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://drdeodrant.com/blog</loc>
+  <lastmod>2026-06-27T15:48:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://drdeodrant.com/contact</loc>
+  <lastmod>2026-06-27T15:48:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://drdeodrant.com/privacy</loc>
+  <lastmod>2026-06-27T15:48:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://drdeodrant.com/shipping</loc>
+  <lastmod>2026-06-27T15:48:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://drdeodrant.com/tnc</loc>
+  <lastmod>2026-06-27T15:48:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://drdeodrant.com/blog/five-morning-habits-that-keep-you-fresh-all-day</loc>
+  <lastmod>2026-06-27T15:48:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://drdeodrant.com/blog/complete-guide-to-natural-deodorant-ingredients</loc>
+  <lastmod>2026-06-27T15:48:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://drdeodrant.com/blog/science-of-sweat-and-body-odor</loc>
+  <lastmod>2026-06-27T15:48:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+</urlset>
