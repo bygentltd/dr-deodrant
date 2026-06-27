@@ -36,7 +36,7 @@ export default function Home() {
           <ImageSectionComp src="/HOME_21.webp" />
           <div className="relative">
             <ImageSectionComp src="/Home-Ing.webp" />
-            <Link href="/shop/popular" className="absolute bottom-[2%] left-[9%] md:-translate-x-4 md:translate-y-2 md:bottom-[11%] md:left-[7%] xl:bottom-[10%] xl:left-[11%] z-20">
+            <Link href="/shop/original" className="absolute bottom-[2%] left-[9%] md:-translate-x-4 md:translate-y-2 md:bottom-[11%] md:left-[7%] xl:bottom-[10%] xl:left-[11%] z-20">
               <FlowButton
                 text="Buy Now"
                 className="scale-110 md:scale-110 lg:scale-125 xl:scale-150 origin-bottom-left"

@@ -165,7 +165,7 @@ export function HeroSection() {
               defaultBgColor="bg-[#203652]"
               defaultTextColor="text-[#FFFFFF]"
               circleColor="bg-[#2C476B]"
-              onClick={() => (window.location.href = "/shop/popular")}
+              onClick={() => (window.location.href = "/shop/original")}
             />
 
             <Button

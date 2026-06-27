@@ -34,7 +34,7 @@ export function FixedHeroSection() {
 
         {/* Call to Action Button */}
         <a
-          href="/shop/popular"
+          href="/shop/original"
           className="group inline-flex items-center justify-center gap-2 bg-[#113D86] text-[#F5FBFF] px-8 py-3.5 sm:px-10 sm:py-4 rounded-full text-base sm:text-lg font-medium transition-all hover:bg-[#113D86]/95 hover:scale-105 active:scale-95 shadow-lg cursor-pointer"
         >
           <span>Switch To Natural</span>

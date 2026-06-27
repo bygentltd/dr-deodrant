@@ -17,7 +17,7 @@ export default function Header() {
 
   const links = [
     { name: "Home", href: "/" },
-    { name: "Shop", href: "/shop/popular" },
+    { name: "Shop", href: "/shop/original" },
     { name: "Our Story", href: "/story" },
     { name: "Blog", href: "/blog" },
     { name: "Support", href: "/contact" },
@@ -143,7 +143,7 @@ export default function Header() {
 
           {/* [#F5FBFF] Pill Action Button */}
           <FlowButton
-            onClick={() => router.push("/shop/popular")}
+            onClick={() => router.push("/shop/original")}
             defaultBgColor="bg-[#203652]"
             defaultTextColor="text-[#FFFFFF]"
             circleColor="bg-[#2C476B]"
