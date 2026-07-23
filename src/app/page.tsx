@@ -15,12 +15,9 @@ import { ServicesSection } from "@/components/sections/services-section";
 import HowToUse from "@/components/sections/how-to-use";
 import ImageSectionComp from "@/components/sections/image-section-comp";
 import ImageCarousel from "@/components/sections/image-carousel";
-import IngredientsSection from "@/components/sections/product-ingredient-layout";
-import ProductIngredientLayout from "@/components/sections/product-ingredient-layout";
 import MeetTheFounder from "@/components/sections/meet-the-founders";
 import { CertificateSection } from "@/components/sections/certificate-section";
-
-
+import PureIngredientsSection from "@/components/sections/pure-ingredients-section";
 
 export default function Home() {
   return (
@@ -34,19 +31,12 @@ export default function Home() {
         {/* Desktop View */}
         <div className="hidden md:block">
           <ImageSectionComp src="/HOME_21.webp" />
-          <div className="relative">
-            <ImageSectionComp src="/Home-Ing.webp" />
-            <Link href="/shop/original" className="absolute bottom-[2%] left-[9%] md:-translate-x-4 md:translate-y-2 md:bottom-[11%] md:left-[7%] xl:bottom-[10%] xl:left-[11%] z-20">
-              <FlowButton
-                text="Buy Now"
-                className="scale-110 md:scale-110 lg:scale-125 xl:scale-150 origin-bottom-left"
-                defaultBgColor="bg-[#203652]"
-                defaultTextColor="text-white"
-                circleColor="bg-[#2C476B]"
-                hoverTextColor="group-hover:text-white"
-              />
-            </Link>
-          </div>
+        </div>
+
+        {/* Dynamic Mobile Responsive Ingredients Section */}
+        <PureIngredientsSection />
+
+        <div className="hidden md:block">
           <ImageSectionComp src="/HOME_HOW.webp" />
         </div>
 
