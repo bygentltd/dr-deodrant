@@ -27,7 +27,19 @@ export function TestimonialSection() {
         "/reviews/Rev-Img3.webp",
       quote:
         "Healthy habits are built on consistency. We brush our teeth daily, in the same way our underarms also deserve the same care. Dr. Deodrant keeps me feeling fresh through long days with patients, without residue or stains on my white coats. It’s simple, effective underarm skincare I trust every day",
-      author: "Dr. Priti Shah, Dentist",
+      author: "Dr. Prachi Shah, Dentist",
+    },
+    {
+      image:
+        "/reviews/Rev-Img4.webp",
+      quote: "I Finally Feel Confident Wearing Sleeveless Again! I struggled with dark underarms for years, but after using Dr. Deodrant, I noticed a visible difference. My underarms look brighter, smoother, and the odour stays under control all day without any irritation. It's now a part of my daily routine, and I finally feel confident wearing sleeveless outfits again.",
+      author: "Shraddha, Mumbai"
+    },
+    {
+      image:
+        "/reviews/Rev-Img5.webp",
+      quote: "I've been using this deodorant since I received the first samples years ago and from that day kept me feeling fresh all day and, more importantly, noticeably improved the appearance of my underarms. I'm so happy to see it launch as its own brand with such a genuinely effective product. I'll definitely be recommending it to my friends and family!",
+      author: "Hita, Makeup Artist"
     },
     // {
     //   image:
