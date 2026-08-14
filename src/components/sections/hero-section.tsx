@@ -1,11 +1,25 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { FlowButton } from "../ui/flow-button";
 import { motion } from "framer-motion";
 
+const PROMO_END_TIME = new Date("2026-08-20T23:59:59+05:30").getTime();
+
 export function HeroSection() {
+  const [isPromoActive, setIsPromoActive] = useState(true);
+
+  useEffect(() => {
+    const checkPromo = () => {
+      setIsPromoActive(Date.now() <= PROMO_END_TIME);
+    };
+    checkPromo();
+    const timer = setInterval(checkPromo, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
   const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
   const heroContentOffset = "md:pl-[5vw] lg:pl-[8vw]";
 
@@ -48,11 +62,39 @@ export function HeroSection() {
   ];
 
   useEffect(() => {
+    if (isPromoActive) return;
     const timer = setInterval(() => {
       setCurrentHeroSlide((prev) => (prev + 1) % heroSlides.length);
     }, 7000);
     return () => clearInterval(timer);
-  }, [heroSlides.length]);
+  }, [heroSlides.length, isPromoActive]);
+
+  if (isPromoActive) {
+    return (
+      <section
+        className="relative w-full min-h-screen h-[calc(100svh+4rem)] md:h-[calc(100svh+7rem)] overflow-hidden bg-[#F5FBFF]"
+        id="hero-section"
+      >
+        <Link
+          href="/shop/original"
+          className="w-full h-full flex items-center justify-center cursor-pointer select-none"
+        >
+          {/* Desktop Image */}
+          <img
+            src="/ff/independence-day.webp"
+            alt="Independence Day Sale Offer"
+            className="hidden md:block w-full h-full object-cover pointer-events-none -translate-y-4 md:-translate-y-12 lg:-translate-y-16"
+          />
+          {/* Mobile / Phone Image */}
+          <img
+            src="/ff/independence-day-phone.webp"
+            alt="Independence Day Sale Offer"
+            className="block md:hidden w-full h-full object-cover pointer-events-none"
+          />
+        </Link>
+      </section>
+    );
+  }
 
   return (
     <section
