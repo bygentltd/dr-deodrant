@@ -89,7 +89,7 @@ export function HeroSection() {
           <img
             src="/ff/independence-day-phone.webp"
             alt="Independence Day Sale Offer"
-            className="block md:hidden w-full h-full object-cover pointer-events-none"
+            className="block md:hidden w-full h-full object-cover pointer-events-none -translate-y-8 sm:-translate-y-13"
           />
         </Link>
       </section>
