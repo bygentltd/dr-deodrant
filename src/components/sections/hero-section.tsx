@@ -6,19 +6,9 @@ import { Button } from "@/components/ui/button";
 import { FlowButton } from "../ui/flow-button";
 import { motion } from "framer-motion";
 
-const PROMO_END_TIME = new Date("2026-08-20T23:59:59+05:30").getTime();
-
 export function HeroSection() {
-  const [isPromoActive, setIsPromoActive] = useState(true);
-
-  useEffect(() => {
-    const checkPromo = () => {
-      setIsPromoActive(Date.now() <= PROMO_END_TIME);
-    };
-    checkPromo();
-    const timer = setInterval(checkPromo, 1000);
-    return () => clearInterval(timer);
-  }, []);
+  // Vercel Feature Flag: Set NEXT_PUBLIC_PROMO_ACTIVE="true" in Vercel to activate promo banner
+  const isPromoActive = process.env.NEXT_PUBLIC_PROMO_ACTIVE === "true";
 
   const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
   const heroContentOffset = "md:pl-[5vw] lg:pl-[8vw]";
@@ -81,13 +71,13 @@ export function HeroSection() {
         >
           {/* Desktop Image */}
           <img
-            src="/ff/independence-day.webp"
+            src="/ff/promo.webp"
             alt="Independence Day Sale Offer"
             className="hidden md:block w-full h-full object-cover pointer-events-none -translate-y-4 md:-translate-y-12 lg:-translate-y-16"
           />
           {/* Mobile / Phone Image */}
           <img
-            src="/ff/independence-day-phone.webp"
+            src="/ff/promo-phone.webp"
             alt="Independence Day Sale Offer"
             className="block md:hidden w-full h-full object-cover pointer-events-none -translate-y-8 sm:-translate-y-13"
           />

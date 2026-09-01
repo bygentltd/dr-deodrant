@@ -22,6 +22,8 @@ import { CertificateSection } from "@/components/sections/certificate-section";
 
 
 
+import ReelsActionSection from "@/components/sections/reels-action-section";
+
 export default function Home() {
   return (
     <>
@@ -31,6 +33,7 @@ export default function Home() {
         <PhilosophySection />
         <StatsSection />
         <FeaturedProductSection />
+        <ReelsActionSection />
         {/* Desktop View */}
         <div className="hidden md:block">
           <ImageSectionComp src="/HOME_21.webp" />
