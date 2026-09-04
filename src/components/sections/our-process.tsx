@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function OurProcess() {
   const principles = [
     {
@@ -57,7 +61,14 @@ export default function OurProcess() {
         {/* Bottom Grid: Core Principles */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-16 process-grid">
           {principles.map((principle, idx) => (
-            <div key={principle.number} className="process-card flex flex-col">
+            <motion.div
+              key={principle.number}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.7, delay: idx * 0.15, ease: [0.21, 0.47, 0.32, 0.98] }}
+              className="process-card flex flex-col"
+            >
               <div className="mb-5 md:mb-6 relative">
                 <div className="process-number-badge absolute -top-3 -left-2 md:-top-4 md:left-4 z-10 inline-flex items-center justify-center rounded-full bg-[#003286] px-3 py-1 md:px-4 md:py-1.5 text-[12px] md:text-sm font-medium text-white shadow-lg">
                   Step {principle.number}
@@ -79,7 +90,7 @@ export default function OurProcess() {
                   {principle.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

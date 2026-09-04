@@ -225,39 +225,47 @@ export default function ReelsActionSection({
     setActiveSoundId((prev) => (prev === reelId ? null : reelId));
   };
 
-  // Horizontal Scroll Navigation Controls
+  // Horizontal Scroll Navigation Controls (Loops back to start at final reel)
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: -320, behavior: "smooth" });
+      const { scrollLeft, clientWidth, scrollWidth } = scrollContainerRef.current;
+      if (scrollLeft <= 25) {
+        scrollContainerRef.current.scrollTo({ left: scrollWidth, behavior: "smooth" });
+      } else {
+        scrollContainerRef.current.scrollBy({ left: -320, behavior: "smooth" });
+      }
     }
   };
 
   const scrollRight = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: 320, behavior: "smooth" });
+      const { scrollLeft, clientWidth, scrollWidth } = scrollContainerRef.current;
+      if (scrollLeft + clientWidth >= scrollWidth - 25) {
+        scrollContainerRef.current.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        scrollContainerRef.current.scrollBy({ left: 320, behavior: "smooth" });
+      }
     }
   };
 
   return (
-    <section className="bg-[#C6EAFA] py-16 md:py-24 px-4 sm:px-6 overflow-hidden">
+    <section className="bg-[#EAF5FF] py-16 md:py-24 px-0 sm:px-6 overflow-hidden">
       <div className="max-w-[1600px] mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-10 md:mb-14">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-inter font-bold text-[#113D86] tracking-tight leading-tight">
-            Dr. Deodorant <span className="font-serif italic font-normal text-[#113D86]">in action</span>
+        <div className="text-center mb-10 md:mb-14 px-4 sm:px-0">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-inter font-bold text-[#003286] leading-tight px-4">
+            Freshness,<br className="sm:hidden" /> From Every Angle
           </h2>
-          <p className="text-gray-700 text-sm sm:text-base md:text-xl font-medium mt-2">
-            See it for yourself.
-          </p>
+
         </div>
 
         {/* Outer Carousel Container with Fade Mask & Navigation Arrows */}
         <div className="relative">
           {/* Left Fade Gradient Mask */}
-          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-10 sm:w-16 md:w-24 bg-gradient-to-r from-[#C6EAFA] via-[#C6EAFA]/80 to-transparent z-20" />
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 hidden sm:block w-16 md:w-24 bg-gradient-to-r from-[#EAF5FF] via-[#EAF5FF]/80 to-transparent z-20" />
 
           {/* Right Fade Gradient Mask */}
-          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-10 sm:w-16 md:w-24 bg-gradient-to-l from-[#C6EAFA] via-[#C6EAFA]/80 to-transparent z-20" />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 hidden sm:block w-16 md:w-24 bg-gradient-to-l from-[#EAF5FF] via-[#EAF5FF]/80 to-transparent z-20" />
 
           {/* Left Arrow Button */}
           <button
@@ -280,7 +288,7 @@ export default function ReelsActionSection({
           {/* Horizontal Reels Container: Start-aligned so Video #1 is 100% visible on left */}
           <div
             ref={scrollContainerRef}
-            className="flex items-center gap-4 sm:gap-6 lg:gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none py-4 px-6 sm:px-12 md:px-16 justify-start scroll-smooth"
+            className="flex items-center gap-4 sm:gap-6 lg:gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none py-4 px-6 sm:px-12 md:px-16 scroll-pl-6 sm:scroll-pl-12 justify-start scroll-smooth"
           >
             {reels.map((reel) => (
               <SingleReelCard
@@ -351,7 +359,7 @@ function SingleReelCard({
   return (
     <div
       onClick={onCardClick}
-      className="relative flex-shrink-0 w-[78vw] sm:w-[280px] md:w-[300px] lg:w-[310px] xl:w-[330px] h-[480px] lg:h-[540px] xl:h-[570px] aspect-[9/16] lg:aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl bg-black group snap-center border-4 border-white/50 cursor-pointer select-none transition-transform duration-300 hover:scale-[1.02]"
+      className="relative flex-shrink-0 w-[80vw] sm:w-[280px] md:w-[300px] lg:w-[310px] xl:w-[330px] h-[480px] lg:h-[540px] xl:h-[570px] aspect-[9/16] lg:aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl bg-black group snap-start sm:snap-center border-4 border-[#EAF5FF] cursor-pointer select-none transition-transform duration-300 hover:scale-[1.02]"
     >
       {/* Video Element */}
       {reel.videoUrl ? (

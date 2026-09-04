@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 import { useRevealOnScroll } from "@/hooks/use-reveal";
 import type { BlogPost } from "@/lib/blog-posts";
@@ -31,7 +32,12 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
         />
         <div className="absolute inset-0 bg-black/45" />
 
-        <div className="relative z-10 flex flex-col items-center text-center px-4 md:px-6 mt-10 md:mt-16">
+        <motion.div
+          initial={{ opacity: 0, y: 35 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="relative z-10 flex flex-col items-center text-center px-4 md:px-6 mt-10 md:mt-16"
+        >
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-4 md:mb-6">
             <span className="text-[#F5FBFF]/80 text-[11px] sm:text-sm font-medium tracking-wider">{post.date}</span>
             <span className="bg-[#F5FBFF]/20 backdrop-blur-md text-[#F5FBFF] px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium">
@@ -42,10 +48,10 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
           <h1 className="text-2xl sm:text-3xl md:text-6xl lg:text-7xl font-inter text-[#F5FBFF] max-w-5xl leading-tight mb-4 md:mb-6">
             {post.title}
           </h1>
-          <p className="translate-y-6 text-xs sm:text-base md:text-lg text-[#F5FBFF]/90 font-medium max-w-2xl">
+          <p className="text-xs sm:text-base md:text-lg text-[#F5FBFF]/90 font-medium max-w-2xl">
             {post.excerpt}
           </p>
-        </div>
+        </motion.div>
       </div>
 
       <div className="max-w-4xl mx-auto px-5 md:px-8 pt-12 md:pt-20">
@@ -71,13 +77,19 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
               </div>
 
               {section.image ? (
-                <div>
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ duration: 0.75, ease: [0.21, 0.47, 0.32, 0.98] }}
+                  className="overflow-hidden rounded-2xl md:rounded-3xl"
+                >
                   <img
                     src={section.image.src}
                     alt={section.image.alt}
                     className="w-full h-[240px] sm:h-[350px] md:h-auto rounded-2xl md:rounded-3xl shadow-sm object-cover"
                   />
-                </div>
+                </motion.div>
               ) : null}
 
               <div className="space-y-4 md:space-y-5 text-[13px] sm:text-base md:text-lg text-gray-700 leading-relaxed font-light">

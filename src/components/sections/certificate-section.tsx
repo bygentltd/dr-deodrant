@@ -1,5 +1,7 @@
+"use client";
+
 import Image from "next/image";
-import { Check } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function CertificateSection() {
     return (
@@ -7,7 +9,13 @@ export function CertificateSection() {
             <div className="container mx-auto px-4 md:px-6 max-w-6xl">
                 <div className="flex flex-col md:flex-row items-center gap-8 sm:gap-12 md:gap-16">
                     {/* Left: Certificate Image */}
-                    <div className="w-full md:w-1/2 flex justify-center order-1 px-4 sm:px-0">
+                    <motion.div
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-60px" }}
+                        transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
+                        className="w-full md:w-1/2 flex justify-center order-1 px-4 sm:px-0"
+                    >
                         <div className="relative w-full max-w-[260px] sm:max-w-[320px] md:max-w-lg aspect-[4/5] sm:aspect-[3/4] md:aspect-[2/3]">
                             <Image
                                 src="/Certificate.webp"
@@ -17,10 +25,16 @@ export function CertificateSection() {
                                 sizes="(max-width: 768px) 100vw, 50vw"
                             />
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Right: Content */}
-                    <div className="w-full md:w-1/2 space-y-5 sm:space-y-6 order-2 text-center md:text-left px-2 sm:px-0">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-60px" }}
+                        transition={{ duration: 0.7, delay: 0.15, ease: [0.21, 0.47, 0.32, 0.98] }}
+                        className="w-full md:w-1/2 space-y-5 sm:space-y-6 order-2 text-center md:text-left px-2 sm:px-0"
+                    >
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#003286] tracking-tight">
                             We didn't just claim it.<br /> We got it certified.
                         </h2>
@@ -38,7 +52,7 @@ export function CertificateSection() {
                                 Trust DR.DEODRANT. <br /> Trust What's Inside.
                             </p>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

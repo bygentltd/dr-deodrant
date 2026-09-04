@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { FlowButton } from "./ui/flow-button";
 import { Menu, ShoppingBagIcon, X, User, ArrowRight } from "lucide-react";
+import AnnouncementBar from "./AnnouncementBar";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -66,9 +67,15 @@ export default function Header() {
   const iconClasses = "text-[#203856]/80 hover:text-[#203856]";
 
   return (
-    <header ref={headerRef} className="absolute top-0 left-0 right-0 z-50 px-4 md:px-8 flex justify-center pointer-events-none">
-      {/* 👇 ADDED 'relative' TO NAV SO THE ABSOLUTE LOGO STAYS INSIDE IT */}
-      <nav className={cn("relative pointer-events-auto mt-6 flex items-center justify-between w-full max-w-[1400px] h-[60px] px-6 md:px-8 rounded-full transition-all duration-300", surfaceClasses)}>
+    <header ref={headerRef} className="absolute top-0 left-0 right-0 z-50 flex flex-col items-center pointer-events-none">
+      {/* Top Announcement Bar (Non-sticky, slides left-to-right automatically) */}
+      <div className="w-full pointer-events-auto">
+        <AnnouncementBar />
+      </div>
+
+      {/* Floating Header Nav Pill */}
+      <div className="w-full px-4 md:px-8 flex justify-center">
+        <nav className={cn("relative pointer-events-auto mt-4 md:mt-5 flex items-center justify-between w-full max-w-[1400px] h-[60px] px-6 md:px-8 rounded-full transition-all duration-300", surfaceClasses)}>
 
         {/* Mobile Menu Toggle (Left on mobile & tablet, hidden on desktop) */}
         <div className="flex lg:hidden items-center z-10">
@@ -123,7 +130,7 @@ export default function Header() {
         </div>
 
         {/* 👇 CENTER LOGO - NOW ABSOLUTELY POSITIONED FOR PERFECT CENTERING */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-[55%] md:-translate-x-1/2 -translate-y-1/2 flex items-center justify-center z-10">
+        <div className="absolute left-1/2 top-1/2 -translate-x-[60%] md:-translate-x-1/2 -translate-y-1/2 flex items-center justify-center z-10">
           <Link href="/">
             {/* 👇 CHANGED h-15 to h-10 (mobile) and lg:h-12 (desktop) so Tailwind recognizes it */}
             <img src="/DeDeo-logo.svg" alt="Dr. Deodrant Logo" className="h-11 md:h-13 lg:h-14 w-auto hover:opacity-90 transition-opacity flex items-center justify0ce" />
@@ -159,10 +166,11 @@ export default function Header() {
         </div>
 
       </nav>
+      </div>
 
       {/* Mobile Dropdown Menu Drawer */}
       <div className={cn(
-        "absolute top-24 left-4 right-4 backdrop-blur-2xl border rounded-3xl p-6 flex flex-col gap-6 lg:hidden z-50 glass-nav transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] origin-top",
+        "absolute top-28 left-4 right-4 backdrop-blur-2xl border rounded-3xl p-6 flex flex-col gap-6 lg:hidden z-50 glass-nav transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] origin-top",
         "bg-[#F5FBFF]/12 border-[#F5FBFF]/15",
         isOpen ? "opacity-100 translate-y-0 pointer-events-auto shadow-2xl scale-100" : "opacity-0 -translate-y-4 pointer-events-none shadow-none scale-95"
       )}>

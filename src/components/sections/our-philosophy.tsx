@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function OurPhilosophy() {
   const principles = [
     {
@@ -54,12 +58,19 @@ export default function OurPhilosophy() {
         {/* Bottom Grid: Core Principles */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-16 philosophy-grid">
           {principles.map((principle, idx) => (
-            <div key={principle.number} className="flex flex-col philosophy-card">
-              <div className="mb-5 md:mb-6">
+            <motion.div
+              key={principle.number}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.7, delay: idx * 0.15, ease: [0.21, 0.47, 0.32, 0.98] }}
+              className="flex flex-col philosophy-card"
+            >
+              <div className="mb-5 md:mb-6 overflow-hidden rounded-xl">
                 <img
                   src={images[idx]}
                   alt={principle.title}
-                  className="w-full aspect-square rounded-xl object-cover philosophy-image"
+                  className="w-full aspect-square object-cover philosophy-image"
                 />
               </div>
               <div className="w-full">
@@ -77,7 +88,7 @@ export default function OurPhilosophy() {
                   {principle.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

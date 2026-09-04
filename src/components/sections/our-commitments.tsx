@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function OurCommitments() {
   const commitments = [
     {
@@ -39,9 +43,15 @@ export default function OurCommitments() {
 
         {/* Commitments Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
-          {commitments.map((item) => (
-            <div key={item.id} className="flex flex-col group cursor-pointer">
-              
+          {commitments.map((item, idx) => (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.7, delay: idx * 0.15, ease: [0.21, 0.47, 0.32, 0.98] }}
+              className="flex flex-col group cursor-pointer"
+            >
               {/* Image Container with Hover Zoom Effect */}
               <div className="w-full aspect-[4/5] md:aspect-square lg:aspect-[4/5] overflow-hidden rounded-2xl md:rounded-[2rem] mb-5 md:mb-8 bg-[#e4e7dd]">
                 <img
@@ -67,8 +77,7 @@ export default function OurCommitments() {
                   {item.description}
                 </p>
               </div>
-              
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

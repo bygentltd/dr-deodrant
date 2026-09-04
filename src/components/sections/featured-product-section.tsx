@@ -199,7 +199,7 @@ export function FeaturedProductSection() {
     </svg>
 
     <span class="font-medium">
-      Trusted by 1000+ Happy Customers
+      Trusted by 10000+ Happy Customers
     </span>
   </div>
 </div>
