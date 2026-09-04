@@ -324,6 +324,7 @@ function SingleReelCard({
   const videoRef = useRef<HTMLVideoElement>(null);
   const hasSoundRef = useRef(hasSound);
   const onMuteSelfRef = useRef(onMuteSelf);
+  const isPlayingRef = useRef(false);
 
   // Keep refs synced with latest prop values
   useEffect(() => {
@@ -340,7 +341,7 @@ function SingleReelCard({
     if (!video) return;
 
     video.muted = !hasSound;
-    if (hasSound) {
+    if (hasSound && video.paused) {
       video.play().catch(() => {});
     }
   }, [hasSound]);
@@ -355,17 +356,28 @@ function SingleReelCard({
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             video.muted = !hasSoundRef.current;
-            video.play().catch(() => {});
+            if (video.paused && !isPlayingRef.current) {
+              isPlayingRef.current = true;
+              video
+                .play()
+                .catch(() => {})
+                .finally(() => {
+                  isPlayingRef.current = false;
+                });
+            }
           } else {
             // Immediately mute video and reset sound state when scrolled out of view
             video.muted = true;
+            if (!video.paused) {
+              video.pause();
+            }
             if (hasSoundRef.current) {
               onMuteSelfRef.current();
             }
           }
         });
       },
-      { threshold: 0.25 }
+      { threshold: 0.3 }
     );
 
     observer.observe(video);
@@ -375,7 +387,8 @@ function SingleReelCard({
   return (
     <div
       onClick={onCardClick}
-      className="relative flex-shrink-0 w-[80vw] sm:w-[280px] md:w-[300px] lg:w-[310px] xl:w-[330px] h-[480px] lg:h-[540px] xl:h-[570px] rounded-[2rem] overflow-hidden shadow-2xl bg-black group snap-start sm:snap-center border-4 border-[#EAF5FF] cursor-pointer select-none transition-transform duration-300 hover:scale-[1.02]"
+      className="relative flex-shrink-0 w-[80vw] sm:w-[280px] md:w-[300px] lg:w-[310px] xl:w-[330px] h-[480px] lg:h-[540px] xl:h-[570px] min-h-[480px] rounded-[2rem] overflow-hidden shadow-2xl bg-black group snap-start sm:snap-center border-4 border-[#EAF5FF] cursor-pointer select-none transition-transform duration-300 hover:scale-[1.02]"
+      style={{ contain: "layout size" }}
     >
       {/* Video Element */}
       {reel.videoUrl && (
@@ -386,28 +399,25 @@ function SingleReelCard({
           loop
           playsInline
           autoPlay
-          className="w-full h-full object-cover pointer-events-none"
+          preload="metadata"
+          className="w-full h-full object-cover pointer-events-none absolute inset-0"
         />
       )}
 
       {/* Sound Status Indicator Badge */}
-      {hasSound && <div className="absolute top-4 right-4 z-10">
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            onCardClick();
-          }}
-          className="flex items-center gap-1.5 bg-black/60 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-white/20 shadow-md hover:bg-black/80 transition-all"
-        >
-          {hasSound && (
-            <>
-              <Volume2 size={15} className="text-blue-400 animate-pulse" />
-            </>
-          )}
-        </button>
-      </div>}
-
-
+      {hasSound && (
+        <div className="absolute top-4 right-4 z-10">
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onCardClick();
+            }}
+            className="flex items-center gap-1.5 bg-black/60 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-white/20 shadow-md hover:bg-black/80 transition-all"
+          >
+            <Volume2 size={15} className="text-blue-400 animate-pulse" />
+          </button>
+        </div>
+      )}
 
       {/* Bottom Product Bar (Navigates to Product Page on Click) */}
       <Link
