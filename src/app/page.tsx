@@ -29,16 +29,16 @@ export default function Home() {
         <StatsSection />
         <FeaturedProductSection />
         {/* Desktop View */}
+        {/* Dynamic Mobile Responsive Ingredients Section */}
+        <PureIngredientsSection />
         <div className="hidden md:block">
           <ImageSectionComp src="/HOME_21.webp" />
         </div>
 
-        {/* Dynamic Mobile Responsive Ingredients Section */}
-        <PureIngredientsSection />
-
         <div className="hidden md:block">
           <ImageSectionComp src="/HOME_HOW.webp" />
         </div>
+
 
         {/* Mobile View */}
         <div className="block md:hidden">
