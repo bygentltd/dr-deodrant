@@ -324,9 +324,7 @@ function SingleReelCard({
   const videoRef = useRef<HTMLVideoElement>(null);
   const hasSoundRef = useRef(hasSound);
   const onMuteSelfRef = useRef(onMuteSelf);
-  const isPlayingRef = useRef(false);
 
-  // Keep refs synced with latest prop values
   useEffect(() => {
     hasSoundRef.current = hasSound;
   }, [hasSound]);
@@ -335,18 +333,18 @@ function SingleReelCard({
     onMuteSelfRef.current = onMuteSelf;
   }, [onMuteSelf]);
 
-  // Direct sync of video muted property & playback when sound state changes
+  // Handle Mute / Unmute state changes cleanly
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
     video.muted = !hasSound;
-    if (hasSound && video.paused) {
+    if (hasSound) {
       video.play().catch(() => {});
     }
   }, [hasSound]);
 
-  // Handle continuous play & AUTOMATIC MUTING as soon as card leaves viewport
+  // Robust Intersection Observer to play/pause without triggering layout shifts
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
@@ -356,28 +354,18 @@ function SingleReelCard({
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             video.muted = !hasSoundRef.current;
-            if (video.paused && !isPlayingRef.current) {
-              isPlayingRef.current = true;
-              video
-                .play()
-                .catch(() => {})
-                .finally(() => {
-                  isPlayingRef.current = false;
-                });
-            }
+            video.play().catch(() => {});
           } else {
-            // Immediately mute video and reset sound state when scrolled out of view
+            video.pause();
+            video.currentTime = 0; // Reset frame to prevent Mac memory/layout caching bugs
             video.muted = true;
-            if (!video.paused) {
-              video.pause();
-            }
             if (hasSoundRef.current) {
               onMuteSelfRef.current();
             }
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     );
 
     observer.observe(video);
@@ -387,10 +375,10 @@ function SingleReelCard({
   return (
     <div
       onClick={onCardClick}
-      className="relative flex-shrink-0 w-[80vw] sm:w-[280px] md:w-[300px] lg:w-[310px] xl:w-[330px] h-[480px] lg:h-[540px] xl:h-[570px] min-h-[480px] rounded-[2rem] overflow-hidden shadow-2xl bg-black group snap-start sm:snap-center border-4 border-[#EAF5FF] cursor-pointer select-none transition-transform duration-300 hover:scale-[1.02]"
-      style={{ contain: "layout size" }}
+      className="relative flex-shrink-0 w-[80vw] sm:w-[280px] md:w-[300px] lg:w-[310px] xl:w-[330px] h-[480px] lg:h-[540px] xl:h-[570px] rounded-[2rem] overflow-hidden shadow-2xl bg-black group snap-start sm:snap-center border-4 border-[#EAF5FF] cursor-pointer select-none transition-transform duration-300 hover:scale-[1.02]"
+      style={{ transform: "translateZ(0)" }}
     >
-      {/* Video Element */}
+      {/* Video Element - NOTE: autoPlay attribute is completely removed */}
       {reel.videoUrl && (
         <video
           ref={videoRef}
@@ -398,8 +386,7 @@ function SingleReelCard({
           muted={!hasSound}
           loop
           playsInline
-          autoPlay
-          preload="metadata"
+          preload="auto"
           className="w-full h-full object-cover pointer-events-none absolute inset-0"
         />
       )}
