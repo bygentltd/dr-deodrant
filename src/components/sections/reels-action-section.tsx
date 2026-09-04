@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import { Volume2 } from "lucide-react";
 
@@ -221,9 +221,13 @@ export default function ReelsActionSection({
   }, [domain, storefrontAccessToken]);
 
   // Handle clicking a card to un-mute its audio and mute all others
-  const toggleSound = (reelId: string) => {
+  const toggleSound = useCallback((reelId: string) => {
     setActiveSoundId((prev) => (prev === reelId ? null : reelId));
-  };
+  }, []);
+
+  const handleMuteSelf = useCallback(() => {
+    setActiveSoundId(null);
+  }, []);
 
   // Horizontal Scroll Navigation Controls (Loops back to start at final reel)
   const scrollLeft = () => {
@@ -296,7 +300,7 @@ export default function ReelsActionSection({
                 reel={reel}
                 hasSound={activeSoundId === reel.id}
                 onCardClick={() => toggleSound(reel.id)}
-                onMuteSelf={() => setActiveSoundId(null)}
+                onMuteSelf={handleMuteSelf}
               />
             ))}
           </div>
@@ -318,13 +322,27 @@ function SingleReelCard({
   onMuteSelf: () => void;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const hasSoundRef = useRef(hasSound);
+  const onMuteSelfRef = useRef(onMuteSelf);
 
-  // Guarantee strictly muted DOM property immediately on mount & when sound state changes
+  // Keep refs synced with latest prop values
+  useEffect(() => {
+    hasSoundRef.current = hasSound;
+  }, [hasSound]);
+
+  useEffect(() => {
+    onMuteSelfRef.current = onMuteSelf;
+  }, [onMuteSelf]);
+
+  // Direct sync of video muted property & playback when sound state changes
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
     video.muted = !hasSound;
+    if (hasSound) {
+      video.play().catch(() => {});
+    }
   }, [hasSound]);
 
   // Handle continuous play & AUTOMATIC MUTING as soon as card leaves viewport
@@ -332,19 +350,17 @@ function SingleReelCard({
     const video = videoRef.current;
     if (!video) return;
 
-    video.muted = !hasSound;
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            video.muted = !hasSound;
-            video.play().catch(() => { });
+            video.muted = !hasSoundRef.current;
+            video.play().catch(() => {});
           } else {
             // Immediately mute video and reset sound state when scrolled out of view
             video.muted = true;
-            if (hasSound) {
-              onMuteSelf();
+            if (hasSoundRef.current) {
+              onMuteSelfRef.current();
             }
           }
         });
@@ -354,12 +370,12 @@ function SingleReelCard({
 
     observer.observe(video);
     return () => observer.disconnect();
-  }, [hasSound, onMuteSelf]);
+  }, []);
 
   return (
     <div
       onClick={onCardClick}
-      className="relative flex-shrink-0 w-[80vw] sm:w-[280px] md:w-[300px] lg:w-[310px] xl:w-[330px] h-[480px] lg:h-[540px] xl:h-[570px] aspect-[9/16] lg:aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl bg-black group snap-start sm:snap-center border-4 border-[#EAF5FF] cursor-pointer select-none transition-transform duration-300 hover:scale-[1.02]"
+      className="relative flex-shrink-0 w-[80vw] sm:w-[280px] md:w-[300px] lg:w-[310px] xl:w-[330px] h-[480px] lg:h-[540px] xl:h-[570px] rounded-[2rem] overflow-hidden shadow-2xl bg-black group snap-start sm:snap-center border-4 border-[#EAF5FF] cursor-pointer select-none transition-transform duration-300 hover:scale-[1.02]"
     >
       {/* Video Element */}
       {reel.videoUrl && (
