@@ -70,7 +70,7 @@ const FALLBACK_REELS: ReelCardData[] = [
     id: "reel-aloe-vera",
     title: "Aloe Vera Roll-On",
     price: "Rs. 699.00",
-    videoUrl: "",
+    videoUrl: "/video/Untitled.mp4",
     productImage: "/Step_2.webp",
     productHandle: "aloe-vera-deodorant",
   },
@@ -78,7 +78,7 @@ const FALLBACK_REELS: ReelCardData[] = [
     id: "reel-natural",
     title: "Natural Crystal",
     price: "Rs. 699.00",
-    videoUrl: "",
+    videoUrl: "/video/Untitled.mp4",
     productImage: "/Step_1.webp",
     productHandle: "natural-deodorant",
   },
@@ -86,7 +86,7 @@ const FALLBACK_REELS: ReelCardData[] = [
     id: "reel-turmeric",
     title: "Turmeric Bright",
     price: "Rs. 699.00",
-    videoUrl: "",
+    videoUrl: "/video/Untitled.mp4",
     productImage: "/Result_1.webp",
     productHandle: "turmeric-deodorant",
   },
@@ -94,7 +94,7 @@ const FALLBACK_REELS: ReelCardData[] = [
     id: "reel-charcoal",
     title: "Charcoal Pure",
     price: "Rs. 699.00",
-    videoUrl: "",
+    videoUrl: "/video/Untitled.mp4",
     productImage: "/Step_2.webp",
     productHandle: "charcoal-deodorant",
   },
@@ -362,7 +362,7 @@ function SingleReelCard({
       className="relative flex-shrink-0 w-[80vw] sm:w-[280px] md:w-[300px] lg:w-[310px] xl:w-[330px] h-[480px] lg:h-[540px] xl:h-[570px] aspect-[9/16] lg:aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl bg-black group snap-start sm:snap-center border-4 border-[#EAF5FF] cursor-pointer select-none transition-transform duration-300 hover:scale-[1.02]"
     >
       {/* Video Element */}
-      {reel.videoUrl ? (
+      {reel.videoUrl && (
         <video
           ref={videoRef}
           src={reel.videoUrl}
@@ -370,12 +370,6 @@ function SingleReelCard({
           loop
           playsInline
           autoPlay
-          className="w-full h-full object-cover pointer-events-none"
-        />
-      ) : (
-        <img
-          src={reel.productImage}
-          alt={reel.title}
           className="w-full h-full object-cover pointer-events-none"
         />
       )}

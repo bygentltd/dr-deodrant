@@ -42,9 +42,9 @@ export default function AnnouncementBar({
     <div
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
-      className="w-full bg-[#003286] text-white py-2 px-4 overflow-hidden relative z-40 select-none shadow-sm"
+      className="w-full bg-[#003286] text-white py-1 px-3 overflow-hidden relative z-40 select-none shadow-sm"
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-center h-5 sm:h-6 overflow-hidden">
+      <div className="max-w-7xl mx-auto flex items-center justify-center h-3.5 sm:h-4 overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             key={index}
@@ -52,7 +52,7 @@ export default function AnnouncementBar({
             animate={{ x: "0%", opacity: 1 }}
             exit={{ x: "-100%", opacity: 0 }}
             transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
-            className="text-center font-inter text-xs sm:text-sm font-medium tracking-wide text-white/95 truncate"
+            className="text-center font-inter text-[10px] sm:text-[11px] font-medium tracking-normal text-white/95 truncate"
           >
             {announcements[index]}
           </motion.div>

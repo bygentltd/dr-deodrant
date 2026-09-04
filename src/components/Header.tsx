@@ -75,7 +75,7 @@ export default function Header() {
 
       {/* Floating Header Nav Pill */}
       <div className="w-full px-4 md:px-8 flex justify-center">
-        <nav className={cn("relative pointer-events-auto mt-4 md:mt-5 flex items-center justify-between w-full max-w-[1400px] h-[60px] px-6 md:px-8 rounded-full transition-all duration-300", surfaceClasses)}>
+        <nav className={cn("relative pointer-events-auto mt-3 md:mt-4 flex items-center justify-between w-full max-w-[1400px] h-[60px] px-6 md:px-8 rounded-full transition-all duration-300", surfaceClasses)}>
 
         {/* Mobile Menu Toggle (Left on mobile & tablet, hidden on desktop) */}
         <div className="flex lg:hidden items-center z-10">
@@ -170,7 +170,7 @@ export default function Header() {
 
       {/* Mobile Dropdown Menu Drawer */}
       <div className={cn(
-        "absolute top-28 left-4 right-4 backdrop-blur-2xl border rounded-3xl p-6 flex flex-col gap-6 lg:hidden z-50 glass-nav transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] origin-top",
+        "absolute top-24 left-4 right-4 backdrop-blur-2xl border rounded-3xl p-6 flex flex-col gap-6 lg:hidden z-50 glass-nav transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] origin-top",
         "bg-[#F5FBFF]/12 border-[#F5FBFF]/15",
         isOpen ? "opacity-100 translate-y-0 pointer-events-auto shadow-2xl scale-100" : "opacity-0 -translate-y-4 pointer-events-none shadow-none scale-95"
       )}>
