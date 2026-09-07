@@ -375,7 +375,7 @@ function SingleReelCard({
   return (
     <div
       onClick={onCardClick}
-      className="relative flex-shrink-0 w-[80vw] sm:w-[280px] md:w-[300px] lg:w-[310px] xl:w-[330px] h-[480px] lg:h-[540px] xl:h-[570px] rounded-[2rem] overflow-hidden shadow-2xl bg-black group snap-start sm:snap-center border-4 border-[#EAF5FF] cursor-pointer select-none transition-transform duration-300 hover:scale-[1.02]"
+      className="relative flex-shrink-0 w-[80vw] sm:w-[280px] md:w-[300px] lg:w-[310px] xl:w-[330px] h-[480px] lg:h-[540px] xl:h-[570px] aspect-[9/16] lg:aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl bg-black group snap-start sm:snap-center border-4 border-[#EAF5FF] cursor-pointer select-none transition-transform duration-300 hover:scale-[1.02] [transform:translateZ(0)]"
       style={{ transform: "translateZ(0)" }}
     >
       {/* Video Element - NOTE: autoPlay attribute is completely removed */}

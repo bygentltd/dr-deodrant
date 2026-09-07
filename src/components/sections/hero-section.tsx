@@ -96,20 +96,24 @@ export function HeroSection() {
         {heroSlides.map((slide, idx) => (
           <div
             key={idx}
-            className={`carousel-slide absolute inset-0 ${idx === currentHeroSlide ? "active" : "opacity-0"
+            className={`carousel-slide absolute inset-0 ${idx === currentHeroSlide ? "active" : "opacity-0 pointer-events-none"
               } transition-opacity duration-1000`}
           >
             {/* Desktop Image */}
             <img
               alt={`Hero slide ${idx + 1}`}
-              className="hidden xl:block w-full h-full object-cover ken-burns"
+              className={`hidden xl:block w-full h-full object-cover ${idx === currentHeroSlide ? "ken-burns" : ""}`}
               src={slide.src}
+              loading={idx === 0 ? "eager" : "lazy"}
+              decoding="async"
             />
             {/* Mobile & iPad Portrait Image */}
             <img
               alt={`Hero slide ${idx + 1} portrait`}
-              className="block xl:hidden w-full h-full object-cover ken-burns"
+              className={`block xl:hidden w-full h-full object-cover ${idx === currentHeroSlide ? "ken-burns" : ""}`}
               src={heroSlidesVertical[idx].src}
+              loading={idx === 0 ? "eager" : "lazy"}
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#000000]/10 via-[#000000]/10 to-[#000000]/10 z-10" />
           </div>

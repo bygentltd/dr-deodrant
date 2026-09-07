@@ -207,6 +207,8 @@
   .glass-nav {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    transform: translateZ(0);
+    will-change: transform;
   }
 
   .bento-hover {
