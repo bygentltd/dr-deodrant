@@ -64,6 +64,8 @@ const ImageCarousel = ({ images, title, subtitle, bgColor }: { images: string[];
             key={index}
             src={img}
             alt={`Slide ${index}`}
+            loading="lazy"
+            decoding="async"
             className="w-[85vw] h-auto flex-shrink-0 object-cover rounded-3xl shadow-sm"
           />
         ))}

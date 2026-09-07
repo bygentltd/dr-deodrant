@@ -7,7 +7,7 @@ export function FixedHeroSection() {
 
   return (
     <section
-      className="relative flex items-center justify-center w-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] bg-cover bg-center bg-no-repeat bg-scroll lg:bg-fixed"
+      className="relative flex items-center justify-center w-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] bg-cover bg-center bg-no-repeat bg-scroll"
       // Replace this URL with your actual image path
       style={{ backgroundImage: "url('/fixed_bg.webp')" }}
     >

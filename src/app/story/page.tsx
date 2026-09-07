@@ -15,12 +15,11 @@ export default function StoryPage() {
   return (
     <div className="w-full">
       <TheBeginning />
-      <OurStoryFixed/>
-      <OurPhilosophy/>
-      <ReelsActionSection />
-      <MeetTheFounders/>
-      <OurProcess/>
-      <OurCommitments/>
+      <OurStoryFixed />
+      <OurPhilosophy />
+      <MeetTheFounders />
+      <OurProcess />
+      <OurCommitments />
     </div>
   );
 }

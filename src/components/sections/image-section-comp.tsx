@@ -15,6 +15,8 @@ export default function ImageSectionComp({
         <img
           src={src}
           alt={alt}
+          loading="lazy"
+          decoding="async"
           className="w-full h-auto object-cover"
         />
       </div>
