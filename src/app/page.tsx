@@ -35,7 +35,7 @@ export default function Home() {
         <StatsSection />
         <FeaturedProductSection />
         {/* Desktop View */}
-        {/* <div className="hidden md:block">
+        <div className="hidden md:block">
           <ImageSectionComp src="/HOME_21.webp" />
           <div className="relative">
             <ImageSectionComp src="/Home-Ing.webp" />
@@ -51,7 +51,7 @@ export default function Home() {
             </Link>
           </div>
           <ImageSectionComp src="/HOME_HOW.webp" />
-        </div> */}
+        </div>
 
         {/* Mobile View */}
         <div className="block md:hidden">

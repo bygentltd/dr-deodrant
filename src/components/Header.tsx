@@ -11,7 +11,6 @@ import AnnouncementBar from "./AnnouncementBar";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isHeroSurface, setIsHeroSurface] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
   const headerRef = useRef<HTMLElement | null>(null);
@@ -23,45 +22,6 @@ export default function Header() {
     { name: "Blog", href: "/blog" },
     { name: "Support", href: "/contact" },
   ];
-
-  const openCart = () => {
-    const cart = document.getElementById('main-cart') as any;
-    if (cart && cart.showModal) cart.showModal();
-  };
-
-  useEffect(() => {
-    const heroSection = document.getElementById("hero-section");
-
-    if (!heroSection || pathname !== "/") {
-      setIsHeroSurface(false);
-      return;
-    }
-
-    let frameId = 0;
-
-    const updateSurfaceState = () => {
-      const headerBottom = headerRef.current?.getBoundingClientRect().bottom ?? 0;
-      const heroBottom = heroSection.getBoundingClientRect().bottom;
-
-      setIsHeroSurface(heroBottom > headerBottom + 8);
-    };
-
-    const scheduleUpdate = () => {
-      window.cancelAnimationFrame(frameId);
-      frameId = window.requestAnimationFrame(updateSurfaceState);
-    };
-
-    updateSurfaceState();
-    window.addEventListener("scroll", scheduleUpdate, { passive: true });
-    window.addEventListener("resize", scheduleUpdate);
-
-    return () => {
-      window.cancelAnimationFrame(frameId);
-      window.removeEventListener("scroll", scheduleUpdate);
-      window.removeEventListener("resize", scheduleUpdate);
-    };
-  }, [pathname]);
-
   const surfaceClasses = "bg-[#F5FBFF]/12 text-[#203856] border-[#F5FBFF]/20 shadow-2xl glass-nav backdrop-blur-2xl";
   const linkClasses = "text-[#203856]/90 hover:text-[#203856]";
   const iconClasses = "text-[#203856]/80 hover:text-[#203856]";

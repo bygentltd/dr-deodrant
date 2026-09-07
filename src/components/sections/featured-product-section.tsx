@@ -29,7 +29,8 @@ export function FeaturedProductSection() {
       }
     });
 
-    observer.observe(document.body, {
+    const targetNode = document.querySelector("shopify-context") || document.body;
+    observer.observe(targetNode, {
       childList: true,
       subtree: true,
     });
