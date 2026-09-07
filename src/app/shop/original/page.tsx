@@ -6,6 +6,7 @@ import { IngredientShowcase } from "@/components/sections/ingredient-showcase";
 import IngredientsContent from "@/components/sections/ingredients-content";
 import { TestimonialSection } from "@/components/sections/testimonial-section";
 import { FaqSection } from "@/components/sections/faq-section";
+import ReelsActionSection from "@/components/sections/reels-action-section";
 
 export default function Page() {
   useRevealOnScroll();
@@ -498,6 +499,7 @@ export default function Page() {
         </div>
       </section>
       {/* <IngredientShowcase/> */}
+      <ReelsActionSection />
       <IngredientsContent />
       <TestimonialSection />
       <FaqSection />
