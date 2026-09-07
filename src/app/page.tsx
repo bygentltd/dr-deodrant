@@ -35,37 +35,7 @@ export default function Home() {
         <StatsSection />
         <FeaturedProductSection />
         {/* Desktop View */}
-        <div className="hidden md:block">
-          <ImageSectionComp src="/HOME_21.webp" />
-          <div className="relative">
-            <ImageSectionComp src="/Home-Ing.webp" />
-            <Link href="/shop/original" className="absolute bottom-[2%] left-[9%] md:-translate-x-4 md:translate-y-2 md:bottom-[11%] md:left-[7%] xl:bottom-[10%] xl:left-[11%] z-20">
-              <FlowButton
-                text="Buy Now"
-                className="scale-110 md:scale-110 lg:scale-125 xl:scale-150 origin-bottom-left"
-                defaultBgColor="bg-[#203652]"
-                defaultTextColor="text-white"
-                circleColor="bg-[#2C476B]"
-                hoverTextColor="group-hover:text-white"
-              />
-            </Link>
-          </div>
-          <ImageSectionComp src="/HOME_HOW.webp" />
-        </div>
 
-        {/* Mobile View */}
-        <div className="block md:hidden">
-          <ImageCarousel
-            images={["/Result_1.webp", "/Result_2.webp", "/Result_3.webp"]}
-            title="Visible Results, Real Confidence"
-            subtitle="Brighter, smoother underarms in just 21 days"
-            bgColor="#eaf5ff"
-          />
-          <ImageCarousel
-            images={["/HTU_1.webp", "/HTU_2.webp", "/HTU_3.webp"]}
-            title="How To Use?"
-          />
-        </div>
         {/* <MajorFeaturesSection/>
         <BentoGridSection /> */}
         <ServicesSection />
