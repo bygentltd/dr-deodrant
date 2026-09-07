@@ -4,6 +4,7 @@ import OurCommitments from "@/components/sections/our-commitments";
 import OurPhilosophy from "@/components/sections/our-philosophy";
 import OurProcess from "@/components/sections/our-process";
 import OurStoryFixed from "@/components/sections/our-story-fixed";
+import ReelsActionSection from "@/components/sections/reels-action-section";
 import TheBeginning from "@/components/sections/the-beginning";
 import { useEffect } from "react";
 
@@ -16,6 +17,7 @@ export default function StoryPage() {
       <TheBeginning />
       <OurStoryFixed/>
       <OurPhilosophy/>
+      <ReelsActionSection />
       <MeetTheFounders/>
       <OurProcess/>
       <OurCommitments/>
