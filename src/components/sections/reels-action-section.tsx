@@ -229,35 +229,45 @@ export default function ReelsActionSection({
     setActiveSoundId(null);
   }, []);
 
-  // Horizontal Scroll Navigation Controls (Loops back to start at final reel)
-  const scrollLeft = () => {
-    if (scrollContainerRef.current) {
-      const { scrollLeft, clientWidth, scrollWidth } = scrollContainerRef.current;
-      const maxScrollLeft = scrollWidth - clientWidth;
-      if (scrollLeft <= 30) {
-        scrollContainerRef.current.scrollTo({ left: maxScrollLeft, behavior: "smooth" });
-      } else {
-        scrollContainerRef.current.scrollBy({ left: -300, behavior: "smooth" });
-      }
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => Math.min(prevIndex + 1, reels.length - 1));
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0));
+  };
+
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEndHandler = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe && currentIndex < reels.length - 1) {
+      nextSlide();
+    } else if (isRightSwipe && currentIndex > 0) {
+      prevSlide();
     }
   };
 
-  const scrollRight = () => {
-    if (scrollContainerRef.current) {
-      const { scrollLeft, clientWidth, scrollWidth } = scrollContainerRef.current;
-      const maxScrollLeft = scrollWidth - clientWidth;
-      if (scrollLeft >= maxScrollLeft - 50) {
-        scrollContainerRef.current.scrollTo({ left: 0, behavior: "smooth" });
-      } else {
-        const scrollAmount = Math.min(300, maxScrollLeft - scrollLeft);
-        if (scrollAmount <= 15) {
-          scrollContainerRef.current.scrollTo({ left: 0, behavior: "smooth" });
-        } else {
-          scrollContainerRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
-        }
-      }
-    }
-  };
+  const isAtFirst = currentIndex === 0;
+  const isAtLast = currentIndex === reels.length - 1;
 
   return (
     <section className="bg-[#EAF5FF] py-16 md:py-24 px-0 sm:px-6 overflow-hidden">
@@ -271,7 +281,12 @@ export default function ReelsActionSection({
         </div>
 
         {/* Outer Carousel Container with Fade Mask & Navigation Arrows */}
-        <div className="relative">
+        <div
+          className="relative select-none overflow-hidden"
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEndHandler}
+        >
           {/* Left Fade Gradient Mask */}
           <div className="pointer-events-none absolute left-0 top-0 bottom-0 hidden sm:block w-16 md:w-24 bg-gradient-to-r from-[#EAF5FF] via-[#EAF5FF]/80 to-transparent z-20" />
 
@@ -280,26 +295,37 @@ export default function ReelsActionSection({
 
           {/* Left Arrow Button */}
           <button
-            onClick={scrollLeft}
+            onClick={prevSlide}
+            disabled={isAtFirst}
             aria-label="Previous Reels"
-            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-30 bg-black/70 hover:bg-black text-white w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full shadow-2xl backdrop-blur-md transition-all transform active:scale-90 border border-white/20"
+            className={`absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-30 bg-black/70 hover:bg-black text-white w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full shadow-2xl backdrop-blur-md transition-all transform active:scale-90 border border-white/20 ${
+              isAtFirst ? "opacity-0 pointer-events-none" : "opacity-100"
+            }`}
           >
             &#10094;
           </button>
 
           {/* Right Arrow Button */}
           <button
-            onClick={scrollRight}
+            onClick={nextSlide}
+            disabled={isAtLast}
             aria-label="Next Reels"
-            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-30 bg-black/70 hover:bg-black text-white w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full shadow-2xl backdrop-blur-md transition-all transform active:scale-90 border border-white/20"
+            className={`absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-30 bg-black/70 hover:bg-black text-white w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full shadow-2xl backdrop-blur-md transition-all transform active:scale-90 border border-white/20 ${
+              isAtLast ? "opacity-0 pointer-events-none" : "opacity-100"
+            }`}
           >
             &#10095;
           </button>
 
-          {/* Horizontal Reels Container: Start-aligned so Video #1 is 100% visible on left */}
+          {/* Horizontal Reels Container */}
           <div
             ref={scrollContainerRef}
-            className="flex items-center gap-4 sm:gap-6 lg:gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none py-4 px-6 sm:px-12 md:px-16 scroll-px-6 sm:scroll-px-12 justify-start scroll-smooth overscroll-x-contain"
+            className="flex items-center gap-4 sm:gap-6 lg:gap-6 py-4 px-6 sm:px-12 md:px-16 transition-transform duration-500 ease-out"
+            style={{
+              transform: isAtLast
+                ? `translateX(calc(-${currentIndex * 80}vw - ${currentIndex * 1}rem + 20vw - 3rem))`
+                : `translateX(calc(-${currentIndex * 80}vw - ${currentIndex * 1}rem))`,
+            }}
           >
             {reels.map((reel) => (
               <SingleReelCard
@@ -310,8 +336,6 @@ export default function ReelsActionSection({
                 onMuteSelf={handleMuteSelf}
               />
             ))}
-            {/* Trailing spacer element so the last reel card is 100% fully visible without right edge cutoff */}
-            <div className="w-2 sm:w-6 shrink-0" aria-hidden="true" />
           </div>
         </div>
       </div>
@@ -383,6 +407,7 @@ function SingleReelCard({
 
   return (
     <div
+      data-reel-card="true"
       onClick={onCardClick}
       className="relative flex-shrink-0 w-[80vw] sm:w-[280px] md:w-[300px] lg:w-[310px] xl:w-[330px] h-[480px] lg:h-[540px] xl:h-[570px] aspect-[9/16] lg:aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl bg-black group snap-center border-4 border-[#EAF5FF] cursor-pointer select-none transition-transform duration-300 hover:scale-[1.02] [transform:translateZ(0)]"
       style={{ transform: "translateZ(0)" }}
