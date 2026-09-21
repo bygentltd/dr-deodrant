@@ -310,6 +310,8 @@ export default function ReelsActionSection({
                 onMuteSelf={handleMuteSelf}
               />
             ))}
+            {/* Trailing spacer element so the last reel card is 100% fully visible without right edge cutoff */}
+            <div className="w-2 sm:w-6 shrink-0" aria-hidden="true" />
           </div>
         </div>
       </div>

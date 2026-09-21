@@ -2,25 +2,15 @@
 
 import React, { useState } from "react";
 
-const ImageCarousel = ({
-  images,
-  title,
-  subtitle,
-  bgColor,
-}: {
-  images: string[];
-  title?: string;
-  subtitle?: string;
-  bgColor?: string;
-}) => {
+const ImageCarousel = ({ images, title, subtitle, bgColor }: { images: string[]; title?: string; subtitle?: string; bgColor?: string }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => Math.min(prevIndex + 1, images.length - 1));
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0));
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
   const [touchStart, setTouchStart] = useState<number | null>(null);
@@ -43,82 +33,66 @@ const ImageCarousel = ({
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
 
-    if (isLeftSwipe && currentIndex < images.length - 1) {
+    if (isLeftSwipe) {
       nextSlide();
-    } else if (isRightSwipe && currentIndex > 0) {
+    } else if (isRightSwipe) {
       prevSlide();
     }
   };
 
-  const isAtFirst = currentIndex === 0;
-  const isAtLast = currentIndex === images.length - 1;
-
   return (
     <div
-      className="relative w-full overflow-hidden pt-10 pb-20 select-none"
+      className="relative w-full overflow-hidden pt-10 pb-20"
       style={{ backgroundColor: bgColor || "#F5FBFF" }}
       onTouchStart={onTouchStart}
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEndHandler}
     >
       {(title || subtitle) && (
-        <div className="mb-6 text-center px-4">
-          {title && <h1 className="text-2xl font-bold text-[#113D86] sm:text-4xl font-inter">{title}</h1>}
-          {subtitle && <p className="text-gray-600 mt-2 text-sm sm:text-base font-medium">{subtitle}</p>}
+        <div className="mb-6 text-center">
+          {title && <h1 className="text-2xl font-bold text-[#113D86] sm:text-4xl">{title}</h1>}
+          {subtitle && <p className="text-gray-600 mt-2">{subtitle}</p>}
         </div>
       )}
-
-      {/* Image Display Carousel */}
+      {/* Image Display */}
       <div
-        className="flex gap-4 px-6 py-4 transition-transform duration-500 ease-out"
-        style={{ transform: `translateX(calc(-${currentIndex * 80}vw - ${currentIndex * 1}rem))` }}
+        className="flex gap-4 px-4 py-4 transition-transform duration-500 ease-out"
+        style={{ transform: `translateX(calc(-${currentIndex * 85}vw - ${currentIndex} * 1rem))` }}
       >
         {images.map((img, index) => (
           <img
             key={index}
             src={img}
-            alt={`Slide ${index + 1}`}
+            alt={`Slide ${index}`}
             loading="lazy"
             decoding="async"
-            className="w-[80vw] sm:w-[280px] md:w-[320px] h-auto flex-shrink-0 object-cover rounded-3xl shadow-md border-2 border-white/60"
+            className="w-[85vw] h-auto flex-shrink-0 object-cover rounded-3xl shadow-sm"
           />
         ))}
       </div>
 
-      {/* Prev Navigation Button */}
+      {/* Navigation Buttons */}
       <button
         onClick={prevSlide}
-        disabled={isAtFirst}
-        aria-label="Previous Slide"
-        className={`absolute top-1/2 left-3 bg-black/60 text-white w-9 h-9 flex items-center justify-center rounded-full transform -translate-y-1/2 backdrop-blur-md transition-all ${
-          isAtFirst ? "opacity-0 pointer-events-none" : "opacity-100 hover:bg-black/80"
-        }`}
+        className="absolute top-1/2 left-4 bg-black/50 hover:bg-black/70 transition-colors text-white w-10 h-10 flex items-center justify-center rounded-full transform -translate-y-1/2"
       >
         &#10094;
       </button>
-
-      {/* Next Navigation Button */}
       <button
         onClick={nextSlide}
-        disabled={isAtLast}
-        aria-label="Next Slide"
-        className={`absolute top-1/2 right-3 bg-black/60 text-white w-9 h-9 flex items-center justify-center rounded-full transform -translate-y-1/2 backdrop-blur-md transition-all ${
-          isAtLast ? "opacity-0 pointer-events-none" : "opacity-100 hover:bg-black/80"
-        }`}
+        className="absolute top-1/2 right-4 bg-black/50 hover:bg-black/70 transition-colors text-white w-10 h-10 flex items-center justify-center rounded-full transform -translate-y-1/2"
       >
         &#10095;
       </button>
 
-      {/* Dots Indicator */}
-      <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2">
+      {/* Dots indicator */}
+      <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
         {images.map((_, idx) => (
           <button
             key={idx}
             onClick={() => setCurrentIndex(idx)}
-            aria-label={`Go to slide ${idx + 1}`}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              idx === currentIndex ? "w-6 bg-[#113D86]" : "w-2 bg-[#113D86]/30"
-            }`}
+            className={`w-2.5 h-2.5 rounded-full transition-colors ${idx === currentIndex ? "bg-white" : "bg-white/50"
+              }`}
           />
         ))}
       </div>
