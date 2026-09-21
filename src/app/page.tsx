@@ -31,7 +31,9 @@ export default function Home() {
       <div className="relative z-10 -mt-16 md:-mt-28 bg-[#F5FBFF] rounded-t-[3rem] md:rounded-t-[7rem] overflow-hidden">
         <InfiniteCarousel />
         <PhilosophySection />
-        <ReelsActionSection />
+        <div className="md:hidden">
+          <ReelsActionSection />
+        </div>
         <StatsSection />
         <FeaturedProductSection />
         {/* Desktop View */}

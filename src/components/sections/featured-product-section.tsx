@@ -236,7 +236,7 @@ export function FeaturedProductSection() {
     <span class="flex items-center justify-center w-4 h-4 rounded-full bg-[#394481] text-white text-[10px] shrink-0">
       ✓
     </span>
-    <span>One Crystal gives 6 to 8 Months of Freshness</span>
+    <span>One Crystal gives 12 Months of Freshness</span>
   </li>
 
 </ul>
