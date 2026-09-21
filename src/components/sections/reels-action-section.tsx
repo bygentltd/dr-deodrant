@@ -233,10 +233,11 @@ export default function ReelsActionSection({
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
       const { scrollLeft, clientWidth, scrollWidth } = scrollContainerRef.current;
-      if (scrollLeft <= 25) {
-        scrollContainerRef.current.scrollTo({ left: scrollWidth, behavior: "smooth" });
+      const maxScrollLeft = scrollWidth - clientWidth;
+      if (scrollLeft <= 30) {
+        scrollContainerRef.current.scrollTo({ left: maxScrollLeft, behavior: "smooth" });
       } else {
-        scrollContainerRef.current.scrollBy({ left: -320, behavior: "smooth" });
+        scrollContainerRef.current.scrollBy({ left: -300, behavior: "smooth" });
       }
     }
   };
@@ -244,10 +245,16 @@ export default function ReelsActionSection({
   const scrollRight = () => {
     if (scrollContainerRef.current) {
       const { scrollLeft, clientWidth, scrollWidth } = scrollContainerRef.current;
-      if (scrollLeft + clientWidth >= scrollWidth - 25) {
+      const maxScrollLeft = scrollWidth - clientWidth;
+      if (scrollLeft >= maxScrollLeft - 50) {
         scrollContainerRef.current.scrollTo({ left: 0, behavior: "smooth" });
       } else {
-        scrollContainerRef.current.scrollBy({ left: 320, behavior: "smooth" });
+        const scrollAmount = Math.min(300, maxScrollLeft - scrollLeft);
+        if (scrollAmount <= 15) {
+          scrollContainerRef.current.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+          scrollContainerRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        }
       }
     }
   };
@@ -292,7 +299,7 @@ export default function ReelsActionSection({
           {/* Horizontal Reels Container: Start-aligned so Video #1 is 100% visible on left */}
           <div
             ref={scrollContainerRef}
-            className="flex items-center gap-4 sm:gap-6 lg:gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none py-4 px-6 sm:px-12 md:px-16 scroll-pl-6 sm:scroll-pl-12 justify-start scroll-smooth"
+            className="flex items-center gap-4 sm:gap-6 lg:gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none py-4 px-6 sm:px-12 md:px-16 scroll-px-6 sm:scroll-px-12 justify-start scroll-smooth overscroll-x-contain"
           >
             {reels.map((reel) => (
               <SingleReelCard
@@ -375,7 +382,7 @@ function SingleReelCard({
   return (
     <div
       onClick={onCardClick}
-      className="relative flex-shrink-0 w-[80vw] sm:w-[280px] md:w-[300px] lg:w-[310px] xl:w-[330px] h-[480px] lg:h-[540px] xl:h-[570px] aspect-[9/16] lg:aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl bg-black group snap-start sm:snap-center border-4 border-[#EAF5FF] cursor-pointer select-none transition-transform duration-300 hover:scale-[1.02] [transform:translateZ(0)]"
+      className="relative flex-shrink-0 w-[80vw] sm:w-[280px] md:w-[300px] lg:w-[310px] xl:w-[330px] h-[480px] lg:h-[540px] xl:h-[570px] aspect-[9/16] lg:aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl bg-black group snap-center border-4 border-[#EAF5FF] cursor-pointer select-none transition-transform duration-300 hover:scale-[1.02] [transform:translateZ(0)]"
       style={{ transform: "translateZ(0)" }}
     >
       {/* Video Element - NOTE: autoPlay attribute is completely removed */}
