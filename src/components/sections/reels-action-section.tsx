@@ -275,7 +275,7 @@ export default function ReelsActionSection({
         {/* Section Header */}
         <div className="text-center mb-10 md:mb-14 px-4 sm:px-0">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-inter font-bold text-[#003286] leading-tight px-4">
-            Freshness,<br className="sm:hidden" /> From Every Angle
+            Our Customers,<br className="sm:hidden" /> Our Confidence
           </h2>
 
         </div>

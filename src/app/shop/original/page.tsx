@@ -498,7 +498,8 @@ export default function Page() {
           </div>
         </div>
       </section>
-      {/* <IngredientShowcase/> */}
+      {/* <IngredientShowcase /> */}
+      <ReelsActionSection />
       <IngredientsContent />
       <TestimonialSection />
       <FaqSection />

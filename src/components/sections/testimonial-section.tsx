@@ -1,6 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+const AUTO_SCROLL_INTERVAL_MS = 1500;
 import { useRevealOnScroll } from "@/hooks/use-reveal";
 
 export function TestimonialSection() {
@@ -57,6 +59,19 @@ export function TestimonialSection() {
     // },
   ];
 
+  const [isPaused, setIsPaused] = useState(false);
+
+  // Auto-scroll: the timer restarts whenever the slide changes (including via
+  // the manual arrow buttons), so a manual click always gets a full interval
+  // before the next automatic advance. Pauses while the user hovers/touches.
+  useEffect(() => {
+    if (isPaused) return;
+    const timer = setTimeout(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, AUTO_SCROLL_INTERVAL_MS);
+    return () => clearTimeout(timer);
+  }, [currentTestimonial, isPaused, testimonials.length]);
+
   return (
     <section className="py-12 md:py-16 bg-[#F5FBFF] overflow-hidden">
 
@@ -71,7 +86,13 @@ export function TestimonialSection() {
       </div>
 
       {/* Slider Carousel */}
-      <div className="max-w-5xl mx-auto px-4 md:px-8 relative overflow-hidden ">
+      <div
+        className="max-w-5xl mx-auto px-4 md:px-8 relative overflow-hidden "
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+        onTouchStart={() => setIsPaused(true)}
+        onTouchEnd={() => setIsPaused(false)}
+      >
         <div
           className="flex transition-transform duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]"
           style={{ transform: `translateX(-${currentTestimonial * 100}%)` }}
